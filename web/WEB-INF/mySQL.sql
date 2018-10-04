@@ -35,5 +35,4 @@ INSERT INTO project_user (user_firstname, user_lastname, user_country, user_dob,
 
 INSERT INTO project_user_article VALUES (1, 1, 'HFHFKAJDKSJF;KAJFLASJFD');
 
-SELECT *
-FROM project_article;
+SELECT * FROM project_article;
