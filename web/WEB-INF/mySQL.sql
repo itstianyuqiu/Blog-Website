@@ -7,6 +7,7 @@ CREATE TABLE project_article (
   article_content TEXT,
   PRIMARY KEY (article_id)
 );
+
 CREATE TABLE project_user (
   user_id         INT         NOT NULL AUTO_INCREMENT,
   user_firstname  VARCHAR(50) NOT NULL,
