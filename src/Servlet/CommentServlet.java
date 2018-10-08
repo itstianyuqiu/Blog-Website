@@ -1,7 +1,7 @@
 package Servlet;
 
 import DAO.ArticleDAO;
-import POJO.ArticlePOJO;
+import POJO.CommentsPOJO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,12 +12,22 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-public class ArticleServlet extends HttpServlet {
+public class CommentServlet extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-            String userID =  req.getSession().getAttribute("userID").toString();
-            req.getSession().setAttribute("userID", userID);
-            doPost(req,resp);
+
+            String articleID = req.getParameter("articleID_comment");
+            req.getSession().setAttribute("articleID_comment", articleID);
+
+            if (req.getSession().getAttribute("buttonClicked").toString().equals("false")) {
+                req.getSession().setAttribute("buttonClicked", true);
+            }
+            else {
+                req.getSession().setAttribute("buttonClicked", false);
+            }
+
+        doPost(req, resp);
     }
 
     @Override

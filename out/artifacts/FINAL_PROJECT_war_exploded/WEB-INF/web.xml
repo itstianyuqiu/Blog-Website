@@ -29,4 +29,25 @@
         <url-pattern>/ArticleServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>UpdateArticleDatabase</servlet-name>
+        <servlet-class>Servlet.UpdateArticleDatabase</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateArticleDatabase</servlet-name>
+        <url-pattern>/UpdateArticleDatabase</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CommentServlet</servlet-name>
+        <servlet-class>Servlet.CommentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CommentServlet</servlet-name>
+        <url-pattern>/CommentServlet</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>
