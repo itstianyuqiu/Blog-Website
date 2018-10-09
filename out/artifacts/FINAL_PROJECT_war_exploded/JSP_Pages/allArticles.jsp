@@ -18,10 +18,8 @@
 <body>
 
 <%
-
     ArticleDAO newArticleDAO = new ArticleDAO();
     List<ArticlePOJO> allArticles = newArticleDAO.loadAllArticles();
-
 
     for (ArticlePOJO a : allArticles) {
         out.println("<h4>" + a.getTitle() + "</h4>");
