@@ -46,9 +46,6 @@ SELECT * FROM project_article;
 
 SELECT * FROM project_user;
 
-SELECT * FROM project_article JOIN project_user_article ON project_article.article_id = project_user_article.article_id WHERE user_id = 1;
-
-
 DELETE FROM project_user_article WHERE article_id = 1;
 DELETE FROM project_article WHERE article_id = 1;
 
