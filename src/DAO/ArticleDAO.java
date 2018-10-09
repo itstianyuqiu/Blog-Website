@@ -126,24 +126,26 @@ public class ArticleDAO {
 
     }
 
-    public List<CommentsPOJO> getAllComments (String userID, String articleID) throws SQLException {
+    public List<CommentsPOJO> getAllComments (String articleID) throws SQLException {
 
 
         List<CommentsPOJO> allComments = new ArrayList<>();
 
-        try (PreparedStatement smt = this.conn.prepareStatement("SELECT article_comment FROM project_user_article WHERE user_id = ? AND article_id = ?")){
-            smt.setString(1, userID);
-            smt.setString(2, articleID);
+        try (PreparedStatement smt = this.conn.prepareStatement("SELECT user_id, article_comment FROM project_user_article WHERE article_id = ?")){
+            smt.setString(1, articleID);
+
             try (ResultSet rs = smt.executeQuery()){
                 while (rs.next()){
                     CommentsPOJO cpj = new CommentsPOJO();
-                    cpj.setUserID(Integer.parseInt(userID));
+                    cpj.setUserID(rs.getInt("user_id"));
                     cpj.setArticleID(Integer.parseInt(articleID));
                     cpj.setComments(rs.getString("article_comment"));
                     allComments.add(cpj);
                 }
             }
         }
+
+
 
 
 

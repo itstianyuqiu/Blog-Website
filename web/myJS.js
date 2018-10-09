@@ -19,6 +19,8 @@ function addNewArticle() {
 }
 
 function showVisibility() {
+
+
     var commentDIVs =  document.getElementsByClassName("comments");
 
     for (var i = 0; i < commentDIVs.length; i++){

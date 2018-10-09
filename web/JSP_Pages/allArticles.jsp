@@ -27,13 +27,9 @@
         out.println("<p>" + a.getContent() + "</p>");
         out.println("<br>");
         int articleID = a.getArticle_id();
+
         if (request.getSession().getAttribute("userLogged") != null) {
-            out.println("<div class=\"comments\" visibility=\"visible\" id=\"article_" + articleID + "\"" + "></div>");
-                %>
-                <script>
-                    loadArticleCommentsJSP();
-                </script>
-                <%
+            out.println("<div class=\"comments\" visibility=\"visible\" id=\"" + articleID + "\"" + "></div>");
             if (Boolean.parseBoolean(request.getSession().getAttribute("buttonClicked").toString()) == false) {
                 %>
                 <script>
@@ -43,6 +39,11 @@
             }
             out.println("<form action=\"/CommentServlet\" method=\"get\">");
             out.println("<input onclick=\"showVisibility()\" type=\"submit\" value=\"Comments\" name=\"comment_button\">");
+                %>
+                <script>
+                    loadArticleCommentsJSP();
+                </script>
+                <%
             out.println("<input type=\"hidden\" name=\"articleID_comment\" value=\"" + articleID + "\">");
             out.println("</form>");
         }

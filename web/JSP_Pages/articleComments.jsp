@@ -21,22 +21,19 @@
 
     ArticleDAO newArticleDAO = new ArticleDAO();
 
-    List<CommentsPOJO> listOfComments = newArticleDAO.getAllComments(request.getSession().getAttribute("userID").toString(), request.getSession().getAttribute("articleID_comment").toString());
+    List<CommentsPOJO> listOfComments = newArticleDAO.getAllComments(request.getSession().getAttribute("articleID_comment").toString());
     List<ArticlePOJO> listOfArticles = newArticleDAO.loadAllArticles();
 
-    System.out.println("c" + listOfComments.get(0).getComments());
-    System.out.println("a" + listOfArticles.get(0).getTitle());
 
-    for (ArticlePOJO apj : listOfArticles){
-        if (apj.getArticle_id() == Integer.parseInt(request.getSession().getAttribute("articleID_comment").toString())){
             for (CommentsPOJO cpj: listOfComments){
-                out.println("<h4>" + cpj.getUserID() + "</h4>");
-                out.println("<br>");
+                out.println("<b>" + cpj.getUserID() + "</b>");
                 out.println("<p>" + cpj.getComments() + "</p>");
-                out.println("<hr>");
+                out.println("<br>");
+                out.println("---");
             }
-        }
-    }
+
+
+
 %>
 
 </body>

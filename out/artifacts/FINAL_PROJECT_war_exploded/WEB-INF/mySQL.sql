@@ -36,11 +36,10 @@ INSERT INTO project_user (user_firstname, user_lastname, user_country, user_dob,
                           user_desciption, user_username, user_password) VALUES
   ('aaaa', 'aaa', 'NZ', DATE '2015-12-17', 'AAAAAAAA', 'USER', 'PASSWORD');
 
-INSERT INTO project_user_article VALUES (1, 1, 'HFHFKAJDKSJF;KAJFLASJFD');
 INSERT INTO project_user_article VALUES (1, 2, 'HFHFKAJDKSJF;KAJFLASJFD');
-INSERT INTO project_user_article VALUES (1, 3, 'HFHFKAJDKSJF;KAJFLASJFD');
+INSERT INTO project_user_article VALUES (4, 2, 'cafsafas;KAJFLASJFD');
 INSERT INTO project_user_article VALUES (2, 2, 'HFHFKAJDKSJF;KAJFLASJFD');
-INSERT INTO project_user_article VALUES (3, 3, 'HFHFKAJDKSJF;KAJFLASJFD');
+
 
 SELECT * FROM project_article;
 
