@@ -4,22 +4,25 @@ public class UserPOJO {
     private int user_id;
     private String firstName;
     private String lastName;
+    private String gender;
     private String country;
     private String birth;
-    private String desciption;
+    private String email;
+    private String description;
     private String username;
     private String password;
 
     public UserPOJO() {
     }
 
-    public UserPOJO(int user_id, String firstName, String lastName, String country, String birth, String desciption, String username, String password) {
-        this.user_id = user_id;
+    public UserPOJO(String firstName, String lastName, String gender, String country, String birth, String email, String description, String username, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.gender = gender;
         this.country = country;
         this.birth = birth;
-        this.desciption = desciption;
+        this.email = email;
+        this.description = description;
         this.username = username;
         this.password = password;
     }
@@ -48,6 +51,14 @@ public class UserPOJO {
         this.lastName = lastName;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
     public String getCountry() {
         return country;
     }
@@ -64,12 +75,20 @@ public class UserPOJO {
         this.birth = birth;
     }
 
-    public String getDesciption() {
-        return desciption;
+    public String getEmail() {
+        return email;
     }
 
-    public void setDesciption(String desciption) {
-        this.desciption = desciption;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getUsername() {

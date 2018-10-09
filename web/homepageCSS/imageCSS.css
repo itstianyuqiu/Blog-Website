@@ -1,0 +1,74 @@
+/*IMAGE*/
+
+.image
+{
+    display: inline-block;
+    outline: 0;
+}
+
+.image img
+{
+    display: block;
+    width: 100%;
+}
+
+.image-centered
+{
+    display: block;
+    margin: 0 0 2em 0;
+}
+
+.image-centered img
+{
+    margin: 0 auto;
+    width: auto;
+}
+
+.image-full
+{
+    display: block;
+    width: 100%;
+    margin: 0 0 2em 0;
+}
+
+.image-left
+{
+    float: left;
+    margin: 0 2em 2em 0;
+}
+
+
+
+
+
+/*box*/
+
+
+
+.box
+{
+    background: #ffffff;
+    border-bottom: solid 1px #ccc;
+}
+
+.box .image-full
+{
+    position: relative;
+    width: auto;
+}
+
+.box
+{
+    padding: 2.75em 1.75em 2.75em 1.75em;
+}
+
+.box .image-full
+{
+    left: 1.75em;
+    top: 1.75em;
+    margin: -4.5em 0 4.25em -3.5em;
+}
+
+
+
+/*box END*/

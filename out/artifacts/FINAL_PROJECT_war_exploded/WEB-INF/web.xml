@@ -5,23 +5,45 @@
          version="4.0">
 
     <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-
+    <!--login-->
     <servlet>
-        <servlet-name>UserServlet</servlet-name>
-        <servlet-class>Servlet.UserServlet</servlet-class>
+        <servlet-name>UserLoginServlet</servlet-name>
+        <servlet-class>UserServlet.UserLoginServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>UserServlet</servlet-name>
-        <url-pattern>/UserServlet</url-pattern>
+        <servlet-name>UserLoginServlet</servlet-name>
+        <url-pattern>/UserLoginServlet</url-pattern>
     </servlet-mapping>
+
+    <!--new account-->
+    <servlet>
+        <servlet-name>UserNewAccountServlet</servlet-name>
+        <servlet-class>UserServlet.UserNewAccountServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserNewAccountServlet</servlet-name>
+        <url-pattern>/UserNewAccountServlet</url-pattern>
+    </servlet-mapping>
+    <!--update user details-->
+    <servlet>
+        <servlet-name>UserUpdateAccountServlet</servlet-name>
+        <servlet-class>UserServlet.UserUpdateAccountServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserUpdateAccountServlet</servlet-name>
+        <url-pattern>/UserUpdateAccountServlet</url-pattern>
+    </servlet-mapping>
+
 
 
     <servlet>
         <servlet-name>ArticleServlet</servlet-name>
-        <servlet-class>Servlet.ArticleServlet</servlet-class>
+        <servlet-class>UserServlet.ArticleServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -29,4 +51,23 @@
         <url-pattern>/ArticleServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>UpdateArticleDatabase</servlet-name>
+        <servlet-class>UserServlet.UpdateArticleDatabase</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateArticleDatabase</servlet-name>
+        <url-pattern>/UpdateArticleDatabase</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CommentServlet</servlet-name>
+        <servlet-class>UserServlet.CommentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CommentServlet</servlet-name>
+        <url-pattern>/CommentServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -20,6 +20,7 @@ public class HikariConnectionPool {
         // Loads a resource from the classpath. Can find files on:
         // /WEB-INF/lib, or
         // /WEB-INF/classes
+
         try (InputStream input = classLoader.getResourceAsStream("connection.properties")) {
             dbProps.load(input);
         } catch (IOException e) {
@@ -31,7 +32,7 @@ public class HikariConnectionPool {
         hds.setDriverClassName("com.mysql.jdbc.Driver");
         hds.setUsername(dbProps.getProperty("user"));
         hds.setPassword(dbProps.getProperty("password"));
-        hds.setMaximumPoolSize(10);
+        hds.setMaximumPoolSize(100);
     }
 
     public static Connection getConnection() throws SQLException {

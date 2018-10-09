@@ -4,15 +4,18 @@ DROP TABLE IF EXISTS project_user_article;
 
 CREATE TABLE project_article (
   article_id      INT NOT NULL AUTO_INCREMENT,
+  article_title   VARCHAR(100),
   article_content TEXT,
   PRIMARY KEY (article_id)
 );
 CREATE TABLE project_user (
-  user_id         INT         NOT NULL AUTO_INCREMENT,
-  user_firstname  VARCHAR(50) NOT NULL,
-  user_lastname   VARCHAR(50) NOT NULL,
+  user_id         INT NOT NULL AUTO_INCREMENT,
+  user_firstname  VARCHAR(50),
+  user_lastname   VARCHAR(50),
+  user_gender     VARCHAR(6),
   user_country    VARCHAR(2),
   user_dob        DATE,
+  user_email      VARCHAR(100),
   user_desciption VARCHAR(200),
   user_username   VARCHAR(100),
   user_password   VARCHAR(100),
@@ -35,4 +38,5 @@ INSERT INTO project_user (user_firstname, user_lastname, user_country, user_dob,
 
 INSERT INTO project_user_article VALUES (1, 1, 'HFHFKAJDKSJF;KAJFLASJFD');
 
-SELECT * FROM project_article;
+SELECT *
+FROM project_article;

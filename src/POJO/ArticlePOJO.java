@@ -1,20 +1,33 @@
 package POJO;
 
 public class ArticlePOJO {
-    private int user_id;
+    private int article_id;
+    private String title;
     private String content;
 
-    public ArticlePOJO(String content,int user_id){
-        this.content = content;
-        this.user_id = user_id;
+    public ArticlePOJO(){
+
     }
-    public int getUser_id() {
-        return user_id;
+
+    public int getArticle_id() {
+        return article_id;
     }
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+
+    public void setArticle_id(int article_id) {
+        this.article_id = article_id;
     }
+
     public String getContent() {
         return content;
     }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) { this.title = title; }
 }
