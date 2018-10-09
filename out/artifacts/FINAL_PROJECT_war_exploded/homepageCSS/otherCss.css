@@ -1,0 +1,124 @@
+/*skel*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+
+vertical-align: baseline
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+body
+{
+    font-size: 10.5pt;
+    min-width: 1000px;
+}
+
+.major
+{
+    margin: 0.75em 0 1em 0;
+}
+
+.major h2
+{
+    padding: 0 1em 0 1em;
+}
+
+
+
+
+
+
+/*skel*/
+
+/*stylesheet*/
+
+
+/*body*/
+/*{*/
+    /*font-family: 'Source Sans Pro';*/
+    /*font-weight: 300;*/
+    /*background: #252122;*/
+    /*background-image: url('images/bg02.png');*/
+    /*color: #5d5d5d;*/
+/*}*/
+
+
+
+
+
+/*section,*/
+/*article*/
+/*{*/
+    /*margin-bottom: 2.5em;*/
+/*}*/
+
+/*section > :last-child,*/
+/*article > :last-child*/
+/*{*/
+    /*margin-bottom: 0;*/
+/*}*/
+
+/*section:last-child,*/
+/*article:last-child*/
+/*{*/
+    /*margin-bottom: 0;*/
+/*}*/
+
+
+
+
+
+
+h1, h2, h3, h4, h5, h6
+{
+    color: #252122;
+    font-weight: 700;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+/*a*/
+/*{*/
+    /*!*color: #d52349;*!*/
+    /*text-decoration: none;*/
+    /*color:white ;*/
+/*}*/
+
+/*a:hover*/
+/*{*/
+    /*text-decoration: none;*/
+/*}*/
+/*stylesheet*/
+
+/*header*/
+header
+{
+    margin: 0 0 1.5em 0;
+}
+
+
+#header
+{
+    text-align: center;
+}
+
+#header h1
+{
+    color: #252122;
+    font-weight: 900;
+    font-size: 2.5em;
+    letter-spacing: -0.035em;
+    margin: 0 0 1.5em 0;
+}
