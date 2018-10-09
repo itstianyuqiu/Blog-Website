@@ -11,5 +11,8 @@
       <user-name>kugn318</user-name>
       <introspection-schemas>*:kugn318</introspection-schemas>
     </data-source>
+    <data-source name="group1@db.sporadic.nz" uuid="345f34d4-2e2d-4cfe-951d-7b877791e0fd">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    </data-source>
   </component>
 </project>

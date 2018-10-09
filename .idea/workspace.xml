@@ -6,103 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b7fbd8c-773f-427a-91cd-f776cccc2f4c" name="Default" comment="yang userpojo">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/POJO/AdministratorPOJO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/POJO/CommentsPOJO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/UserServlet/CommentServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/UserServlet/UpdateArticleDatabase.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/UserServlet/UserLoginServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/UserServlet/UserNewAccountServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/UserServlet/UserUpdateAccountServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/JQuery_lib/jquery-3.3.1.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/JSP_Pages/allArticles.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/JSP_Pages/articleComments.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/JSP_Pages/editUserArticle.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/JSP_Pages/newArticleSubmitForm.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/JSP_Pages/userLoggedMainPage.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/homepage.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/index.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/index.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/myJS.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/settingpage.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/writenewarticle.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/article.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/homepage.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/homepageCSS/articleCSS.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/homepageCSS/containerCSS.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/homepageCSS/cssStyle.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/homepageCSS/headWraperCss.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/homepageCSS/imageCSS.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/homepageCSS/myJS.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/homepageCSS/myStyle.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/homepageCSS/otherCss.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/homepageCSS/rowPart.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/bg01.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/bg02.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/blog-logo.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/default_avatar.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/icons32.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/icons48.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/icons64.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/login.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/logout_user_login_account-512.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/milky-way-Morocco-8-24-2014-Besancon-Arnaud1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/no-photo.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic01.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic02.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic03.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic04.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic05.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic06.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic07.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic08.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic09.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic10.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/sign-up.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/upload_avatar_182104.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/index_forget_pwd.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/index_login.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/index_signup.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/settingpage.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/writenewarticle.jsp" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d4a473b5-6575-4fdf-b5f1-877327745b86.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/d4a473b5-6575-4fdf-b5f1-877327745b86.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+    <list default="true" id="0b7fbd8c-773f-427a-91cd-f776cccc2f4c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/ArticleDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/ArticleDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/HikariConnectionPool.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/HikariConnectionPool.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/UserDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/ArticlePOJO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/ArticlePOJO.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/UserPOJO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/UserPOJO.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserServlet.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/myJS.js" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/myJS.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/myStyle.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/ArticleDAO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/ArticleDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/HikariConnectionPool.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/HikariConnectionPool.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/UserDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/ArticlePOJO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/ArticlePOJO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/UserPOJO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/UserPOJO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/ArticleServlet.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserServlet.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/ArticleDAO.java" afterPath="$PROJECT_DIR$/src/DAO/ArticleDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/HikariConnectionPool.java" afterPath="$PROJECT_DIR$/src/DAO/HikariConnectionPool.java" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/UserDAO.java" afterPath="$PROJECT_DIR$/src/DAO/UserDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/POJO/ArticlePOJO.java" afterPath="$PROJECT_DIR$/src/POJO/ArticlePOJO.java" />
-      <change beforePath="$PROJECT_DIR$/src/POJO/UserPOJO.java" afterPath="$PROJECT_DIR$/src/POJO/UserPOJO.java" />
-      <change beforePath="$PROJECT_DIR$/src/Servlet/ArticleServlet.java" afterPath="$PROJECT_DIR$/src/UserServlet/ArticleServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/Servlet/UserServlet.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/connection.properties" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/connection.properties" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/mySQL.sql" afterPath="$PROJECT_DIR$/web/WEB-INF/mySQL.sql" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" afterPath="$PROJECT_DIR$/web/homepageCSS/index.html" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/myJS.js" afterPath="$PROJECT_DIR$/web/myJS.js" />
-      <change beforePath="$PROJECT_DIR$/web/myStyle.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/mySQL" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -121,124 +28,17 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="group1@db.sporadic.nz" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="group1@db.sporadic.nz" type="feb32156:DbDataSourceImpl" />
-        <item name="group1: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="CommentServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UserServlet/CommentServlet.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="editUserArticle.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://H:/FINAL_PROJECT/web/JSP_Pages/editUserArticle.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="41" column="94" lean-forward="false" selection-start-line="41" selection-start-column="94" selection-end-line="41" selection-end-column="94" />
+            <state relative-caret-position="425">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateArticleDatabase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UserServlet/UpdateArticleDatabase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="43" column="26" lean-forward="false" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="homepage.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/homepage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mySQL.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/mySQL.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-              <folding>
-                <marker date="1539056044000" expanded="true" signature="0:36" ph="DROP TABLE I... " />
-                <marker date="1539056044000" expanded="true" signature="38:71" ph="DROP TABLE I... " />
-                <marker date="1539056044000" expanded="true" signature="73:114" ph="DROP TABLE I... " />
-                <marker date="1539056044000" expanded="true" signature="117:279" ph="CREATE TABLE... project_article" />
-                <marker date="1539056044000" expanded="true" signature="281:655" ph="CREATE TABLE... project_user" />
-                <marker date="1539056044000" expanded="true" signature="657:927" ph="CREATE TABLE... project_user_article" />
-                <marker date="1539056044000" expanded="true" signature="930:998" ph="INSERT INTO project_article... " />
-                <marker date="1539056044000" expanded="true" signature="1001:1236" ph="INSERT INTO project_user... " />
-                <marker date="1539056044000" expanded="true" signature="1239:1312" ph="INSERT INTO project_user_article... " />
-                <marker date="1539056044000" expanded="true" signature="1315:1344" ph="SELECT * FRO... project_article" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/345f34d4-2e2d-4cfe-951d-7b877791e0fd/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connection.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/connection.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project_article" pinned="false" current-in-tab="false">
-        <entry file="das://table:/a26142cf/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_article">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project_user" pinned="false" current-in-tab="false">
-        <entry file="das://table:/a26142cf/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_user">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project_user_article" pinned="false" current-in-tab="true">
-        <entry file="das://table:/a26142cf/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_user_article">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project_user" pinned="false" current-in-tab="false">
-        <entry file="das://table:/a26142cf/d4a473b5-6575-4fdf-b5f1-877327745b86/kugn318.project_user">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -273,7 +73,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="yang" />
       </map>
     </option>
   </component>
@@ -348,6 +148,7 @@
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -373,6 +174,11 @@
             <path>
               <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="final_project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_project" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
@@ -406,20 +212,31 @@
               <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="final_project" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="homepageCSS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_project" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="JQuery_lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_project" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="JSP_Pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="final_project" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="TianCSS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="final_project" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -646,12 +463,20 @@
       <option name="presentableId" value="Default" />
       <updated>1538606613004</updated>
       <workItem from="1538606619761" duration="7595000" />
-      <workItem from="1539049549423" duration="6707000" />
+      <workItem from="1539049549423" duration="7201000" />
     </task>
+    <task id="LOCAL-00001" summary="yang">
+      <created>1539056359323</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1539056359323</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14302000" />
+    <option name="totallyTimeSpent" value="14796000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -708,38 +533,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="yang userpojo" />
-    <option name="LAST_COMMIT_MESSAGE" value="yang userpojo" />
+    <MESSAGE value="yang" />
+    <option name="LAST_COMMIT_MESSAGE" value="yang" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="2" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://table:/29f0492a/d4a473b5-6575-4fdf-b5f1-877327745b86/kugn318.project_user" />
-    <entry file="file://$PROJECT_DIR$/web/homepage.css" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/old/settingpage.css" />
-    <entry file="file://$PROJECT_DIR$/web/index_signup.html" />
-    <entry file="file://$PROJECT_DIR$/web/settingpage.css" />
-    <entry file="file://$PROJECT_DIR$/web/settingpage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="34" column="114" lean-forward="false" selection-start-line="34" selection-start-column="114" selection-end-line="34" selection-end-column="114" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a87f06b0/d4a473b5-6575-4fdf-b5f1-877327745b86/kugn318.project_user_article" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/Thread.java" />
-    <entry file="file://$PROJECT_DIR$/web/mySQL.sql" />
-    <entry file="file://$PROJECT_DIR$/web/homepageCSS/myJS.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UserServlet/UserUpdateAccountServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -755,16 +556,16 @@
         <state relative-caret-position="2125">
           <caret line="135" column="52" lean-forward="true" selection-start-line="135" selection-start-column="52" selection-end-line="135" selection-end-column="52" />
           <folding>
-            <marker date="1539050030000" expanded="true" signature="669:698" ph="SELECT * FRO... project_article" />
-            <marker date="1539050030000" expanded="true" signature="1181:1318" ph="SELECT * FRO... project_article" />
-            <marker date="1539050030000" expanded="true" signature="2331:2405" ph="INSERT INTO project_article... " />
-            <marker date="1539050030000" expanded="true" signature="2596:2667" ph="SELECT artic... project_article" />
-            <marker date="1539050030000" expanded="true" signature="2896:2964" ph="INSERT INTO project_user_article... " />
-            <marker date="1539050030000" expanded="true" signature="3222:3275" ph="DELETE FROM project_user_article... " />
-            <marker date="1539050030000" expanded="true" signature="3426:3474" ph="DELETE FROM project_article... " />
-            <marker date="1539050030000" expanded="true" signature="3845:3931" ph="UPDATE project_article... " />
-            <marker date="1539050030000" expanded="true" signature="4314:4392" ph="SELECT user_... project_user_article" />
-            <marker date="1539050030000" expanded="true" signature="5162:5250" ph="INSERT INTO project_user_article... " />
+            <marker date="1539056740000" expanded="true" signature="669:698" ph="SELECT * FRO... project_article" />
+            <marker date="1539056740000" expanded="true" signature="1181:1318" ph="SELECT * FRO... project_article" />
+            <marker date="1539056740000" expanded="true" signature="2331:2405" ph="INSERT INTO project_article... " />
+            <marker date="1539056740000" expanded="true" signature="2596:2667" ph="SELECT artic... project_article" />
+            <marker date="1539056740000" expanded="true" signature="2896:2964" ph="INSERT INTO project_user_article... " />
+            <marker date="1539056740000" expanded="true" signature="3222:3275" ph="DELETE FROM project_user_article... " />
+            <marker date="1539056740000" expanded="true" signature="3426:3474" ph="DELETE FROM project_article... " />
+            <marker date="1539056740000" expanded="true" signature="3845:3931" ph="UPDATE project_article... " />
+            <marker date="1539056740000" expanded="true" signature="4314:4392" ph="SELECT user_... project_user_article" />
+            <marker date="1539056740000" expanded="true" signature="5162:5250" ph="INSERT INTO project_user_article... " />
           </folding>
         </state>
       </provider>
@@ -775,10 +576,10 @@
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="false" />
-            <marker date="1539038456000" expanded="true" signature="1046:1096" ph="SELECT * FRO... project_user" />
-            <marker date="1539038456000" expanded="true" signature="3126:3346" ph="INSERT INTO project_user... " />
-            <marker date="1539038456000" expanded="true" signature="4142:4190" ph="DELETE FROM project_user... " />
-            <marker date="1539038456000" expanded="true" signature="4558:4705" ph="UPDATE project_user... " />
+            <marker date="1539056740000" expanded="true" signature="1046:1096" ph="SELECT * FRO... project_user" />
+            <marker date="1539056740000" expanded="true" signature="3126:3346" ph="INSERT INTO project_user... " />
+            <marker date="1539056740000" expanded="true" signature="4142:4190" ph="DELETE FROM project_user... " />
+            <marker date="1539056740000" expanded="true" signature="4558:4705" ph="UPDATE project_user... " />
           </folding>
         </state>
       </provider>
@@ -1028,18 +829,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding>
-            <marker date="1539056044000" expanded="true" signature="0:36" ph="DROP TABLE I... " />
-            <marker date="1539056044000" expanded="true" signature="38:71" ph="DROP TABLE I... " />
-            <marker date="1539056044000" expanded="true" signature="73:114" ph="DROP TABLE I... " />
-            <marker date="1539056044000" expanded="true" signature="117:279" ph="CREATE TABLE... project_article" />
-            <marker date="1539056044000" expanded="true" signature="281:655" ph="CREATE TABLE... project_user" />
-            <marker date="1539056044000" expanded="true" signature="657:927" ph="CREATE TABLE... project_user_article" />
-            <marker date="1539056044000" expanded="true" signature="930:998" ph="INSERT INTO project_article... " />
-            <marker date="1539056044000" expanded="true" signature="1001:1236" ph="INSERT INTO project_user... " />
-            <marker date="1539056044000" expanded="true" signature="1239:1312" ph="INSERT INTO project_user_article... " />
-            <marker date="1539056044000" expanded="true" signature="1315:1344" ph="SELECT * FRO... project_article" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,7 +844,7 @@
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/connection.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1077,6 +867,86 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://H:/FINAL_PROJECT/web/JSP_Pages/allArticles.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://H:/FINAL_PROJECT/web/WEB-INF/mySQL.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://H:/FINAL_PROJECT/web/myJS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="1" lean-forward="false" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://H:/FINAL_PROJECT/src/POJO/UserPOJO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://H:/FINAL_PROJECT/.idea/sqldialects.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://H:/FINAL_PROJECT/web/JSP_Pages/newArticleSubmitForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://H:/FINAL_PROJECT/web/JSP_Pages/userLoggedMainPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://H:/FINAL_PROJECT/web/myStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://H:/FINAL_PROJECT/web/JSP_Pages/myArticles.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="79" lean-forward="false" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://H:/FINAL_PROJECT/web/JSP_Pages/editUserArticle.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
