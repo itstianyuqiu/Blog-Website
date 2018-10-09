@@ -14,6 +14,8 @@ public class HikariConnectionPool {
 
     static {
 
+        System.out.println("I made changes");
+
         Properties dbProps = new Properties();
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 
