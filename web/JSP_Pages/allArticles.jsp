@@ -29,26 +29,67 @@
         int articleID = a.getArticle_id();
 
         if (request.getSession().getAttribute("userLogged") != null) {
-            out.println("<div class=\"comments\" visibility=\"visible\" id=\"" + articleID + "\"" + "></div>");
-            if (Boolean.parseBoolean(request.getSession().getAttribute("buttonClicked").toString()) == false) {
-                %>
-                <script>
-                    hideVisibility();
-                </script>
-                <%
+
+            out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
+            System.out.println(request.getSession().getAttribute("buttonClicked"));
+            if ((request.getSession().getAttribute("buttonClicked").toString().equals("false"))){
+                    %>
+                    <script>
+                        hideVisibility(<%=articleID%>);
+                    </script>
+                    <%
             }
-            out.println("<form action=\"/CommentServlet\" method=\"get\">");
-            out.println("<input onclick=\"showVisibility()\" type=\"submit\" value=\"Comments\" name=\"comment_button\">");
-                %>
-                <script>
-                    loadArticleCommentsJSP();
-                </script>
-                <%
-            out.println("<input type=\"hidden\" name=\"articleID_comment\" value=\"" + articleID + "\">");
-            out.println("</form>");
+
+                        System.out.println("gget here 1");
+            String currentArticle = request.getSession().getAttribute("articleID_comment_button_clicked").toString();
+                        System.out.println("gget here 2");
+            request.getSession().setAttribute("commentsList", null);
+
+            if (currentArticle != null){
+                System.out.println("gget here 3");
+                if (articleID == Integer.parseInt(currentArticle)){
+                    System.out.println("gget here 4");
+                        %>
+                        <script>
+                            loadArticleCommentsJSP(<%=articleID%>);
+                        </script>
+                        <%
+                        }
+                        }
+//            out.println("<form action=\"/CommentServlet\" method=\"get\">");
+//            out.println("<input onclick=\"showVisibility(1)\" type=\"submit\" value=\"Show/Hide Comments\" name=\"comment_button\">");
+//            out.println("<input type=\"hidden\" name=\"articleID_comment_button_clicked\" value=\"" + articleID + "\">");
+//            out.println("</form>");
+            %>
+                        <form action="/CommentServlet" method="get">
+                        <input onclick="showVisibility(<%=articleID%>)" type="submit" value="Show/Hide Comments" name="comment_button">
+                        <input type="hidden" name="articleID_comment_button_clicked" value="<%=articleID%>">
+                        </form>
+            <%
+
         }
+
         out.println("<hr>");
     }
 %>
 </body>
 </html>
+
+
+
+<%--<div style="display: none" id="${ArticlePOJO.getArticleId}"></div>--%>
+
+<%--out.println("<div class=\"comments\" visibility=\"visible\" id=\"" + articleID + "\"" + "></div>");--%>
+<%--if (Boolean.parseBoolean(request.getSession().getAttribute("buttonClicked").toString()) == false) {--%>
+<%--%>--%>
+<%--<script>--%>
+    <%--hideVisibility();--%>
+<%--</script>--%>
+<%--<%--%>
+    <%--}--%>
+
+<%--%>--%>
+<%--<script>--%>
+    <%--loadArticleCommentsJSP();--%>
+<%--</script>--%>
+<%--<%--%>
