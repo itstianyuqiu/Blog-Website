@@ -14,8 +14,6 @@ public class HikariConnectionPool {
 
     static {
 
-        System.out.println("I made changes");
-
         Properties dbProps = new Properties();
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 
@@ -34,7 +32,7 @@ public class HikariConnectionPool {
         hds.setDriverClassName("com.mysql.jdbc.Driver");
         hds.setUsername(dbProps.getProperty("user"));
         hds.setPassword(dbProps.getProperty("password"));
-        hds.setMaximumPoolSize(100);
+        hds.setMaximumPoolSize(20);
     }
 
     public static Connection getConnection() throws SQLException {

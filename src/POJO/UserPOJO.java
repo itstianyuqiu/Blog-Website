@@ -15,7 +15,8 @@ public class UserPOJO {
     public UserPOJO() {
     }
 
-    public UserPOJO(String firstName, String lastName, String gender, String country, String birth, String email, String description, String username, String password) {
+    public UserPOJO(int user_id, String firstName, String lastName, String gender, String country, String birth, String email, String description, String username, String password) {
+        this.user_id = user_id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;

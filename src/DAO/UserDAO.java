@@ -9,24 +9,30 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDAO {
+public class UserDAO implements AutoCloseable {
     private Connection conn;
 
     public UserDAO() throws SQLException {
         this.conn = HikariConnectionPool.getConnection();
     }
 
-
-//    public void postEntries() throws SQLException {
-//        try (PreparedStatement ps = this.conn.prepareStatement("SELECT * FROM project_user;")) {
-//            ps.execute();
-//            try (ResultSet rs = ps.executeQuery()) {
-//                while (rs.next()) {
-//
-//                }
-//            }
-//        }
-//    }
+    /**
+     * query all users
+     * @return all userPOJO
+     * @throws SQLException
+     */
+    public List<UserPOJO> queryEntries() throws SQLException {
+        List<UserPOJO> list = new ArrayList<>();
+        try (PreparedStatement ps = this.conn.prepareStatement("SELECT * FROM project_user;")) {
+            ps.execute();
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    list.add(userFromResultSet(rs));
+                }
+            }
+        }
+        return list;
+    }
 
     /**
      * show one user's information
@@ -35,10 +41,10 @@ public class UserDAO {
      * @return the user that log in
      * @throws SQLException
      */
-    public UserPOJO postEntriesByUsername(String username) throws SQLException {
+    public UserPOJO queryEntriesByUsername(String username) throws SQLException {
         UserPOJO userPOJO = null;
         try (PreparedStatement ps = this.conn.prepareStatement(
-                "SELECT * FROM project_user where user_username = ?;")) {
+                "SELECT * FROM project_user WHERE user_username = ?;")) {
             ps.setString(1, username);
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
@@ -78,9 +84,10 @@ public class UserDAO {
 //    }
 
     private UserPOJO userFromResultSet(ResultSet rs) throws SQLException {
-        return new UserPOJO(rs.getString(2), rs.getString(3), rs.getString(4),
-                rs.getString(5), rs.getString(6), rs.getString(7),
-                rs.getString(8), rs.getString(9), rs.getString(10));
+        return new UserPOJO(rs.getInt(1), rs.getString(2), rs.getString(3),
+                rs.getString(4), rs.getString(5), rs.getString(6),
+                rs.getString(7), rs.getString(8), rs.getString(9),
+                rs.getString(10));
     }
 
     /**
@@ -110,13 +117,13 @@ public class UserDAO {
     /**
      * delete user account by username
      *
-     * @param username
+     * @param id
      * @throws SQLException
      */
-    public void deleteUserAccount(String username) throws SQLException {
+    public void deleteUserAccount(int id) throws SQLException {
         try (PreparedStatement ps = this.conn.prepareStatement(
-                "DELETE FROM project_user WHERE user_username = ?;")) {
-            ps.setString(1, username);
+                "DELETE FROM project_user WHERE user_id = ?;")) {
+            ps.setInt(1, id);
             ps.executeUpdate();
         }
     }
@@ -139,5 +146,10 @@ public class UserDAO {
             ps.setInt(6, userPOJO.getUser_id());
             ps.executeUpdate();
         }
+    }
+
+    @Override
+    public void close() throws Exception {
+        this.conn.close();
     }
 }
