@@ -6,26 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b7fbd8c-773f-427a-91cd-f776cccc2f4c" name="Default" comment="(yang) add userAvatarPOJO,change user servlet:login,update&#10;merge Tian&amp;Crystal">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/POJO/UserAvatarPOJO.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithComments.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/example_homepage.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/example_settingpage.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-fileupload-1.3.2.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-io-2.5.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/homepageCSS/popUpCss.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/icon_setting.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/solida-marketing4-16-512.png" />
+    <list default="true" id="0b7fbd8c-773f-427a-91cd-f776cccc2f4c" name="Default" comment="(yang) add userAvatarPOJO,change user servlet:login,update&#10;merge Tian&amp;Crystal web pages">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/FINAL_PROJECT.iml" afterPath="$PROJECT_DIR$/FINAL_PROJECT.iml" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/homepage.css" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/homepage.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/index.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/myJS.js" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/settingpage.css" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/settingpage.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/writenewarticle.css" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/UserDAO.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/UserPOJO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/UserPOJO.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/UserServlet/UpdateArticleDatabase.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/UserServlet/UpdateArticleDatabase.class" />
@@ -36,58 +21,17 @@
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/article.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/article.jsp" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/homepage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/homepage.jsp" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/homepageCSS/otherCss.css" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/homepageCSS/otherCss.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/images/1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/images/blog-logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/images/default_avatar.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/images/login.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/images/logout_user_login_account-512.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/images/upload_avatar_182104.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index.jsp" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index_forget_pwd.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index_forget_pwd.jsp" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index_login.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index_login.jsp" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index_signup.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index_signup.jsp" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/myJS.js" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/myJS.js" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/settingpage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/settingpage.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/writenewarticle.jsp" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/UserDAO.class" />
       <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/UserPOJO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/UserPOJO.class" />
       <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/UserServlet/UpdateArticleDatabase.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/UserServlet/UpdateArticleDatabase.class" />
       <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/UserServlet/UserLoginServlet.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/UserServlet/UserLoginServlet.class" />
       <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/UserServlet/UserUpdateAccountServlet.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/UserServlet/UserUpdateAccountServlet.class" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/UserDAO.java" afterPath="$PROJECT_DIR$/src/DAO/UserDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/POJO/UserPOJO.java" afterPath="$PROJECT_DIR$/src/POJO/UserPOJO.java" />
-      <change beforePath="$PROJECT_DIR$/src/UserServlet/UpdateArticleDatabase.java" afterPath="$PROJECT_DIR$/src/UserServlet/UpdateArticleDatabase.java" />
-      <change beforePath="$PROJECT_DIR$/src/UserServlet/UserDeleteAccountServlet.java" afterPath="$PROJECT_DIR$/src/UserServlet/UserDeleteAccountServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/UserServlet/UserLogOutServlet.java" afterPath="$PROJECT_DIR$/src/UserServlet/UserLogOutServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/UserServlet/UserLoginServlet.java" afterPath="$PROJECT_DIR$/src/UserServlet/UserLoginServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/UserServlet/UserUpdateAccountServlet.java" afterPath="$PROJECT_DIR$/src/UserServlet/UserUpdateAccountServlet.java" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/allArticles.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/newArticleSubmitForm.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/newArticleSubmitForm.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/userLoggedMainPage.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/userLoggedMainPage.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/homepage.css" afterPath="$PROJECT_DIR$/web/TianCSS/homepage.css" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/index.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/myJS.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/settingpage.css" afterPath="$PROJECT_DIR$/web/TianCSS/settingpage.css" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/writenewarticle.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/mySQL.sql" afterPath="$PROJECT_DIR$/web/WEB-INF/mySQL.sql" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/web/article.jsp" afterPath="$PROJECT_DIR$/web/article.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/homepage.jsp" afterPath="$PROJECT_DIR$/web/homepage.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/homepageCSS/otherCss.css" afterPath="$PROJECT_DIR$/web/homepageCSS/otherCss.css" />
-      <change beforePath="$PROJECT_DIR$/web/images/1.png" afterPath="$PROJECT_DIR$/web/images/icon_home.png" />
-      <change beforePath="$PROJECT_DIR$/web/images/blog-logo.png" afterPath="$PROJECT_DIR$/web/images/icon_logo.png" />
-      <change beforePath="$PROJECT_DIR$/web/images/default_avatar.png" afterPath="$PROJECT_DIR$/web/images/image_default_avatar.png" />
-      <change beforePath="$PROJECT_DIR$/web/images/login.png" afterPath="$PROJECT_DIR$/web/images/icon_login.png" />
-      <change beforePath="$PROJECT_DIR$/web/images/logout_user_login_account-512.png" afterPath="$PROJECT_DIR$/web/images/icon_logout.png" />
-      <change beforePath="$PROJECT_DIR$/web/images/upload_avatar_182104.png" afterPath="$PROJECT_DIR$/web/images/icon_uplode_avatar.png" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/index_forget_pwd.jsp" afterPath="$PROJECT_DIR$/web/index_forget_pwd.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/index_login.jsp" afterPath="$PROJECT_DIR$/web/index_login.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/index_signup.jsp" afterPath="$PROJECT_DIR$/web/index_signup.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/myJS.js" afterPath="$PROJECT_DIR$/web/myJS.js" />
-      <change beforePath="$PROJECT_DIR$/web/settingpage.jsp" afterPath="$PROJECT_DIR$/web/settingpage.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/writenewarticle.jsp" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -132,8 +76,8 @@
       <file leaf-file-name="UserDeleteAccountServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UserServlet/UserDeleteAccountServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="713">
-              <caret line="31" column="37" lean-forward="true" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+            <state relative-caret-position="651">
+              <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -631,7 +575,8 @@
     <MESSAGE value="(yang) change user servlet:login newAccount update delete logout" />
     <MESSAGE value="(yang) change user servlet:login newAccount update delete logout,&#10;userDao,userPOJO" />
     <MESSAGE value="(yang) add userAvatarPOJO,change user servlet:login,update" />
-    <option name="LAST_COMMIT_MESSAGE" value="(yang) add userAvatarPOJO,change user servlet:login,update" />
+    <MESSAGE value="(yang) add userAvatarPOJO,change user servlet:login,update&#10;merge Tian&amp;Crystal web pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="(yang) add userAvatarPOJO,change user servlet:login,update&#10;merge Tian&amp;Crystal web pages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -976,8 +921,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UserServlet/UserDeleteAccountServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="31" column="37" lean-forward="true" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+        <state relative-caret-position="651">
+          <caret line="29" column="32" lean-forward="true" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
           <folding />
         </state>
       </provider>
