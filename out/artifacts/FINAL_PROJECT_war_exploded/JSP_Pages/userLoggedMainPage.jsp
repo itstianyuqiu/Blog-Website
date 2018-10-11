@@ -12,12 +12,12 @@
     <script type="text/javascript" src="../JQuery_lib/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="myJS.js"></script>
 </head>
-<body onload="loadAllArticle()">
+<body >
 
 <div id ="side_nav">
     <button onclick="loadUserArticle()">My Articles </button>
     <br>
-    <button onclick="loadAllArticle()">All Articles </button>
+    <button onclick="loadAllArticleWithComments()">All Articles </button>
     <br>
     <button onclick="addNewArticle()">Add a new article </button>
     <br>
