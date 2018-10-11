@@ -35,13 +35,16 @@ public class UserLoginServlet extends HttpServlet {
                 if (userPOJO != null) {
 
                     req.getSession().setAttribute("userPOJO", userPOJO);
+                    req.getSession().setAttribute("page","allArticles");
                     req.getRequestDispatcher("/homepage.jsp").forward(req, resp);
 
 
                     //Kien's gr stuffs
                     req.getSession().setAttribute("userID", "1");
                     req.getSession().setAttribute("userLogged", true);
-                    req.getSession().setAttribute("buttonClicked", false);
+                    req.getSession().setAttribute("firstLogin", true);
+                    req.getSession().setAttribute("current_article", 0);
+
                     resp.sendRedirect("/ArticleServlet");
                     //---
 
