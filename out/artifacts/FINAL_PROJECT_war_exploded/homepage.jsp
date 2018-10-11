@@ -105,14 +105,34 @@
         <button onclick="addNewArticle()">Add a new article </button>
         <br>
 
-        <button>My Account</button>
     </div>
 
     <div id ="articles">
+
+        <%
+            String fromPage = request.getSession().getAttribute("page").toString();
+            System.out.println(fromPage);
+
+            if (fromPage.equals("myArticles")){
+                %>
+                <script>
+                    loadUserArticle();
+                </script>
+                <%
+            }
+            else {
+                %>
+                <script>
+                    loadAllArticle();
+                </script>
+                <%
+            }
+
+        %>
+
     </div>
 
 </div>
-
 
 </body>
 </html>

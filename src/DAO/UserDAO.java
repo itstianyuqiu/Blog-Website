@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDAO {
+public class UserDAO implements AutoCloseable {
     private Connection conn;
 
     public UserDAO() throws SQLException {
@@ -139,5 +139,10 @@ public class UserDAO {
             ps.setInt(6, userPOJO.getUser_id());
             ps.executeUpdate();
         }
+    }
+
+    @Override
+    public void close() throws Exception {
+        this.conn.close();
     }
 }

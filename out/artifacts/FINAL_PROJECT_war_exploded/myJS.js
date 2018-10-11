@@ -18,29 +18,31 @@ function addNewArticle() {
     $('#articles').load('../JSP_Pages/newArticleSubmitForm.jsp');
 }
 
-function showVisibility() {
+function showVisibility(articleID) {
 
+    var x = document.getElementById("" + articleID + "");
 
-    var commentDIVs =  document.getElementsByClassName("comments");
+    console.log(x.style.display);
 
-    for (var i = 0; i < commentDIVs.length; i++){
-        commentDIVs[i].style.visibility = "visible";
+    if (x.style.display === "block") {
+        console.log("if");
+        x.style.display = "none";
+    } else {
+        console.log("else");
+        x.style.display = "block";
     }
 
 }
 
-function hideVisibility() {
-    var commentDIVs =  document.getElementsByClassName("comments");
-    for (var i = 0; i < commentDIVs.length; i++){
-        commentDIVs[i].style.visibility = "hidden";
-    }
+
+function hideVisibility(articleID) {
+    var x = document.getElementById("" + articleID + "");
+    x.style.display = "none";
+
 }
 
-function loadArticleCommentsJSP() {
-    $('.comments').load('../JSP_Pages/articleComments.jsp');
+function loadArticleCommentsJSP(articleID) {
+    $("#" + articleID + "").load('../JSP_Pages/articleComments.jsp');
 }
 
-function loadArticleCommentsJSPTwo(article) {
-    var art = document.getElementById(article);
-    $(art).load('../JSP_Pages/articleComments.jsp');
-}
+

@@ -13,6 +13,7 @@
     </data-source>
     <data-source name="group1@db.sporadic.nz" uuid="345f34d4-2e2d-4cfe-951d-7b877791e0fd">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <introspection-schemas>*:group1,information_schema</introspection-schemas>
     </data-source>
   </component>
 </project>

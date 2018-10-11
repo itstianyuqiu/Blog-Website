@@ -108,10 +108,31 @@
     </div>
 
     <div id ="articles">
+
+        <%
+            String fromPage = request.getSession().getAttribute("page").toString();
+            System.out.println(fromPage);
+
+            if (fromPage.equals("myArticles")){
+                %>
+                <script>
+                    loadUserArticle();
+                </script>
+                <%
+            }
+            else {
+                %>
+                <script>
+                    loadAllArticle();
+                </script>
+                <%
+            }
+
+        %>
+
     </div>
 
 </div>
-
 
 </body>
 </html>
