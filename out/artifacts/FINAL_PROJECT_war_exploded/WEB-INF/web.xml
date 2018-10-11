@@ -50,7 +50,6 @@
         <servlet-name>UserLogOutServlet</servlet-name>
         <servlet-class>UserServlet.UserLogOutServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>UserLogOutServlet</servlet-name>
         <url-pattern>/UserLogOutServlet</url-pattern>

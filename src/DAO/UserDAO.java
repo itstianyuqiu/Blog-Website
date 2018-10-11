@@ -1,5 +1,6 @@
 package DAO;
 
+import POJO.UserAvatarPOJO;
 import POJO.UserPOJO;
 
 import java.sql.Connection;
@@ -18,13 +19,13 @@ public class UserDAO implements AutoCloseable {
 
     /**
      * query all users
+     *
      * @return all userPOJO
      * @throws SQLException
      */
     public List<UserPOJO> queryEntries() throws SQLException {
         List<UserPOJO> list = new ArrayList<>();
         try (PreparedStatement ps = this.conn.prepareStatement("SELECT * FROM project_user;")) {
-            ps.execute();
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     list.add(userFromResultSet(rs));
@@ -146,6 +147,16 @@ public class UserDAO implements AutoCloseable {
             ps.setInt(6, userPOJO.getUser_id());
             ps.executeUpdate();
         }
+    }
+
+    public UserAvatarPOJO getUserAvatar(int id) throws SQLException {
+        try (PreparedStatement ps = this.conn.prepareStatement(
+                "SELECT u.user_id,a.user_id,user_avatar FROM project_user u" +
+                        "  JOIN project_user_avatar a ON u.user_id = a.user_id;"
+        )) {
+
+        }
+        return new UserAvatarPOJO("");
     }
 
     @Override

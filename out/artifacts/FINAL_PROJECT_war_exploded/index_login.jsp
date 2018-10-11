@@ -8,9 +8,9 @@
 </head>
 <body>
 
-<form action="/UserLoginServlet" method="get">
+<form action="/UserLoginServlet" method="post">
     <div id="login_frame">
-        <p id="image_logo"><img src="images/blog-logo.png" width="100px"></p>
+        <p id="image_logo"><img src="images/icon_logo.png" width="100px"></p>
 
         <input placeholder="  Username " type="text" name="username" id="username" class="login_text_field"/>
         <br>

@@ -1,22 +1,29 @@
 function start() {
     loadSession();
-    loadAllArticle();
+    loadAllArticleWithoutComments();
 }
 
 function loadSession() {
     sessionStorage.setItem("buttonClicked","false");
 }
 
-function loadAllArticle() {
-    $('#articles').load('../JSP_Pages/allArticles.jsp');
+function loadAllArticleWithoutComments() {
+    $('#articles').load('../JSP_Pages/allArticlesWithoutComments.jsp');
+}
+
+function loadAllArticleWithComments() {
+    $('#articles').load('../JSP_Pages/allArticlesWithComments.jsp');
 }
 function loadUserArticle() {
     $('#articles').load('../JSP_Pages/myArticles.jsp');
 }
 
 function addNewArticle() {
+    $('#btn_add_new_article').hide();
     $('#articles').load('../JSP_Pages/newArticleSubmitForm.jsp');
 }
+
+
 
 function showVisibility() {
 

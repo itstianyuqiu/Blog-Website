@@ -10,7 +10,7 @@
 
 <form action="/UserServlet" method="get">
     <div id="login_frame_resetpassword">
-        <p id="image_logo"><img src="images/blog-logo.png" width="100px"></p>
+        <p id="image_logo"><img src="images/icon_logo.png" width="100px"></p>
         <input placeholder="  Email address " type="text" id="emailaddress" class="signup_text_field_usernameemailpassword"/>
         <br>
         <br>

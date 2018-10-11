@@ -46,5 +46,22 @@
         <property name="resultSetSizeThreshold" value="10000" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="group1@localhost" uuid="f0d9df20-70b4-4eac-86de-d506222e0485">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/group1</jdbc-url>
+      <driver-properties>
+        <property name="autoReconnect" value="true" />
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+        <property name="callableStmtCacheSize" value="10000" />
+        <property name="resultSetSizeThreshold" value="10000" />
+        <property name="maxReconnects" value="100" />
+      </driver-properties>
+    </data-source>
   </component>
 </project>

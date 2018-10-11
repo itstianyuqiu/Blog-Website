@@ -15,12 +15,14 @@
     <link rel="stylesheet" href="homepageCSS/containerCSS.css">
     <link rel="stylesheet" href="homepageCSS/imageCSS.css">
     <link rel="stylesheet" href="homepageCSS/articleCSS.css">
+    <script type="text/javascript" src="JQuery_lib/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="myJS.js"></script>
 
 
 
 
 </head>
-<body onload="loadAllArticle()">
+<body >
 
 
 
@@ -40,10 +42,17 @@
                     <nav id="nav">
                         <ul>
                             <li><a href="homepage.jsp">Home Page</a></li>
-                            <li><a href="#">Other Articles</a></li>
+                            <%--<li><button>My Account</button></li>--%>
+                            <%--<li><a href="#">Other Articles</a></li>--%>
+                            <li><a onclick="loadAllArticle()">Other Articles</a></li>
+                            <li><a onclick="loadAllArticle()">Other Articles</a></li>
+
                             <li class="current_page_item"><a href="article.jsp">Current Article</a></li>
+
                         </ul>
                     </nav>
+
+
 
                 </section>
 
@@ -88,6 +97,11 @@
                                         eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean
                                         elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor.
                                     </p>
+
+                                    <div id ="articles">
+
+
+                                    </div>
                                     <section>
                                         <header>
                                             <h3>Something else</h3>
@@ -145,7 +159,7 @@
 <div id ="side_nav">
     <button onclick="loadUserArticle()">My Articles </button>
     <br>
-    <button onclick="loadAllArticle()">All Articles </button>
+    <button  onclick="loadAllArticle()"></button>
     <br>
     <button onclick="addNewArticle()">Add a new article </button>
     <br>
@@ -153,8 +167,7 @@
     <button>My Account</button>
 </div>
 
-<div id ="articles">
-</div>
+
 
 
 </body>

@@ -7,10 +7,27 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 
 public class UserUpdateAccountServlet extends HttpServlet {
+    private File uploadFolder;
+    private File tempFolder;
+
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        this.uploadFolder = new File(getServletContext().getRealPath("/UploadedPhotos"));
+        if (!uploadFolder.exists()) {
+            uploadFolder.mkdirs();
+        }
+        this.tempFolder = new File(getServletContext().getRealPath("/WEB-INF/tempFolder"));
+        if (!tempFolder.exists()) {
+            tempFolder.mkdirs();
+        }
+    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doPost(req, resp);
@@ -27,7 +44,7 @@ public class UserUpdateAccountServlet extends HttpServlet {
             //if click second save change button, change user's password
             else if ("savechange2".equals(req.getParameter("savechange2"))) {
                 changeToNewPassword(userDAO, req, resp);
-                System.out.println("修改mim");
+                System.out.println("change password");
             }
             req.getRequestDispatcher("/settingpage.jsp").forward(req, resp);
         } catch (SQLException e) {
@@ -47,6 +64,7 @@ public class UserUpdateAccountServlet extends HttpServlet {
             userPOJO.setPassword(newPassword);
 
             userDAO.updateUserAccount(userPOJO);
+            System.out.println("new password");
         } else {
             System.out.println("not correct");////ajax!!!!!
         }

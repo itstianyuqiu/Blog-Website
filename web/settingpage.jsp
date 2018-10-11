@@ -1,107 +1,139 @@
-<%@ page import="POJO.UserPOJO" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Personal page</title>
     <link rel="stylesheet" href="TianCSS/settingpage.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <script src="myJS.js"></script>
 </head>
-
-
 <body>
-<div class="box">
-    <div class="container-2">
-        <a href="homepage.jsp"><img id="image_home" src="images/1.png" width="40px"></a>
-        <a href="/UserLogOutServlet"><img id="image_logout" src="images/logout_user_login_account-512.png" width="40px"></a>
-        <span class="icon">
-            <i class="fa fa-search"></i>
+<div id="side_both" class="container " align="center">
+    <!--research-->
+    <div id="zone_search_icon">
+        <span id="zone_search">
+        <input type="search" id="search_bar" placeholder=" Search..."/>
         </span>
-        <input type="search" id="search" placeholder="Search..."/>
+        <!--icon_setting_logout-->
+        <span id="icon_logout&setting">
+            <a href="homepage.jsp">
+                <img id="icon_setting" src="images/icon_setting.jpg">
+            </a>
+            <a href="/UserLogOutServlet">
+                <img id="icon_logout" src="images/icon_logout.png" width="40px">
+            </a>
+        </span>
     </div>
-</div>
 
-<div id="main">
+    <div id="zone_avatar_main" class="row">
+        <!--Avatar-->
+        <div id="zone_left" class="col-lg-4" align="center">
+            <a href="#">
+                <img id="image_avatar" src="images/image_default_avatar.png" alt=""/>
+            </a>
+            <br>
+            <button type="submit" id="btn_change_avatar" value="changeavatar">Change avatar</button>
+        </div>
 
-    <section id="one">
-        <form action="/UserUpdateAccountServlet" method="post">
-            <h2>General Account Settings</h2>
-            Change avatar
-            <br>
-            <img id="setting_avatar" src="images/no-photo.jpg" alt="" width="130px">
-            <img id="setting_uploadicon" src="images/upload_avatar_182104.png" alt="" width="49px">
-            <!--<button type="button" id="btn_uploadavatar" value="upload" >Upload</button>-->
-            <br>
-            <br>
-            Username
-            <br>
-            <input type="text" name="username" id="setting_username" class="setting_text_field_long"
-                   value="${userPOJO.getUsername()}"/>
-            <br>
-            <br>
-            Email address
-            <br>
-            <input type="text" name="emailaddress" id="setting_emailaddress" class="setting_text_field_long"
-                   value="${userPOJO.getEmail()}"/>
-            <br>
-            <br>
-            Country
-            <br>
-            <input type="text" name="country" id="setting_country" class="setting_text_field_long"
-                   value="${userPOJO.getCountry()}"/>
-            <br>
-            <br>
-            Describe yourself in one sentence
-            <br>
-            <input type="text" name="description" id="setting_description" class="setting_text_field_long"
-                   value="${userPOJO.getDescription()}"/>
-            <br>
-            <br>
-            <button type="submit" id="btn_savechange" name="savechange1" value="savechange1">
-                Save change
-            </button>
-            <br>
-        </form>
-    </section>
+        <div class="col-lg-8" align="left">
+            <div id="zone_right">
+                <section id="one">
+                    <form action="/UserUpdateAccountServlet" method="post">
+                        <h2>General Account Settings</h2>
+                        <br>
+                        <p class="sub_title">Username</p>
+                        <br>
+                        <input type="text" name="username" id="setting_username" class="setting_text_field"
+                               value="${userPOJO.getUsername()}"/>
+                        <br>
+                        <br>
+                        <p class="sub_title"> Email address</p>
+                        <br>
+                        <input type="text" name="emailaddress" id="setting_emailaddress" class="setting_text_field"
+                               value="${userPOJO.getDescription()}"/>
+                        <br>
+                        <br>
+                        <p class="sub_title"> Country</p>
+                        <br>
+                        <input type="text" name="country" id="setting_country"
+                               class="setting_text_field" value="${userPOJO.getCountry()}"/>
+                        <br>
+                        <br>
+                        <p class="sub_title">Describe yourself in one sentence</p>
+                        <br>
+                        <input type="text" name="description" id="setting_description" class="setting_text_field"
+                               value="${userPOJO.getDescription()}"/>
+                        <br>
+                        <br>
+                        <button type="submit" id="btn_savechange" name="savechange1" value="savechange1">Save change</button>
+                        <br>
+                        <br>
+                        <hr>
+                        <br>
+                    </form>
+                </section>
 
-    <section id="two">
-        <form action="/UserUpdateAccountServlet" method="post">
-            <h2>Security</h2>
-            Email address
-            <br>
-            <input type="text" name="emailaddress" id="security_emailaddress" class="setting_text_field_long"/>
-            <br>
-            <button type="submit" id="btn_sendcode" value="sendcode"> Send verification code</button>
-            <br>
-            <br>
-            New password
-            <br>
-            <input type="text" name="newpwd" id="security_password" class="setting_text_field_long"/>
-            <br>
-            <br>
-            Confirm password
-            <br>
-            <input type="text" name="confirmpwd" id="security_conpassword" class="setting_text_field_long"/>
-            <br>
-            <br>
-            Verification code
-            <br>
-            <input type="text" id="security_vcode" class="setting_text_field_long"/>
-            <br>
-            <br>
-            <button type="submit" id="btn_savechange_security" name="savechange2" value="savechange2">Save change
-            </button>
-            <br>
-        </form>
-    </section>
+                <section id="two">
+                    <form action="/UserUpdateAccountServlet" method="post">
+                        <h2>Security</h2>
+                        <br>
+                        <!--Email address-->
+                        <!--<br>-->
+                        <!--<input type="text" id="security_emailaddress" class="setting_text_field_long"/>-->
+                        <!--<br>-->
+                        <!--<button type="button" id="btn_sendcode" value="sendcode"> Send verification code</button>-->
+                        <p class="sub_title">Security question</p>
+                        <br>
+                        <select id="form_securityquestion" name="securityquestion">
+                            <option value="-">select a question</option>
+                            <option value="1">What is your favourite movie?</option>
+                            <option value="2">Where are you born?</option>
+                            <option value="3">What is your first pet's name?</option>
+                        </select>
+                        <br>
+                        <br>
+                        <p class="sub_title">Answer</p>
+                        <br>
+                        <input type="text"  id="security_questionanswer" class="setting_text_field"/>
+                        <br>
+                        <br>
+                        <p class="sub_title">New password</p>
+                        <br>
+                        <input type="text" name="newpwd" id="security_password" class="setting_text_field"/>
+                        <br>
+                        <br>
+                        <p class="sub_title">Confirm password</p>
+                        <br>
+                        <input type="text" name="confirmpwd" id="security_conpassword" class="setting_text_field"/>
+                        <br>
+                        <br>
+                        <button type="submit" id="btn_savechange_security" name="savechange2" value="savechange2">Save change</button>
+                        <br>
+                        <br>
+                        <hr>
+                        <br>
+                    </form>
+                </section>
 
-    <section id="three">
-        <form action="/UserDeleteAccountServlet" method="post">
-            <h2>Delete Account</h2>
-            <p>Deleting an account will delete all your information. Do you want to continue?</p>
-            <button type="submit" id="btn_delet" name="delete" value="${userPOJO.getUser_id()}">Yes, delete my account</button>
-        </form>
-    </section>
+                <section id="three">
+                    <form action="/UserDeleteAccountServlet" method="post">
+                        <h2>Delete Account</h2>
+                        <br>
+                        <p>Deleting an account will delete all your information. Do you want to continue?</p>
+                        <br>
+                        <button type="submit" id="btn_delet" value="delete">Yes, delete my account</button>
+                    </form>
+                </section>
+                <br><br><br><br><br><br><br>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
 </div>
 </body>
 </html>

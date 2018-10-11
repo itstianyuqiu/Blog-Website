@@ -10,7 +10,7 @@
 
 <form action="/UserNewAccountServlet" method="get">
     <div id="signup_frame_signup">
-        <p id="image_logo"><img src="images/blog-logo.png" width="100px"></p>
+        <p id="image_logo"><img src="images/icon_logo.png" width="100px"></p>
         <input placeholder="  First name " type="text" name="firstname" id="firstname" class="signup_text_field_name"/>
         <input placeholder="  Surname " type="text" name="surname" id="surname" class="signup_text_field_name"/>
         <br>

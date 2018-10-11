@@ -107,4 +107,5 @@ public class UserPOJO {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }

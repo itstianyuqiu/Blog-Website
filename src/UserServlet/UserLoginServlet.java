@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -24,14 +25,14 @@ public class UserLoginServlet extends HttpServlet {
             if (userPOJO != null && password.equals(userPOJO.getPassword())) {
 
                 req.getSession().setAttribute("userPOJO", userPOJO);
-                req.getRequestDispatcher("/homepage.jsp").forward(req, resp);
+//                req.getRequestDispatcher("/homepage.jsp").forward(req, resp);
 
 
-//                //Kien's gr stuffs
-//                req.getSession().setAttribute("userID", "1");
-//                req.getSession().setAttribute("userLogged", true);
-//                req.getSession().setAttribute("buttonClicked", false);
-//                resp.sendRedirect("/ArticleServlet");
+                //Kien's gr stuffs
+                req.getSession().setAttribute("userID", "1");
+                req.getSession().setAttribute("userLogged", true);
+                req.getSession().setAttribute("buttonClicked", false);
+                resp.sendRedirect("/ArticleServlet");
 
             }
             //if not correct then back to login page again

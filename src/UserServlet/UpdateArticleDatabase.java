@@ -24,8 +24,8 @@ public class UpdateArticleDatabase extends HttpServlet {
         String updateArticle = req.getParameter("updateArticle");
 
 
-        try {
-            ArticleDAO newArticleDAO = new ArticleDAO();
+        try (ArticleDAO newArticleDAO = new ArticleDAO()){
+
             ArticlePOJO apj = new ArticlePOJO();
             UserPOJO upj = new UserPOJO();
 
@@ -52,6 +52,8 @@ public class UpdateArticleDatabase extends HttpServlet {
         }
         catch(SQLException e){
             System.out.println(e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }

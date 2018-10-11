@@ -30,5 +30,15 @@
       <user-name>ycui124</user-name>
       <introspection-schemas>*:ycui124</introspection-schemas>
     </data-source>
+    <data-source name="group1@localhost" uuid="f0d9df20-70b4-4eac-86de-d506222e0485">
+      <database-info product="MySQL" version="5.0.22-community-nt" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-schemas>*:group1</introspection-schemas>
+    </data-source>
   </component>
 </project>

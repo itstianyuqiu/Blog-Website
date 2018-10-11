@@ -16,5 +16,6 @@ public class UserLogOutServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getSession().setAttribute("userPOJO", null);
         req.getRequestDispatcher("index.jsp").forward(req, resp);
+        System.out.println("logout logout");
     }
 }
