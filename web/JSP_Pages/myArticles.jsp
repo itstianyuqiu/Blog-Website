@@ -11,27 +11,69 @@
 <html>
 <head>
     <title>Title</title>
+    <script type="text/javascript" src="../JQuery_lib/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="myJS.js"></script>
 </head>
 <body>
 
 <%
-    ArticleDAO newArticleDAO = new ArticleDAO();
-    List<ArticlePOJO> listOfUserArticles = newArticleDAO.loadUserArticles(request.getSession().getAttribute("userID").toString());
+    try (ArticleDAO newArticleDAO = new ArticleDAO()){
 
-    for (ArticlePOJO apj: listOfUserArticles){
-        out.println("<h4>" + apj.getTitle() + "</h4>");
-        out.println("<br>");
-        out.println("<p>" + apj.getContent() + "</p>");
-        out.println("<hr>");
-        int articleID = apj.getArticle_id();
-        out.print("<form action=\"/UpdateArticleDatabase\" method=\"get\">");
-        out.print("<input type=\"submit\" value=\"Delete\" name=\"delete_button\"\">");
-        out.print("<input type=\"submit\" value=\"Edit\" name=\"edit_button\"\">");
-        out.print("<input type=\"hidden\" name=\"articleID\" value=\"" + articleID + "\">");
-        out.print("</form>");
+        List<ArticlePOJO> allArticles = newArticleDAO.loadUserArticles(request.getSession().getAttribute("userID").toString());
+
+        for (ArticlePOJO a : allArticles) {
+            System.out.println("1");
+            out.println("<h4>" + a.getTitle() + "</h4>");
+            out.println("<br>");
+            out.println("<p>" + a.getContent() + "</p>");
+            out.println("<br>");
+            int articleID = a.getArticle_id();
+            if (request.getSession().getAttribute("userLogged") != null) {
+                out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
+                if (request.getSession().getAttribute("firstLogin").toString().equals("true")){
+                    request.getSession().setAttribute("button_" + articleID, false);
+%>
+<script>hideVisibility(<%=articleID%>);</script>
+<%
     }
+%>
+<form action="/CommentServlet" method="get">
+    <input type="submit" id="button_<%=articleID%>" value="Show/Hide Comments" name="comment_button">
+    <input type="hidden" name="current_article" value="<%=articleID%>">
+    <input type="hidden" name="button_id" value="button_<%=articleID%>">
+</form>
+<%
+    String currentArticle = request.getSession().getAttribute("current_article").toString();
+    String currentButton = request.getSession().getAttribute("button_" + articleID).toString();
+    request.getSession().setAttribute("commentsList", null);
+    if ((articleID == Integer.parseInt(currentArticle)) && (currentButton.equals("true"))){
+%>
+<script>
+    showVisibility(<%=currentArticle%>);
+    loadArticleCommentsJSP(<%=currentArticle%>);
+</script>
+<%
+}
+else {
+%><script>hideVisibility(<%=articleID%>);</script><%;
+}
+}
+}
+    request.getSession().setAttribute("firstLogin", false);
+}
+catch (Exception e){
+    e.getMessage();
+}
 %>
 
 
 </body>
 </html>
+
+<%--out.print("<form action=\"/UpdateArticleDatabase\" method=\"get\">");--%>
+<%--out.print("<input type=\"submit\" value=\"Delete\" name=\"delete_button\"\">");--%>
+<%--out.print("<input type=\"submit\" value=\"Edit\" name=\"edit_button\"\">");--%>
+<%--out.print("<input type=\"hidden\" name=\"articleID\" value=\"" + articleID + "\">");--%>
+<%--out.print("</form>");--%>
+
+
