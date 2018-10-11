@@ -50,7 +50,7 @@
                         <p class="sub_title"> Email address</p>
                         <br>
                         <input type="text" name="emailaddress" id="setting_emailaddress" class="setting_text_field"
-                               value="${userPOJO.getDescription()}"/>
+                               value="${userPOJO.getEmail()}"/>
                         <br>
                         <br>
                         <p class="sub_title"> Country</p>
