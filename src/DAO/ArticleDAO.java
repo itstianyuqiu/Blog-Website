@@ -12,7 +12,7 @@ import POJO.CommentsPOJO;
 import POJO.UserPOJO;
 import com.zaxxer.hikari.HikariDataSource;
 
-public class ArticleDAO {
+public class ArticleDAO implements AutoCloseable {
 
     private final Connection conn;
 
@@ -126,16 +126,17 @@ public class ArticleDAO {
 
     }
 
-    public List<CommentsPOJO> getAllComments (String articleID) throws SQLException {
+    public List<CommentsPOJO> getCommentsByArticle (String articleID) throws SQLException {
 
         List<CommentsPOJO> allComments = new ArrayList<>();
 
-        try (PreparedStatement smt = this.conn.prepareStatement("SELECT user_id, article_comment FROM project_user_article WHERE article_id = ?")){
+        try (PreparedStatement smt = this.conn.prepareStatement("SELECT comment_id, user_id, article_comment FROM project_user_article WHERE article_id = ?")){
             smt.setString(1, articleID);
 
             try (ResultSet rs = smt.executeQuery()){
                 while (rs.next()){
                     CommentsPOJO cpj = new CommentsPOJO();
+                    cpj.setCommentID(rs.getInt("comment_id"));
                     cpj.setUserID(rs.getInt("user_id"));
                     cpj.setArticleID(Integer.parseInt(articleID));
                     cpj.setComments(rs.getString("article_comment"));
@@ -161,4 +162,17 @@ public class ArticleDAO {
         }
     }
 
+    public void deleteComment (String index) throws SQLException{
+
+        try (PreparedStatement smt = this.conn.prepareStatement("DELETE FROM project_user_article WHERE comment_id = ?")) {
+            smt.setString(1,index);
+            smt.executeUpdate();
+        }
+
+    }
+
+    @Override
+    public void close() throws Exception {
+        this.conn.close();
+    }
 }
