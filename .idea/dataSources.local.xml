@@ -12,33 +12,14 @@
       <introspection-schemas>*:kugn318</introspection-schemas>
     </data-source>
     <data-source name="group1@db.sporadic.nz" uuid="345f34d4-2e2d-4cfe-951d-7b877791e0fd">
-      <database-info product="MySQL" version="5.5.5-10.1.34-MariaDB-0ubuntu0.18.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
-      <user-name>group1</user-name>
-      <introspection-schemas>*:group1</introspection-schemas>
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <introspection-schemas>*:group1,information_schema</introspection-schemas>
     </data-source>
     <data-source name="ycui124@db.sporadic.nz" uuid="26d96d04-4478-42b0-9e7e-60b5aa6bf0ad">
-      <database-info product="MySQL" version="5.5.5-10.1.34-MariaDB-0ubuntu0.18.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>ycui124</user-name>
-      <introspection-schemas>*:ycui124</introspection-schemas>
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
     </data-source>
     <data-source name="group1@localhost" uuid="f0d9df20-70b4-4eac-86de-d506222e0485">
-      <database-info product="MySQL" version="5.0.22-community-nt" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>root</user-name>
-      <introspection-schemas>*:group1</introspection-schemas>
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
     </data-source>
   </component>
 </project>
