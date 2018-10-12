@@ -32,7 +32,7 @@ public class HikariConnectionPool {
         hds.setDriverClassName("com.mysql.jdbc.Driver");
         hds.setUsername(dbProps.getProperty("user"));
         hds.setPassword(dbProps.getProperty("password"));
-        hds.setMaximumPoolSize(20);
+        hds.setMaximumPoolSize(10);
     }
 
     public static Connection getConnection() throws SQLException {

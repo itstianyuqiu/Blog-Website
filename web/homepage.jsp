@@ -88,6 +88,26 @@
 
 
                         <div id="articles">
+
+                            <%
+                                String fromPage = request.getSession().getAttribute("page").toString();
+                                System.out.println(fromPage);
+                                if (fromPage.equals("myArticles")){
+                            %>
+                            <script>
+                                loadUserArticle();
+                            </script>
+                            <%
+                            }
+                            else {
+                            %>
+                            <script>
+                                loadAllArticleWithComments();
+                            </script>
+                            <%
+                                }
+
+                            %>
                         </div>
 
                         <br>
@@ -99,7 +119,7 @@
                     <br>
                     <button id="btn_add_new_article" onclick="addNewArticle()">Add a new article</button>
                     <br>
-                    <div>
+
                         <%--<article id="article_recent_one">--%>
                         <%--<a href="article.jsp">--%>
                         <%--<h3>Demo Article I</h3>--%>
@@ -113,23 +133,10 @@
                         <%--</a>--%>
                         <%--<p>Preview of the article...</p>--%>
                         <%--</article>--%>
-
-                        <%--<article id="article_recent_three">--%>
-                        <%--<a href="article.jsp">--%>
-                        <%--<h3>Demo Article III</h3>--%>
-                        <%--</a>--%>
-                        <%--<p>Preview of the article...</p>--%>
-                        <%--</article>--%>
-
-                        <%--<article id="article_recent_four">--%>
-                        <%--<a href="article.jsp">--%>
-                        <%--<h3>Demo Article IV</h3>--%>
-                        <%--</a>--%>
-                        <%--<p>Preview of the article...</p>--%>
-                        <%--</article>--%>
-                    </div>
                 </section>
-            </div>
+
+
+        </div>
         </div>
     </div>
 </div>

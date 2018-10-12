@@ -12,7 +12,7 @@
     <!--login-->
     <servlet>
         <servlet-name>UserLoginServlet</servlet-name>
-        <servlet-class>UserServlet.UserLoginServlet</servlet-class>
+        <servlet-class>Servlet.UserLoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserLoginServlet</servlet-name>
@@ -21,7 +21,7 @@
     <!--new account-->
     <servlet>
         <servlet-name>UserNewAccountServlet</servlet-name>
-        <servlet-class>UserServlet.UserNewAccountServlet</servlet-class>
+        <servlet-class>Servlet.UserNewAccountServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserNewAccountServlet</servlet-name>
@@ -30,7 +30,7 @@
     <!--update user details-->
     <servlet>
         <servlet-name>UserUpdateAccountServlet</servlet-name>
-        <servlet-class>UserServlet.UserUpdateAccountServlet</servlet-class>
+        <servlet-class>Servlet.UserUpdateAccountServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserUpdateAccountServlet</servlet-name>
@@ -39,7 +39,7 @@
     <!--delete user account-->
     <servlet>
         <servlet-name>UserDeleteAccountServlet</servlet-name>
-        <servlet-class>UserServlet.UserDeleteAccountServlet</servlet-class>
+        <servlet-class>Servlet.UserDeleteAccountServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserDeleteAccountServlet</servlet-name>
@@ -48,7 +48,7 @@
     <!--log out user account-->
     <servlet>
         <servlet-name>UserLogOutServlet</servlet-name>
-        <servlet-class>UserServlet.UserLogOutServlet</servlet-class>
+        <servlet-class>Servlet.UserLogOutServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserLogOutServlet</servlet-name>
@@ -60,7 +60,7 @@
 
     <servlet>
         <servlet-name>ArticleServlet</servlet-name>
-        <servlet-class>UserServlet.ArticleServlet</servlet-class>
+        <servlet-class>Servlet.ArticleServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -70,7 +70,7 @@
 
     <servlet>
         <servlet-name>UpdateArticleDatabase</servlet-name>
-        <servlet-class>UserServlet.UpdateArticleDatabase</servlet-class>
+        <servlet-class>Servlet.UpdateArticleDatabase</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -80,7 +80,7 @@
 
     <servlet>
         <servlet-name>CommentServlet</servlet-name>
-        <servlet-class>UserServlet.CommentServlet</servlet-class>
+        <servlet-class>Servlet.CommentServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

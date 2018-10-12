@@ -1,6 +1,6 @@
+DROP TABLE IF EXISTS project_user_article;
 DROP TABLE IF EXISTS project_article;
 DROP TABLE IF EXISTS project_user;
-DROP TABLE IF EXISTS project_user_article;
 
 CREATE TABLE project_article (
   article_id      INT NOT NULL AUTO_INCREMENT,
@@ -22,21 +22,36 @@ CREATE TABLE project_user (
   PRIMARY KEY (user_id)
 );
 CREATE TABLE project_user_article (
+  comment_id      INT NOT NULL AUTO_INCREMENT,
   user_id         INT,
   article_id      INT,
   article_comment TEXT,
-  PRIMARY KEY (user_id, article_id),
+  PRIMARY KEY (comment_id),
   FOREIGN KEY (user_id) REFERENCES project_user (user_id),
   FOREIGN KEY (article_id) REFERENCES project_article (article_id)
 );
 
-INSERT INTO project_article (article_content) VALUES ('testContent');
+INSERT INTO project_article (article_title, article_content) VALUES ('heading 3', 'content artticle 3');
 
 INSERT INTO project_user (user_firstname, user_lastname, user_country, user_dob,
                           user_desciption, user_username, user_password) VALUES
-  ('aaaa', 'aaa', 'NZ', DATE '2015-12-17', 'AAAAAAAA', 'USER', 'PASSWORD');
+  ('b', 'b', 'NZ', DATE '2015-12-17', 'b', 'b', 'b');
 
-INSERT INTO project_user_article VALUES (1, 1, 'HFHFKAJDKSJF;KAJFLASJFD');
+INSERT INTO project_user_article (user_id, article_id, article_comment) VALUES (1, 1, 'user 1, article 1');
+INSERT INTO project_user_article (user_id, article_id, article_comment) VALUES (3, 1, 'user 3, article 1');
+INSERT INTO project_user_article (user_id, article_id, article_comment) VALUES (2, 1, 'user 2, article 1');
 
-SELECT *
-FROM project_article;
+
+SELECT * FROM project_article;
+
+SELECT * FROM project_user;
+
+SELECT article_id FROM project_user_article WHERE user_id = 1;
+
+SELECT * FROM project_user_article;
+
+SELECT comment_id, user_id, article_comment FROM project_user_article WHERE article_id = 1;
+
+SELECT comment_id, user_id, article_comment FROM project_user_article WHERE article_id = ?;
+
+SELECT * FROM project_article JOIN project_user_article ON project_article.article_id = project_user_article.article_id WHERE user_id = 1;

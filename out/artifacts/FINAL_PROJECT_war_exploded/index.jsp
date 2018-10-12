@@ -87,7 +87,7 @@
                                                 <div class="row">
                                                         <div class="6u" >
                                                                 <section class="box">
-                                                                        <a href="http://facebook.com/DreametryDoodle" class="image image-full">
+                                                                        <a href="#" class="image image-full">
                                                                             <img src="images/pic08.jpg" alt=""  height="272"/>
                                                                         </a>
                                                                             <header>
@@ -116,20 +116,7 @@
                                                                             </footer>
                                                                 </section>
                                                         </div>
-                                                        <%--<div class="6u">--%>
-                                                                <%--<section class="box">--%>
-                                                                        <%--<a href="http://facebook.com/DreametryDoodle" class="image image-full"><img src="images/pic09.jpg" alt="" /></a>--%>
-                                                                            <%--<header>--%>
-                                                                                <%--<h3>Aptent veroeros et aliquam</h3>--%>
-                                                                                <%--<span class="byline">Posted 45 minutes ago</span>--%>
-                                                                            <%--</header>--%>
-                                                                                <%--<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit  adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>--%>
-                                                                            <%--<footer class="actions">--%>
-                                                                                <%--<a href="#" class="button button-icon button-icon-1">Continue Reading</a>--%>
-                                                                                <%--<a href="#" class="button button-alt button-icon button-icon-2">33 comments</a>--%>
-                                                                            <%--</footer>--%>
-                                                                <%--</section>--%>
-                                                        <%--</div>--%>
+
 
                                                     <div id="articles">
                                                         <%-- to edit into front end --%>
