@@ -25,7 +25,7 @@
     <textarea id="newarticile_content" name="article_content" rows="15"> </textarea>
     <br>
     <br>
-    <button type="submit" id="btn_newarticle" name="addArticle" value="Add Now">Sumbit</button>
+    <button type="submit" id="btn_newarticle" name="addArticle" value="Add Now">Submit</button>
 
 </form>
 

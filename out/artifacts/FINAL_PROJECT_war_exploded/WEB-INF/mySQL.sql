@@ -2,12 +2,8 @@ DROP TABLE IF EXISTS project_user_article;
 DROP TABLE IF EXISTS project_article;
 DROP TABLE IF EXISTS project_user;
 
-CREATE TABLE project_article (
-  article_id      INT NOT NULL AUTO_INCREMENT,
-  article_title   VARCHAR(100),
-  article_content TEXT,
-  PRIMARY KEY (article_id)
-);
+
+
 CREATE TABLE project_user (
   user_id         INT NOT NULL AUTO_INCREMENT,
   user_firstname  VARCHAR(50),
@@ -21,6 +17,17 @@ CREATE TABLE project_user (
   user_password   VARCHAR(100),
   PRIMARY KEY (user_id)
 );
+
+CREATE TABLE project_article (
+  article_id      INT NOT NULL AUTO_INCREMENT,
+  article_title   VARCHAR(100),
+  article_content TEXT,
+  author_id  INT,
+  FOREIGN KEY (author_id) REFERENCES project_user (user_id),
+  PRIMARY KEY (article_id)
+);
+
+
 CREATE TABLE project_user_article (
   comment_id      INT NOT NULL AUTO_INCREMENT,
   user_id         INT,
@@ -31,7 +38,7 @@ CREATE TABLE project_user_article (
   FOREIGN KEY (article_id) REFERENCES project_article (article_id)
 );
 
-INSERT INTO project_article (article_title, article_content) VALUES ('heading 3', 'content artticle 3');
+INSERT INTO project_article (article_title, article_content, author_id) VALUES ('heading 1', 'content artticle 1', 2);
 
 INSERT INTO project_user (user_firstname, user_lastname, user_country, user_dob,
                           user_desciption, user_username, user_password) VALUES
@@ -55,3 +62,5 @@ SELECT comment_id, user_id, article_comment FROM project_user_article WHERE arti
 SELECT comment_id, user_id, article_comment FROM project_user_article WHERE article_id = ?;
 
 SELECT * FROM project_article JOIN project_user_article ON project_article.article_id = project_user_article.article_id WHERE user_id = 1;
+
+SELECT article_id FROM project_article ORDER BY article_id DESC ;

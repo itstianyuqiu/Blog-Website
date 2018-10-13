@@ -50,6 +50,8 @@ public class UserNewAccountServlet extends HttpServlet {
             if (req.getSession().getAttribute("userPOJO") == null) {
                 req.getSession().setAttribute("userPOJO", userPOJO);
             }
+
+
             resp.sendRedirect("/homepage.jsp");
         } catch (SQLException e) {
             e.printStackTrace();

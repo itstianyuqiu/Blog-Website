@@ -24,16 +24,19 @@
 </head>
 <body>
 
-
-
 <%
-    System.out.println("got to my articles");
+
 
     try (ArticleDAO newArticleDAO = new ArticleDAO()){
 
+        //generate a list of Articles based on the current userID
         List<ArticlePOJO> allArticles = newArticleDAO.loadUserArticles(request.getSession().getAttribute("userID").toString());
 
+        System.out.println("list size: " + allArticles.size() );
+        //looping through the generated list
         for (ArticlePOJO a : allArticles) {
+
+            System.out.println(a.getArticle_id());
 
             out.println("<h4>" + a.getTitle() + "</h4>");
             out.println("<br>");
@@ -41,40 +44,52 @@
             out.println("<br>");
             int articleID = a.getArticle_id();
 
-//                out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
+                out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
 
                 %>
-                <%--<form action="/CommentServlet" method="get">--%>
-                    <%--<input type="submit" id="button_<%=articleID%>" value="Show/Hide Comments" name="comment_button">--%>
-                    <%--<input type="hidden" name="current_article" value="<%=articleID%>">--%>
-                    <%--<input type="hidden" name="button_id" value="button_<%=articleID%>">--%>
-                    <%--<input type="hidden" name="page" value="myArticles">--%>
-                <%--</form>--%>
+                <form action="/CommentServlet" method="get">
+                    <input type="submit" id="button_<%=articleID%>" value="Show/Hide Comments" name="comment_button">
+                    <input type="hidden" name="current_article" value="<%=articleID%>">
+                    <input type="hidden" name="button_id" value="button_<%=articleID%>">
+                    <input type="hidden" name="page" value="myArticles">
+                </form>
                 <%
 
-        String currentArticle = request.getSession().getAttribute("current_article").toString();
-        String currentButton = request.getSession().getAttribute("button_" + articleID).toString();
+            // get the session of current article and current button, if matches with the current iteration of the loop then show
 
 
-        request.getSession().setAttribute("commentsList", null);
+            String currentArticle = request.getSession().getAttribute("current_article").toString();
+            String currentButton = request.getSession().getAttribute("button_" + articleID).toString();
 
-                if ((articleID == Integer.parseInt(currentArticle)) && (currentButton.equals("true"))){
+
+            //Get the current article & button session, if matches with the current iteration of the loop, then show & load the comments div.
+
+            if ((articleID == Integer.parseInt(currentArticle)) && (currentButton.equals("true"))){
                 %>
-                <script>
-                    showVisibility(<%=currentArticle%>);
-                    loadArticleCommentsJSP(<%=currentArticle%>);
-                </script>
+                    <script>
+                        showVisibility(<%=currentArticle%>);
+                        loadArticleCommentsJSP(<%=currentArticle%>);
+                    </script>
                 <%
-                }
-                else {
-                    %><script>hideVisibility(<%=articleID%>);</script><%
-                }
+            }
+            else {
+                %>
+                    <script>
+                        hideVisibility(<%=articleID%>);
+                    </script>
+                <%
+            }
 
+
+
+            //create the Delete and Edit buttons, passing on current article ID
             out.print("<form action=\"/UpdateArticleDatabase\" method=\"get\">");
             out.print("<input type=\"submit\" value=\"Delete\" name=\"delete_button\"\">");
             out.print("<input type=\"submit\" value=\"Edit\" name=\"edit_button\"\">");
             out.print("<input type=\"hidden\" name=\"articleID\" value=\"" + articleID + "\">");
             out.print("</form>");
+
+
             }
 
         }

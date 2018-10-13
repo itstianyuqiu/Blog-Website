@@ -1,10 +1,5 @@
 function start() {
-    loadSession();
     loadAllArticleWithoutComments();
-}
-
-function loadSession() {
-    sessionStorage.setItem("buttonClicked","false");
 }
 
 function loadAllArticleWithoutComments() {

@@ -88,22 +88,21 @@
 
 
                         <div id="articles">
-
                             <%
                                 String fromPage = request.getSession().getAttribute("page").toString();
                                 System.out.println(fromPage);
                                 if (fromPage.equals("myArticles")){
                             %>
-                            <script>
-                                loadUserArticle();
-                            </script>
+                                <script>
+                                    loadUserArticle();
+                                </script>
                             <%
-                            }
-                            else {
+                                }
+                                else if (fromPage.equals("allArticles")) {
                             %>
-                            <script>
-                                loadAllArticleWithComments();
-                            </script>
+                                <script>
+                                    loadAllArticleWithComments();
+                                </script>
                             <%
                                 }
 

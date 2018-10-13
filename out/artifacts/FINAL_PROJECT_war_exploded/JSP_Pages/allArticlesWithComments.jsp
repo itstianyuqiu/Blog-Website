@@ -34,15 +34,18 @@
             out.println("<p>" + a.getContent() + "</p>");
             out.println("<br>");
             int articleID = a.getArticle_id();
-            if (request.getSession().getAttribute("userLogged") != null) {
-                out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
-                if (request.getSession().getAttribute("firstLogin").toString().equals("true")){
-                    request.getSession().setAttribute("button_" + articleID, false);
 
-                %>
-                <script>hideVisibility(<%=articleID%>);</script>
-                <%
+                out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
+
+                //If this is first login, set all comments button to false & hide all comments div
+                if (request.getSession().getAttribute("firstLogin_AllArticles").toString().equals("true")){
+                    request.getSession().setAttribute("button_" + articleID, false);
+                    %>
+                    <script>hideVisibility(<%=articleID%>);</script>
+                    <%
                  }
+
+                // Code to create show/hide comments button. When submit passing on current article ID & current button ID & current page "all articles"
                 %>
                 <form action="/CommentServlet" method="get">
                     <input type="submit" id="button_<%=articleID%>" value="Show/Hide Comments" name="comment_button">
@@ -51,23 +54,27 @@
                     <input type="hidden" name="page" value="allArticles">
                 </form>
                 <%
+
+                // Get the current article & button session, if matches with the current iteration of the loop, then show & load the comments div.
                 String currentArticle = request.getSession().getAttribute("current_article").toString();
                 String currentButton = request.getSession().getAttribute("button_" + articleID).toString();
-                request.getSession().setAttribute("commentsList", null);
+
                 if ((articleID == Integer.parseInt(currentArticle)) && (currentButton.equals("true"))){
-                %>
-                <script>
-                    showVisibility(<%=currentArticle%>);
-                    loadArticleCommentsJSP(<%=currentArticle%>);
-                </script>
-                <%
-            }
-                else {
-                %><script>hideVisibility(<%=articleID%>);</script><%;
+                    %>
+                        <script>
+                            showVisibility(<%=currentArticle%>);
+                            loadArticleCommentsJSP(<%=currentArticle%>);
+                        </script>
+                    <%
                 }
-            }
+                else {
+                    %>
+                        <script>hideVisibility(<%=articleID%>);</script>
+                    <%
+                }
+
         }
-            request.getSession().setAttribute("firstLogin", false);
+            request.getSession().setAttribute("firstLogin_AllArticles", false);
         }
         catch (Exception e){
             e.getMessage();

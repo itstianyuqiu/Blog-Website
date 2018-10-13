@@ -28,10 +28,13 @@ public class UpdateArticleDatabase extends HttpServlet {
             UserPOJO upj = new UserPOJO();
 
             if ("Add Now".equals(addArticle)) {
+                System.out.println("I got here");
                 apj.setTitle(req.getParameter("article_heading"));
                 apj.setContent(req.getParameter("article_content"));
                 upj.setUser_id(Integer.parseInt(req.getSession().getAttribute("userID").toString()));
                 newArticleDAO.addNewArticle(apj,upj);
+                req.getSession().setAttribute("page","myArticles");
+                req.getSession().setAttribute("button_" + newArticleDAO.getIDOfLastArticle(),false);
                 doPost(req, resp);
             } else if ("Delete".equals(deleteArticle)) {
                 newArticleDAO.deleteArticle(req.getParameter("articleID"));

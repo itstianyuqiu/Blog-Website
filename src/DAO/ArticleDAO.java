@@ -38,7 +38,7 @@ public class ArticleDAO implements AutoCloseable {
     public List<ArticlePOJO> loadUserArticles(String userID) throws SQLException {
         List<ArticlePOJO> articles = new ArrayList<>();
 
-        try (PreparedStatement smt = this.conn.prepareStatement("SELECT * FROM project_article JOIN project_user_article ON project_article.article_id = project_user_article.article_id WHERE user_id = ?")){
+        try (PreparedStatement smt = this.conn.prepareStatement("SELECT * FROM project_article WHERE author_id = ?")){
 
             smt.setString(1, userID);
 
@@ -76,26 +76,14 @@ public class ArticleDAO implements AutoCloseable {
         String heading = apj.getTitle();
         String content = apj.getContent();
 
-        int articleID;
 
-        try (PreparedStatement smt = this.conn.prepareStatement("INSERT INTO project_article (article_title, article_content) VALUES (?, ?)")) {
+        try (PreparedStatement smt = this.conn.prepareStatement("INSERT INTO project_article (article_title, article_content, author_id) VALUES (?, ?, ?)")) {
             smt.setString(1,heading);
             smt.setString(2,content);
+            smt.setInt(3, userID);
             smt.executeUpdate();
         }
 
-        try (PreparedStatement smt = this.conn.prepareStatement("SELECT article_id FROM project_article ORDER BY article_id DESC LIMIT 1")) {
-            try (ResultSet rs = smt.executeQuery()){
-                rs.next();
-                articleID = rs.getInt("article_id");
-            }
-        }
-
-        try (PreparedStatement smt = this.conn.prepareStatement("INSERT INTO project_user_article (user_id, article_id) VALUES (?, ?)")) {
-            smt.setInt(1,userID);
-            smt.setInt(2,articleID);
-            smt.executeUpdate();
-        }
     }
 
     public void deleteArticle(String index) throws SQLException{
@@ -169,6 +157,21 @@ public class ArticleDAO implements AutoCloseable {
             smt.executeUpdate();
         }
 
+    }
+
+    public int getIDOfLastArticle() throws SQLException{
+
+        int article_ID = 0;
+
+        try (PreparedStatement smt = this.conn.prepareStatement("SELECT article_id FROM project_article ORDER BY article_id DESC")) {
+
+            try (ResultSet rs = smt.executeQuery()){
+                rs.next();
+                article_ID = rs.getInt(1);
+                }
+            }
+
+        return article_ID;
     }
 
     @Override
