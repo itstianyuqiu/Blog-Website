@@ -6,21 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b7fbd8c-773f-427a-91cd-f776cccc2f4c" name="Default" comment="completed show/hide advanced (admin interface)&#10;added values in edit page&#10;updated article &amp; user details in all articles">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d4a473b5-6575-4fdf-b5f1-877327745b86.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/d4a473b5-6575-4fdf-b5f1-877327745b86.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/ArticleDAO.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/ArticleDAO.java" afterPath="$PROJECT_DIR$/src/DAO/ArticleDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/POJO/ArticlePOJO.java" afterPath="$PROJECT_DIR$/src/POJO/ArticlePOJO.java" />
-      <change beforePath="$PROJECT_DIR$/src/Servlet/UpdateArticleDatabase.java" afterPath="$PROJECT_DIR$/src/Servlet/UpdateArticleDatabase.java" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/Admin_allArticles.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/Admin_allArticles.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithComments.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithComments.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/articleComments.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/articleComments.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/newArticleSubmitForm.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/newArticleSubmitForm.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/mySQL.sql" afterPath="$PROJECT_DIR$/web/WEB-INF/mySQL.sql" />
-      <change beforePath="$PROJECT_DIR$/web/myJS.js" afterPath="$PROJECT_DIR$/web/myJS.js" />
-    </list>
+    <list default="true" id="0b7fbd8c-773f-427a-91cd-f776cccc2f4c" name="Default" comment="completed show/hide advanced (admin interface)&#10;added values in edit page&#10;updated article &amp; user details in all articles" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,7 +56,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="allArticlesWithoutComments.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="allArticlesWithoutComments.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="497">
@@ -80,10 +66,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="articleComments.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="articleComments.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/JSP_Pages/articleComments.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
+            <state relative-caret-position="867">
               <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
               <folding />
             </state>
@@ -148,8 +134,8 @@
       <file leaf-file-name="ArticleDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DAO/ArticleDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="43" column="164" lean-forward="false" selection-start-line="43" selection-start-column="164" selection-end-line="43" selection-end-column="164" />
+            <state relative-caret-position="68">
+              <caret line="140" column="50" lean-forward="false" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="50" />
               <folding>
                 <marker date="1539565916435" expanded="true" signature="785:814" ph="SELECT * FRO... project_article" />
                 <marker date="1539565916435" expanded="true" signature="785:846" ph="SELECT * FRO... project_article" />
@@ -623,7 +609,7 @@
       <workItem from="1539049549423" duration="7369000" />
       <workItem from="1539305270148" duration="4283000" />
       <workItem from="1539398969608" duration="12644000" />
-      <workItem from="1539551766472" duration="15078000" />
+      <workItem from="1539551766472" duration="15848000" />
     </task>
     <task id="LOCAL-00001" summary="yang">
       <created>1539056359323</created>
@@ -643,7 +629,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47557000" />
+    <option name="totallyTimeSpent" value="48327000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1054,10 +1040,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticlesWithComments.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="41" column="47" lean-forward="false" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="81" column="36" lean-forward="false" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/mySQL.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="59" column="15" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/Admin_allArticles.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="37" column="19" lean-forward="true" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="33" column="88" lean-forward="true" selection-start-line="33" selection-start-column="88" selection-end-line="33" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/ArticleDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="43" column="164" lean-forward="false" selection-start-line="43" selection-start-column="164" selection-end-line="43" selection-end-column="164" />
+        <state relative-caret-position="68">
+          <caret line="140" column="50" lean-forward="false" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="50" />
           <folding>
             <marker date="1539565916435" expanded="true" signature="785:814" ph="SELECT * FRO... project_article" />
             <marker date="1539565916435" expanded="true" signature="785:846" ph="SELECT * FRO... project_article" />
@@ -1087,50 +1113,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticlesWithComments.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="41" column="47" lean-forward="false" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="81" column="36" lean-forward="false" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/mySQL.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="59" column="15" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/JSP_Pages/articleComments.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
+        <state relative-caret-position="867">
           <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/Admin_allArticles.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="37" column="19" lean-forward="true" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="33" column="88" lean-forward="true" selection-start-line="33" selection-start-column="88" selection-end-line="33" selection-end-column="88" />
           <folding />
         </state>
       </provider>
