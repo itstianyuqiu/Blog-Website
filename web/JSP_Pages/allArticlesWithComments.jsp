@@ -1,6 +1,7 @@
 <%@ page import="DAO.ArticleDAO" %>
 <%@ page import="POJO.ArticlePOJO" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="POJO.UserPOJO" %><%--
   Created by IntelliJ IDEA.
   User: Crystal
   Date: 2018/10/11
@@ -28,6 +29,15 @@
         List<ArticlePOJO> allArticles = newArticleDAO.loadAllArticles();
 
         for (ArticlePOJO a : allArticles) {
+
+            UserPOJO user = newArticleDAO.getUserName(String.valueOf(a.getAuthor_id())); //added method in DAO to return user's name details
+
+            out.println("<header>");
+            out.println("<h3>" + user.getFirstName() + " " + user.getLastName() + "</h3>");
+            out.println("<br>");
+            out.println("<h5>" + user.getUsername() + "</h5>");
+            out.println("</header>");
+            out.println("<br>");
 
             out.println("<h4>" + a.getTitle() + "</h4>");
             out.println("<br>");

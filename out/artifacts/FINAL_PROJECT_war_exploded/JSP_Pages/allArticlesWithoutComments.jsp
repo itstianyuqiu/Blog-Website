@@ -1,6 +1,7 @@
 <%@ page import="DAO.ArticleDAO" %>
 <%@ page import="java.util.List" %>
-<%@ page import="POJO.ArticlePOJO" %><%--
+<%@ page import="POJO.ArticlePOJO" %>
+<%@ page import="POJO.UserPOJO" %><%--
   Created by IntelliJ IDEA.
   User: kugn318
   Date: 5/10/2018
@@ -31,6 +32,20 @@
         out.println(" <div class=\"6u\" >");
         out.println("<section class=\"box\">");
         out.println(" <a href=\"#\" class=\"image image-full\"><img src=\"images/pic09.jpg\" alt=\"\"  height=\"272\"/></a>");
+
+        //Add author's name to article when displaying all articles
+
+        UserPOJO user = newArticleDAO.getUserName(String.valueOf(a.getAuthor_id())); //added method in DAO to return user's name details
+
+        out.println("<header>");
+        out.println("<h3>" + user.getFirstName() + " " + user.getLastName() + "</h3>");
+        out.println("<br>");
+        out.println("<h5>" + user.getUsername() + "</h5>");
+        out.println("</header>");
+        out.println("<br>");
+
+        // --------------------------------------------------------------------------------
+
         out.println("<header>");
         out.println("<h3>" + a.getTitle() + "</h3>");
         out.println("</header>");

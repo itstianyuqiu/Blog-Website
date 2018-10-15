@@ -43,6 +43,8 @@
             out.println("<p>" + a.getContent() + "</p>");
             out.println("<br>");
             int articleID = a.getArticle_id();
+            String articleTitle = a.getTitle();
+            String articleContent =a.getContent();
 
                 out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
 
@@ -56,12 +58,9 @@
                 <%
 
             // get the session of current article and current button, if matches with the current iteration of the loop then show
-
-
             String currentArticle = request.getSession().getAttribute("current_article").toString();
             String currentButton = request.getSession().getAttribute("button_" + articleID).toString();
-
-
+            
             //Get the current article & button session, if matches with the current iteration of the loop, then show & load the comments div.
 
             if ((articleID == Integer.parseInt(currentArticle)) && (currentButton.equals("true"))){
@@ -79,16 +78,15 @@
                     </script>
                 <%
             }
-
-
-
+            
             //create the Delete and Edit buttons, passing on current article ID
             out.print("<form action=\"/UpdateArticleDatabase\" method=\"get\">");
             out.print("<input type=\"submit\" value=\"Delete\" name=\"delete_button\"\">");
             out.print("<input type=\"submit\" value=\"Edit\" name=\"edit_button\"\">");
             out.print("<input type=\"hidden\" name=\"articleID\" value=\"" + articleID + "\">");
+            out.print("<input type=\"hidden\" name=\"articleTitle\" value=\"" + articleTitle + "\">");
+            out.print("<input type=\"hidden\" name=\"articleContent\" value=\"" + articleContent + "\">");
             out.print("</form>");
-
 
             }
 

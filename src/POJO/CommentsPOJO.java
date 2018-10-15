@@ -5,6 +5,7 @@ public class CommentsPOJO {
     int userID;
     int articleID;
     String comments;
+    boolean commentsVisibility;
 
     public CommentsPOJO(){}
 
@@ -38,5 +39,13 @@ public class CommentsPOJO {
 
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+    public boolean isCommentsVisibility() {
+        return commentsVisibility;
+    }
+
+    public void setCommentsVisibility(boolean commentsVisibility) {
+        this.commentsVisibility = commentsVisibility;
     }
 }

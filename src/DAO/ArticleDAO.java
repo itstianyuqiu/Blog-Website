@@ -24,7 +24,7 @@ public class ArticleDAO implements AutoCloseable {
     public List<ArticlePOJO> loadAllArticles() throws SQLException {
 
         List<ArticlePOJO> articles = new ArrayList<>();
-        try (PreparedStatement smt = this.conn.prepareStatement("SELECT * FROM project_article")) {
+        try (PreparedStatement smt = this.conn.prepareStatement("SELECT * FROM project_article WHERE article_visibility = TRUE")) {
             try (ResultSet rs = smt.executeQuery()) {
                 while (rs.next()) {
                     ArticlePOJO article = loadSingleArticle(rs);
@@ -38,7 +38,7 @@ public class ArticleDAO implements AutoCloseable {
     public List<ArticlePOJO> loadUserArticles(String userID) throws SQLException {
         List<ArticlePOJO> articles = new ArrayList<>();
 
-        try (PreparedStatement smt = this.conn.prepareStatement("SELECT * FROM project_article WHERE author_id = ?")){
+        try (PreparedStatement smt = this.conn.prepareStatement("SELECT * FROM project_article WHERE author_id = ? AND article_visibility = TRUE ")){
 
             smt.setString(1, userID);
 
@@ -61,13 +61,30 @@ public class ArticleDAO implements AutoCloseable {
             article.setArticle_id(rs.getInt(1));
             article.setTitle(rs.getString(2));
             article.setContent(rs.getString(3));
-
+            article.setAuthor_id(rs.getInt(4));
+            article.setArticle_visibility(rs.getBoolean(5));
         }
         catch (SQLException e){
             System.out.println(e.getMessage());
         }
 
         return article;
+    }
+
+    public UserPOJO getUserName (String userID) throws SQLException {
+        UserPOJO upj = new UserPOJO();
+
+        try (PreparedStatement smt = this.conn.prepareStatement("SELECT user_username, user_firstname, user_lastname FROM project_user JOIN project_article a ON project_user.user_id = a.author_id WHERE a.author_id = ?")) {
+            smt.setString(1, userID);
+            try (ResultSet rs = smt.executeQuery()){
+                while (rs.next()){
+                    upj.setUsername(rs.getString("user_username"));
+                    upj.setFirstName(rs.getString("user_firstname"));
+                    upj.setLastName(rs.getString("user_lastname"));
+                }
+            }
+        }
+        return upj;
     }
 
     public void addNewArticle(ArticlePOJO apj, UserPOJO upj) throws SQLException{
@@ -77,7 +94,7 @@ public class ArticleDAO implements AutoCloseable {
         String content = apj.getContent();
 
 
-        try (PreparedStatement smt = this.conn.prepareStatement("INSERT INTO project_article (article_title, article_content, author_id) VALUES (?, ?, ?)")) {
+        try (PreparedStatement smt = this.conn.prepareStatement("INSERT INTO project_article (article_title, article_content, author_id, article_visibility) VALUES (?, ?, ?, TRUE)")) {
             smt.setString(1,heading);
             smt.setString(2,content);
             smt.setInt(3, userID);
@@ -118,7 +135,7 @@ public class ArticleDAO implements AutoCloseable {
 
         List<CommentsPOJO> allComments = new ArrayList<>();
 
-        try (PreparedStatement smt = this.conn.prepareStatement("SELECT comment_id, user_id, article_comment FROM project_user_article WHERE article_id = ?")){
+        try (PreparedStatement smt = this.conn.prepareStatement("SELECT comment_id, user_id, article_comment, comment_visibility FROM project_user_article WHERE article_id = ? AND comment_visibility = TRUE")){
             smt.setString(1, articleID);
 
             try (ResultSet rs = smt.executeQuery()){
@@ -128,6 +145,7 @@ public class ArticleDAO implements AutoCloseable {
                     cpj.setUserID(rs.getInt("user_id"));
                     cpj.setArticleID(Integer.parseInt(articleID));
                     cpj.setComments(rs.getString("article_comment"));
+                    cpj.setCommentsVisibility(rs.getBoolean("comment_visibility"));
                     allComments.add(cpj);
                 }
             }
@@ -142,7 +160,7 @@ public class ArticleDAO implements AutoCloseable {
         int articleID = cpj.getArticleID();
         String content = cpj.getComments();
 
-        try (PreparedStatement smt = this.conn.prepareStatement("INSERT INTO project_user_article (user_id, article_id, article_comment) VALUES (?, ?, ?)")) {
+        try (PreparedStatement smt = this.conn.prepareStatement("INSERT INTO project_user_article (user_id, article_id, article_comment, comment_visibility) VALUES (?, ?, ?, TRUE)")) {
             smt.setInt(1,userID);
             smt.setInt(2,articleID);
             smt.setString(3, content);
@@ -172,6 +190,95 @@ public class ArticleDAO implements AutoCloseable {
             }
 
         return article_ID;
+    }
+
+    public void changeArticleVisibility(String index) throws SQLException {
+
+        int visibility;
+
+        try (PreparedStatement smt = this.conn.prepareStatement("SELECT article_visibility FROM project_article WHERE article_id = ?")) {
+            smt.setString(1, index);
+            try (ResultSet rs = smt.executeQuery()) {
+                rs.next();
+                visibility = rs.getInt(1);
+            }
+        }
+
+        if (visibility == 0) {
+            try (PreparedStatement smt = this.conn.prepareStatement("UPDATE project_article SET article_visibility = TRUE WHERE article_id = ?")) {
+                smt.setString(1, index);
+                smt.executeUpdate();
+            }
+        } else if (visibility == 1) {
+            try (PreparedStatement smt = this.conn.prepareStatement("UPDATE project_article SET article_visibility = FALSE WHERE article_id = ?")) {
+                smt.setString(1, index);
+                smt.executeUpdate();
+            }
+
+        }
+    }
+
+    public void changeCommentVisibility(String index) throws SQLException {
+
+        int visibility;
+
+        try (PreparedStatement smt = this.conn.prepareStatement("SELECT comment_visibility FROM project_user_article WHERE comment_id = ?")) {
+            smt.setString(1, index);
+            try (ResultSet rs = smt.executeQuery()) {
+                rs.next();
+                visibility = rs.getInt(1);
+            }
+        }
+
+        if (visibility == 0) {
+            try (PreparedStatement smt = this.conn.prepareStatement("UPDATE project_user_article SET comment_visibility = TRUE WHERE comment_id = ?")) {
+                smt.setString(1, index);
+                smt.executeUpdate();
+            }
+        } else if (visibility == 1) {
+            try (PreparedStatement smt = this.conn.prepareStatement("UPDATE project_user_article SET comment_visibility = FALSE WHERE comment_id = ?")) {
+                smt.setString(1, index);
+                smt.executeUpdate();
+            }
+
+        }
+    }
+
+    public List<ArticlePOJO> loadAllArticlesAdmin() throws SQLException {
+
+        List<ArticlePOJO> articles = new ArrayList<>();
+        try (PreparedStatement smt = this.conn.prepareStatement("SELECT * FROM project_article")) {
+            try (ResultSet rs = smt.executeQuery()) {
+                while (rs.next()) {
+                    ArticlePOJO article = loadSingleArticle(rs);
+                    articles.add(article);
+                }
+            }
+        }
+        return articles;
+    }
+
+    public List<CommentsPOJO> getCommentsByArticleAdmin (String articleID) throws SQLException {
+
+        List<CommentsPOJO> allComments = new ArrayList<>();
+
+        try (PreparedStatement smt = this.conn.prepareStatement("SELECT comment_id, user_id, article_comment, comment_visibility FROM project_user_article WHERE article_id = ?")){
+            smt.setString(1, articleID);
+
+            try (ResultSet rs = smt.executeQuery()){
+                while (rs.next()){
+                    CommentsPOJO cpj = new CommentsPOJO();
+                    cpj.setCommentID(rs.getInt("comment_id"));
+                    cpj.setUserID(rs.getInt("user_id"));
+                    cpj.setArticleID(Integer.parseInt(articleID));
+                    cpj.setComments(rs.getString("article_comment"));
+                    cpj.setCommentsVisibility(rs.getBoolean("comment_visibility"));
+                    allComments.add(cpj);
+                }
+            }
+        }
+
+        return allComments;
     }
 
     @Override

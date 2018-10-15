@@ -42,6 +42,10 @@ public class UpdateArticleDatabase extends HttpServlet {
             } else if ("Edit".equals(editArticle)){
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/JSP_Pages/editUserArticle.jsp");
                 req.getSession().setAttribute("articleID", req.getParameter("articleID"));
+                apj.setArticle_id(Integer.parseInt(req.getSession().getAttribute("articleID").toString()));
+                apj.setTitle(req.getParameter("articleTitle"));
+                apj.setContent(req.getParameter("articleContent"));
+                req.getSession().setAttribute("editArticle", apj);
                 dispatcher.forward(req, resp);
             } else if ("Update".equals(updateArticle)){
                 apj.setArticle_id(Integer.parseInt(req.getSession().getAttribute("articleID").toString()));
