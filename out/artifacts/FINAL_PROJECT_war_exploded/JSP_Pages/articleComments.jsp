@@ -28,14 +28,12 @@
 
         List<CommentsPOJO> listOfComments = newArticleDAO.getCommentsByArticle(current_article);
             for (CommentsPOJO cpj: listOfComments){
+                out.print("<div id =\"comment_" + cpj.getCommentID() +"\">");
                 out.println("<b>" + cpj.getUserID() + "</b>");
                 out.println("<p>" + cpj.getComments() + "</p>");
                 int commentID = cpj.getCommentID();
 
                 String userID = request.getSession().getAttribute("userID").toString();
-
-
-
 
                 if (userID.equals("" + cpj.getUserID())){
                     out.println("<form action=\"/CommentServlet\" method=\"get\">");
@@ -44,14 +42,21 @@
                     out.println("</form>");
                 }
 
+                out.println("<form action=\"/CommentServlet\" method=\"get\">");
+                out.println("<input type=\"text\" name=\"comments_content\">");
+                out.println("<input type=\"submit\" value=\"Comment On Comment\" name=\"comment_on_comment_button\"\">");
+                out.println("</form>");
+
                 out.println("<br>");
-                out.println("---");
+                out.println("<hr>");
+                out.print("</div>");
             }
 
-    out.println("<form action=\"/CommentServlet\" method=\"get\">");
-    out.println("<input type=\"text\" name=\"comments_content\">");
-    out.println("<input type=\"submit\" value=\"Add New Comment\" name=\"add_comment_button\"\">");
-    out.println("</form>");
+            out.println("<hr>");
+            out.println("<form action=\"/CommentServlet\" method=\"get\">");
+            out.println("<input type=\"text\" name=\"comments_content\">");
+            out.println("<input type=\"submit\" value=\"Add New Comment\" name=\"add_comment_button\"\">");
+            out.println("</form>");
 
     } catch (Exception e) {
         e.printStackTrace();

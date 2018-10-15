@@ -29,6 +29,7 @@
             <thead>
             <tr>
                 <th>Author ID</th>
+                <th>Article ID</th>
                 <th>Article Title</th>
                 <th>Article Visibility</th>
                 <th>Show/Hide Article</th>
@@ -39,6 +40,7 @@
                  for (ArticlePOJO a : allArticles) {
                      out.println("<tr>");
                      out.println("<td>" + a.getAuthor_id() + "</td>");
+                     out.println("<td>" + a.getArticle_id() + "</td>");
                      out.println("<td>" + a.getTitle() + "</td>");
                      out.println("<td>" + a.isArticle_visibility() + "</td>");
                      out.println("<td>");

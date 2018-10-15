@@ -36,9 +36,9 @@
         //looping through the generated list
         for (ArticlePOJO a : allArticles) {
 
-            System.out.println(a.getArticle_id());
-
             out.println("<h4>" + a.getTitle() + "</h4>");
+            out.println("<br>");
+            out.println("<i>" + "Publishing Date: " + a.getArticle_date() + "</i>");
             out.println("<br>");
             out.println("<p>" + a.getContent() + "</p>");
             out.println("<br>");

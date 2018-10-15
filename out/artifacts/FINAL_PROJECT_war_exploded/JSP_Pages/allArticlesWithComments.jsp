@@ -35,13 +35,15 @@
             out.println("<header>");
             out.println("<h3>" + user.getFirstName() + " " + user.getLastName() + "</h3>");
             out.println("<br>");
-            out.println("<h5>" + user.getUsername() + "</h5>");
+            out.println("<i>" + user.getUsername() + "</i>");
             out.println("</header>");
             out.println("<br>");
 
-            out.println("<h4>" + a.getTitle() + "</h4>");
+            out.println("<h4>" + "Heading: " + a.getTitle() + "</h4>");
             out.println("<br>");
-            out.println("<p>" + a.getContent() + "</p>");
+            out.println("<i>" + "Publishing Date: " + a.getArticle_date() + "</i>");
+            out.println("<br>");
+            out.println("<p>" + "Content: " +  a.getContent() + "</p>");
             out.println("<br>");
             int articleID = a.getArticle_id();
 

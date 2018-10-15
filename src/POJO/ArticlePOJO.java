@@ -6,6 +6,7 @@ public class ArticlePOJO {
     private String content;
     private int author_id;
     private boolean article_visibility;
+    private String article_date;
 
     public ArticlePOJO(){
 
@@ -37,6 +38,10 @@ public class ArticlePOJO {
         return author_id;
     }
 
+    public void setArticle_date(String article_date) {
+        this.article_date = article_date;
+    }
+
     public void setAuthor_id(int author_id) {
         this.author_id = author_id;
     }
@@ -47,5 +52,9 @@ public class ArticlePOJO {
 
     public boolean isArticle_visibility() {
         return article_visibility;
+    }
+
+    public String getArticle_date() {
+        return article_date;
     }
 }

@@ -3,7 +3,6 @@ DROP TABLE IF EXISTS project_article;
 DROP TABLE IF EXISTS project_user;
 
 
-
 CREATE TABLE project_user (
   user_id         INT NOT NULL AUTO_INCREMENT,
   user_firstname  VARCHAR(50),
@@ -24,6 +23,7 @@ CREATE TABLE project_article (
   article_content TEXT,
   author_id  INT,
   article_visibility BOOLEAN,
+  article_date DATE,
   FOREIGN KEY (author_id) REFERENCES project_user (user_id),
   PRIMARY KEY (article_id)
 );
@@ -40,7 +40,7 @@ CREATE TABLE project_user_article (
   FOREIGN KEY (article_id) REFERENCES project_article (article_id)
 );
 
-INSERT INTO project_article (article_title, article_content, author_id, article_visibility) VALUES ('heading 2', 'content article 2', 1, TRUE );
+INSERT INTO project_article (article_title, article_content, author_id, article_visibility,article_date) VALUES ('heading 2', 'content article 2', 1, TRUE, DATE '2018-03-17');
 
 INSERT INTO project_user (user_firstname, user_lastname, user_country, user_dob,
                           user_desciption, user_username, user_password) VALUES
@@ -71,3 +71,4 @@ UPDATE project_article SET article_visibility = FALSE WHERE article_id = 8;
 
 SELECT article_visibility FROM project_article WHERE article_id = 8;
 
+SELECT * FROM project_article WHERE article_visibility = TRUE AND article_date <= CURDATE();

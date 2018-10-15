@@ -10,6 +10,8 @@
 <head>
     <link rel="stylesheet" href="TianCSS/homepage.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="../JQuery_lib/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="myJS.js"></script>
     <title>Add New Article</title>
 </head>
 <body>
@@ -25,9 +27,17 @@
     <textarea id="newarticile_content" name="article_content" rows="15"> </textarea>
     <br>
     <br>
+    <h5>Publishing Date:</h5>
+    <input id="theDate" type="date" name="article_date">
+    <script>
+        loadCurrentDate();
+    </script>
+    <br>
+    <br>
     <button type="submit" id="btn_newarticle" name="addArticle" value="Add Now">Submit</button>
 
 </form>
+
 
 </body>
 </html>

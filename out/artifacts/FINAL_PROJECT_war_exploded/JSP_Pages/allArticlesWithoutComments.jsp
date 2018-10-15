@@ -40,7 +40,7 @@
         out.println("<header>");
         out.println("<h3>" + user.getFirstName() + " " + user.getLastName() + "</h3>");
         out.println("<br>");
-        out.println("<h5>" + user.getUsername() + "</h5>");
+        out.println("<i>" + user.getUsername() + "</i>");
         out.println("</header>");
         out.println("<br>");
 
@@ -49,6 +49,8 @@
         out.println("<header>");
         out.println("<h3>" + a.getTitle() + "</h3>");
         out.println("</header>");
+        out.println("<br>");
+        out.println("<i>" + "Publishing Date: " + a.getArticle_date() + "</i>");
         out.println("<br>");
         out.println("<p>" + a.getContent() + "</p>");
         out.println("<br>");

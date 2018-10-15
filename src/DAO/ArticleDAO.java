@@ -4,7 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import POJO.ArticlePOJO;
@@ -24,7 +27,7 @@ public class ArticleDAO implements AutoCloseable {
     public List<ArticlePOJO> loadAllArticles() throws SQLException {
 
         List<ArticlePOJO> articles = new ArrayList<>();
-        try (PreparedStatement smt = this.conn.prepareStatement("SELECT * FROM project_article WHERE article_visibility = TRUE")) {
+        try (PreparedStatement smt = this.conn.prepareStatement("SELECT * FROM project_article WHERE article_visibility = TRUE AND article_date <= CURDATE()")) {
             try (ResultSet rs = smt.executeQuery()) {
                 while (rs.next()) {
                     ArticlePOJO article = loadSingleArticle(rs);
@@ -38,7 +41,7 @@ public class ArticleDAO implements AutoCloseable {
     public List<ArticlePOJO> loadUserArticles(String userID) throws SQLException {
         List<ArticlePOJO> articles = new ArrayList<>();
 
-        try (PreparedStatement smt = this.conn.prepareStatement("SELECT * FROM project_article WHERE author_id = ? AND article_visibility = TRUE ")){
+        try (PreparedStatement smt = this.conn.prepareStatement("SELECT * FROM project_article WHERE author_id = ? AND article_visibility = TRUE AND article_date <= CURDATE()")){
 
             smt.setString(1, userID);
 
@@ -63,6 +66,7 @@ public class ArticleDAO implements AutoCloseable {
             article.setContent(rs.getString(3));
             article.setAuthor_id(rs.getInt(4));
             article.setArticle_visibility(rs.getBoolean(5));
+            article.setArticle_date(rs.getString(6));
         }
         catch (SQLException e){
             System.out.println(e.getMessage());
@@ -87,17 +91,20 @@ public class ArticleDAO implements AutoCloseable {
         return upj;
     }
 
-    public void addNewArticle(ArticlePOJO apj, UserPOJO upj) throws SQLException{
+    public void addNewArticle(ArticlePOJO apj, UserPOJO upj) throws SQLException, ParseException{
 
         int userID = upj.getUser_id();
         String heading = apj.getTitle();
         String content = apj.getContent();
+        String dateString = apj.getArticle_date();
 
+        Date date = new SimpleDateFormat("yyyy-MM-dd").parse(dateString);
 
-        try (PreparedStatement smt = this.conn.prepareStatement("INSERT INTO project_article (article_title, article_content, author_id, article_visibility) VALUES (?, ?, ?, TRUE)")) {
+        try (PreparedStatement smt = this.conn.prepareStatement("INSERT INTO project_article (article_title, article_content, author_id, article_visibility, article_date) VALUES (?, ?, ?, TRUE, ?)")) {
             smt.setString(1,heading);
             smt.setString(2,content);
             smt.setInt(3, userID);
+            smt.setDate(4, new java.sql.Date(date.getTime()));
             smt.executeUpdate();
         }
 

@@ -31,6 +31,7 @@ public class UpdateArticleDatabase extends HttpServlet {
                 System.out.println("I got here");
                 apj.setTitle(req.getParameter("article_heading"));
                 apj.setContent(req.getParameter("article_content"));
+                apj.setArticle_date(req.getParameter("article_date"));
                 upj.setUser_id(Integer.parseInt(req.getSession().getAttribute("userID").toString()));
                 newArticleDAO.addNewArticle(apj,upj);
                 req.getSession().setAttribute("page","myArticles");
