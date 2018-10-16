@@ -7,64 +7,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b7fbd8c-773f-427a-91cd-f776cccc2f4c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/345f34d4-2e2d-4cfe-951d-7b877791e0fd/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/ArticleDAO.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/HikariConnectionPool.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/UserDAO.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/CommentsPOJO.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Servlet/CommentServlet.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/26d96d04-4478-42b0-9e7e-60b5aa6bf0ad.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/345f34d4-2e2d-4cfe-951d-7b877791e0fd.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d4a473b5-6575-4fdf-b5f1-877327745b86.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f0d9df20-70b4-4eac-86de-d506222e0485.xml" afterPath="" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/editUserArticle.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/newArticleSubmitForm.jsp" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/345f34d4-2e2d-4cfe-951d-7b877791e0fd.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/345f34d4-2e2d-4cfe-951d-7b877791e0fd.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/allArticles.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/allArticles.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/articleComments.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/articleComments.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/myArticles.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/myArticles.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/ArticleDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/ArticleDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/HikariConnectionPool.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/HikariConnectionPool.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/CommentsPOJO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/CommentsPOJO.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/CommentServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/CommentServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UpdateArticleDatabase.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UpdateArticleDatabase.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserLoginServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserLoginServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserNewAccountServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserNewAccountServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/UserServlet/ArticleServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/ArticleServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/UserServlet/CommentServlet.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/UserServlet/UpdateArticleDatabase.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/UserServlet/UserLoginServlet.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/UserServlet/UserNewAccountServlet.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/UserServlet/UserUpdateAccountServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserUpdateAccountServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/connection.properties" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/connection.properties" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/mySQL.sql" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/mySQL.sql" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/settingpage.css" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/settingpage.css" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/UserDAO.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/UserAvatarPOJO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/UserAvatarPOJO.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserUpdateAccountServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserUpdateAccountServlet.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/homepage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/homepage.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/myJS.js" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/myJS.js" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/UserServlet/CommentServlet.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/UserServlet/CommentServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/UserServlet/UpdateArticleDatabase.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/UserServlet/UpdateArticleDatabase.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/UserServlet/UserLoginServlet.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/UserServlet/UserLoginServlet.class" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/ArticleDAO.java" afterPath="$PROJECT_DIR$/src/DAO/ArticleDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/HikariConnectionPool.java" afterPath="$PROJECT_DIR$/src/DAO/HikariConnectionPool.java" />
-      <change beforePath="$PROJECT_DIR$/src/POJO/CommentsPOJO.java" afterPath="$PROJECT_DIR$/src/POJO/CommentsPOJO.java" />
-      <change beforePath="$PROJECT_DIR$/src/UserServlet/ArticleServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/ArticleServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/UserServlet/CommentServlet.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/UserServlet/UpdateArticleDatabase.java" afterPath="$PROJECT_DIR$/src/Servlet/UpdateArticleDatabase.java" />
-      <change beforePath="$PROJECT_DIR$/src/UserServlet/UserDeleteAccountServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/UserDeleteAccountServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/UserServlet/UserLogOutServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/UserLogOutServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/UserServlet/UserLoginServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/UserLoginServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/UserServlet/UserNewAccountServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/UserNewAccountServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/UserServlet/UserUpdateAccountServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/UserUpdateAccountServlet.java" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/allArticles.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/allArticles.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithComments.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithComments.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/articleComments.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/articleComments.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/connection.properties" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/connection.properties" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/mySQL.sql" afterPath="$PROJECT_DIR$/web/WEB-INF/mySQL.sql" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/settingpage.html" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/settingpage.html" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/settingpage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/settingpage.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/UserDAO.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/UserAvatarPOJO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/UserAvatarPOJO.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserUpdateAccountServlet.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserUpdateAccountServlet.class" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/UserDAO.java" afterPath="$PROJECT_DIR$/src/DAO/UserDAO.java" />
+      <change beforePath="$PROJECT_DIR$/src/POJO/UserAvatarPOJO.java" afterPath="$PROJECT_DIR$/src/POJO/UserAvatarPOJO.java" />
+      <change beforePath="$PROJECT_DIR$/src/POJO/UserPOJO.java" afterPath="$PROJECT_DIR$/src/POJO/UserPOJO.java" />
+      <change beforePath="$PROJECT_DIR$/src/Servlet/UserLoginServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/UserLoginServlet.java" />
+      <change beforePath="$PROJECT_DIR$/src/Servlet/UserNewAccountServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/UserNewAccountServlet.java" />
+      <change beforePath="$PROJECT_DIR$/src/Servlet/UserUpdateAccountServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/UserUpdateAccountServlet.java" />
+      <change beforePath="$PROJECT_DIR$/web/TianCSS/settingpage.css" afterPath="$PROJECT_DIR$/web/TianCSS/settingpage.css" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change beforePath="$PROJECT_DIR$/web/article.jsp" afterPath="" />
       <change beforePath="$PROJECT_DIR$/web/homepage.jsp" afterPath="$PROJECT_DIR$/web/homepage.jsp" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
       <change beforePath="$PROJECT_DIR$/web/myJS.js" afterPath="$PROJECT_DIR$/web/myJS.js" />
+      <change beforePath="$PROJECT_DIR$/web/settingpage.jsp" afterPath="$PROJECT_DIR$/web/settingpage.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,6 +58,39 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="group1@db.sporadic.nz" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="group1@db.sporadic.nz" type="feb32156:DbDataSourceImpl" />
+        <item name="group1: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="group1@db.sporadic.nz" type="feb32156:DbDataSourceImpl" />
+        <item name="group1: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="project_article: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="group1@db.sporadic.nz" type="feb32156:DbDataSourceImpl" />
+        <item name="group1: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="project_user: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="group1@db.sporadic.nz" type="feb32156:DbDataSourceImpl" />
+        <item name="group1: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="project_user_article: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="group1@db.sporadic.nz" type="feb32156:DbDataSourceImpl" />
+        <item name="group1: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="project_user_avatar: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="group1@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
     </expand>
     <select />
   </component>
@@ -95,43 +98,44 @@
     <favorites_list name="final_project" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="UserLoginServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Servlet/UserLoginServlet.java">
+    <leaf>
+      <file leaf-file-name="CommentServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Servlet/CommentServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="33" column="81" lean-forward="false" selection-start-line="33" selection-start-column="81" selection-end-line="33" selection-end-column="81" />
+            <state relative-caret-position="31">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homepage.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/homepage.jsp">
+      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DAO/UserDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="92" column="103" lean-forward="false" selection-start-line="92" selection-start-column="50" selection-end-line="92" selection-end-column="103" />
-              <folding />
+            <state relative-caret-position="1101">
+              <caret line="146" column="46" lean-forward="false" selection-start-line="146" selection-start-column="37" selection-end-line="146" selection-end-column="46" />
+              <folding>
+                <marker date="1539663319257" expanded="true" signature="701:727" ph="SELECT * FRO... project_user" />
+                <marker date="1539663319257" expanded="true" signature="1288:1338" ph="SELECT * FRO... project_user" />
+                <marker date="1539663319257" expanded="true" signature="3415:3635" ph="INSERT INTO project_user... " />
+                <marker date="1539663319257" expanded="true" signature="4416:4458" ph="DELETE FROM project_user... " />
+                <marker date="1539663319257" expanded="true" signature="4817:4978" ph="UPDATE project_user... " />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myArticles.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp">
+      <file leaf-file-name="UserPOJO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/POJO/UserPOJO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="33" column="112" lean-forward="false" selection-start-line="33" selection-start-column="106" selection-end-line="33" selection-end-column="112" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="allArticlesWithComments.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticlesWithComments.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1126">
-              <caret line="74" column="10" lean-forward="true" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
-              <folding />
+            <state relative-caret-position="282">
+              <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+              <folding>
+                <element signature="e#2470#2471#0" expanded="true" />
+                <element signature="e#2499#2500#0" expanded="true" />
+                <element signature="e#2543#2544#0" expanded="true" />
+                <element signature="e#2579#2580#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,35 +143,15 @@
       <file leaf-file-name="UserNewAccountServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Servlet/UserNewAccountServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="33" column="63" lean-forward="false" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="allArticlesWithoutComments.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="37" column="53" lean-forward="true" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mySQL.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/mySQL.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-131">
-              <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+            <state relative-caret-position="685">
+              <caret line="43" column="63" lean-forward="false" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="project_user" pinned="false" current-in-tab="false">
-        <entry file="das://table:/ae8a79/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_user">
+        <entry file="das://table:/29f0492a/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_user">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -175,21 +159,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <file leaf-file-name="editUserArticle.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/editUserArticle.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="755">
-              <caret line="99" column="101" lean-forward="true" selection-start-line="99" selection-start-column="101" selection-end-line="99" selection-end-column="101" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myJS.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/myJS.js">
+      <file leaf-file-name="settingpage.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/settingpage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="64" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="64" />
+            <state relative-caret-position="899">
+              <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserUpdateAccountServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Servlet/UserUpdateAccountServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="609">
+              <caret line="81" column="34" lean-forward="false" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -216,6 +210,8 @@
       <find>articles</find>
       <find>login</find>
       <find>form</find>
+      <find>close</find>
+      <find>UserUpdateAccountServlet</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -240,10 +236,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/WEB-INF/mySQL" />
-        <option value="$PROJECT_DIR$/src/HikariConnectionPool.java" />
         <option value="$PROJECT_DIR$/src/ArticleDAO.java" />
-        <option value="$PROJECT_DIR$/src/Servlet/ArticleServlet.java" />
         <option value="$PROJECT_DIR$/src/POJO/AdministratorPOJO.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/tian/homepage.html" />
         <option value="$PROJECT_DIR$/web/index_login.html" />
@@ -251,9 +244,6 @@
         <option value="$PROJECT_DIR$/web/homepage.css" />
         <option value="$PROJECT_DIR$/src/Servlet/UserServlet.java" />
         <option value="$PROJECT_DIR$/web/settingpage.css" />
-        <option value="$PROJECT_DIR$/src/Servlet/UserUpdateAccountServlet.java" />
-        <option value="$PROJECT_DIR$/web/settingpage.html" />
-        <option value="$PROJECT_DIR$/src/Servlet/UserLoginServlet.java" />
         <option value="$PROJECT_DIR$/web/mySQL.sql" />
         <option value="$PROJECT_DIR$/web/index_signup.jsp" />
         <option value="$PROJECT_DIR$/src/POJO/ArticlePOJO.java" />
@@ -275,21 +265,27 @@
         <option value="$PROJECT_DIR$/../0118program/src/datasource.properties" />
         <option value="$PROJECT_DIR$/src/UserServlet/UpdateArticleDatabase.java" />
         <option value="$PROJECT_DIR$/web/index_login.jsp" />
-        <option value="$PROJECT_DIR$/src/DAO/UserDAO.java" />
-        <option value="$PROJECT_DIR$/src/POJO/UserPOJO.java" />
-        <option value="$PROJECT_DIR$/src/POJO/UserAvatarPOJO.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/UserServlet/UserLogOutServlet.java" />
         <option value="$PROJECT_DIR$/src/UserServlet/UserDeleteAccountServlet.java" />
         <option value="$PROJECT_DIR$/src/UserServlet/UserUpdateAccountServlet.java" />
-        <option value="$PROJECT_DIR$/web/settingpage.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/classes/connection.properties" />
         <option value="$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp" />
         <option value="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithComments.jsp" />
         <option value="$PROJECT_DIR$/web/homepage.jsp" />
         <option value="$PROJECT_DIR$/src/UserServlet/UserLoginServlet.java" />
         <option value="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/Servlet/ArticleServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/classes/connection.properties" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/Servlet/Textselevt.java" />
+        <option value="$PROJECT_DIR$/web/settingpage.html" />
+        <option value="$PROJECT_DIR$/web/TianCSS/settingpage.css" />
+        <option value="$PROJECT_DIR$/src/POJO/UserAvatarPOJO.java" />
+        <option value="$PROJECT_DIR$/src/DAO/UserDAO.java" />
+        <option value="$PROJECT_DIR$/src/Servlet/UserUpdateAccountServlet.java" />
+        <option value="$PROJECT_DIR$/src/Servlet/UserLoginServlet.java" />
+        <option value="$PROJECT_DIR$/src/POJO/UserPOJO.java" />
+        <option value="$PROJECT_DIR$/web/settingpage.jsp" />
         <option value="$PROJECT_DIR$/src/Servlet/UserNewAccountServlet.java" />
       </list>
     </option>
@@ -307,11 +303,11 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2869" />
+    <option name="y" value="-11" />
+    <option name="width" value="2902" />
+    <option name="height" value="1582" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -329,10 +325,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -372,12 +365,6 @@
               <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="final_project" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="JSP_Pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="final_project" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="TianCSS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -397,6 +384,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -404,30 +394,31 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="H:/Project Versions/12-10/final_project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Crystal+tian/final_project_1015" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="SQL" />
+    <property name="Database.Console.ShowToolbar" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\CY\Documents\UoA\final_project\web" />
-      <recent name="C:\Users\CY\Documents\UoA\final_project\web\WEB-INF" />
-      <recent name="C:\Users\CY\Documents\UoA\final_project\web\WEB-INF\lib" />
-      <recent name="E:\CS718CS719 FinalProject\final_project\web" />
-      <recent name="E:\CS718CS719 FinalProject\final_project\src\UserServlet" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="POJO" />
-      <recent name="Servlet" />
-      <recent name="" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\CY\Documents\UoA\CS718CS719 FinalProject\final_project" />
       <recent name="C:\Users\CY\Documents\UoA\CS718CS719 FinalProject\final_project\web\WEB-INF\old" />
       <recent name="C:\Users\CY\Documents\UoA\final_project\web" />
       <recent name="H:\FINAL_PROJECT\web\WEB-INF\lib" />
       <recent name="H:\FINAL_PROJECT\web" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="POJO" />
+      <recent name="Servlet" />
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\CY\Documents\UoA\final_project\web" />
+      <recent name="C:\Users\CY\Documents\UoA\final_project\web\WEB-INF" />
+      <recent name="C:\Users\CY\Documents\UoA\final_project\web\WEB-INF\lib" />
+      <recent name="E:\CS718CS719 FinalProject\final_project\web" />
+      <recent name="E:\CS718CS719 FinalProject\final_project\src\UserServlet" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -490,33 +481,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
     </configuration>
     <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.24" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8181/" />
@@ -593,6 +557,33 @@
         </option>
       </method>
     </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -652,42 +643,78 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="2869" y="-11" width="2902" height="1582" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287373" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19666183" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287373" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20029028" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33599418" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4391408" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14509246" sideWeight="0.49709725" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17460883" sideWeight="0.50290275" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.20519203" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="744" y="91" width="431" height="838" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287373" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17460883" sideWeight="0.50290275" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36754176" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="2969" y="89" width="2702" height="1382" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3252376" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20029028" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.2328125" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="4104" y="91" width="432" height="1378" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.20519203" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="744" y="91" width="431" height="838" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36754176" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287373" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19666183" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287373" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22386484" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33599418" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3252376" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1859375" sideWeight="0.49709725" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17460883" sideWeight="0.50290275" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17460883" sideWeight="0.50290275" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="2969" y="89" width="2702" height="1382" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33599418" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4391408" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3252376" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22030237" sideWeight="0.49709725" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17460883" sideWeight="0.50290275" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946298" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296586" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-    </layout>
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937366" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17460883" sideWeight="0.50290275" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -716,75 +743,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/images/blog-logo.png" />
-    <entry file="file://$PROJECT_DIR$/web/images/default_avatar.png" />
-    <entry file="file://$PROJECT_DIR$/web/images/icons32.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/icons48.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/icons64.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/login.png" />
-    <entry file="file://$PROJECT_DIR$/web/images/logout_user_login_account-512.png" />
-    <entry file="file://$PROJECT_DIR$/web/images/milky-way-Morocco-8-24-2014-Besancon-Arnaud1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/no-photo.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/pic01.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/pic02.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/pic03.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/pic04.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/pic05.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/pic06.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/pic07.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/images/pic08.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/images/pic09.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -802,32 +760,6 @@
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/345f34d4-2e2d-4cfe-951d-7b877791e0fd/console.sql" />
-    <entry file="file://$PROJECT_DIR$/src/POJO/UserAvatarPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#378#379#0" expanded="false" />
-            <element signature="e#425#426#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlet/UpdateArticleDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="26" column="56" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/homepageCSS/myJS.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/TianCSS/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -835,15 +767,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/web/article.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1116">
-          <caret line="36" column="15" lean-forward="false" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/article.jsp">
+    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticles.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/Servlet/UserDeleteAccountServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/ae8a79/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_user" />
+    <entry file="file://$PROJECT_DIR$/web/homepage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4185">
+          <caret line="135" column="26" lean-forward="false" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/mySQL.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-131">
+          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/26d96d04-4478-42b0-9e7e-60b5aa6bf0ad/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index_signup.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -859,67 +822,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/29f0492a/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_user_article" />
-    <entry file="das://table:/29f0492a/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_article" />
-    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticles.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/Servlet/UserDeleteAccountServlet.java">
+    <entry file="file://$PROJECT_DIR$/web/homepageCSS/popUpCss.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/UserDAO.java">
+    <entry file="file://$PROJECT_DIR$/web/homepageCSS/myJS.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2244">
-          <caret line="140" column="73" lean-forward="false" selection-start-line="140" selection-start-column="73" selection-end-line="140" selection-end-column="73" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlet/UserUpdateAccountServlet.java">
+    <entry file="file://$PROJECT_DIR$/web/homepageCSS/myStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="48" column="76" lean-forward="false" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/settingpage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="54" lean-forward="false" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
-          <folding />
+    <entry file="das://table:/29f0492a/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_article">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/29f0492a/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_user" />
-    <entry file="file://$PROJECT_DIR$/src/POJO/UserPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="862">
-          <caret line="78" column="26" lean-forward="false" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="26" />
-          <folding />
+    <entry file="das://table:/29f0492a/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_user_article">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/connection.properties">
+    <entry file="file://$PROJECT_DIR$/src/Servlet/UpdateArticleDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlet/ArticleServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="19" column="94" lean-forward="false" selection-start-line="19" selection-start-column="94" selection-end-line="19" selection-end-column="94" />
+        <state relative-caret-position="775">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/JSP_Pages/articleComments.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="31" column="53" lean-forward="false" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/editUserArticle.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -927,81 +881,254 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/myJS.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="64" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlet/UserLoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="33" column="81" lean-forward="false" selection-start-line="33" selection-start-column="81" selection-end-line="33" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/ae8a79/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="33" column="112" lean-forward="false" selection-start-line="33" selection-start-column="106" selection-end-line="33" selection-end-column="112" />
+        <state relative-caret-position="-826">
+          <caret line="49" column="60" lean-forward="true" selection-start-line="49" selection-start-column="60" selection-end-line="49" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticlesWithComments.jsp">
+    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/newArticleSubmitForm.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1126">
-          <caret line="74" column="10" lean-forward="true" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/userLoggedMainPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/apache-tomcat-8.5.24/lib/servlet-api.jar!/javax/servlet/ServletException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="96" column="32" lean-forward="false" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
+        <state relative-caret-position="1178">
           <caret line="37" column="53" lean-forward="true" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticlesWithComments.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2542">
+          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/myJS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlet/Textselevt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="755">
-          <caret line="99" column="101" lean-forward="true" selection-start-line="99" selection-start-column="101" selection-end-line="99" selection-end-column="101" />
+        <state relative-caret-position="527">
+          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/homepage.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/connection.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="92" column="103" lean-forward="false" selection-start-line="92" selection-start-column="50" selection-end-line="92" selection-end-column="103" />
+        <state relative-caret-position="186">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="9" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/TianCSS/settingpage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5414">
+          <caret line="259" column="1" lean-forward="false" selection-start-line="259" selection-start-column="1" selection-end-line="259" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/POJO/CommentsPOJO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/POJO/UserAvatarPOJO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding>
+            <element signature="e#163#164#0" expanded="false" />
+            <element signature="e#202#203#0" expanded="false" />
+            <element signature="e#246#247#0" expanded="false" />
+            <element signature="e#282#283#0" expanded="false" />
+            <element signature="e#562#563#0" expanded="false" />
+            <element signature="e#592#593#0" expanded="false" />
+            <element signature="e#635#636#0" expanded="false" />
+            <element signature="e#673#674#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/29f0492a/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_user_avatar">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlet/ArticleServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlet/CommentServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/ArticleDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2325">
+          <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+          <folding>
+            <marker date="1539659630018" expanded="true" signature="694:723" ph="SELECT * FRO... project_article" />
+            <marker date="1539659630018" expanded="true" signature="1206:1236" ph="SELECT * FRO... project_article" />
+            <marker date="1539659630018" expanded="true" signature="1206:1343" ph="SELECT * FRO... project_article" />
+            <marker date="1539659630018" expanded="true" signature="2356:2430" ph="INSERT INTO project_article... " />
+            <marker date="1539659630018" expanded="true" signature="2621:2692" ph="SELECT artic... project_article" />
+            <marker date="1539659630018" expanded="true" signature="2921:2989" ph="INSERT INTO project_user_article... " />
+            <marker date="1539659630018" expanded="true" signature="3247:3300" ph="DELETE FROM project_user_article... " />
+            <marker date="1539659630018" expanded="true" signature="3451:3499" ph="DELETE FROM project_article... " />
+            <marker date="1539659630018" expanded="true" signature="3870:3956" ph="UPDATE project_article... " />
+            <marker date="1539659630018" expanded="true" signature="4345:4435" ph="SELECT comme... project_user_article" />
+            <marker date="1539659630018" expanded="true" signature="5268:5356" ph="INSERT INTO project_user_article... " />
+            <marker date="1539659630018" expanded="true" signature="5654:5707" ph="DELETE FROM project_user_article... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/UploadedPhotos/Mario_(New_Super_Mario_Bros._2).png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1101">
+          <caret line="146" column="46" lean-forward="false" selection-start-line="146" selection-start-column="37" selection-end-line="146" selection-end-column="46" />
+          <folding>
+            <marker date="1539663319257" expanded="true" signature="701:727" ph="SELECT * FRO... project_user" />
+            <marker date="1539663319257" expanded="true" signature="1288:1338" ph="SELECT * FRO... project_user" />
+            <marker date="1539663319257" expanded="true" signature="3415:3635" ph="INSERT INTO project_user... " />
+            <marker date="1539663319257" expanded="true" signature="4416:4458" ph="DELETE FROM project_user... " />
+            <marker date="1539663319257" expanded="true" signature="4817:4978" ph="UPDATE project_user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/POJO/UserPOJO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding>
+            <element signature="e#2470#2471#0" expanded="true" />
+            <element signature="e#2499#2500#0" expanded="true" />
+            <element signature="e#2543#2544#0" expanded="true" />
+            <element signature="e#2579#2580#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/settingpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1023">
+          <caret line="32" column="75" lean-forward="false" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlet/UserLoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlet/UserUpdateAccountServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="81" column="34" lean-forward="false" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Servlet/UserNewAccountServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="33" column="63" lean-forward="false" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
+        <state relative-caret-position="685">
+          <caret line="43" column="63" lean-forward="false" selection-start-line="43" selection-start-column="63" selection-end-line="43" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/mySQL.sql">
+    <entry file="das://table:/29f0492a/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/editUserArticle.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-131">
-          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/settingpage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="899">
+          <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
           <folding />
         </state>
       </provider>

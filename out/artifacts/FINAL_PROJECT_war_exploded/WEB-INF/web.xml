@@ -87,4 +87,14 @@
         <servlet-name>CommentServlet</servlet-name>
         <url-pattern>/CommentServlet</url-pattern>
     </servlet-mapping>
+    <!--text-->
+    <servlet>
+        <servlet-name>Textselevt</servlet-name>
+        <servlet-class>Servlet.Textselevt</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Textselevt</servlet-name>
+        <url-pattern>/Textselevt</url-pattern>
+    </servlet-mapping>
+    <!--text-->
 </web-app>

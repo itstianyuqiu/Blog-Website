@@ -11,11 +11,12 @@ public class UserPOJO {
     private String description;
     private String username;
     private String password;
+    private String avatar;
 
     public UserPOJO() {
     }
 
-    public UserPOJO(int user_id, String firstName, String lastName, String gender, String country, String birth, String email, String description, String username, String password) {
+    public UserPOJO(int user_id, String firstName, String lastName, String gender, String country, String birth, String email, String description, String username, String password, String avatar) {
         this.user_id = user_id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -26,6 +27,7 @@ public class UserPOJO {
         this.description = description;
         this.username = username;
         this.password = password;
+        this.avatar = avatar;
     }
 
     public int getUser_id() {
@@ -108,4 +110,11 @@ public class UserPOJO {
         this.password = password;
     }
 
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
 }

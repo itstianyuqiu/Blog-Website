@@ -41,6 +41,7 @@ public class UserNewAccountServlet extends HttpServlet {
             userPOJO.setPassword(password);
             userPOJO.setBirth(birthYear + "-" + birthMonth + "-" + birthDay);
             userPOJO.setGender(gender);
+            userPOJO.setAvatar("images/image_default_avatar.png");
 
             userDAO.addNewUserAccount(userPOJO);
             List<UserPOJO> usersList = userDAO.queryEntries();
