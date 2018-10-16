@@ -163,4 +163,22 @@ public class UserDAO implements AutoCloseable {
     public void close() throws Exception {
         this.conn.close();
     }
+
+    //added from articleDAO
+
+    public UserPOJO getUserName (String userID) throws SQLException {
+        UserPOJO upj = new UserPOJO();
+
+        try (PreparedStatement smt = this.conn.prepareStatement("SELECT user_username, user_firstname, user_lastname FROM project_user JOIN project_article a ON project_user.user_id = a.author_id WHERE a.author_id = ?")) {
+            smt.setString(1, userID);
+            try (ResultSet rs = smt.executeQuery()){
+                while (rs.next()){
+                    upj.setUsername(rs.getString("user_username"));
+                    upj.setFirstName(rs.getString("user_firstname"));
+                    upj.setLastName(rs.getString("user_lastname"));
+                }
+            }
+        }
+        return upj;
+    }
 }

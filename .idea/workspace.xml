@@ -6,7 +6,25 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b7fbd8c-773f-427a-91cd-f776cccc2f4c" name="Default" comment="completed show/hide advanced (admin interface)&#10;added values in edit page&#10;updated article &amp; user details in all articles" />
+    <list default="true" id="0b7fbd8c-773f-427a-91cd-f776cccc2f4c" name="Default" comment="completed show/hide advanced (admin interface)&#10;added values in edit page&#10;updated article &amp; user details in all articles">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/kugn318.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d4a473b5-6575-4fdf-b5f1-877327745b86.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/d4a473b5-6575-4fdf-b5f1-877327745b86.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/articleComments.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/articleComments.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/ArticleDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/ArticleDAO.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/CommentsPOJO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/CommentsPOJO.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/mySQL.sql" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/mySQL.sql" />
+      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/ArticleDAO.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/CommentsPOJO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/CommentsPOJO.class" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/ArticleDAO.java" afterPath="$PROJECT_DIR$/src/DAO/ArticleDAO.java" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/UserDAO.java" afterPath="$PROJECT_DIR$/src/DAO/UserDAO.java" />
+      <change beforePath="$PROJECT_DIR$/src/POJO/CommentsPOJO.java" afterPath="$PROJECT_DIR$/src/POJO/CommentsPOJO.java" />
+      <change beforePath="$PROJECT_DIR$/src/Servlet/CommentServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/CommentServlet.java" />
+      <change beforePath="$PROJECT_DIR$/src/Servlet/UpdateArticleDatabase.java" afterPath="$PROJECT_DIR$/src/Servlet/UpdateArticleDatabase.java" />
+      <change beforePath="$PROJECT_DIR$/src/Servlet/UserNewAccountServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/UserNewAccountServlet.java" />
+      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/articleComments.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/articleComments.jsp" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/mySQL.sql" afterPath="$PROJECT_DIR$/web/WEB-INF/mySQL.sql" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,21 +64,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mySQL.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/mySQL.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="59" column="15" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="allArticlesWithoutComments.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="33" column="88" lean-forward="true" selection-start-line="33" selection-start-column="88" selection-end-line="33" selection-end-column="88" />
+            <state relative-caret-position="17">
+              <caret line="33" column="88" lean-forward="false" selection-start-line="33" selection-start-column="88" selection-end-line="33" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -69,8 +77,8 @@
       <file leaf-file-name="articleComments.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/JSP_Pages/articleComments.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+            <state relative-caret-position="1037">
+              <caret line="61" column="62" lean-forward="false" selection-start-line="61" selection-start-column="62" selection-end-line="61" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -79,24 +87,19 @@
       <file leaf-file-name="Admin_allArticles.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/JSP_Pages/Admin_allArticles.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-289">
-              <caret line="37" column="19" lean-forward="true" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+            <state relative-caret-position="17">
+              <caret line="37" column="19" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommentsPOJO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/POJO/CommentsPOJO.java">
+      <file leaf-file-name="homepage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/homepage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-              <folding>
-                <element signature="e#820#821#0" expanded="true" />
-                <element signature="e#861#862#0" expanded="true" />
-                <element signature="e#930#931#0" expanded="true" />
-                <element signature="e#990#991#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="994">
+              <caret line="91" column="47" lean-forward="false" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,28 +107,8 @@
       <file leaf-file-name="allArticlesWithComments.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticlesWithComments.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="41" column="47" lean-forward="false" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateArticleDatabase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Servlet/UpdateArticleDatabase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="35" column="43" lean-forward="false" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="81" column="36" lean-forward="false" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+            <state relative-caret-position="207">
+              <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -134,33 +117,76 @@
       <file leaf-file-name="ArticleDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DAO/ArticleDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="140" column="50" lean-forward="false" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="50" />
+            <state relative-caret-position="313">
+              <caret line="445" column="49" lean-forward="false" selection-start-line="445" selection-start-column="49" selection-end-line="445" selection-end-column="49" />
               <folding>
-                <marker date="1539565916435" expanded="true" signature="785:814" ph="SELECT * FRO... project_article" />
-                <marker date="1539565916435" expanded="true" signature="785:846" ph="SELECT * FRO... project_article" />
-                <marker date="1539565916435" expanded="true" signature="785:876" ph="SELECT * FRO... project_article" />
-                <marker date="1539565916435" expanded="true" signature="1359:1408" ph="SELECT * FRO... project_article" />
-                <marker date="1539565916435" expanded="true" signature="1359:1438" ph="SELECT * FRO... project_article" />
-                <marker date="1539565916435" expanded="true" signature="1359:1468" ph="SELECT * FRO... project_article" />
-                <marker date="1539565916435" expanded="true" signature="2522:2674" ph="SELECT user_... project_user" />
-                <marker date="1539565916435" expanded="true" signature="3495:3626" ph="INSERT INTO project_article... " />
-                <marker date="1539565916435" expanded="true" signature="3988:4041" ph="DELETE FROM project_user_article... " />
-                <marker date="1539565916435" expanded="true" signature="4192:4240" ph="DELETE FROM project_article... " />
-                <marker date="1539565916435" expanded="true" signature="4611:4697" ph="UPDATE project_article... " />
-                <marker date="1539565916435" expanded="true" signature="5086:5196" ph="SELECT comme... project_user_article" />
-                <marker date="1539565916435" expanded="true" signature="5086:5226" ph="SELECT comme... project_user_article" />
-                <marker date="1539565916435" expanded="true" signature="6143:6257" ph="INSERT INTO project_user_article... " />
-                <marker date="1539565916435" expanded="true" signature="6555:6608" ph="DELETE FROM project_user_article... " />
-                <marker date="1539565916435" expanded="true" signature="6853:6916" ph="SELECT artic... project_article" />
-                <marker date="1539565916435" expanded="true" signature="7280:7347" ph="SELECT artic... project_article" />
-                <marker date="1539565916435" expanded="true" signature="7639:7712" ph="UPDATE project_article... " />
-                <marker date="1539565916435" expanded="true" signature="7917:7991" ph="UPDATE project_article... " />
-                <marker date="1539565916435" expanded="true" signature="8274:8346" ph="SELECT comme... project_user_article" />
-                <marker date="1539565916435" expanded="true" signature="8638:8716" ph="UPDATE project_user_article... " />
-                <marker date="1539565916435" expanded="true" signature="8921:9000" ph="UPDATE project_user_article... " />
-                <marker date="1539565916435" expanded="true" signature="9312:9341" ph="SELECT * FRO... project_article" />
-                <marker date="1539565916435" expanded="true" signature="9843:9953" ph="SELECT comme... project_user_article" />
+                <marker date="1539654030874" expanded="true" signature="785:814" ph="SELECT * FRO... project_article" />
+                <marker date="1539654030874" expanded="true" signature="785:846" ph="SELECT * FRO... project_article" />
+                <marker date="1539654030874" expanded="true" signature="785:876" ph="SELECT * FRO... project_article" />
+                <marker date="1539654030874" expanded="true" signature="1359:1408" ph="SELECT * FRO... project_article" />
+                <marker date="1539654030874" expanded="true" signature="1359:1438" ph="SELECT * FRO... project_article" />
+                <marker date="1539654030874" expanded="true" signature="1359:1468" ph="SELECT * FRO... project_article" />
+                <marker date="1539654030874" expanded="true" signature="2765:2896" ph="INSERT INTO project_article... " />
+                <marker date="1539654030874" expanded="true" signature="3331:3394" ph="DELETE * FRO... project_comment_relationship" />
+                <marker date="1539654030874" expanded="true" signature="3337:3394" ph="DELETE * FRO... project_comment_relationship" />
+                <marker date="1539654030874" expanded="true" signature="3551:3639" ph="SELECT comme... project_article_comment" />
+                <marker date="1539654030874" expanded="true" signature="3949:4005" ph="DELETE FROM project_user_article... " />
+                <marker date="1539654030874" expanded="true" signature="4156:4204" ph="DELETE FROM project_article... " />
+                <marker date="1539654030874" expanded="true" signature="4444:4504" ph="DELETE FROM project_comment_relationship... " />
+                <marker date="1539654030874" expanded="true" signature="4876:4962" ph="UPDATE project_article... " />
+                <marker date="1539654030874" expanded="true" signature="5351:5529" ph="SELECT comme... project_user_article" />
+                <marker date="1539654030874" expanded="true" signature="5351:5559" ph="SELECT comme... project_user_article" />
+                <marker date="1539654030874" expanded="true" signature="5351:5574" ph="SELECT comme... project_article_comment" />
+                <marker date="1539654030874" expanded="true" signature="5351:5581" ph="SELECT comme... project_article_comment" />
+                <marker date="1539654030874" expanded="true" signature="6632:6858" ph="INSERT INTO project_user_article... " />
+                <marker date="1539654030874" expanded="true" signature="7156:7218" ph="SELECT * FRO... project_comment_relationship" />
+                <marker date="1539654030874" expanded="true" signature="7590:7646" ph="DELETE FROM project_user_article... " />
+                <marker date="1539654030874" expanded="true" signature="7884:7940" ph="DELETE FROM project_article_comment... " />
+                <marker date="1539654030874" expanded="true" signature="8177:8236" ph="DELETE FROM project_comment_relationship... " />
+                <marker date="1539654030874" expanded="true" signature="8387:8443" ph="DELETE FROM project_article_comment... " />
+                <marker date="1539654030874" expanded="true" signature="8688:8751" ph="SELECT artic... project_article" />
+                <marker date="1539654030874" expanded="true" signature="9115:9182" ph="SELECT artic... project_article" />
+                <marker date="1539654030874" expanded="true" signature="9474:9547" ph="UPDATE project_article... " />
+                <marker date="1539654030874" expanded="true" signature="9752:9826" ph="UPDATE project_article... " />
+                <marker date="1539654030874" expanded="true" signature="10109:10184" ph="SELECT comme... project_user_article" />
+                <marker date="1539654030874" expanded="true" signature="10476:10557" ph="UPDATE project_user_article... " />
+                <marker date="1539654030874" expanded="true" signature="10762:10844" ph="UPDATE project_user_article... " />
+                <marker date="1539654030874" expanded="true" signature="11156:11185" ph="SELECT * FRO... project_article" />
+                <marker date="1539654030874" expanded="true" signature="11687:11800" ph="SELECT comme... project_user_article" />
+                <marker date="1539654030874" expanded="true" signature="13029:13098" ph="SELECT child... project_comment_relationship" />
+                <marker date="1539654030874" expanded="true" signature="13554:13612" ph="SELECT * FRO... project_article_comment" />
+                <marker date="1539654030874" expanded="true" signature="14563:14635" ph="UPDATE project_article_comment... " />
+                <marker date="1539654030874" expanded="true" signature="14789:14965" ph="INSERT INTO project_article_comment... " />
+                <marker date="1539654030874" expanded="true" signature="15190:15265" ph="INSERT INTO project_comment_relationship... " />
+                <marker date="1539654030874" expanded="true" signature="15568:15639" ph="SELECT comme... project_article_comment" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserPOJO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/POJO/UserPOJO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="421">
+              <caret line="78" column="26" lean-forward="false" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DAO/UserDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="166" column="27" lean-forward="false" selection-start-line="166" selection-start-column="27" selection-end-line="166" selection-end-column="27" />
+              <folding>
+                <marker date="1539654030940" expanded="true" signature="701:727" ph="SELECT * FRO... project_user" />
+                <marker date="1539654030940" expanded="true" signature="1288:1338" ph="SELECT * FRO... project_user" />
+                <marker date="1539654030940" expanded="true" signature="3398:3618" ph="INSERT INTO project_user... " />
+                <marker date="1539654030940" expanded="true" signature="4399:4441" ph="DELETE FROM project_user... " />
+                <marker date="1539654030940" expanded="true" signature="4800:4947" ph="UPDATE project_user... " />
+                <marker date="1539654030940" expanded="true" signature="5467:5607" ph="SELECT u.use... project_user" />
+                <marker date="1539654030940" expanded="true" signature="5975:6127" ph="SELECT user_... project_user" />
               </folding>
             </state>
           </provider>
@@ -169,8 +195,18 @@
       <file leaf-file-name="newArticleSubmitForm.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/JSP_Pages/newArticleSubmitForm.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="30" column="56" lean-forward="true" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+            <state relative-caret-position="280">
+              <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myArticles.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="65" column="81" lean-forward="false" selection-start-line="65" selection-start-column="68" selection-end-line="65" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -198,6 +234,7 @@
       <find>articles</find>
       <find>login</find>
       <find>form</find>
+      <find>project_user_article</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -222,7 +259,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/homepage.css" />
         <option value="$PROJECT_DIR$/src/Servlet/UserServlet.java" />
         <option value="$PROJECT_DIR$/web/settingpage.css" />
         <option value="$PROJECT_DIR$/src/Servlet/UserUpdateAccountServlet.java" />
@@ -244,7 +280,6 @@
         <option value="$PROJECT_DIR$/../0118program/src/datasource.properties" />
         <option value="$PROJECT_DIR$/src/UserServlet/UpdateArticleDatabase.java" />
         <option value="$PROJECT_DIR$/web/index_login.jsp" />
-        <option value="$PROJECT_DIR$/src/DAO/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/POJO/UserPOJO.java" />
         <option value="$PROJECT_DIR$/src/POJO/UserAvatarPOJO.java" />
         <option value="$PROJECT_DIR$/src/UserServlet/UserLogOutServlet.java" />
@@ -254,12 +289,10 @@
         <option value="$PROJECT_DIR$/src/UserServlet/UserLoginServlet.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/src/Servlet/ArticleServlet.java" />
-        <option value="$PROJECT_DIR$/src/Servlet/UserNewAccountServlet.java" />
         <option value="$PROJECT_DIR$/src/Servlet/UserLoginServlet.java" />
         <option value="$PROJECT_DIR$/web/homepage.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/classes/connection.properties" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/POJO/CommentsPOJO.java" />
         <option value="$PROJECT_DIR$/src/Servlet/AdminServlet.java" />
         <option value="$PROJECT_DIR$/web/JSP_Pages/editUserArticle.jsp" />
         <option value="$PROJECT_DIR$/web/myJS.js" />
@@ -267,12 +300,16 @@
         <option value="$PROJECT_DIR$/web/JSP_Pages/newArticleSubmitForm.jsp" />
         <option value="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp" />
         <option value="$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp" />
+        <option value="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithComments.jsp" />
+        <option value="$PROJECT_DIR$/web/JSP_Pages/Admin_allArticles.jsp" />
+        <option value="$PROJECT_DIR$/src/POJO/CommentsPOJO.java" />
+        <option value="$PROJECT_DIR$/src/Servlet/UserNewAccountServlet.java" />
         <option value="$PROJECT_DIR$/src/Servlet/UpdateArticleDatabase.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/mySQL.sql" />
+        <option value="$PROJECT_DIR$/src/Servlet/CommentServlet.java" />
+        <option value="$PROJECT_DIR$/src/DAO/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/DAO/ArticleDAO.java" />
-        <option value="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithComments.jsp" />
         <option value="$PROJECT_DIR$/web/JSP_Pages/articleComments.jsp" />
-        <option value="$PROJECT_DIR$/web/JSP_Pages/Admin_allArticles.jsp" />
       </list>
     </option>
   </component>
@@ -317,6 +354,22 @@
             <path>
               <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="final_project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_project" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_project" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="dictionaries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="final_project" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="final_project" type="b2602c69:ProjectViewProjectNode" />
@@ -380,10 +433,10 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -609,7 +662,8 @@
       <workItem from="1539049549423" duration="7369000" />
       <workItem from="1539305270148" duration="4283000" />
       <workItem from="1539398969608" duration="12644000" />
-      <workItem from="1539551766472" duration="15848000" />
+      <workItem from="1539551766472" duration="15977000" />
+      <workItem from="1539637048036" duration="17437000" />
     </task>
     <task id="LOCAL-00001" summary="yang">
       <created>1539056359323</created>
@@ -629,7 +683,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48327000" />
+    <option name="totallyTimeSpent" value="65893000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -645,7 +699,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20029028" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33262935" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -662,10 +716,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287373" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33549783" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22294372" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47727272" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19029851" sideWeight="0.49709725" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3409091" sideWeight="0.49791667" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1945629" sideWeight="0.49709725" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17460883" sideWeight="0.50290275" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17460883" sideWeight="0.50290275" order="7" side_tool="true" content_ui="tabs" />
@@ -742,19 +796,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/images/sign-up.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/345f34d4-2e2d-4cfe-951d-7b877791e0fd/console.sql" />
-    <entry file="file://$PROJECT_DIR$/web/homepageCSS/myJS.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/TianCSS/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -764,14 +805,6 @@
     </entry>
     <entry file="das://table:/29f0492a/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_user_article" />
     <entry file="das://table:/29f0492a/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_article" />
-    <entry file="file://$PROJECT_DIR$/src/DAO/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2244">
-          <caret line="140" column="73" lean-forward="false" selection-start-line="140" selection-start-column="73" selection-end-line="140" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/settingpage.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
@@ -781,14 +814,6 @@
       </provider>
     </entry>
     <entry file="das://table:/29f0492a/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_user" />
-    <entry file="file://$PROJECT_DIR$/src/POJO/UserPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="862">
-          <caret line="78" column="26" lean-forward="false" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/ae8a79/345f34d4-2e2d-4cfe-951d-7b877791e0fd/group1.project_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -801,26 +826,10 @@
     <entry file="file://$PROJECT_DIR$/src/UserServlet/CommentServlet.java" />
     <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticles.jsp" />
     <entry file="file://$PROJECT_DIR$/src/UserServlet/ArticleServlet.java" />
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="120" column="66" lean-forward="false" selection-start-line="120" selection-start-column="66" selection-end-line="120" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Servlet/UserUpdateAccountServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="48" column="76" lean-forward="false" selection-start-line="48" selection-start-column="76" selection-end-line="48" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/POJO/UserAvatarPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -846,34 +855,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlet/UserLoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="38" column="81" lean-forward="true" selection-start-line="38" selection-start-column="81" selection-end-line="38" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/ae8a79/d4a473b5-6575-4fdf-b5f1-877327745b86/kugn318.project_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlet/UserLogOutServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlet/UserNewAccountServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -885,50 +870,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/article.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/homepage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="59" lean-forward="false" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/connection.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/POJO/AdministratorPOJO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/ae8a79/d4a473b5-6575-4fdf-b5f1-877327745b86/kugn318.project_article">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlet/ArticleServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="22" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,7 +893,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlet/AdminServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/HikariConnectionPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/classes/connection.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/index_signup.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index_login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="81" column="36" lean-forward="false" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="120" column="66" lean-forward="false" selection-start-line="120" selection-start-column="66" selection-end-line="120" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/article.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -958,165 +961,241 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/myJS.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
+        <state relative-caret-position="105">
           <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/POJO/ArticlePOJO.java">
+    <entry file="file://$PROJECT_DIR$/src/POJO/UserAvatarPOJO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="41" column="41" lean-forward="true" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
-          <folding>
-            <element signature="e#721#722#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
-            <element signature="e#857#858#0" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#1200#1201#0" expanded="true" />
-            <element signature="e#1235#1236#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlet/AdminServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlet/CommentServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="34" column="16" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="67" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp">
+    <entry file="file://$PROJECT_DIR$/src/POJO/AdministratorPOJO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/newArticleSubmitForm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="30" column="56" lean-forward="true" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlet/UpdateArticleDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="35" column="43" lean-forward="false" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="43" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/POJO/CommentsPOJO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="43" column="28" lean-forward="true" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+        <state relative-caret-position="-114">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding>
-            <element signature="e#820#821#0" expanded="true" />
-            <element signature="e#861#862#0" expanded="true" />
-            <element signature="e#930#931#0" expanded="true" />
-            <element signature="e#990#991#0" expanded="true" />
+            <element signature="e#283#284#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticlesWithComments.jsp">
+    <entry file="file://$PROJECT_DIR$/src/POJO/ArticlePOJO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="41" column="47" lean-forward="false" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+        <state relative-caret-position="332">
+          <caret line="41" column="41" lean-forward="false" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/Servlet/UserLogOutServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="81" column="36" lean-forward="false" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+        <state relative-caret-position="238">
+          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlet/ArticleServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="22" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlet/UserLoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlet/UserNewAccountServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="57" column="40" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlet/UpdateArticleDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="41" column="44" lean-forward="false" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/26d96d04-4478-42b0-9e7e-60b5aa6bf0ad/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/mySQL.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="59" column="15" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="35" />
+        <state relative-caret-position="254">
+          <caret line="68" column="3" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlet/CommentServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="69" column="87" lean-forward="true" selection-start-line="69" selection-start-column="87" selection-end-line="69" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/newArticleSubmitForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/JSP_Pages/Admin_allArticles.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="37" column="19" lean-forward="true" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        <state relative-caret-position="17">
+          <caret line="37" column="19" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="33" column="88" lean-forward="true" selection-start-line="33" selection-start-column="88" selection-end-line="33" selection-end-column="88" />
+        <state relative-caret-position="17">
+          <caret line="33" column="88" lean-forward="false" selection-start-line="33" selection-start-column="88" selection-end-line="33" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="65" column="81" lean-forward="false" selection-start-line="65" selection-start-column="68" selection-end-line="65" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/homepage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="994">
+          <caret line="91" column="47" lean-forward="false" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/POJO/UserPOJO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="78" column="26" lean-forward="false" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="166" column="27" lean-forward="false" selection-start-line="166" selection-start-column="27" selection-end-line="166" selection-end-column="27" />
+          <folding>
+            <marker date="1539654030940" expanded="true" signature="701:727" ph="SELECT * FRO... project_user" />
+            <marker date="1539654030940" expanded="true" signature="1288:1338" ph="SELECT * FRO... project_user" />
+            <marker date="1539654030940" expanded="true" signature="3398:3618" ph="INSERT INTO project_user... " />
+            <marker date="1539654030940" expanded="true" signature="4399:4441" ph="DELETE FROM project_user... " />
+            <marker date="1539654030940" expanded="true" signature="4800:4947" ph="UPDATE project_user... " />
+            <marker date="1539654030940" expanded="true" signature="5467:5607" ph="SELECT u.use... project_user" />
+            <marker date="1539654030940" expanded="true" signature="5975:6127" ph="SELECT user_... project_user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticlesWithComments.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/ArticleDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="140" column="50" lean-forward="false" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="50" />
+        <state relative-caret-position="313">
+          <caret line="445" column="49" lean-forward="false" selection-start-line="445" selection-start-column="49" selection-end-line="445" selection-end-column="49" />
           <folding>
-            <marker date="1539565916435" expanded="true" signature="785:814" ph="SELECT * FRO... project_article" />
-            <marker date="1539565916435" expanded="true" signature="785:846" ph="SELECT * FRO... project_article" />
-            <marker date="1539565916435" expanded="true" signature="785:876" ph="SELECT * FRO... project_article" />
-            <marker date="1539565916435" expanded="true" signature="1359:1408" ph="SELECT * FRO... project_article" />
-            <marker date="1539565916435" expanded="true" signature="1359:1438" ph="SELECT * FRO... project_article" />
-            <marker date="1539565916435" expanded="true" signature="1359:1468" ph="SELECT * FRO... project_article" />
-            <marker date="1539565916435" expanded="true" signature="2522:2674" ph="SELECT user_... project_user" />
-            <marker date="1539565916435" expanded="true" signature="3495:3626" ph="INSERT INTO project_article... " />
-            <marker date="1539565916435" expanded="true" signature="3988:4041" ph="DELETE FROM project_user_article... " />
-            <marker date="1539565916435" expanded="true" signature="4192:4240" ph="DELETE FROM project_article... " />
-            <marker date="1539565916435" expanded="true" signature="4611:4697" ph="UPDATE project_article... " />
-            <marker date="1539565916435" expanded="true" signature="5086:5196" ph="SELECT comme... project_user_article" />
-            <marker date="1539565916435" expanded="true" signature="5086:5226" ph="SELECT comme... project_user_article" />
-            <marker date="1539565916435" expanded="true" signature="6143:6257" ph="INSERT INTO project_user_article... " />
-            <marker date="1539565916435" expanded="true" signature="6555:6608" ph="DELETE FROM project_user_article... " />
-            <marker date="1539565916435" expanded="true" signature="6853:6916" ph="SELECT artic... project_article" />
-            <marker date="1539565916435" expanded="true" signature="7280:7347" ph="SELECT artic... project_article" />
-            <marker date="1539565916435" expanded="true" signature="7639:7712" ph="UPDATE project_article... " />
-            <marker date="1539565916435" expanded="true" signature="7917:7991" ph="UPDATE project_article... " />
-            <marker date="1539565916435" expanded="true" signature="8274:8346" ph="SELECT comme... project_user_article" />
-            <marker date="1539565916435" expanded="true" signature="8638:8716" ph="UPDATE project_user_article... " />
-            <marker date="1539565916435" expanded="true" signature="8921:9000" ph="UPDATE project_user_article... " />
-            <marker date="1539565916435" expanded="true" signature="9312:9341" ph="SELECT * FRO... project_article" />
-            <marker date="1539565916435" expanded="true" signature="9843:9953" ph="SELECT comme... project_user_article" />
+            <marker date="1539654030874" expanded="true" signature="785:814" ph="SELECT * FRO... project_article" />
+            <marker date="1539654030874" expanded="true" signature="785:846" ph="SELECT * FRO... project_article" />
+            <marker date="1539654030874" expanded="true" signature="785:876" ph="SELECT * FRO... project_article" />
+            <marker date="1539654030874" expanded="true" signature="1359:1408" ph="SELECT * FRO... project_article" />
+            <marker date="1539654030874" expanded="true" signature="1359:1438" ph="SELECT * FRO... project_article" />
+            <marker date="1539654030874" expanded="true" signature="1359:1468" ph="SELECT * FRO... project_article" />
+            <marker date="1539654030874" expanded="true" signature="2765:2896" ph="INSERT INTO project_article... " />
+            <marker date="1539654030874" expanded="true" signature="3331:3394" ph="DELETE * FRO... project_comment_relationship" />
+            <marker date="1539654030874" expanded="true" signature="3337:3394" ph="DELETE * FRO... project_comment_relationship" />
+            <marker date="1539654030874" expanded="true" signature="3551:3639" ph="SELECT comme... project_article_comment" />
+            <marker date="1539654030874" expanded="true" signature="3949:4005" ph="DELETE FROM project_user_article... " />
+            <marker date="1539654030874" expanded="true" signature="4156:4204" ph="DELETE FROM project_article... " />
+            <marker date="1539654030874" expanded="true" signature="4444:4504" ph="DELETE FROM project_comment_relationship... " />
+            <marker date="1539654030874" expanded="true" signature="4876:4962" ph="UPDATE project_article... " />
+            <marker date="1539654030874" expanded="true" signature="5351:5529" ph="SELECT comme... project_user_article" />
+            <marker date="1539654030874" expanded="true" signature="5351:5559" ph="SELECT comme... project_user_article" />
+            <marker date="1539654030874" expanded="true" signature="5351:5574" ph="SELECT comme... project_article_comment" />
+            <marker date="1539654030874" expanded="true" signature="5351:5581" ph="SELECT comme... project_article_comment" />
+            <marker date="1539654030874" expanded="true" signature="6632:6858" ph="INSERT INTO project_user_article... " />
+            <marker date="1539654030874" expanded="true" signature="7156:7218" ph="SELECT * FRO... project_comment_relationship" />
+            <marker date="1539654030874" expanded="true" signature="7590:7646" ph="DELETE FROM project_user_article... " />
+            <marker date="1539654030874" expanded="true" signature="7884:7940" ph="DELETE FROM project_article_comment... " />
+            <marker date="1539654030874" expanded="true" signature="8177:8236" ph="DELETE FROM project_comment_relationship... " />
+            <marker date="1539654030874" expanded="true" signature="8387:8443" ph="DELETE FROM project_article_comment... " />
+            <marker date="1539654030874" expanded="true" signature="8688:8751" ph="SELECT artic... project_article" />
+            <marker date="1539654030874" expanded="true" signature="9115:9182" ph="SELECT artic... project_article" />
+            <marker date="1539654030874" expanded="true" signature="9474:9547" ph="UPDATE project_article... " />
+            <marker date="1539654030874" expanded="true" signature="9752:9826" ph="UPDATE project_article... " />
+            <marker date="1539654030874" expanded="true" signature="10109:10184" ph="SELECT comme... project_user_article" />
+            <marker date="1539654030874" expanded="true" signature="10476:10557" ph="UPDATE project_user_article... " />
+            <marker date="1539654030874" expanded="true" signature="10762:10844" ph="UPDATE project_user_article... " />
+            <marker date="1539654030874" expanded="true" signature="11156:11185" ph="SELECT * FRO... project_article" />
+            <marker date="1539654030874" expanded="true" signature="11687:11800" ph="SELECT comme... project_user_article" />
+            <marker date="1539654030874" expanded="true" signature="13029:13098" ph="SELECT child... project_comment_relationship" />
+            <marker date="1539654030874" expanded="true" signature="13554:13612" ph="SELECT * FRO... project_article_comment" />
+            <marker date="1539654030874" expanded="true" signature="14563:14635" ph="UPDATE project_article_comment... " />
+            <marker date="1539654030874" expanded="true" signature="14789:14965" ph="INSERT INTO project_article_comment... " />
+            <marker date="1539654030874" expanded="true" signature="15190:15265" ph="INSERT INTO project_comment_relationship... " />
+            <marker date="1539654030874" expanded="true" signature="15568:15639" ph="SELECT comme... project_article_comment" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/JSP_Pages/articleComments.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+        <state relative-caret-position="1037">
+          <caret line="61" column="62" lean-forward="false" selection-start-line="61" selection-start-column="62" selection-end-line="61" selection-end-column="62" />
           <folding />
         </state>
       </provider>

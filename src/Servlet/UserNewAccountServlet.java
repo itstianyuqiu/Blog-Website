@@ -31,8 +31,6 @@ public class UserNewAccountServlet extends HttpServlet {
             String birthYear = req.getParameter("dob_year");
             String gender = req.getParameter("gender");
 
-            req.getSession().setAttribute("page", "something");
-
             UserPOJO userPOJO = new UserPOJO();
             userPOJO.setFirstName(firstName);
             userPOJO.setLastName(lastName);
@@ -51,6 +49,11 @@ public class UserNewAccountServlet extends HttpServlet {
                 req.getSession().setAttribute("userPOJO", userPOJO);
             }
 
+            //Kien's gr stuffs
+            req.getSession().setAttribute("userID", userPOJO.getUser_id());
+            req.getSession().setAttribute("firstLogin_AllArticles", true);
+            req.getSession().setAttribute("current_article", 0);
+            req.getSession().setAttribute("page","allArticles");
 
             resp.sendRedirect("/homepage.jsp");
         } catch (SQLException e) {

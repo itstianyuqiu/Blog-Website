@@ -15,6 +15,12 @@
     <title>Article comments</title>
     <script type="text/javascript" src="../JQuery_lib/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="myJS.js"></script>
+    <style>
+        .child_comments{
+            margin-left: 20px;
+            color: blue;
+        }
+    </style>
 </head>
 <body>
 
@@ -24,27 +30,56 @@
     try (ArticleDAO newArticleDAO = new ArticleDAO()){
         String current_article = request.getSession().getAttribute("current_article").toString();
 
-        System.out.println(current_article);
-
         List<CommentsPOJO> listOfComments = newArticleDAO.getCommentsByArticle(current_article);
             for (CommentsPOJO cpj: listOfComments){
-                out.print("<div id =\"comment_" + cpj.getCommentID() +"\">");
-                out.println("<b>" + cpj.getUserID() + "</b>");
-                out.println("<p>" + cpj.getComments() + "</p>");
                 int commentID = cpj.getCommentID();
 
-                String userID = request.getSession().getAttribute("userID").toString();
+                out.println("<div id =\"comment_" + commentID +"\">");
 
-                if (userID.equals("" + cpj.getUserID())){
+                UserPOJO user = newArticleDAO.getUserName(String.valueOf(cpj.getUserID())); //added method in DAO to return user's name details
+
+                out.println("<b>" + user.getUsername() + "</b>");
+                out.println("<p>" + cpj.getComments() + "</p>");
+
+                // Code to get userID and ensure they can only delete comments that they have written
+                String userID = request.getSession().getAttribute("userID").toString();
+                String pageFrom = request.getSession().getAttribute("page").toString();
+
+                if (userID.equals("" + cpj.getUserID()) || (pageFrom.equals("myArticles"))){
                     out.println("<form action=\"/CommentServlet\" method=\"get\">");
                     out.println("<input type=\"submit\" value=\"Delete Comment\" name=\"delete_comment_button\"\">");
                     out.println("<input type=\"hidden\" name=\"comment_ID\" value=\"" + commentID + "\">");
                     out.println("</form>");
                 }
 
+
+                // Check if this comment is a parent comment, if yes then display the childs with userID, comments, and delete button (if written by user).
+                if (cpj.isIs_parent()){
+                    List<CommentsPOJO> listOfChild = newArticleDAO.getChildComments(commentID);
+                    for (CommentsPOJO child: listOfChild){
+                        out.println("<div class=\"child_comments\" id =\"child_comment_" + child.getCommentID() +"\">");
+
+                        out.println("<b>" + user.getUsername() + "</b>");
+                        out.println("<p>" + child.getComments() + "</p>");
+
+                        if (userID.equals("" + child.getUserID()) || (pageFrom.equals("myArticles"))){
+                            out.println("<form action=\"/CommentServlet\" method=\"get\">");
+                            out.println("<input type=\"submit\" value=\"Delete Comment\" name=\"delete_child_comment_button\"\">");
+                            out.println("<input type=\"hidden\" name=\"comment_ID\" value=\"" + child.getCommentID() + "\">");
+                            out.println("</form>");
+                        }
+
+                        out.print("</div>");
+
+                    }
+                }
+
+
+                // Button to make replies to a comment
                 out.println("<form action=\"/CommentServlet\" method=\"get\">");
-                out.println("<input type=\"text\" name=\"comments_content\">");
-                out.println("<input type=\"submit\" value=\"Comment On Comment\" name=\"comment_on_comment_button\"\">");
+                out.println("<input type=\"text\" name=\"comment_reply_content\">");
+                out.println("<input type=\"submit\" value=\"Reply\" name=\"comment_reply\"\">");
+                out.println("<input type=\"hidden\" name=\"parent_ID\" value=\"" + commentID + "\">");
                 out.println("</form>");
 
                 out.println("<br>");

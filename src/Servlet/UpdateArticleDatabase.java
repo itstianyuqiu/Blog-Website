@@ -39,6 +39,7 @@ public class UpdateArticleDatabase extends HttpServlet {
                 doPost(req, resp);
             } else if ("Delete".equals(deleteArticle)) {
                 newArticleDAO.deleteArticle(req.getParameter("articleID"));
+                System.out.println("got here");
                 doPost(req,resp);
             } else if ("Edit".equals(editArticle)){
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/JSP_Pages/editUserArticle.jsp");
