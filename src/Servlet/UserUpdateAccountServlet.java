@@ -2,6 +2,10 @@ package Servlet;
 
 import DAO.UserDAO;
 import POJO.UserPOJO;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,7 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.List;
 
 public class UserUpdateAccountServlet extends HttpServlet {
     private File uploadFolder;
@@ -18,7 +24,7 @@ public class UserUpdateAccountServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
-        this.uploadFolder = new File(getServletContext().getRealPath("/UploadedPhotos"));
+        this.uploadFolder = new File(getServletContext().getRealPath("/Uploaded_Avatar"));
         if (!uploadFolder.exists()) {
             uploadFolder.mkdirs();
         }
@@ -46,6 +52,10 @@ public class UserUpdateAccountServlet extends HttpServlet {
                 changeToNewPassword(userDAO, req, resp);
                 System.out.println("change password");
             }
+            //change user avatar
+            else {
+                changeAvatarWithFileUpload(userDAO, req, resp);
+            }
             req.getRequestDispatcher("/settingpage.jsp").forward(req, resp);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -53,6 +63,37 @@ public class UserUpdateAccountServlet extends HttpServlet {
             e.printStackTrace();
         }
 
+    }
+
+    private void changeAvatarWithFileUpload(UserDAO userDAO, HttpServletRequest req, HttpServletResponse resp) throws Exception {
+        DiskFileItemFactory factory = new DiskFileItemFactory();
+        factory.setSizeThreshold(4 * 1024);
+        factory.setRepository(tempFolder);
+        ServletFileUpload fileUpload = new ServletFileUpload(factory);
+
+        List<FileItem> fileItems = fileUpload.parseRequest(req);
+        System.out.println(fileItems.size());
+        File imgFile = null;
+        String filename = null;
+
+
+        for (FileItem fi : fileItems) {
+            if (!fi.isFormField()) {
+                System.out.println(fi.getName());
+                filename = fi.getName();
+                imgFile = new File(uploadFolder, filename);
+                fi.write(imgFile);
+            }
+        }
+        if (imgFile == null) {
+            System.out.println("imgFile is null.");
+        } else {
+            UserPOJO userPOJO = (UserPOJO) req.getSession().getAttribute("userPOJO");
+            userPOJO.setAvatar("Uploaded_Avatar/" + filename);
+
+            userDAO.updateUserAccount(userPOJO);
+
+        }
     }
 
     private void changeToNewPassword(UserDAO userDAO, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, SQLException {
@@ -74,8 +115,8 @@ public class UserUpdateAccountServlet extends HttpServlet {
         String username = req.getParameter("username");
         String email = req.getParameter("emailaddress");
         String country = req.getParameter("country");
+        System.out.println(country);
         String description = req.getParameter("description");
-        System.out.println(username);
 
         UserPOJO userPOJO = (UserPOJO) req.getSession().getAttribute("userPOJO");
         userPOJO.setUsername(username);

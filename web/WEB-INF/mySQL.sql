@@ -16,6 +16,7 @@ CREATE TABLE project_user (
   user_desciption VARCHAR(200),
   user_username   VARCHAR(100),
   user_password   VARCHAR(100),
+  user_avatar     VARCHAR(500),
   PRIMARY KEY (user_id)
 );
 
@@ -73,10 +74,15 @@ INSERT INTO project_article_comment (user_id, article_id, article_comment, comme
 INSERT INTO project_comment_relationship (parent_id, child_id) VALUES (1, 3);
 
 
-SELECT * FROM project_article;
+SELECT *
+FROM project_article;
 
-SELECT * FROM project_user;
+SELECT *
+FROM project_user;
 
+SELECT article_id
+FROM project_user_article
+WHERE user_id = 1;
 SELECT * FROM project_article_comment;
 
 SELECT * FROM project_comment_relationship;
@@ -99,12 +105,30 @@ SELECT * FROM project_article WHERE article_visibility = TRUE AND article_date <
 
 SELECT child_id FROM project_comment_relationship WHERE parent_id = 1;
 
+SELECT *
+FROM project_user_article;
 SELECT * FROM project_article_comment WHERE comment_id = 3;
 
+SELECT
+  comment_id,
+  user_id,
+  article_comment
+FROM project_user_article
+WHERE article_id = 1;
 UPDATE project_article_comment SET is_parent = TRUE WHERE comment_id = 2;
 
+SELECT
+  comment_id,
+  user_id,
+  article_comment
+FROM project_user_article
+WHERE article_id = ?;
 SELECT * FROM project_article_comment WHERE article_id = 1;
 
+SELECT *
+FROM project_article
+  JOIN project_user_article ON project_article.article_id = project_user_article.article_id
+WHERE user_id = 1;
 DELETE * FROM project_comment_relationship WHERE parent_id =
 
 SELECT comment_id FROM project_article_comment WHERE is_parent = TRUE AND article_id = 1;

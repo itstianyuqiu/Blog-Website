@@ -3,19 +3,24 @@ function start() {
 }
 
 function loadAllArticleWithoutComments() {
-    $('#articles').load('../JSP_Pages/allArticlesWithoutComments.jsp');
+    $('#all_articles').load('../JSP_Pages/allArticlesWithoutComments.jsp');
 }
 
 function loadAllArticleWithComments() {
-    $('#articles').load('../JSP_Pages/allArticlesWithComments.jsp');
+    $('#all_articles').load('../JSP_Pages/allArticlesWithComments.jsp');
 }
-function loadUserArticle() {
-    $('#articles').load('../JSP_Pages/myArticles.jsp');
-}
+// function loadUserArticle() {
+//     $('#articles').load('../JSP_Pages/myArticles.jsp');
+// }
+//
+// function addNewArticle() {
+//     $('#btn_add_new_article').hide();
+//     $('#add_new_articles').load('../JSP_Pages/newArticleSubmitForm.jsp');
+// }
 
-function addNewArticle() {
-    $('#btn_add_new_article').hide();
-    $('#articles').load('../JSP_Pages/newArticleSubmitForm.jsp');
+
+function load_article() {
+    $('#my_articles').load('../JSP_Pages/myArticles.jsp');
 }
 
 function showVisibility(articleID) {
