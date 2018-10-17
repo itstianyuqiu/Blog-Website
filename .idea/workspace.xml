@@ -7,72 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b7fbd8c-773f-427a-91cd-f776cccc2f4c" name="Default" comment="completed show/hide advanced (admin interface)&#10;added values in edit page&#10;updated article &amp; user details in all articles">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Servlet/ArticleUpload.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/JSP_Pages/Admin_allArticles.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/comments.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/editUserArticle.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/index_signup.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/newArticleSubmitForm.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/editUserArticle.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic11.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic12.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic13.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic14.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic15.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/test1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/mainPageCSS/article.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/mainPageCSS/new_index.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/mainPageCSS/personal_page.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/mainPageCSS/setting.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/newArticleSubmitForm.jsp" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/345f34d4-2e2d-4cfe-951d-7b877791e0fd.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/345f34d4-2e2d-4cfe-951d-7b877791e0fd.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/Admin_allArticles.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/Admin_allArticles.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/allArticlesWithComments.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/allArticlesWithComments.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/allArticlesWithoutComments.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/allArticlesWithoutComments.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/myArticles.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/myArticles.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/example_homepage.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/example_settingpage.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/homepage.css" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/homepage.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/settingpage.css" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/settingpage.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/UserDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/UserAvatarPOJO.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/UserPOJO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/UserPOJO.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/ArticleUpload.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/ArticleUpload.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserLoginServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserLoginServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserNewAccountServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserNewAccountServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserUpdateAccountServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserUpdateAccountServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/connection.properties" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/connection.properties" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/mySQL.sql" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/mySQL.sql" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/homepage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/homepage.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/myJS.js" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/myJS.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/settingpage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/settingpage.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/UserDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/UserPOJO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/UserPOJO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserLoginServlet.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserLoginServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserNewAccountServlet.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserNewAccountServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserUpdateAccountServlet.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserUpdateAccountServlet.class" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/UserDAO.java" afterPath="$PROJECT_DIR$/src/DAO/UserDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/POJO/UserPOJO.java" afterPath="$PROJECT_DIR$/src/POJO/UserPOJO.java" />
-      <change beforePath="$PROJECT_DIR$/src/Servlet/UserLoginServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/UserLoginServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/Servlet/UserNewAccountServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/UserNewAccountServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/Servlet/UserUpdateAccountServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/UserUpdateAccountServlet.java" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/example_homepage.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/homepage.css" afterPath="$PROJECT_DIR$/web/TianCSS/homepage.css" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/settingpage.css" afterPath="$PROJECT_DIR$/web/TianCSS/settingpage.css" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/connection.properties" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/connection.properties" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/mySQL.sql" afterPath="$PROJECT_DIR$/web/WEB-INF/mySQL.sql" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/web/article.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/homepage.jsp" afterPath="$PROJECT_DIR$/web/homepage.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/myJS.js" afterPath="$PROJECT_DIR$/web/myJS.js" />
-      <change beforePath="$PROJECT_DIR$/web/settingpage.jsp" afterPath="$PROJECT_DIR$/web/settingpage.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/HikariConnectionPool.java" afterPath="$PROJECT_DIR$/src/DAO/HikariConnectionPool.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -139,7 +74,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="allArticlesWithoutComments.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="allArticlesWithoutComments.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-170">
@@ -149,20 +84,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="HikariConnectionPool.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DAO/HikariConnectionPool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="16" column="46" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="pic07.jpg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/images/pic07.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mySQL.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/mySQL.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="76" column="8" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="77" selection-end-column="21" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -301,7 +236,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/26d96d04-4478-42b0-9e7e-60b5aa6bf0ad/console_1.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/26d96d04-4478-42b0-9e7e-60b5aa6bf0ad/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/345f34d4-2e2d-4cfe-951d-7b877791e0fd/console_1.sql" />
-        <option value="$PROJECT_DIR$/src/DAO/HikariConnectionPool.java" />
         <option value="$PROJECT_DIR$/src/UserServlet/UserDeleteServlet.java" />
         <option value="$PROJECT_DIR$/src/UserServlet/UserNewAccountServlet.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/345f34d4-2e2d-4cfe-951d-7b877791e0fd/console.sql" />
@@ -342,6 +276,7 @@
         <option value="$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp" />
         <option value="$PROJECT_DIR$/web/homepage.jsp" />
         <option value="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp" />
+        <option value="$PROJECT_DIR$/src/DAO/HikariConnectionPool.java" />
       </list>
     </option>
   </component>
@@ -750,7 +685,7 @@
       <workItem from="1539551766472" duration="15977000" />
       <workItem from="1539637048036" duration="17440000" />
       <workItem from="1539724957064" duration="16624000" />
-      <workItem from="1539745596500" duration="5941000" />
+      <workItem from="1539745596500" duration="6016000" />
     </task>
     <task id="LOCAL-00001" summary="yang">
       <created>1539056359323</created>
@@ -770,7 +705,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88479000" />
+    <option name="totallyTimeSpent" value="88554000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -783,6 +718,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33896515" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
@@ -805,7 +741,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33549783" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3474026" sideWeight="0.49583334" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1988273" sideWeight="0.49709725" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1988273" sideWeight="0.49709725" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17460883" sideWeight="0.50290275" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17460883" sideWeight="0.50290275" order="7" side_tool="true" content_ui="tabs" />
@@ -1025,14 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DAO/HikariConnectionPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Servlet/ArticleUpload.java" />
     <entry file="file://$PROJECT_DIR$/src/Servlet/CommentServlet.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1236,6 +1164,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-170">
           <caret line="63" column="55" lean-forward="true" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DAO/HikariConnectionPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="46" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
           <folding />
         </state>
       </provider>

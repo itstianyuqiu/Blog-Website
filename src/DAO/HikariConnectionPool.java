@@ -14,6 +14,8 @@ public class HikariConnectionPool {
 
     static {
 
+        System.out.println("final commit 17/10");
+
         Properties dbProps = new Properties();
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 
