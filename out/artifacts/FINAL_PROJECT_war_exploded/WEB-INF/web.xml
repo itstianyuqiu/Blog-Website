@@ -97,4 +97,14 @@
         <servlet-name>AdminServlet</servlet-name>
         <url-pattern>/AdminServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FileUploads</servlet-name>
+        <servlet-class>Servlet.FileUploads</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FileUploads</servlet-name>
+        <url-pattern>/FileUploads</url-pattern>
+    </servlet-mapping>
 </web-app>

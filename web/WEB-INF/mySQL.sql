@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS project_article_images;
 DROP TABLE IF EXISTS project_comment_relationship;
 DROP TABLE IF EXISTS project_article_comment;
 DROP TABLE IF EXISTS project_article;
@@ -51,6 +52,14 @@ CREATE TABLE project_comment_relationship (
   FOREIGN KEY (child_id) REFERENCES project_article_comment (comment_id)
 );
 
+CREATE TABLE project_article_images (
+  image_id INT NOT NULL AUTO_INCREMENT,
+  article_id INT,
+  image_source TEXT,
+  FOREIGN KEY (article_id) REFERENCES project_article (article_id),
+  PRIMARY KEY (image_id)
+);
+
 INSERT INTO project_article (article_title, article_content, author_id, article_visibility,article_date) VALUES ('heading 2', 'content article 2', 1, TRUE, DATE '2018-03-17');
 
 INSERT INTO project_user (user_firstname, user_lastname, user_country, user_dob,
@@ -71,6 +80,8 @@ SELECT * FROM project_user;
 SELECT * FROM project_article_comment;
 
 SELECT * FROM project_comment_relationship;
+
+SELECT * FROM project_article_images;
 
 SELECT comment_id, user_id, article_comment FROM project_article_comment WHERE article_id = 1;
 
@@ -97,3 +108,5 @@ SELECT * FROM project_article_comment WHERE article_id = 1;
 DELETE * FROM project_comment_relationship WHERE parent_id =
 
 SELECT comment_id FROM project_article_comment WHERE is_parent = TRUE AND article_id = 1;
+
+INSERT INTO project_article_images (article_id, image_source) VALUES (?, ?);

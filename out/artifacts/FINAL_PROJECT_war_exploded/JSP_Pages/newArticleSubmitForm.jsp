@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<form action="/UpdateArticleDatabase" method="get">
+<form action="/FileUploads" method="post" enctype="multipart/form-data">
     <br>
     <br>
     <h5>Headings:</h5>
@@ -25,6 +25,9 @@
     <br>
     <h5>Content:</h5>
     <textarea id="newarticile_content" name="article_content" rows="15"> </textarea>
+    <br>
+    <br>
+    <input type="file" id="picture" name="picture" accept="image/png, image/jpeg" multiple>
     <br>
     <br>
     <h5>Publishing Date:</h5>
@@ -37,6 +40,9 @@
     <button type="submit" id="btn_newarticle" name="addArticle" value="Add Now">Submit</button>
 
 </form>
+
+
+
 
 
 </body>

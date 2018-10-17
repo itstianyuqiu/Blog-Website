@@ -1,7 +1,8 @@
 <%@ page import="DAO.ArticleDAO" %>
 <%@ page import="POJO.ArticlePOJO" %>
 <%@ page import="java.util.List" %>
-<%@ page import="POJO.UserPOJO" %><%--
+<%@ page import="POJO.UserPOJO" %>
+<%@ page import="POJO.ImagePOJO" %><%--
   Created by IntelliJ IDEA.
   User: Crystal
   Date: 2018/10/11
@@ -45,6 +46,12 @@
             out.println("<br>");
             out.println("<p>" + "Content: " +  a.getContent() + "</p>");
             out.println("<br>");
+            List <ImagePOJO> allImages = newArticleDAO.loadImageFromArticle(a.getArticle_id());
+            for (ImagePOJO i : allImages ) {
+                out.println("<img src=\"../Article_Photos/" + i.getSource() + "\"" + "width=\"200\">");
+            }
+            out.println("<br>");
+
             int articleID = a.getArticle_id();
 
                 out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
