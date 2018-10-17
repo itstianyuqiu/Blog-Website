@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS project_article_images;
 DROP TABLE IF EXISTS project_comment_relationship;
 DROP TABLE IF EXISTS project_article_comment;
+DROP TABLE IF EXISTS project_article_images;
 DROP TABLE IF EXISTS project_article;
 DROP TABLE IF EXISTS project_user;
 

@@ -1,10 +1,14 @@
-package ictgradschool.web.lab.uploads;
+package Servlet;
 
+import DAO.ArticleDAO;
+import POJO.ArticlePOJO;
+import POJO.ImagePOJO;
+import POJO.UserPOJO;
 import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,21 +16,21 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 
-public class FileUploads extends HttpServlet {
+public class ArticleUpload extends HttpServlet {
 
     private File uploadsFolder;
     private File tempFolder;
 
-    //TODO - make this a proper HttpServlet that uses init() and doPost() methods
 
     @Override
     public void init() throws ServletException {
 
         super.init();
 
-        this.uploadsFolder = new File(getServletContext().getRealPath("/Uploaded_Photos"));
+        this.uploadsFolder = new File(getServletContext().getRealPath("/Article_Photos"));
 
         if (!uploadsFolder.exists()){
             uploadsFolder.mkdir();
@@ -67,20 +71,66 @@ public class FileUploads extends HttpServlet {
         try {
             List<FileItem> fileItems = upload.parseRequest(request);
 
-            System.out.println(fileItems);
+            List <File> allImages = new ArrayList<>();
 
-            File fullSizeImage = null;
+            String title = null;
+            String content = null;
+            String date = null;
 
             for (FileItem fi: fileItems){
 
                 if (!fi.isFormField()){
                     String fileName = fi.getName();
-                    fullSizeImage = new File(uploadsFolder, fileName);
-                    fi.write(fullSizeImage);
+                    if (!fileName.equals("")){
+                            File singleImage = new File(uploadsFolder, fileName);
+                            allImages.add(singleImage);
+                            fi.write(singleImage);
+                    }
+                }
+
+                if (fi.getFieldName().equals("article_heading")){
+                    title = fi.getString();
+                }
+
+                if (fi.getFieldName().equals("article_content")){
+                    content = fi.getString();
+                }
+
+                if (fi.getFieldName().equals("article_date")){
+                    date = fi.getString();
                 }
             }
 
-            out.println("<img src=\"../Uploaded_Photos/" + fullSizeImage.getName() + "\"" + "width=\"1000\">");
+            try(ArticleDAO newArticleDAO = new ArticleDAO()) {
+
+                ArticlePOJO apj = new ArticlePOJO();
+                UserPOJO upj = new UserPOJO();
+                apj.setTitle(title);
+                apj.setContent(content);
+                apj.setArticle_date(date);
+                upj.setUser_id(Integer.parseInt(request.getSession().getAttribute("userID").toString()));
+                newArticleDAO.addNewArticle(apj, upj);
+
+
+                if (!allImages.isEmpty()){
+                    System.out.println("Enter here");
+                    for (File singleImage: allImages){
+                        ImagePOJO ipj = new ImagePOJO();
+                        ipj.setArticle_id(newArticleDAO.getIDOfLastArticle());
+                        ipj.setSource(singleImage.getName());
+                        newArticleDAO.saveImageToDatabase(ipj);
+                    }
+                }
+
+                request.getSession().setAttribute("page", "myArticles");
+                request.getSession().setAttribute("button_" + newArticleDAO.getIDOfLastArticle(), false);
+
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/homepage.jsp");
+                dispatcher.forward(request, response);
+            }
+
+
+
 
         }
         catch (Exception e){

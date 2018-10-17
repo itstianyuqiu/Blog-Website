@@ -72,124 +72,17 @@
         <br>
         <%--<button id="btn_my_articles" onclick="loadUserArticle()">Just read my articles</button>--%>
         <%--<button id="btn_all_articles" onclick="loadAllArticleWithComments()">Read everyone's article</button>--%>
-        <div id="my_articles">
-            <%--<%--%>
-            <%--String fromPage = request.getSession().getAttribute("page").toString();--%>
-            <%--System.out.println(fromPage);--%>
-            <%--if (fromPage.equals("myArticles")) {--%>
-            <%--%>--%>
-            <%--<script>--%>
-            <%--loadUserArticle();--%>
-            <%--</script>--%>
-            <%--<%--%>
-            <%--} else if (fromPage.equals("allArticles")) {--%>
-            <%--%>--%>
-            <%--<script>--%>
-            <%--loadAllArticleWithComments();--%>
-            <%--</script>--%>
-            <%--<%--%>
-            <%--}--%>
-            <%--%>--%>
-        </div>
+        <div id="my_articles"></div>
     </section>
 
     <section id="four">
         <h2>Read Everyone's Articles</h2>
-        <br>
-        <%--<button id="btn_my_articles" onclick="loadUserArticle()">Just read my articles</button>--%>
         <button id="btn_all_articles" onclick="loadAllArticleWithComments()">Read everyone's article</button>
         <br>
         <br>
-        <div id="all_articles">
-            <%--<%--%>
-            <%--String fromPage = request.getSession().getAttribute("page").toString();--%>
-            <%--System.out.println(fromPage);--%>
-            <%--if (fromPage.equals("myArticles")) {--%>
-            <%--%>--%>
-            <%--<script>--%>
-            <%--loadUserArticle();--%>
-            <%--</script>--%>
-            <%--<%--%>
-            <%--} else if (fromPage.equals("allArticles")) {--%>
-            <%--%>--%>
-            <%--<script>--%>
-            <%--loadAllArticleWithComments();--%>
-            <%--</script>--%>
-            <%--<%--%>
-            <%--}--%>
-            <%--%>--%>
-        </div>
+        <div id="all_articles"></div>
     </section>
-                <!--article_my article_all articile-->
-                <br>
-                <div class="row">
-                    <section id="article_my_articles">
-                        <h2>Blog List</h2>
-                        <hr>
-                        <%--<div id="my_articles"></div>--%>
-                        <div id="justForButtom">
-                            <button id="btn_my_articles" onclick="loadUserArticle()">Manage my articles</button>
-                            <button id="btn_all_articles" onclick="loadAllArticleWithComments()">View other people's
-                                articles
-                            </button>
-                        </div>
 
-
-                    </section>
-                </div>
-                <br>
-                <hr>
-                <%--show all articles--%>
-                <div class="row">
-                    <section id="article_all_articles">
-                        <h2>Recent Blog</h2>
-
-
-                        <div id="articles">
-                            <%
-                                String fromPage = request.getSession().getAttribute("page").toString();
-                                if (fromPage.equals("myArticles")){
-                            %>
-                                <script>
-                                    loadUserArticle();
-                                </script>
-                            <%
-                                }
-                                else if (fromPage.equals("allArticles")) {
-                            %>
-                                <script>
-                                    loadAllArticleWithComments();
-                                </script>
-                            <%
-                                }
-
-                            %>
-                        </div>
-
-                        <br>
-                    </section>
-                </div>
-                <!--Add_new_article-->
-                <section id="article_new_article">
-
-                    <br>
-                    <button id="btn_add_new_article" onclick="addNewArticle()">Add a new article</button>
-                    <br>
-
-                        <%--<article id="article_recent_one">--%>
-                        <%--<a href="article.jsp">--%>
-                        <%--<h3>Demo Article I</h3>--%>
-                        <%--</a>--%>
-                        <%--<p>Preview of the article...</p>--%>
-                        <%--</article>--%>
-
-                        <%--<article id="article_recent_two">--%>
-                        <%--<a href="article.jsp">--%>
-                        <%--<h3>Demo Article II</h3>--%>
-                        <%--</a>--%>
-                        <%--<p>Preview of the article...</p>--%>
-                        <%--</article>--%>
-                </section>
 
 </div>
 </body>

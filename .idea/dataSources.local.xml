@@ -23,8 +23,5 @@
     <data-source name="ycui124@db.sporadic.nz" uuid="26d96d04-4478-42b0-9e7e-60b5aa6bf0ad">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
     </data-source>
-    <data-source name="group1@localhost" uuid="f0d9df20-70b4-4eac-86de-d506222e0485">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
-    </data-source>
   </component>
 </project>

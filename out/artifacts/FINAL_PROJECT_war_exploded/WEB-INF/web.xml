@@ -89,6 +89,16 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>ArticleUpload</servlet-name>
+        <servlet-class>Servlet.ArticleUpload</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ArticleUpload</servlet-name>
+        <url-pattern>/ArticleUpload</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>AdminServlet</servlet-name>
         <servlet-class>Servlet.AdminServlet</servlet-class>
     </servlet>
@@ -98,13 +108,4 @@
         <url-pattern>/AdminServlet</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>FileUploads</servlet-name>
-        <servlet-class>Servlet.ArticleUpload</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>FileUploads</servlet-name>
-        <url-pattern>/FileUploads</url-pattern>
-    </servlet-mapping>
 </web-app>

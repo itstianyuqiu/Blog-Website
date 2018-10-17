@@ -56,6 +56,7 @@
 
                      for (CommentsPOJO c: singleArticleComments){
                          allComments.add(c);
+                         System.out.println(c.isCommentsVisibility());
                      }
 
         }

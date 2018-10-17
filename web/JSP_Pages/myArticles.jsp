@@ -34,10 +34,9 @@
         //generate a list of Articles based on the current userID
         List<ArticlePOJO> allArticles = newArticleDAO.loadUserArticles(request.getSession().getAttribute("userID").toString());
 
-
         //looping through the generated list
         for (ArticlePOJO a : allArticles) {
-
+            out.println("<hr>");
             //get current article info
             int articleID = a.getArticle_id();
             String articleTitle = a.getTitle();
@@ -72,10 +71,18 @@
                 </form>
                 <%
 
+                    if (request.getSession().getAttribute("firstLogin_MyArticles").toString().equals("true")){
+                        request.getSession().setAttribute("button_" + articleID, false);
+                        %>
+                        <script>hideVisibility(<%=articleID%>);</script>
+                        <%
+                    }
+
+
             // get the session of current article and current button, if matches with the current iteration of the loop then show
             String currentArticle = request.getSession().getAttribute("current_article").toString();
             String currentButton = request.getSession().getAttribute("button_" + articleID).toString();
-            
+
             //Get the current article & button session, if matches with the current iteration of the loop, then show & load the comments div.
             if ((articleID == Integer.parseInt(currentArticle)) && (currentButton.equals("true"))){
                 %>
@@ -103,6 +110,8 @@
             out.print("</form>");
 
             }
+
+            request.getSession().setAttribute("firstLogin_MyArticles", false);
 
         }
         catch (Exception e){
