@@ -22,11 +22,13 @@
     ArticlePOJO apj = (ArticlePOJO) request.getSession().getAttribute("editArticle");
 %>
 
-<form action="/UpdateArticleDatabase" method="get">
+<form action="/ArticleUpload" method="post" enctype="multipart/form-data">
     <b>New Heading: </b>
-    <input type="text" name="new_article_heading" value="<%=apj.getTitle()%>">
+    <input type="text" name="article_heading" value="<%=apj.getTitle()%>">
     <b>New Content: </b>
-    <textarea name="new_article_content" rows="10" cols="10"><%=apj.getContent()%></textarea>
+    <textarea name="article_content" rows="10" cols="10"><%=apj.getContent()%></textarea>
+    <b>Date: </b>
+    <input id="theDate" type="date" name="article_date" value="<%=apj.getArticle_date()%>">
     <br>
     <%
         try (ArticleDAO newArticleDAO = new ArticleDAO()){
@@ -37,6 +39,7 @@
                 out.println("<input type=\"checkbox\" name=\"checkbox_" + i.getImage_id() + "\" value=\"" + i.getImage_id() + "\">");
 
             }
+                out.println("<input type=\"file\" id=\"picture\" name=\"picture\" accept=\"image/png, image/jpeg\" multiple>");
         }
         catch (Exception e){
             e.getMessage();

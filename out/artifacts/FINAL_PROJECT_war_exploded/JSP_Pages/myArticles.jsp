@@ -107,6 +107,7 @@
             out.print("<input type=\"hidden\" name=\"articleID\" value=\"" + articleID + "\">");
             out.print("<input type=\"hidden\" name=\"articleTitle\" value=\"" + articleTitle + "\">");
             out.print("<input type=\"hidden\" name=\"articleContent\" value=\"" + articleContent + "\">");
+            out.print("<input type=\"hidden\" name=\"articleDate\" value=\"" + articleDate + "\">");
             out.print("</form>");
 
             }

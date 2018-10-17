@@ -32,13 +32,13 @@ public class ArticleUpload extends HttpServlet {
 
         this.uploadsFolder = new File(getServletContext().getRealPath("/Article_Photos"));
 
-        if (!uploadsFolder.exists()){
+        if (!uploadsFolder.exists()) {
             uploadsFolder.mkdir();
         }
 
         this.tempFolder = new File(getServletContext().getRealPath("/WEB-INF/temp"));
 
-        if (!tempFolder.exists()){
+        if (!tempFolder.exists()) {
             tempFolder.mkdir();
         }
 
@@ -47,7 +47,7 @@ public class ArticleUpload extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         //DiskFileItemFactory is a class with APIs to help storing files in the temporary folder and with other aspects of the upload process.
         //ServletFileUpload is a class with APIs that help with aspects of the uploading process.
@@ -56,12 +56,11 @@ public class ArticleUpload extends HttpServlet {
         // Setup DiskFileItemFactory and ServletFileUpload objects
         DiskFileItemFactory factory = new DiskFileItemFactory();
 
-        factory.setSizeThreshold(4*1024);
+        factory.setSizeThreshold(4 * 1024);
         factory.setRepository(tempFolder);
 
         ServletFileUpload upload = new ServletFileUpload(factory);
 
-        System.out.println(upload);
 
         //Setup PrintWriter
         response.setContentType("text/html");
@@ -71,69 +70,112 @@ public class ArticleUpload extends HttpServlet {
         try {
             List<FileItem> fileItems = upload.parseRequest(request);
 
-            List <File> allImages = new ArrayList<>();
+            List<File> allImages = new ArrayList<>();
 
             String title = null;
             String content = null;
             String date = null;
 
-            for (FileItem fi: fileItems){
+            String form = null;
 
-                if (!fi.isFormField()){
+            for (FileItem fi : fileItems) {
+
+                if (!fi.isFormField()) {
+                    System.out.println("1. did I get here?");
                     String fileName = fi.getName();
-                    if (!fileName.equals("")){
-                            File singleImage = new File(uploadsFolder, fileName);
-                            allImages.add(singleImage);
-                            fi.write(singleImage);
+                    if (!fileName.equals("")) {
+                        File singleImage = new File(uploadsFolder, fileName);
+                        allImages.add(singleImage);
+                        fi.write(singleImage);
                     }
                 }
 
-                if (fi.getFieldName().equals("article_heading")){
+                if (fi.getFieldName().equals("article_heading")) {
                     title = fi.getString();
                 }
 
-                if (fi.getFieldName().equals("article_content")){
+                if (fi.getFieldName().equals("article_content")) {
                     content = fi.getString();
                 }
 
-                if (fi.getFieldName().equals("article_date")){
+                if (fi.getFieldName().equals("article_date")) {
                     date = fi.getString();
                 }
-            }
 
-            try(ArticleDAO newArticleDAO = new ArticleDAO()) {
-
-                ArticlePOJO apj = new ArticlePOJO();
-                UserPOJO upj = new UserPOJO();
-                apj.setTitle(title);
-                apj.setContent(content);
-                apj.setArticle_date(date);
-                upj.setUser_id(Integer.parseInt(request.getSession().getAttribute("userID").toString()));
-                newArticleDAO.addNewArticle(apj, upj);
-
-
-                if (!allImages.isEmpty()){
-                    System.out.println("Enter here");
-                    for (File singleImage: allImages){
-                        ImagePOJO ipj = new ImagePOJO();
-                        ipj.setArticle_id(newArticleDAO.getIDOfLastArticle());
-                        ipj.setSource(singleImage.getName());
-                        newArticleDAO.saveImageToDatabase(ipj);
-                    }
+                if (fi.getFieldName().equals("addArticle")) {
+                    form = fi.getString();
                 }
 
-                request.getSession().setAttribute("page", "myArticles");
-                request.getSession().setAttribute("button_" + newArticleDAO.getIDOfLastArticle(), false);
+                if (fi.getFieldName().equals("updateArticle")){
+                    form = fi.getString();
+                }
+
+            }
+
+            try (ArticleDAO newArticleDAO = new ArticleDAO()) {
+                ArticlePOJO apj = new ArticlePOJO();
+
+                if ("Add Now".equals(form)) {
+                    UserPOJO upj = new UserPOJO();
+                    apj.setTitle(title);
+                    apj.setContent(content);
+                    apj.setArticle_date(date);
+                    upj.setUser_id(Integer.parseInt(request.getSession().getAttribute("userID").toString()));
+                    newArticleDAO.addNewArticle(apj, upj);
+
+                    if (!allImages.isEmpty()) {
+                        System.out.println("2. did I get here?");
+                        for (File singleImage : allImages) {
+                            ImagePOJO ipj = new ImagePOJO();
+                            ipj.setArticle_id(newArticleDAO.getIDOfLastArticle());
+                            ipj.setSource(singleImage.getName());
+                            newArticleDAO.saveImageToDatabase(ipj);
+                        }
+                    }
+
+
+                    request.getSession().setAttribute("page", "myArticles");
+                    request.getSession().setAttribute("button_" + newArticleDAO.getIDOfLastArticle(), false);
+
+                } else if ("Update".equals(form)) {
+
+                    List <ImagePOJO> allImagesEdit = (List<ImagePOJO>) request.getSession().getAttribute("allImages");
+
+                    for (ImagePOJO i : allImagesEdit){
+                        for (FileItem fi : fileItems){
+                            if (fi.getFieldName().equals("checkbox_" + i.getImage_id())){
+                                if (fi.getString() != null){
+                                    newArticleDAO.deleteSingleImage(fi.getString());
+                                }
+                            }
+                        }
+                    }
+
+                    apj.setArticle_id(Integer.parseInt(request.getSession().getAttribute("articleID").toString()));
+                    apj.setTitle(title);
+                    apj.setContent(content);
+                    apj.setArticle_date(date);
+                    newArticleDAO.updateArticle(apj);
+
+                    if (!allImages.isEmpty()) {
+
+                        for (File singleImage : allImages) {
+                            ImagePOJO ipj = new ImagePOJO();
+                            ipj.setArticle_id(Integer.parseInt(request.getSession().getAttribute("articleID").toString()));
+                            ipj.setSource(singleImage.getName());
+                            newArticleDAO.saveImageToDatabase(ipj);
+                        }
+                    }
+
+                }
+
 
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/homepage.jsp");
                 dispatcher.forward(request, response);
             }
 
 
-
-
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             throw new ServletException(e);
         }
 

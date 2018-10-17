@@ -53,7 +53,6 @@
                                         <br>
                                         <button type="submit" id="btn_newarticle" name="addArticle" value="Add Now">Submit</button>
 
-
                                 </section>
                             </div>
                         </div>

@@ -20,8 +20,7 @@ public class UpdateArticleDatabase extends HttpServlet {
 
         String deleteArticle = req.getParameter("delete_button");
         String editArticle = req.getParameter("edit_button");
-        String updateArticle = req.getParameter("updateArticle");
-        String deleteImage = req.getParameter("delete_image_button");
+
 
 
         try (ArticleDAO newArticleDAO = new ArticleDAO()) {
@@ -31,25 +30,16 @@ public class UpdateArticleDatabase extends HttpServlet {
                 newArticleDAO.deleteArticle(req.getParameter("articleID"));
                 redirect(req,resp);
             } else if ("Edit".equals(editArticle)){
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/JSP_Pages/editUserArticle.jsp");
+
                 req.getSession().setAttribute("articleID", req.getParameter("articleID"));
                 apj.setArticle_id(Integer.parseInt(req.getSession().getAttribute("articleID").toString()));
                 apj.setTitle(req.getParameter("articleTitle"));
                 apj.setContent(req.getParameter("articleContent"));
+                apj.setArticle_date(req.getParameter("articleDate"));
                 req.getSession().setAttribute("editArticle", apj);
+
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/JSP_Pages/editUserArticle.jsp");
                 dispatcher.forward(req, resp);
-            } else if ("Update".equals(updateArticle)){
-               List <ImagePOJO> allImages = (List<ImagePOJO>) req.getSession().getAttribute("allImages");
-               for (ImagePOJO i : allImages){
-                   if (req.getParameter("checkbox_" + i.getImage_id()) != null){
-                       newArticleDAO.deleteSingleImage(req.getParameter("checkbox_" + i.getImage_id()));
-                   }
-               }
-                apj.setArticle_id(Integer.parseInt(req.getSession().getAttribute("articleID").toString()));
-                apj.setTitle(req.getParameter("new_article_heading"));
-                apj.setContent(req.getParameter("new_article_content"));
-                newArticleDAO.updateArticle(apj);
-                redirect(req,resp);
             }
         } catch (Exception e) {
             e.printStackTrace();
