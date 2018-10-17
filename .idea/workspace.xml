@@ -6,64 +6,27 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b7fbd8c-773f-427a-91cd-f776cccc2f4c" name="Default" comment="(yang 1017) avatar, Tian&amp;Crystal web style">
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/comments.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/editUserArticle.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/index_signup.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/newArticleSubmitForm.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic11.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic12.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic13.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic14.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/pic15.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/test1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/mainPageCSS/article.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/mainPageCSS/new_index.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/mainPageCSS/personal_page.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/mainPageCSS/setting.css" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/345f34d4-2e2d-4cfe-951d-7b877791e0fd.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/345f34d4-2e2d-4cfe-951d-7b877791e0fd.xml" />
+    <list default="true" id="0b7fbd8c-773f-427a-91cd-f776cccc2f4c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/allArticlesWithoutComments.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/allArticlesWithoutComments.jsp" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/myArticles.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/JSP_Pages/myArticles.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/example_homepage.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/example_settingpage.css" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/homepage.css" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/homepage.css" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/settingpage.css" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/settingpage.css" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/UserDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/UserAvatarPOJO.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/UserPOJO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/UserPOJO.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserLoginServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserLoginServlet.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserNewAccountServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserNewAccountServlet.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserUpdateAccountServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserUpdateAccountServlet.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/article.jsp" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/homepage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/homepage.jsp" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index.jsp" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/myJS.js" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/myJS.js" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/settingpage.html" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/settingpage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/settingpage.jsp" />
       <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/UserDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/UserAvatarPOJO.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/UserPOJO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/UserPOJO.class" />
       <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserLoginServlet.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserLoginServlet.class" />
       <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserNewAccountServlet.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserNewAccountServlet.class" />
       <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserUpdateAccountServlet.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserUpdateAccountServlet.class" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/UserDAO.java" afterPath="$PROJECT_DIR$/src/DAO/UserDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/POJO/UserAvatarPOJO.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Servlet/UserUpdateAccountServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/UserUpdateAccountServlet.java" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/allArticlesWithoutComments.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp" afterPath="$PROJECT_DIR$/web/JSP_Pages/myArticles.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/example_homepage.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/example_settingpage.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/homepage.css" afterPath="$PROJECT_DIR$/web/TianCSS/homepage.css" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/settingpage.css" afterPath="$PROJECT_DIR$/web/TianCSS/settingpage.css" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/connection.properties" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/connection.properties" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/mySQL.sql" afterPath="$PROJECT_DIR$/web/WEB-INF/mySQL.sql" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/web/homepage.jsp" afterPath="$PROJECT_DIR$/web/homepage.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/newArticleSubmitForm.jsp" afterPath="$PROJECT_DIR$/web/newArticleSubmitForm.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/settingpage.jsp" afterPath="$PROJECT_DIR$/web/settingpage.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
