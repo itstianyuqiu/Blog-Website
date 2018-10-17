@@ -11,12 +11,9 @@
 <html>
 <head>
     <title>All Articles</title>
-    <link rel="stylesheet" href="../homepageCSS/cssStyle.css">
-    <link rel="stylesheet" href="../homepageCSS/rowPart.css">
-    <link rel="stylesheet" href="../homepageCSS/otherCss.css">
-    <link rel="stylesheet" href="../homepageCSS/containerCSS.css">
-    <link rel="stylesheet" href="../homepageCSS/imageCSS.css">
     <link rel="stylesheet" href="../homepageCSS/popUpCss.css">
+    <link rel="stylesheet" href="../mainPageCSS/new_index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <script type="text/javascript" src="../JQuery_lib/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="../myJS.js"></script>
 </head>
@@ -28,38 +25,29 @@
     List<ArticlePOJO> allArticles = newArticleDAO.loadAllArticles();
 
     for (ArticlePOJO a : allArticles) {
-        out.println(" <div class=\"6u\" >");
-        out.println("<section class=\"box\">");
-        out.println(" <a href=\"#\" class=\"image image-full\"><img src=\"images/pic09.jpg\" alt=\"\"  height=\"272\"/></a>");
-        out.println("<header>");
-        out.println("<h3>" + a.getTitle() + "</h3>");
-        out.println("</header>");
-        out.println("<br>");
-        out.println("<p>" + a.getContent() + "</p>");
-        out.println("<br>");
-        out.println(" <footer class=\"actions\">\n" +
-                "                                        <a href=\"#popup\" class=\"button button-icon button-icon-1\">comments</a>\n");
-        out.println(" <div class=\"popup\" id=\"popup\">");
-        out.println(" <div class=\"popup-inner\">");
-        out.println(" <div class=\"popup__photo\">\n" +
-                " <img src=\"images/pic07.jpg\" alt=\"\">\n" +
-                "   </div>");
-        out.println("<div class=\"popup__text\">\n" +
-                " <h1>Please Login or Sign up!</h1>\n" +
-                "   </div>");
-        out.println("<a class=\"buttonPopUp popUp1\" href=\"index_login.jsp\">Login</a>");
-        out.println(" <a class=\"buttonPopUp popUp2\" href=\"index_signup.jsp\">Sign Up</a>");
-        out.println("<a class=\"popup__close\" href=\"#\">X</a>");
+//
+//        var len = xhr.length<4?xhr.length:4;
+
+            out.println("<div class=\"box\">");
+            out.println("     <div class=\"card\" >");
+            out.println("<a href=\"article.html\"><img src=\"images/test1.jpg\" alt=\"Avatar\" style=\"width:100%\" ></a>");
+            out.println("<div class=\"container\">");
+            out.println("<h4><b>" + a.getTitle() + "</b></h4>");
+
+            out.println("<p>" + a.getContent() + "</p>");
+
         out.println("</div>");
         out.println("</div>");
-        out.println(" </footer>");
-        out.println("</section>");
         out.println("</div>");
-        out.println("<br>");
 
 
-        out.println("<hr>");
+
     }
+
+
+
+
+
 %>
 </body>
 </html>

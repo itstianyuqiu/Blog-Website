@@ -1,6 +1,5 @@
 package DAO;
 
-import POJO.UserAvatarPOJO;
 import POJO.UserPOJO;
 
 import java.sql.Connection;
@@ -100,7 +99,7 @@ public class UserDAO implements AutoCloseable {
     public void addNewUserAccount(UserPOJO userPOJO) throws SQLException {
         try (PreparedStatement ps = this.conn.prepareStatement(
                 "INSERT INTO project_user (user_firstname, user_lastname, user_gender, user_country, user_dob," +
-                        "user_email, user_desciption, user_username, user_password) VALUES (?, ?, ?, ?, DATE ?, ?, ?, ?, ?);")) {
+                        "user_email, user_desciption, user_username, user_password,user_avatar) VALUES (?, ?, ?, ?, DATE ?, ?, ?, ?, ?,?);")) {
             ps.setString(1, userPOJO.getFirstName());
             ps.setString(2, userPOJO.getLastName());
             ps.setString(3, userPOJO.getGender());
@@ -110,6 +109,7 @@ public class UserDAO implements AutoCloseable {
             ps.setString(7, userPOJO.getDescription());
             ps.setString(8, userPOJO.getUsername());
             ps.setString(9, userPOJO.getPassword());
+            ps.setString(10, userPOJO.getAvatar());
             ps.executeUpdate();
         }
 
@@ -139,6 +139,8 @@ public class UserDAO implements AutoCloseable {
         try (PreparedStatement ps = this.conn.prepareStatement(
                 "UPDATE project_user SET user_country=?,user_email=?,user_desciption=?, " +
                         "user_username=?,user_password=?,user_avatar=? WHERE user_id=?;")) {
+            System.out.println(userPOJO.getCountry());
+            System.out.println(userPOJO.getAvatar());
             ps.setString(1, userPOJO.getCountry());
             ps.setString(2, userPOJO.getEmail());
             ps.setString(3, userPOJO.getDescription());

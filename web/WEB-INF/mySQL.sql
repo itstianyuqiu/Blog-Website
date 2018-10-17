@@ -19,6 +19,7 @@ CREATE TABLE project_user (
   user_desciption VARCHAR(200),
   user_username   VARCHAR(100),
   user_password   VARCHAR(100),
+  user_avatar     VARCHAR(500),
   PRIMARY KEY (user_id)
 );
 CREATE TABLE project_user_article (
@@ -42,16 +43,34 @@ INSERT INTO project_user_article (user_id, article_id, article_comment) VALUES (
 INSERT INTO project_user_article (user_id, article_id, article_comment) VALUES (2, 1, 'user 2, article 1');
 
 
-SELECT * FROM project_article;
+SELECT *
+FROM project_article;
 
-SELECT * FROM project_user;
+SELECT *
+FROM project_user;
 
-SELECT article_id FROM project_user_article WHERE user_id = 1;
+SELECT article_id
+FROM project_user_article
+WHERE user_id = 1;
 
-SELECT * FROM project_user_article;
+SELECT *
+FROM project_user_article;
 
-SELECT comment_id, user_id, article_comment FROM project_user_article WHERE article_id = 1;
+SELECT
+  comment_id,
+  user_id,
+  article_comment
+FROM project_user_article
+WHERE article_id = 1;
 
-SELECT comment_id, user_id, article_comment FROM project_user_article WHERE article_id = ?;
+SELECT
+  comment_id,
+  user_id,
+  article_comment
+FROM project_user_article
+WHERE article_id = ?;
 
-SELECT * FROM project_article JOIN project_user_article ON project_article.article_id = project_user_article.article_id WHERE user_id = 1;
+SELECT *
+FROM project_article
+  JOIN project_user_article ON project_article.article_id = project_user_article.article_id
+WHERE user_id = 1;

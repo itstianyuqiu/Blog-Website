@@ -17,21 +17,18 @@
     <div class="inner">
         <!--Avatar-->
         <a href="#" class="image avatar">
-            <img id="image_avatar" src="images/image_default_avatar.png" alt=""/>
+            <img id="image_avatar" src="${userPOJO.getAvatar()}" alt="loading..."/>
         </a>
         <!--Username & Description-->
         <span id="user_name">
                     <h1>
-                        <strong>
-                            ${UserPOJO.getFirstName()} ${userPOJO.getLastName()}
-                        </strong>
+                        <strong>${userPOJO.getFirstName()} ${userPOJO.getLastName()}</strong>
                     </h1>
             </span>
         <p>${userPOJO.getDescription()}</p>
 
     </div>
 </header>
-
 
 <!--research-->
 
@@ -49,7 +46,7 @@
                     <img id="icon_home" src="images/icon_logo.png">
                 </a>
                 <a href="homepage.jsp">
-                    <img id="icon_setting" src="images/icon_home.png" width="40px">
+                    <img id="icon_setting" src="images/icon_home.png">
                 </a>
                 <a href="/UserLogOutServlet">
                     <img id="icon_logout" src="images/icon_logout.png">
@@ -59,26 +56,31 @@
     </section>
 
     <section id="one">
-    <h2>General Account Settings</h2>
-    <br>
-    <p class="sub_title">Username</p>
-    <input type="text" name="username" id="setting_username" class="setting_text_field" value="${userPOJO.getUsername()}"/>
-    <br>
-    <br>
-    <p class="sub_title">Email address</p>
-    <input type="text" name="emailaddress" id="setting_emailaddress" class="setting_text_field" value="${userPOJO.getEmail()}"/>
-    <br>
-    <br>
-    <p class="sub_title">Country</p>
-    <input type="text" name="country" id="setting_country" class="setting_text_field" value="${userPOJO.getCountry()}"/>
-    <br>
-    <br>
-    <p class="sub_title">Describe yourself in one sentence</p>
-    <input type="text" name="description" id="setting_description" class="setting_text_field" value="${userPOJO.getDescription()}"/>
-    <br>
-    <br>
-    <button type="submit" class="btn_savechange" name="savechange1" value="savechange1">Save change</button>
-    </form>
+        <form action="/UserUpdateAccountServlet" id="update" method="post">
+            <h2>General Account Settings</h2>
+            <br>
+            <p class="sub_title">Username</p>
+            <input type="text" name="username" id="setting_username" class="setting_text_field"
+                   value="${userPOJO.getUsername()}"/>
+            <br>
+            <br>
+            <p class="sub_title">Email address</p>
+            <input type="text" name="emailaddress" id="setting_emailaddress" class="setting_text_field"
+                   value="${userPOJO.getEmail()}"/>
+            <br>
+            <br>
+            <p class="sub_title">Country</p>
+            <input type="text" name="country" id="setting_country" class="setting_text_field"
+                   value="${userPOJO.getCountry()}"/>
+            <br>
+            <br>
+            <p class="sub_title">Describe yourself in one sentence</p>
+            <input type="text" name="description" id="setting_description" class="setting_text_field"
+                   value="${userPOJO.getDescription()}"/>
+            <br>
+            <br>
+            <button type="submit" class="btn_savechange" name="savechange1" value="savechange1">Save change</button>
+        </form>
     </section>
 
     <section id="two">
@@ -100,7 +102,7 @@
             <br>
             <br>
             <p class="sub_title">Answer</p>
-            <input type="text"  id="security_questionanswer" class="setting_text_field"/>
+            <input type="text" id="security_questionanswer" class="setting_text_field"/>
             <br>
             <br>
             <p class="sub_title">New password</p>
@@ -129,5 +131,40 @@
 
 
 </div>
+
+
+<!-- change avatar -->
+
+<div id="change_avatar">
+    <!-- avatar content -->
+    <div class="avatar_update_content">
+        <div class="avatar_update_header">
+            <span class="close">&times;</span>
+        </div>
+        <div class="avatar_update_body">
+            <%--<a href="/UserUpdateAccountServlet"><img src="images/icon_home.png" name="images/icon_home.png"></a>--%>
+            <%--<a href="/UserUpdateAccountServlet"><img src="images/icon_login.png" name="images/icon_login.png"></a>--%>
+            <%--<a href="/UserUpdateAccountServlet"><img src="images/icon_logo.png" name="images/icon_logo.png"></a>--%>
+            <%--<a href="/UserUpdateAccountServlet"><img src="images/icon_setting.jpg" name="images/icon_setting.jpg"></a>--%>
+        </div>
+        <div class="avatar_update_footer">
+            <form id="avatar" action="/UserUpdateAccountServlet" method="post" enctype="multipart/form-data">
+                <input type="file" accept="image/*" name="avatar">
+                <button type="submit" name="submit_btn">Submit</button>
+                <%--<button type="submit" name="cancel_btn">Cancel</button>--%>
+            </form>
+        </div>
+    </div>
+</div>
+
+
 </body>
+<script>
+    $("#image_avatar").click(function () {
+        $("#change_avatar").show(100);
+    });
+    $(".close").click(function () {
+        $("#change_avatar").hide(100);
+    });
+</script>
 </html>

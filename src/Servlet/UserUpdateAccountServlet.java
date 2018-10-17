@@ -24,7 +24,7 @@ public class UserUpdateAccountServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
-        this.uploadFolder = new File(getServletContext().getRealPath("/UploadedPhotos"));
+        this.uploadFolder = new File(getServletContext().getRealPath("/Uploaded_Avatar"));
         if (!uploadFolder.exists()) {
             uploadFolder.mkdirs();
         }
@@ -72,8 +72,11 @@ public class UserUpdateAccountServlet extends HttpServlet {
         ServletFileUpload fileUpload = new ServletFileUpload(factory);
 
         List<FileItem> fileItems = fileUpload.parseRequest(req);
+        System.out.println(fileItems.size());
         File imgFile = null;
         String filename = null;
+
+
         for (FileItem fi : fileItems) {
             if (!fi.isFormField()) {
                 System.out.println(fi.getName());
@@ -82,11 +85,11 @@ public class UserUpdateAccountServlet extends HttpServlet {
                 fi.write(imgFile);
             }
         }
-        if (imgFile == null && filename == null) {
+        if (imgFile == null) {
             System.out.println("imgFile is null.");
         } else {
             UserPOJO userPOJO = (UserPOJO) req.getSession().getAttribute("userPOJO");
-            userPOJO.setAvatar("UploadedPhotos/"+filename);
+            userPOJO.setAvatar("Uploaded_Avatar/" + filename);
 
             userDAO.updateUserAccount(userPOJO);
 
@@ -112,6 +115,7 @@ public class UserUpdateAccountServlet extends HttpServlet {
         String username = req.getParameter("username");
         String email = req.getParameter("emailaddress");
         String country = req.getParameter("country");
+        System.out.println(country);
         String description = req.getParameter("description");
 
         UserPOJO userPOJO = (UserPOJO) req.getSession().getAttribute("userPOJO");

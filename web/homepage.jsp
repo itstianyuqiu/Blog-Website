@@ -10,20 +10,18 @@
     <script type="text/javascript" src="myJS.js"></script>
 </head>
 <%--<body onload="loadAllArticleWithComments()">--%>
-<body class="is-preload" onload="load_article()"  >
+<body class="is-preload" onload="load_article()">
 
 <!-- Header -->
 <header id="header">
     <div class="inner">
         <!--Avatar-->
-        <a href="#" class="image avatar">
-            <img id="image_avatar" src="images/image_default_avatar.png" alt=""/>
-        </a>
+        <img id="image_avatar" src="${userPOJO.getAvatar()}" alt="loading..."/>
         <!--Username & Description-->
         <span id="user_name">
                     <h1>
                         <strong>
-                            ${UserPOJO.getFirstName()} ${userPOJO.getLastName()}
+                            ${userPOJO.getFirstName()} ${userPOJO.getLastName()}
                         </strong>
                     </h1>
             </span>
@@ -64,7 +62,9 @@
         <h2>Write a New Article</h2>
         <br>
         <div id="add_new_articles"></div>
-        <a  href="newArticleSubmitForm.jsp"><button id="btn_add_new_article">Add a new article</button></a>
+        <a href="newArticleSubmitForm.jsp">
+            <button id="btn_add_new_article">Add a new article</button>
+        </a>
     </section>
 
     <section id="three">
@@ -74,21 +74,21 @@
         <%--<button id="btn_all_articles" onclick="loadAllArticleWithComments()">Read everyone's article</button>--%>
         <div id="my_articles">
             <%--<%--%>
-                <%--String fromPage = request.getSession().getAttribute("page").toString();--%>
-                <%--System.out.println(fromPage);--%>
-                <%--if (fromPage.equals("myArticles")) {--%>
+            <%--String fromPage = request.getSession().getAttribute("page").toString();--%>
+            <%--System.out.println(fromPage);--%>
+            <%--if (fromPage.equals("myArticles")) {--%>
             <%--%>--%>
             <%--<script>--%>
-                <%--loadUserArticle();--%>
+            <%--loadUserArticle();--%>
             <%--</script>--%>
             <%--<%--%>
             <%--} else if (fromPage.equals("allArticles")) {--%>
             <%--%>--%>
             <%--<script>--%>
-                <%--loadAllArticleWithComments();--%>
+            <%--loadAllArticleWithComments();--%>
             <%--</script>--%>
             <%--<%--%>
-                <%--}--%>
+            <%--}--%>
             <%--%>--%>
         </div>
     </section>
@@ -102,27 +102,26 @@
         <br>
         <div id="all_articles">
             <%--<%--%>
-                <%--String fromPage = request.getSession().getAttribute("page").toString();--%>
-                <%--System.out.println(fromPage);--%>
-                <%--if (fromPage.equals("myArticles")) {--%>
+            <%--String fromPage = request.getSession().getAttribute("page").toString();--%>
+            <%--System.out.println(fromPage);--%>
+            <%--if (fromPage.equals("myArticles")) {--%>
             <%--%>--%>
             <%--<script>--%>
-                <%--loadUserArticle();--%>
+            <%--loadUserArticle();--%>
             <%--</script>--%>
             <%--<%--%>
             <%--} else if (fromPage.equals("allArticles")) {--%>
             <%--%>--%>
             <%--<script>--%>
-                <%--loadAllArticleWithComments();--%>
+            <%--loadAllArticleWithComments();--%>
             <%--</script>--%>
             <%--<%--%>
-                <%--}--%>
+            <%--}--%>
             <%--%>--%>
         </div>
     </section>
 
-
-
 </div>
 </body>
+
 </html>

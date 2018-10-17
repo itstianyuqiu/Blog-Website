@@ -11,12 +11,13 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="../homepageCSS/cssStyle.css">
-    <link rel="stylesheet" href="../homepageCSS/rowPart.css">
-    <link rel="stylesheet" href="../homepageCSS/otherCss.css">
-    <link rel="stylesheet" href="../homepageCSS/containerCSS.css">
-    <link rel="stylesheet" href="../homepageCSS/imageCSS.css">
-    <link rel="stylesheet" href="../homepageCSS/popUpCss.css">
+    <link rel="stylesheet" href="../TianCSS/homepage.css">
+    <%--<link rel="stylesheet" href="../homepageCSS/cssStyle.css">--%>
+    <%--<link rel="stylesheet" href="../homepageCSS/rowPart.css">--%>
+    <%--<link rel="stylesheet" href="../homepageCSS/otherCss.css">--%>
+    <%--<link rel="stylesheet" href="../homepageCSS/containerCSS.css">--%>
+    <%--<link rel="stylesheet" href="../homepageCSS/imageCSS.css">--%>
+    <%--<link rel="stylesheet" href="../homepageCSS/popUpCss.css">--%>
     <%--<script type="text/javascript" src="../JQuery_lib/jquery-3.3.1.js"></script>--%>
     <%--<script type="text/javascript" src="../myJS.js"></script>--%>
     <script type="text/javascript" src="../JQuery_lib/jquery-3.3.1.js"></script>
