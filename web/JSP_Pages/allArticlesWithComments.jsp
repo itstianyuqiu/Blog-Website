@@ -31,8 +31,16 @@
 
         for (ArticlePOJO a : allArticles) {
 
+            //get current article info
+            int articleID = a.getArticle_id();
+            String articleTitle = a.getTitle();
+            String articleContent = a.getContent();
+            String articleDate = a.getArticle_date();
+
+            //get current user info
             UserPOJO user = newArticleDAO.getUserName(String.valueOf(a.getAuthor_id())); //added method in DAO to return user's name details
 
+            //display user First Name, Last Name and Username
             out.println("<header>");
             out.println("<h3>" + user.getFirstName() + " " + user.getLastName() + "</h3>");
             out.println("<br>");
@@ -40,21 +48,23 @@
             out.println("</header>");
             out.println("<br>");
 
-            out.println("<h4>" + "Heading: " + a.getTitle() + "</h4>");
+            //generate & print out article title, publishing date and content
+            out.println("<h4>" + "Heading: " + articleTitle + "</h4>");
             out.println("<br>");
-            out.println("<i>" + "Publishing Date: " + a.getArticle_date() + "</i>");
+            out.println("<i>" + "Publishing Date: " + articleDate + "</i>");
             out.println("<br>");
-            out.println("<p>" + "Content: " +  a.getContent() + "</p>");
+            out.println("<p>" + "Content: " +  articleContent + "</p>");
             out.println("<br>");
-            List <ImagePOJO> allImages = newArticleDAO.loadImageFromArticle(a.getArticle_id());
+
+            //generate and print images that belong to this article
+            List <ImagePOJO> allImages = newArticleDAO.loadImageFromArticle(articleID);
             for (ImagePOJO i : allImages ) {
                 out.println("<img src=\"../Article_Photos/" + i.getSource() + "\"" + "width=\"200\">");
             }
             out.println("<br>");
 
-            int articleID = a.getArticle_id();
-
-                out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
+            //generate a blank comment div (default visibility is false, true when clicked on show comment button)
+            out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
 
                 //If this is first login, set all comments button to false & hide all comments div
                 if (request.getSession().getAttribute("firstLogin_AllArticles").toString().equals("true")){

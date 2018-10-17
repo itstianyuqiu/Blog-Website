@@ -33,28 +33,35 @@
         //generate a list of Articles based on the current userID
         List<ArticlePOJO> allArticles = newArticleDAO.loadUserArticles(request.getSession().getAttribute("userID").toString());
 
-        System.out.println("list size: " + allArticles.size() );
+
         //looping through the generated list
         for (ArticlePOJO a : allArticles) {
 
-            out.println("<h4>" + a.getTitle() + "</h4>");
+            //get current article info
+            int articleID = a.getArticle_id();
+            String articleTitle = a.getTitle();
+            String articleContent = a.getContent();
+            String articleDate = a.getArticle_date();
+
+            //generate & print out article title, publishing date and content
+            out.println("<h4>" + articleTitle + "</h4>");
             out.println("<br>");
-            out.println("<i>" + "Publishing Date: " + a.getArticle_date() + "</i>");
+            out.println("<i>" + "Publishing Date: " + articleDate + "</i>");
             out.println("<br>");
-            out.println("<p>" + a.getContent() + "</p>");
+            out.println("<p>" + articleContent + "</p>");
             out.println("<br>");
-            List <ImagePOJO> allImages = newArticleDAO.loadImageFromArticle(a.getArticle_id());
+
+            //generate and print images that belong to this article
+            List <ImagePOJO> allImages = newArticleDAO.loadImageFromArticle(articleID);
             for (ImagePOJO i : allImages ) {
                 out.println("<img src=\"../Article_Photos/" + i.getSource() + "\"" + "width=\"200\">");
             }
             out.println("<br>");
-            int articleID = a.getArticle_id();
-            String articleTitle = a.getTitle();
-            String articleContent =a.getContent();
 
+            //generate a blank comment div (default visibility is false, true when clicked on show comment button)
+            out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
 
-                out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
-
+            //generate show/hide comment button
                 %>
                 <form action="/CommentServlet" method="get">
                     <input type="submit" id="button_<%=articleID%>" value="Show/Hide Comments" name="comment_button">
@@ -69,7 +76,6 @@
             String currentButton = request.getSession().getAttribute("button_" + articleID).toString();
             
             //Get the current article & button session, if matches with the current iteration of the loop, then show & load the comments div.
-
             if ((articleID == Integer.parseInt(currentArticle)) && (currentButton.equals("true"))){
                 %>
                     <script>

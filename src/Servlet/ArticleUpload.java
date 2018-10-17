@@ -19,7 +19,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileUploads extends HttpServlet {
+public class ArticleUpload extends HttpServlet {
 
     private File uploadsFolder;
     private File tempFolder;

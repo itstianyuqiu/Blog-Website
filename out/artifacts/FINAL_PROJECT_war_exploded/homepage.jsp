@@ -90,7 +90,6 @@
                         <div id="articles">
                             <%
                                 String fromPage = request.getSession().getAttribute("page").toString();
-                                System.out.println(fromPage);
                                 if (fromPage.equals("myArticles")){
                             %>
                                 <script>

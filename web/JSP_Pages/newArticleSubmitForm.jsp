@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<form action="/FileUploads" method="post" enctype="multipart/form-data">
+<form action="/ArticleUpload" method="post" enctype="multipart/form-data">
     <br>
     <br>
     <h5>Headings:</h5>

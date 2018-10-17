@@ -100,7 +100,7 @@
 
     <servlet>
         <servlet-name>FileUploads</servlet-name>
-        <servlet-class>Servlet.FileUploads</servlet-class>
+        <servlet-class>Servlet.ArticleUpload</servlet-class>
     </servlet>
 
     <servlet-mapping>
