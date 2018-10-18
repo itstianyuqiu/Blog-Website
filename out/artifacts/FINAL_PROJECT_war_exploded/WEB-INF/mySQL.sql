@@ -27,6 +27,9 @@ CREATE TABLE project_article (
   author_id  INT,
   article_visibility BOOLEAN,
   article_date DATE,
+  article_audio TEXT,
+  article_video TEXT,
+  article_YouTube TEXT,
   FOREIGN KEY (author_id) REFERENCES project_user (user_id),
   PRIMARY KEY (article_id)
 );
@@ -74,11 +77,9 @@ INSERT INTO project_article_comment (user_id, article_id, article_comment, comme
 INSERT INTO project_comment_relationship (parent_id, child_id) VALUES (1, 3);
 
 
-SELECT *
-FROM project_article;
+SELECT * FROM project_article;
 
-SELECT *
-FROM project_user;
+SELECT * FROM project_user;
 
 SELECT article_id
 FROM project_user_article

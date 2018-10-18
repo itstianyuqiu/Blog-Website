@@ -7,6 +7,33 @@ public class ArticlePOJO {
     private int author_id;
     private boolean article_visibility;
     private String article_date;
+    private String article_audio;
+    private String article_video;
+    private String article_Youtube;
+
+    public String getArticle_audio() {
+        return article_audio;
+    }
+
+    public String getArticle_video() {
+        return article_video;
+    }
+
+    public String getArticle_Youtube() {
+        return article_Youtube;
+    }
+
+    public void setArticle_audio(String article_audio) {
+        this.article_audio = article_audio;
+    }
+
+    public void setArticle_video(String article_video) {
+        this.article_video = article_video;
+    }
+
+    public void setArticle_Youtube(String article_Youtube) {
+        this.article_Youtube = article_Youtube;
+    }
 
     public ArticlePOJO(){
 

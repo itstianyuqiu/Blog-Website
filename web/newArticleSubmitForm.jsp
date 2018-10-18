@@ -41,7 +41,20 @@
                                         <textarea id="newarticile_content" name="article_content" rows="15"> </textarea>
                                         <br>
                                         <br>
+                                        <b> Upload Image: </b>
                                         <input type="file" id="picture" name="picture" accept="image/png, image/jpeg" multiple>
+                                        <br>
+                                        <br>
+                                        <b> Upload Audio: </b>
+                                        <input type="file" id="audioUpload" name="audioUpload" accept="audio/*">
+                                        <br>
+                                        <br>
+                                        <b> Upload Video: </b>
+                                        <input type="file" id="videoUpload" name="videoUpload" accept="video/*">
+                                        <br>
+                                        <br>
+                                        <b> Youtube Link: </b>
+                                        <input type="text" id="youtubeLink" name="youtubeLink">
                                         <br>
                                         <br>
                                         <h5>Publishing Date:</h5>

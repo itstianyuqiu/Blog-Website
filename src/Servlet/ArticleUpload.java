@@ -21,7 +21,10 @@ import java.util.List;
 
 public class ArticleUpload extends HttpServlet {
 
-    private File uploadsFolder;
+    private File imageFolder;
+    private File audioFolder;
+    private File videoFolder;
+
     private File tempFolder;
 
 
@@ -30,11 +33,25 @@ public class ArticleUpload extends HttpServlet {
 
         super.init();
 
-        this.uploadsFolder = new File(getServletContext().getRealPath("/Article_Photos"));
+        this.imageFolder = new File(getServletContext().getRealPath("/Uploaded_Images"));
 
-        if (!uploadsFolder.exists()) {
-            uploadsFolder.mkdir();
+        if (!imageFolder.exists()) {
+            imageFolder.mkdir();
         }
+
+        this.audioFolder = new File(getServletContext().getRealPath("/Uploaded_Audio"));
+
+        if (!audioFolder.exists()) {
+            audioFolder.mkdir();
+        }
+
+
+        this.videoFolder = new File(getServletContext().getRealPath("/Uploaded_Video"));
+
+        if (!videoFolder.exists()) {
+            videoFolder.mkdir();
+        }
+
 
         this.tempFolder = new File(getServletContext().getRealPath("/WEB-INF/temp"));
 
@@ -71,25 +88,49 @@ public class ArticleUpload extends HttpServlet {
             List<FileItem> fileItems = upload.parseRequest(request);
 
             List<File> allImages = new ArrayList<>();
+            File audioFile = null;
+            File videoFile = null;
 
             String title = null;
             String content = null;
             String date = null;
+            String youtubeLink = null;
 
             String form = null;
 
             for (FileItem fi : fileItems) {
 
+                //get uploaded image/audio/video details
                 if (!fi.isFormField()) {
-                    System.out.println("1. did I get here?");
-                    String fileName = fi.getName();
-                    if (!fileName.equals("")) {
-                        File singleImage = new File(uploadsFolder, fileName);
-                        allImages.add(singleImage);
-                        fi.write(singleImage);
+
+                    if (fi.getFieldName().equals("picture")){
+                        String fileName = fi.getName();
+                        if (!fileName.equals("")) {
+                            File singleImage = new File(imageFolder, fileName);
+                            allImages.add(singleImage);
+                            fi.write(singleImage);
+                        }
                     }
+
+                    if (fi.getFieldName().equals("audioUpload")){
+                        String audioName = fi.getName();
+                        if (!audioName.equals("")) {
+                            audioFile = new File(audioFolder, audioName);
+                            fi.write(audioFile);
+                        }
+                    }
+
+                    if (fi.getFieldName().equals("videoUpload")){
+                        String videoName = fi.getName();
+                        if (!videoName.equals("")) {
+                            videoFile = new File(videoFolder, videoName);
+                            fi.write(videoFile);
+                        }
+                    }
+
                 }
 
+                // get article details
                 if (fi.getFieldName().equals("article_heading")) {
                     title = fi.getString();
                 }
@@ -102,6 +143,12 @@ public class ArticleUpload extends HttpServlet {
                     date = fi.getString();
                 }
 
+                if (fi.getFieldName().equals("youtubeLink")) {
+                    String[] parts = fi.getString().split("=");
+                    youtubeLink = parts[parts.length-1];
+                }
+
+                // which form is the code coming from
                 if (fi.getFieldName().equals("addArticle")) {
                     form = fi.getString();
                 }
@@ -112,19 +159,34 @@ public class ArticleUpload extends HttpServlet {
 
             }
 
+
             try (ArticleDAO newArticleDAO = new ArticleDAO()) {
                 ArticlePOJO apj = new ArticlePOJO();
 
                 if ("Add Now".equals(form)) {
-                    UserPOJO upj = new UserPOJO();
+                    //set article details tile, content, date, author
+
+                    apj.setAuthor_id(Integer.parseInt(request.getSession().getAttribute("userID").toString()));
                     apj.setTitle(title);
                     apj.setContent(content);
                     apj.setArticle_date(date);
-                    upj.setUser_id(Integer.parseInt(request.getSession().getAttribute("userID").toString()));
-                    newArticleDAO.addNewArticle(apj, upj);
+                    apj.setArticle_Youtube(youtubeLink);
 
+                    //add audio file to Article POJO if it's available
+                    if (audioFile != null){
+                        apj.setArticle_audio(audioFile.getName());
+                    }
+
+                    //add video file to Article POJO if it's available
+                    if (videoFile != null){
+                        apj.setArticle_video(videoFile.getName());
+                    }
+
+                    //add the info to database (project_article table)
+                    newArticleDAO.addNewArticle(apj);
+
+                    // if images are available, add them to the database (project_aticle_image table)
                     if (!allImages.isEmpty()) {
-                        System.out.println("2. did I get here?");
                         for (File singleImage : allImages) {
                             ImagePOJO ipj = new ImagePOJO();
                             ipj.setArticle_id(newArticleDAO.getIDOfLastArticle());
@@ -133,7 +195,7 @@ public class ArticleUpload extends HttpServlet {
                         }
                     }
 
-
+                    // set the page session to myArticles, and the visibility for comment div to be false
                     request.getSession().setAttribute("page", "myArticles");
                     request.getSession().setAttribute("button_" + newArticleDAO.getIDOfLastArticle(), false);
 

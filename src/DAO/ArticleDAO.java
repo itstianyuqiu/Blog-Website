@@ -68,6 +68,10 @@ public class ArticleDAO implements AutoCloseable {
             article.setAuthor_id(rs.getInt(4));
             article.setArticle_visibility(rs.getBoolean(5));
             article.setArticle_date(rs.getString(6));
+            article.setArticle_audio(rs.getString(7));
+            article.setArticle_video(rs.getString(8));
+            article.setArticle_Youtube(rs.getString(9));
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
@@ -75,20 +79,27 @@ public class ArticleDAO implements AutoCloseable {
         return article;
     }
 
-    public void addNewArticle(ArticlePOJO apj, UserPOJO upj) throws SQLException, ParseException {
+    public void addNewArticle(ArticlePOJO apj) throws SQLException, ParseException {
 
-        int userID = upj.getUser_id();
+        int userID = apj.getAuthor_id();
         String heading = apj.getTitle();
         String content = apj.getContent();
         String dateString = apj.getArticle_date();
+        String audio = apj.getArticle_audio();
+        String video = apj.getArticle_video();
+        String youtube = apj.getArticle_Youtube();
 
         Date date = new SimpleDateFormat("yyyy-MM-dd").parse(dateString);
 
-        try (PreparedStatement smt = this.conn.prepareStatement("INSERT INTO project_article (article_title, article_content, author_id, article_visibility, article_date) VALUES (?, ?, ?, TRUE, ?)")) {
+        try (PreparedStatement smt = this.conn.prepareStatement("INSERT INTO project_article (article_title, article_content, author_id, article_visibility, article_date,article_audio,article_video,article_YouTube) " +
+                "VALUES (?, ?, ?, TRUE, ?, ?, ?, ?)")) {
             smt.setString(1, heading);
             smt.setString(2, content);
             smt.setInt(3, userID);
             smt.setDate(4, new java.sql.Date(date.getTime()));
+            smt.setString(5, audio);
+            smt.setString(6, video);
+            smt.setString(7, youtube);
             smt.executeUpdate();
         }
 
@@ -147,16 +158,20 @@ public class ArticleDAO implements AutoCloseable {
 
     }
 
-    public void updateArticle(ArticlePOJO article) throws SQLException {
+    public void updateArticle(ArticlePOJO article) throws SQLException, ParseException {
 
         int articleID = article.getArticle_id();
         String title = article.getTitle();
         String content = article.getContent();
+        String dateString = article.getArticle_date();
 
-        try (PreparedStatement smt = this.conn.prepareStatement("UPDATE project_article SET article_title = ?, article_content = ? WHERE article_id = ?")) {
+        Date date = new SimpleDateFormat("yyyy-MM-dd").parse(dateString);
+
+        try (PreparedStatement smt = this.conn.prepareStatement("UPDATE project_article SET article_title = ?, article_content = ?, article_date = ? WHERE article_id = ?")) {
             smt.setString(1, title);
             smt.setString(2, content);
-            smt.setInt(3, articleID);
+            smt.setDate(3, new java.sql.Date(date.getTime()));
+            smt.setInt(4, articleID);
             smt.executeUpdate();
         }
 

@@ -52,17 +52,49 @@
             out.println("<br>");
 
             //generate and print images that belong to this article
+            out.println("<h5>" + "Photos: " + "</h5>");
             List <ImagePOJO> allImages = newArticleDAO.loadImageFromArticle(articleID);
             for (ImagePOJO i : allImages ) {
-                out.println("<img src=\"../Article_Photos/" + i.getSource() + "\"" + "width=\"200\">");
+                out.println("<img src=\"../Uploaded_Images/" + i.getSource() + "\"" + "width=\"200\">");
             }
             out.println("<br>");
+
+            //generate and print the audio that belongs to this article
+            if (a.getArticle_audio() != null){
+                out.println("<h5>" + "Audio: " + "</h5>");
+                out.println("<audio controls>");
+                out.println("<source src=\"../Uploaded_Audio/" + a.getArticle_audio() + "\" type=\"audio/mp3\">");
+                out.println("</audio>");
+            }
+
+            //generate and print the video that belongs to this article
+
+            if (a.getArticle_video() != null){
+                out.println("<h5>" + "Video: " + "</h5>");
+                out.println("<video width=\"200px\" height=\"150px\" controls>");
+                out.println("<source src=\"../Uploaded_Video/" + a.getArticle_video() + "\" type=\"video/mp4\">");
+                out.println("</video>");
+            }
+
+            //generate and print the youtube that belongs to this article
+            if (!a.getArticle_Youtube().equals("")){
+                out.println("<h5>" + "Youtube: " + "</h5>");
+                %>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=a.getArticle_Youtube()%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen> </iframe>
+                <%
+            }
+
+
+
+
+
 
             //generate a blank comment div (default visibility is false, true when clicked on show comment button)
             out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
 
             //generate show/hide comment button
                 %>
+
                 <form action="/CommentServlet" method="get">
                     <input type="submit" id="button_<%=articleID%>" value="Show/Hide Comments" name="comment_button">
                     <input type="hidden" name="current_article" value="<%=articleID%>">
