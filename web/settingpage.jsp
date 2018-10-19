@@ -8,26 +8,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <script type="text/javascript" src="../JQuery_lib/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="myJS.js"></script>
+
 </head>
 <%--<body onload="loadAllArticleWithComments()">--%>
 <body class="is-preload">
 
 <!-- Header -->
 <header id="header">
-    <div class="inner">
-        <!--Avatar-->
-        <a href="#" class="image avatar">
-            <img id="image_avatar" src="${userPOJO.getAvatar()}" alt="loading..."/>
-        </a>
-        <!--Username & Description-->
-        <span id="user_name">
+<div class="inner">
+    <!--Avatar-->
+    <img id="image_avatar" src="${userPOJO.getAvatar()}" alt="loading..."/>
+    <!--Username & Description-->
+    <span id="user_name">
                     <h1>
-                        <strong>${userPOJO.getFirstName()} ${userPOJO.getLastName()}</strong>
+                        <strong>
+                            ${userPOJO.getFirstName()} ${userPOJO.getLastName()}
+                        </strong>
                     </h1>
             </span>
-        <p>${userPOJO.getDescription()}</p>
+    <p>${userPOJO.getDescription()}</p>
 
-    </div>
+</div>
 </header>
 
 <!--research-->
@@ -42,11 +43,11 @@
             </span>
 
             <span id="zone_icon">
-                <a href="index.jsp">
-                    <img id="icon_home" src="images/icon_logo.png">
-                </a>
                 <a href="homepage.jsp">
-                    <img id="icon_setting" src="images/icon_home.png">
+                    <img id="icon_homepage" src="${userPOJO.getAvatar()}" alt="loading..."> ${userPOJO.getFirstName()}
+                </a>
+                <a href="index.jsp">
+                    <img id="icon_home" src="images/icon_home.png">
                 </a>
                 <a href="/UserLogOutServlet">
                     <img id="icon_logout" src="images/icon_logout.png">
@@ -145,19 +146,27 @@
         <div class="avatar_update_header">
             <span class="close">&times;</span>
         </div>
+
         <div class="avatar_update_body">
-            <%--<a href="/UserUpdateAccountServlet"><img src="images/icon_home.png" name="images/icon_home.png"></a>--%>
-            <%--<a href="/UserUpdateAccountServlet"><img src="images/icon_login.png" name="images/icon_login.png"></a>--%>
-            <%--<a href="/UserUpdateAccountServlet"><img src="images/icon_logo.png" name="images/icon_logo.png"></a>--%>
-            <%--<a href="/UserUpdateAccountServlet"><img src="images/icon_setting.jpg" name="images/icon_setting.jpg"></a>--%>
+            <h3>Predefined Icons:</h3>
+            <div class="avatar_update_body_img">
+                <img src="images/icon_home.png">
+                <img src="images/icon_login.png">
+                <img src="images/icon_logo.png">
+                <img src="images/icon_setting.jpg">
+            </div>
         </div>
         <div class="avatar_update_footer">
-            <form id="avatar" action="/UserUpdateAccountServlet" method="post" enctype="multipart/form-data">
-                <input type="file" accept="image/*" name="avatar">
-                <button type="submit" name="submit_btn">Submit</button>
-                <%--<button type="submit" name="cancel_btn">Cancel</button>--%>
-            </form>
+            <h3>Choose your own Icon:</h3>
+            <div>
+                <form action="/UserUpdateAccountServlet" method="post" enctype="multipart/form-data">
+                    <input type="file" accept="image/*" name="avatar">
+                    <button type="submit" name="submit_btn">Submit</button>
+                    <button type="button" name="cancel_btn" id="avatar_update_cancel">Cancel</button>
+                </form>
+            </div>
         </div>
+
     </div>
 </div>
 
@@ -169,6 +178,13 @@
     });
     $(".close").click(function () {
         $("#change_avatar").hide(100);
+    });
+    $("#avatar_update_cancel").click(function () {
+        $("#change_avatar").hide(100);
+    });
+    $(".avatar_update_body img").click(function (e) {
+        console.log(e.target.src);
+        location.href = "/UserUpdateAccountServlet?imgPath=" + e.target.src;
     });
 </script>
 </html>

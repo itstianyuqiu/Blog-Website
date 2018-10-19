@@ -24,18 +24,18 @@
         <input placeholder="  New password " type="password" name="password" id="newpassword" class="signup_text_field_usernameemailpassword"/>
         <br>
         <br>
-        Security question:
-        <select id="form_securityquestion" name="securityquestion">
-            <option value="-">Question</option>
-            <option value="1">What is your favourite movie?</option>
-            <option value="2">Where are you born?</option>
-            <option value="3">What is your first pet's name?</option>
-        </select>
-        <br>
-        <br>
-        <input placeholder="  My answer " type="text" id="security_answer" class="signup_text_field_usernameemailpassword"/>
-        <br>
-        <br>
+        <%--Security question:--%>
+        <%--<select id="form_securityquestion" name="securityquestion">--%>
+            <%--<option value="-">Question</option>--%>
+            <%--<option value="1">What is your favourite movie?</option>--%>
+            <%--<option value="2">Where are you born?</option>--%>
+            <%--<option value="3">What is your first pet's name?</option>--%>
+        <%--</select>--%>
+        <%--<br>--%>
+        <%--<br>--%>
+        <%--<input placeholder="  My answer " type="text" id="security_answer" class="signup_text_field_usernameemailpassword"/>--%>
+        <%--<br>--%>
+        <%--<br>--%>
         Birthday:
         <select id="form_dob_day" name="dob_day">
             <option value="-">Day</option>

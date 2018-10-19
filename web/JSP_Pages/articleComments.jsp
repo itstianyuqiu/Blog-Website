@@ -13,6 +13,7 @@
 <html>
 <head>
     <title>Article comments</title>
+    <link rel="stylesheet" href="../TianCSS/homepage_my_article_delet_comments_and_child.css">
     <script type="text/javascript" src="../JQuery_lib/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="myJS.js"></script>
     <style>
@@ -51,7 +52,7 @@
 
                 if (userID.equals("" + cpj.getUserID()) || (pageFrom.equals("myArticles"))){
                     out.println("<form action=\"/CommentServlet\" method=\"get\">");
-                    out.println("<input type=\"submit\" value=\"Delete Comment\" name=\"delete_comment_button\"\">");
+                    out.println("<input id=\"btn_delete_comments\"type=\"submit\" value=\"Delete Comment\" name=\"delete_comment_button\"\">");
                     out.println("<input type=\"hidden\" name=\"comment_ID\" value=\"" + commentID + "\">");
                     out.println("</form>");
                 }
@@ -68,7 +69,7 @@
 
                         if (userID.equals("" + child.getUserID()) || (pageFrom.equals("myArticles"))){
                             out.println("<form action=\"/CommentServlet\" method=\"get\">");
-                            out.println("<input type=\"submit\" value=\"Delete Comment\" name=\"delete_child_comment_button\"\">");
+                            out.println("<input id=\"btn_delete_child_comments\"type=\"submit\" value=\"Delete Comment\" name=\"delete_child_comment_button\"\">");
                             out.println("<input type=\"hidden\" name=\"comment_ID\" value=\"" + child.getCommentID() + "\">");
                             out.println("</form>");
                         }
@@ -81,8 +82,8 @@
 
                 // Button to make replies to a comment
                 out.println("<form action=\"/CommentServlet\" method=\"get\">");
-                out.println("<input type=\"text\" name=\"comment_reply_content\">");
-                out.println("<input type=\"submit\" value=\"Reply\" name=\"comment_reply\"\">");
+                out.println("<input id=\"text_my_article_add_reply\" type=\"text\" name=\"comment_reply_content\">");
+                out.println("<input id=\"btn_my_article_add_reply\" type=\"submit\" value=\"Reply\" name=\"comment_reply\"\">");
                 out.println("<input type=\"hidden\" name=\"parent_ID\" value=\"" + commentID + "\">");
                 out.println("</form>");
 
@@ -93,8 +94,8 @@
 
             out.println("<hr>");
             out.println("<form action=\"/CommentServlet\" method=\"get\">");
-            out.println("<input type=\"text\" name=\"comments_content\">");
-            out.println("<input type=\"submit\" value=\"Add New Comment\" name=\"add_comment_button\"\">");
+            out.println("<input id=\"text_my_article_add_comments\"type=\"text\" name=\"comments_content\">");
+            out.println("<input id=\"btn_my_article_add_comments\"type=\"submit\" value=\"Add New Comment\" name=\"add_comment_button\"\">");
             out.println("</form>");
 
     } catch (Exception e) {

@@ -34,13 +34,33 @@ public class UserUpdateAccountServlet extends HttpServlet {
         }
     }
 
+    /**
+     * predefined avatar icons
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        doPost(req, resp);
+        String path = req.getParameter("imgPath");
+        String[] paths = path.split(req.getScheme() + "://" + req.getServerName() + ":" + req.getServerPort() + "/");
+
+        UserPOJO userPOJO = (UserPOJO) req.getSession().getAttribute("userPOJO");
+        userPOJO.setAvatar(paths[1]);
+        try (UserDAO userDAO = new UserDAO()) {
+            userDAO.updateUserAccount(userPOJO);
+            req.getRequestDispatcher("/settingpage.jsp").forward(req, resp);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String path = req.getParameter("imgPath");
         try (UserDAO userDAO = new UserDAO()) {
             //if click first save change button, change user's username,email,country,description
             if ("savechange1".equals(req.getParameter("savechange1"))) {
@@ -52,7 +72,7 @@ public class UserUpdateAccountServlet extends HttpServlet {
                 changeToNewPassword(userDAO, req, resp);
                 System.out.println("change password");
             }
-            //change user avatar
+            //change user avatar by file upload
             else {
                 changeAvatarWithFileUpload(userDAO, req, resp);
             }
@@ -64,6 +84,7 @@ public class UserUpdateAccountServlet extends HttpServlet {
         }
 
     }
+
 
     private void changeAvatarWithFileUpload(UserDAO userDAO, HttpServletRequest req, HttpServletResponse resp) throws Exception {
         DiskFileItemFactory factory = new DiskFileItemFactory();
@@ -115,7 +136,6 @@ public class UserUpdateAccountServlet extends HttpServlet {
         String username = req.getParameter("username");
         String email = req.getParameter("emailaddress");
         String country = req.getParameter("country");
-        System.out.println(country);
         String description = req.getParameter("description");
 
         UserPOJO userPOJO = (UserPOJO) req.getSession().getAttribute("userPOJO");
