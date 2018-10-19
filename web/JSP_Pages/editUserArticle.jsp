@@ -28,7 +28,7 @@
 </head>
 <body>
 
-<%
+    <%
 
     /* This page displays a form where the user is able to update the details of the article they wish to edit. The existing details
     * of the article are passed on from the previous page so they are prepopulated in the fields so they can edit if they wish and don't
@@ -72,7 +72,11 @@
 
                                     <%--<textarea name="article_content" rows="10" cols="10"><%=apj.getContent()%></textarea>--%>
                                     <b>Publishing Date:</b>
-                                    <input id="theDate" type="date" name="article_date" value="<%=apj.getArticle_date()%>">
+                                    <input id="theDate" type="date" name="article_date"
+                                           value="<%=apj.getArticle_date()%>">
+                                    <br>
+                                    <br>
+                                    <b>Choose the images you want to delete: </b>
                                     <br>
                                     <br>
                                     <%
@@ -80,23 +84,20 @@
                                             List<ImagePOJO> allImages = newArticleDAO.loadImageFromArticle(apj.getArticle_id());
                                             request.getSession().setAttribute("allImages", allImages);
                                             for (ImagePOJO i : allImages) {
-                                                out.println("<img src=\"../Article_Photos/" + i.getSource() + "\"" + "width=\"200\">");
+                                                out.println("<img src=\"../Uploaded_Images/" + i.getSource() + "\"" + "width=\"200\">");
                                                 out.println("<input type=\"checkbox\" name=\"checkbox_" + i.getImage_id() + "\" value=\"" + i.getImage_id() + "\">");
-
-            }
-                out.println("<input type=\"file\" id=\"picture\" name=\"picture\" accept=\"image/png, image/jpeg\" multiple>");
-        }
-        catch (Exception e){
-            e.getMessage();
-        }
-    %>>
-    <input type="submit" name="updateArticle" value="Update">
                                             }
                                             out.println("<input type=\"file\" id=\"picture\" name=\"picture\" accept=\"image/png, image/jpeg\" multiple>");
                                         } catch (Exception e) {
                                             e.getMessage();
                                         }
-                                    %>>
+                                    %>
+
+                                    <br>
+                                    <br>
+                                    <b>Add more images: </b>
+                                    <br>
+                                    <br>
                                     <input id="btn_update_article" type="submit" name="updateArticle" value="Update">
                                 </section>
                             </div>
@@ -107,4 +108,6 @@
         </div>
     </div>
 </form>
-    <a href="../homepage.jsp"><button id="edit_cancel">Cancel</button></a>
+<a href="../homepage.jsp">
+    <button id="edit_cancel">Cancel</button>
+</a>

@@ -109,6 +109,10 @@ h3 {
 
 }
 
+#icon_gallery{
+    width: 10px;
+}
+
 #btn_my_articles{
     width: 31%;
     height: 50px;

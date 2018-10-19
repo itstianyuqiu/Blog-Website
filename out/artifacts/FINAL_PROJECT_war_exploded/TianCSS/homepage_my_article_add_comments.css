@@ -145,7 +145,7 @@ h3 {
     border-radius: 6px;
     margin-top: 1em;
 }
-#btn_my_article_edit{
+.btn_my_article_edit{
     font-size: 16px;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     text-align: center;
@@ -155,7 +155,7 @@ h3 {
     background-color: rgb(33,140,236);
     color: #f8f8f8;
 }
-#btn_my_article_delete{
+.btn_my_article_delete{
     font-size: 16px;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     text-align: center;

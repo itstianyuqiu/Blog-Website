@@ -46,6 +46,11 @@
                 <a href="index.jsp">
                     <img id="icon_home" src="images/icon_home.png">
                 </a>
+
+                <a href="/JSP_Pages/mediaGalleryAll.jsp">
+                    <img style="width: 5%" id="icon_gallery" src="images/gallery.png">
+                </a>
+
                 <a href="settingpage.jsp">
                     <img id="icon_setting" src="images/icon_setting.jpg">
                 </a>

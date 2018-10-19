@@ -58,7 +58,7 @@
             //generate and print images that belong to this article
             List <ImagePOJO> allImages = newArticleDAO.loadImageFromArticle(articleID);
             for (ImagePOJO i : allImages ) {
-                out.println("<img src=\"../Article_Photos/" + i.getSource() + "\"" + "width=\"200\">");
+                out.println("<img src=\"../Uploaded_Photos/" + i.getSource() + "\"" + "width=\"200\">");
             }
             out.println("<br>");
 

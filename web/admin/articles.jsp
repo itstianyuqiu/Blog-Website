@@ -1,4 +1,10 @@
 <%@ page import="POJO.AdminPOJO" %>
+<%@ page import="POJO.CommentsPOJO" %>
+<%@ page import="java.util.List" %>
+<%@ page import="POJO.ArticlePOJO" %>
+<%@ page import="DAO.ArticleDAO" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.rmi.server.ExportException" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,27 +47,42 @@
       <table class="table table-striped table-bordered table-hover">
         <thead>
           <tr>
-            <th class="text-center" width="40"><input type="checkbox"></th>
-            <th>Title</th>
-            <th>Author</th>
+            <th>Author ID</th>
+            <th>Article ID</th>
 
-            <th class="text-center">Created Date</th>
-            <th class="text-center">Status</th>
-            <th class="text-center" width="150">Operation</th>
+            <th class="text-center">Article Title</th>
+            <th class="text-center">Article Visibility</th>
+            <th class="text-center" width="150">Show/Hide Article</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="text-center"><input type="checkbox"></td>
-            <td>aaaaaaaaaaaaaaaaa</td>
-            <td>aaaaaaaaaaaaa</td>
-            <td>aaaaaaaaaaaaaaaaa</td>
-            <td class="text-center">2016/10/07</td>
-            <td class="text-center">
-              <a href="javascript:;" class="btn btn-default btn-xs">show</a>
-              <a href="javascript:;" class="btn btn-danger btn-xs">hidden</a>
-            </td>
-          </tr>
+        <%
+          try (ArticleDAO newArticleDAO = new ArticleDAO()) {
+
+            List<ArticlePOJO> allArticles = newArticleDAO.loadAllArticlesAdmin();
+
+            for (ArticlePOJO a : allArticles) {
+              out.println("<tr>");
+              out.println("<td>" + a.getAuthor_id() + "</td>");
+              out.println("<td>" + a.getArticle_id() + "</td>");
+              out.println("<td>" + a.getTitle() + "</td>");
+              out.println("<td>" + a.isArticle_visibility() + "</td>");
+              out.println("<td>");
+              int articleID = a.getArticle_id();
+              out.print("<form action=\"/AdminServlet\" method=\"get\">");
+              out.print("<input type=\"submit\" value=\"Show/Hide Article\" name=\"article_visibility_button\"\">");
+              out.print("<input type=\"hidden\" name=\"articleID\" value=\"" + articleID + "\">");
+              out.print("</form>");
+              out.println("</td");
+              out.println("</tr>");
+
+            }
+          }
+          catch (Exception e){
+              e.getMessage();
+          }
+        %>
+
         </tbody>
       </table>
       <script>

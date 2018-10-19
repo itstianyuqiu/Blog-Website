@@ -35,19 +35,36 @@
             String articleContent = a.getContent();
             String articleDate = a.getArticle_date();
 
+            String formattedContent = "";
+
+            String [] parts = articleContent.split("\"");
+            for (int i = 0; i < parts.length; i++){
+                if (i != parts.length - 1){
+                    formattedContent = formattedContent + parts[i] +"&quot;";
+                }
+                else {
+                    formattedContent = formattedContent + parts[i];
+                }
+            }
+
+            System.out.println(formattedContent);
+
             //generate & print out article title, publishing date and content
             out.println("<h4>" + articleTitle + "</h4>");
             out.println("<br>");
             out.println("<i>" + "Publishing Date: " + articleDate + "</i>");
             out.println("<br>");
-            out.println("<p>" + articleContent + "</p>");
+            out.println(articleContent);
             out.println("<br>");
+
 
             //generate and print images that belong to this article
             out.println("<h5>" + "Photos: " + "</h5>");
             List <ImagePOJO> allImages = newArticleDAO.loadImageFromArticle(articleID);
             for (ImagePOJO i : allImages ) {
-                out.println("<img src=\"../Uploaded_Images/" + i.getSource() + "\"" + "width=\"200\">");
+                if (i != null){
+                    out.println("<img src=\"../Uploaded_Images/" + i.getSource() + "\"" + "width=\"200\">");
+                }
             }
             out.println("<br>");
 
@@ -61,8 +78,8 @@
                 out.println("</audio>");
             }
 
-            //generate and print the video that belongs to this article
 
+            //generate and print the video that belongs to this article
             if (a.getArticle_video() != null){
                 out.println("<h5>" + "Video: " + "</h5>");
                 out.println("<video width=\"320px\" height=\"240px\" controls>");
@@ -79,11 +96,6 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=a.getArticle_Youtube()%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen> </iframe>
                 <%
             }
-
-
-
-
-
 
             //generate a blank comment div (default visibility is false, true when clicked on show comment button)
             out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
@@ -127,18 +139,18 @@
                     </script>
                 <%
             }
-            
+
             //create the Delete and Edit buttons, passing on current article ID
-            out.print("<form action=\"/UpdateArticleDatabase\" method=\"get\">");
-            out.print("<input id=\"btn_my_article_edit\"type=\"submit\" value=\"Edit\" name=\"edit_button\"\">");
-            out.print("<input id=\"btn_my_article_delete\" type=\"submit\" value=\"Delete\" name=\"delete_button\"\">");
-//            out.print("<input type=\"submit\" value=\"Delete\" name=\"delete_button\"\">");
-            out.print("<input type=\"submit\" value=\"Edit\" name=\"edit_button\"\">");
-            out.print("<input type=\"hidden\" name=\"articleID\" value=\"" + articleID + "\">");
-            out.print("<input type=\"hidden\" name=\"articleTitle\" value=\"" + articleTitle + "\">");
-            out.print("<input type=\"hidden\" name=\"articleContent\" value=\"" + articleContent + "\">");
-            out.print("<input type=\"hidden\" name=\"articleDate\" value=\"" + articleDate + "\">");
-            out.print("</form>");
+                %>
+                <form action="/UpdateArticleDatabase" method="get">
+                    <input class="btn_my_article_edit" type="submit" value="Edit" name="edit_button">
+                    <input type="hidden" name="articleID" value="<%=articleID%>">
+                    <input type="hidden" name="articleTitle" value="<%=articleTitle%>">
+                    <input type="hidden" name="articleContent" value="<%=formattedContent%>">
+                    <input type="hidden" name="articleDate" value="<%=articleDate%>">
+                </form>
+                <%
+
 
             // ----------------------------------------------------------------------------------------------
 
@@ -153,7 +165,7 @@
                             <b>Are you sure you want to delete this article?</b>
                             <br>
                             <form action="/UpdateArticleDatabase" method="get">
-                            <input id="btn_my_article_edit" type="submit" value="Yes, Delete" name="delete_button">
+                            <input id="btn_my_article_delete" type="submit" value="Yes, Delete" name="delete_button">
                             <input type="hidden" name="articleID" value="<%=articleID%>">
                             </form>
                             <button id="delete_cancel" onclick="cancelDeleteArticleForm(<%=articleID%>)">No</button>

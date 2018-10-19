@@ -53,6 +53,8 @@
                                         });
                                     </script>
 
+                                    <br>
+                                    <br>
                                     <b> Upload Image: </b>
                                     <input type="file" id="picture" name="picture" accept="image/png, image/jpeg" multiple>
                                     <br>
@@ -67,9 +69,6 @@
                                     <br>
                                     <b> Youtube Link: </b>
                                     <input type="text" id="youtubeLink" name="youtubeLink">
-                                    <br>
-                                    <br>
-
                                     <br>
                                     <br>
                                     <h5>Publishing Date:</h5>

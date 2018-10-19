@@ -59,7 +59,7 @@
 
         List <ImagePOJO> allImages = newArticleDAO.loadImageFromArticle(a.getArticle_id());
         for (ImagePOJO i : allImages ) {
-            out.println("<img src=\"../Article_Photos/" + i.getSource() + "\"" + "width=\"200\">");
+            out.println("<img src=\"../Uploaded_Photos/" + i.getSource() + "\"" + "width=\"200\">");
         }
 
 

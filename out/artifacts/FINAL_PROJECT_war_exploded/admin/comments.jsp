@@ -1,3 +1,8 @@
+<%@ page import="DAO.ArticleDAO" %>
+<%@ page import="POJO.ArticlePOJO" %>
+<%@ page import="java.util.List" %>
+<%@ page import="POJO.CommentsPOJO" %>
+<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -34,28 +39,51 @@
       <table class="table table-striped table-bordered table-hover">
         <thead>
           <tr>
-            <th class="text-center" width="40"><input type="checkbox"></th>
-            <th>Author</th>
-            <th>Comment</th>
-            <th>Which Comment</th>
-            <th>Day</th>
-            <th>Status</th>
-            <th class="text-center" width="100">Operation</th>
+            <th>Comment ID</th>
+            <th>User ID</th>
+            <th>Article ID</th>
+            <th>Article Comment</th>
+            <th>Comment Visibility</th>
+            <th>Show/Hide Comment</th>
           </tr>
         </thead>
         <tbody>
-          <tr class="danger">
-            <td class="text-center"><input type="checkbox"></td>
-            <td>aaa</td>
-            <td>aaaaaaaaaaaa</td>
-            <td>aaaaaaaaaaa</td>
-            <td>2016/10/07</td>
-            <td>hidden</td>
-            <td class="text-center">
-              <a href="post-add.html" class="btn btn-info btn-xs">show</a>
-              <a href="javascript:;" class="btn btn-danger btn-xs">hidden</a>
-            </td>
-          </tr>
+        <%
+          try (ArticleDAO newArticleDAO = new ArticleDAO()) {
+
+            List<ArticlePOJO> allArticles = newArticleDAO.loadAllArticlesAdmin();
+
+            List<CommentsPOJO> allComments = new ArrayList<>();
+
+            for (ArticlePOJO a : allArticles) {
+              int articleID = a.getArticle_id();
+              List<CommentsPOJO> singleArticleComments = newArticleDAO.getCommentsByArticleAdmin("" + articleID);
+              for (CommentsPOJO c : singleArticleComments) {
+                allComments.add(c);
+              }
+            }
+
+            for (CommentsPOJO c : allComments) {
+              out.println("<tr>");
+              out.println("<td>" + c.getCommentID() + "</td>");
+              out.println("<td>" + c.getUserID() + "</td>");
+              out.println("<td>" + c.getArticleID() + "</td>");
+              out.println("<td>" + c.getComments() + "</td>");
+              out.println("<td>" + c.isCommentsVisibility() + "</td>");
+              out.println("<td>");
+              int commentID = c.getCommentID();
+              out.print("<form action=\"/AdminServlet\" method=\"get\">");
+              out.print("<input type=\"submit\" value=\"Show/Hide Comment\" name=\"comment_visibility_button\"\">");
+              out.print("<input type=\"hidden\" name=\"commentID\" value=\"" + commentID + "\">");
+              out.print("</form>");
+              out.println("</td");
+              out.println("</tr>");
+            }
+          }
+          catch (Exception e){
+            e.getMessage();
+          }
+        %>
 
         </tbody>
       </table>

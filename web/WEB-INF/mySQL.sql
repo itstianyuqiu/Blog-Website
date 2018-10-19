@@ -29,7 +29,6 @@ CREATE TABLE project_article (
   author_id          INT,
   article_visibility BOOLEAN,
   article_date       DATE,
-  article_date DATE,
   article_audio TEXT,
   article_video TEXT,
   article_YouTube TEXT,
@@ -71,7 +70,7 @@ CREATE TABLE project_admin (
   admin_name VARCHAR(200),
   admin_username VARCHAR(100),
   admin_password VARCHAR(50),
-  admin_create_time DATE,
+  admin_created_date DATE,
   admin_authority TINYINT,
   PRIMARY KEY (admin_id)
 );

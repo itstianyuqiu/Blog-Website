@@ -21,7 +21,8 @@ public class AdminServlet extends HttpServlet {
             if ("Show/Hide Article".equals(req.getParameter("article_visibility_button"))) {
                 String articleID = req.getParameter("articleID");
                 newArticleDAO.changeArticleVisibility(articleID);
-                doPost(req, resp);
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/admin/articles.jsp");
+                dispatcher.forward(req, resp);
             }
 
             //Changes the visibility of the comment that is clicked to either TRUE of FALSE on the admin interface
@@ -29,7 +30,8 @@ public class AdminServlet extends HttpServlet {
             else  if ("Show/Hide Comment".equals(req.getParameter("comment_visibility_button"))) {
                 String commentID = req.getParameter("commentID");
                 newArticleDAO.changeCommentVisibility(commentID);
-                doPost(req, resp);
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/admin/comments.jsp");
+                dispatcher.forward(req, resp);
             }
 
 
@@ -42,7 +44,6 @@ public class AdminServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/JSP_Pages/Admin_allArticles.jsp");
-        dispatcher.forward(req, resp);
+
     }
 }
