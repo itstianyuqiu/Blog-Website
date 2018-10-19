@@ -5,8 +5,28 @@ public class CommentsPOJO {
     int userID;
     int articleID;
     String comments;
+    boolean commentsVisibility;
+    boolean on_article;
+    boolean is_parent;
 
-    public CommentsPOJO(){}
+    public CommentsPOJO() {
+    }
+
+    public void setOn_article(boolean on_article) {
+        this.on_article = on_article;
+    }
+
+    public void setIs_parent(boolean is_parent) {
+        this.is_parent = is_parent;
+    }
+
+    public boolean isOn_article() {
+        return on_article;
+    }
+
+    public boolean isIs_parent() {
+        return is_parent;
+    }
 
     public int getCommentID() {
         return commentID;
@@ -38,5 +58,13 @@ public class CommentsPOJO {
 
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+    public boolean isCommentsVisibility() {
+        return commentsVisibility;
+    }
+
+    public void setCommentsVisibility(boolean commentsVisibility) {
+        this.commentsVisibility = commentsVisibility;
     }
 }

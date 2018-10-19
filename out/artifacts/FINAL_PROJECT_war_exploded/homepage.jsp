@@ -44,8 +44,7 @@
 
             <span id="zone_icon">
                 <a href="index.jsp">
-                    <%--<img id="icon_home" src="images/icon_home.png">--%>
-                    <img id="icon_home" src="images/icon_logo.png">
+                    <img id="icon_home" src="images/icon_home.png">
                 </a>
                 <a href="settingpage.jsp">
                     <img id="icon_setting" src="images/icon_setting.jpg">
@@ -70,56 +69,17 @@
     <section id="three">
         <h2>Manage My Articles</h2>
         <br>
-        <%--<button id="btn_my_articles" onclick="loadUserArticle()">Just read my articles</button>--%>
-        <%--<button id="btn_all_articles" onclick="loadAllArticleWithComments()">Read everyone's article</button>--%>
-        <div id="my_articles">
-            <%--<%--%>
-            <%--String fromPage = request.getSession().getAttribute("page").toString();--%>
-            <%--System.out.println(fromPage);--%>
-            <%--if (fromPage.equals("myArticles")) {--%>
-            <%--%>--%>
-            <%--<script>--%>
-            <%--loadUserArticle();--%>
-            <%--</script>--%>
-            <%--<%--%>
-            <%--} else if (fromPage.equals("allArticles")) {--%>
-            <%--%>--%>
-            <%--<script>--%>
-            <%--loadAllArticleWithComments();--%>
-            <%--</script>--%>
-            <%--<%--%>
-            <%--}--%>
-            <%--%>--%>
-        </div>
+        <div id="my_articles"></div>
     </section>
 
     <section id="four">
         <h2>Read Everyone's Articles</h2>
-        <br>
-        <%--<button id="btn_my_articles" onclick="loadUserArticle()">Just read my articles</button>--%>
         <button id="btn_all_articles" onclick="loadAllArticleWithComments()">Read everyone's article</button>
         <br>
         <br>
-        <div id="all_articles">
-            <%--<%--%>
-            <%--String fromPage = request.getSession().getAttribute("page").toString();--%>
-            <%--System.out.println(fromPage);--%>
-            <%--if (fromPage.equals("myArticles")) {--%>
-            <%--%>--%>
-            <%--<script>--%>
-            <%--loadUserArticle();--%>
-            <%--</script>--%>
-            <%--<%--%>
-            <%--} else if (fromPage.equals("allArticles")) {--%>
-            <%--%>--%>
-            <%--<script>--%>
-            <%--loadAllArticleWithComments();--%>
-            <%--</script>--%>
-            <%--<%--%>
-            <%--}--%>
-            <%--%>--%>
-        </div>
+        <div id="all_articles"></div>
     </section>
+
 
 </div>
 </body>

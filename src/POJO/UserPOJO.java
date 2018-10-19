@@ -12,6 +12,7 @@ public class UserPOJO {
     private String username;
     private String password;
     private String avatar;
+    private String securityKey;
 
     public UserPOJO() {
     }
@@ -116,5 +117,13 @@ public class UserPOJO {
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
+    }
+
+    public String getSecurityKey() {
+        return securityKey;
+    }
+
+    public void setSecurityKey(String securityKey) {
+        this.securityKey = securityKey;
     }
 }

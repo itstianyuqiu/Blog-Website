@@ -56,14 +56,37 @@ public class CommentServlet extends HttpServlet {
         }
 
         if ("Delete Comment".equals(req.getParameter("delete_comment_button"))){
-            try (ArticleDAO newArticleDAO = new ArticleDAO();) {
-                System.out.println(req.getParameter("comment_ID"));
+            try (ArticleDAO newArticleDAO = new ArticleDAO()) {
                 newArticleDAO.deleteComment(req.getParameter("comment_ID"));
                 doPost(req,resp);
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
+        }
+
+        if ("Delete Comment".equals(req.getParameter("delete_child_comment_button"))){
+            try (ArticleDAO newArticleDAO = new ArticleDAO()) {
+                newArticleDAO.deleteSingleChildComment(req.getParameter("comment_ID"));
+                doPost(req,resp);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        if("Reply".equals(req.getParameter("comment_reply"))){
+            String parent_id = req.getParameter("parent_ID");
+            CommentsPOJO cpj = new CommentsPOJO();
+            cpj.setUserID(Integer.parseInt(userID));
+            cpj.setArticleID(Integer.parseInt(req.getSession().getAttribute("current_article").toString()));
+            cpj.setComments(req.getParameter("comment_reply_content"));
+            try (ArticleDAO newArticleDAO = new ArticleDAO()){
+                newArticleDAO.addChildComment(parent_id, cpj);
+                doPost(req, resp);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
     }

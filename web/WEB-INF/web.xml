@@ -54,7 +54,15 @@
         <servlet-name>UserLogOutServlet</servlet-name>
         <url-pattern>/UserLogOutServlet</url-pattern>
     </servlet-mapping>
-
+    <!--user forget password-->
+    <!--<servlet>-->
+        <!--<servlet-name>UserForgetPasswordServlet</servlet-name>-->
+        <!--<servlet-class>Servlet.UserForgetPasswordServlet</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>UserForgetPasswordServlet</servlet-name>-->
+        <!--<url-pattern>/UserForgetPasswordServlet</url-pattern>-->
+    <!--</servlet-mapping>-->
 
     <!--ARTICLE-->
 
@@ -88,4 +96,81 @@
         <url-pattern>/CommentServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ArticleUpload</servlet-name>
+        <servlet-class>Servlet.ArticleUpload</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ArticleUpload</servlet-name>
+        <url-pattern>/ArticleUpload</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>Servlet.AdminServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/AdminServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>test</servlet-name>
+        <servlet-class>Servlet.test</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>test</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+
+
+
+    <!--Manager-->
+    <servlet>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <servlet-class>Servlet.AdminLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <url-pattern>/AdminLoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminQuitServlet</servlet-name>
+        <servlet-class>Servlet.AdminQuitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminQuitServlet</servlet-name>
+        <url-pattern>/AdminQuitServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminUserServlet</servlet-name>
+        <servlet-class>Servlet.AdminUserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminUserServlet</servlet-name>
+        <url-pattern>/AdminUserServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminCommentServlet</servlet-name>
+        <servlet-class>Servlet.AdminCommentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminCommentServlet</servlet-name>
+        <url-pattern>/AdminCommentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminArticleServlet</servlet-name>
+        <servlet-class>Servlet.AdminArticleServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminArticleServlet</servlet-name>
+        <url-pattern>/AdminArticleServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
