@@ -65,7 +65,9 @@
                                         <br>
                                         <br>
                                         <button type="submit" id="btn_newarticle" name="addArticle" value="Add Now">Submit</button>
-
+                                        <br>
+                                        <br>
+                                        <a href="../homepage.jsp"><button id="add_new_cancel">Cancel</button></a>
                                 </section>
                             </div>
                         </div>
@@ -75,6 +77,7 @@
         </div>
     </div>
 </form>
+
 
 </body>
 </html>

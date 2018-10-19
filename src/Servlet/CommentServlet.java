@@ -15,8 +15,10 @@ public class CommentServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        //Gets the userID of the user that is currently logged in
         String userID = req.getSession().getAttribute("userID").toString();
 
+        //If the Show/Hide comments button is clicked, then will show the comments on the article on which it is clicked
         if ("Show/Hide Comments".equals(req.getParameter("comment_button"))){
 
             String button_id = req.getParameter("button_id");
@@ -42,6 +44,7 @@ public class CommentServlet extends HttpServlet {
             doPost(req,resp);
         }
 
+        //If the add new comment button is clicked, will show a text input where the new comment can be typed - it is then added to the database
         if ("Add New Comment".equals(req.getParameter("add_comment_button"))) {
                 CommentsPOJO cpj = new CommentsPOJO();
                 cpj.setUserID(Integer.parseInt(userID));
@@ -55,6 +58,8 @@ public class CommentServlet extends HttpServlet {
             }
         }
 
+
+        //If the delete comment button is clicked, the comment will be deleted from the database (for parent comments)
         if ("Delete Comment".equals(req.getParameter("delete_comment_button"))){
             try (ArticleDAO newArticleDAO = new ArticleDAO()) {
                 newArticleDAO.deleteComment(req.getParameter("comment_ID"));
@@ -65,6 +70,8 @@ public class CommentServlet extends HttpServlet {
 
         }
 
+
+        //If the delete comment button is clicked, the comment will be deleted from the database (for child comments)
         if ("Delete Comment".equals(req.getParameter("delete_child_comment_button"))){
             try (ArticleDAO newArticleDAO = new ArticleDAO()) {
                 newArticleDAO.deleteSingleChildComment(req.getParameter("comment_ID"));
@@ -75,6 +82,7 @@ public class CommentServlet extends HttpServlet {
 
         }
 
+        //If the reply button is clicked, a child comment can be added to the database (related to the parent comment on which it was clicked)
         if("Reply".equals(req.getParameter("comment_reply"))){
             String parent_id = req.getParameter("parent_ID");
             CommentsPOJO cpj = new CommentsPOJO();

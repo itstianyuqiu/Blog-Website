@@ -16,11 +16,15 @@ public class AdminServlet extends HttpServlet {
 
         try (ArticleDAO newArticleDAO = new ArticleDAO()) {
 
+            //Changes the visibility of the article that is clicked to either TRUE of FALSE on the admin interface
+
             if ("Show/Hide Article".equals(req.getParameter("article_visibility_button"))) {
                 String articleID = req.getParameter("articleID");
                 newArticleDAO.changeArticleVisibility(articleID);
                 doPost(req, resp);
             }
+
+            //Changes the visibility of the comment that is clicked to either TRUE of FALSE on the admin interface
 
             else  if ("Show/Hide Comment".equals(req.getParameter("comment_visibility_button"))) {
                 String commentID = req.getParameter("commentID");

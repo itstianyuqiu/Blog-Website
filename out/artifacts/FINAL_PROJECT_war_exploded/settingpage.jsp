@@ -120,13 +120,17 @@
     </section>
 
     <section id="three">
+        <h2>Delete Account</h2>
+        <br>
+        <button type="button" id="delete_user_account_button" onclick="showDeleteUserAccountForm()">Delete Account</button>
+        <div id="delete_user_account" style="display: none">
         <form action="/UserDeleteAccountServlet" method="post">
-            <h2>Delete Account</h2>
-            <br>
             <p>Deleting an account will delete all your information. Do you want to continue?</p>
             <br>
             <button type="submit" id="btn_delete" value="delete">Yes, delete my account</button>
         </form>
+            <button id="delete_cancel_account" onclick="cancelDeleteUserAccountForm()">Cancel</button>
+        </div>
     </section>
 
 

@@ -23,6 +23,10 @@
 <body>
 
 <%
+
+    /* This page displays a list of all the articles in the database, provided their visibility is set to TRUE and the date of the article is equal to or
+     * before the current date. This page is visible regardless of if the user is logged in or not, and is displayed on the index.jsp page */
+
     try (ArticleDAO newArticleDAO = new ArticleDAO()){
     List<ArticlePOJO> allArticles = newArticleDAO.loadAllArticles();
 

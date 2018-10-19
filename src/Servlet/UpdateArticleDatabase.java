@@ -21,16 +21,15 @@ public class UpdateArticleDatabase extends HttpServlet {
         String deleteArticle = req.getParameter("delete_button");
         String editArticle = req.getParameter("edit_button");
 
-
-
         try (ArticleDAO newArticleDAO = new ArticleDAO()) {
             ArticlePOJO apj = new ArticlePOJO();
 
-            if ("Delete".equals(deleteArticle)) {
+            //If the delete button is clicked, the whole article will be deleted from the database
+            if ("Yes, Delete".equals(deleteArticle)) {
                 newArticleDAO.deleteArticle(req.getParameter("articleID"));
                 redirect(req,resp);
+            //If the edit button is clicked, this will take you through to the the editUserArticle page where you can update the article
             } else if ("Edit".equals(editArticle)){
-
                 req.getSession().setAttribute("articleID", req.getParameter("articleID"));
                 apj.setArticle_id(Integer.parseInt(req.getSession().getAttribute("articleID").toString()));
                 apj.setTitle(req.getParameter("articleTitle"));

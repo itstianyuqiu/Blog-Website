@@ -71,4 +71,42 @@ function loadCurrentDate() {
 
 }
 
+function showDeleteArticleForm(articleID) {
+
+    var x = document.getElementById("delete_article_" + articleID + "");
+    var y = document.getElementById("del_article_button_" + articleID + "");
+
+    x.style.display = "block";
+    y.style.display = "none";
+
+}
+
+function cancelDeleteArticleForm(articleID) {
+
+    var x = document.getElementById("delete_article_" + articleID + "");
+    var y = document.getElementById("del_article_button_" + articleID + "");
+
+    x.style.display = "none";
+    y.style.display = "block";
+
+}
+
+function showDeleteUserAccountForm() {
+
+    var x = document.getElementById("delete_user_account");
+    var y = document.getElementById("delete_user_account_button");
+    x.style.display = "block";
+    y.style.display = "none";
+
+}
+
+function cancelDeleteUserAccountForm() {
+
+    var x = document.getElementById("delete_user_account");
+    var y = document.getElementById("delete_user_account_button");
+    x.style.display = "none";
+    y.style.display = "block";
+
+}
+
 

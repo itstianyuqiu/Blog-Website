@@ -22,7 +22,7 @@
     <%--<script type="text/javascript" src="../JQuery_lib/jquery-3.3.1.js"></script>--%>
     <%--<script type="text/javascript" src="../myJS.js"></script>--%>
     <script type="text/javascript" src="../JQuery_lib/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="myJS.js"></script>
+    <script type="text/javascript" src="../myJS.js"></script>
 </head>
 <body>
 
@@ -64,6 +64,8 @@
                 out.println("<h5>" + "Audio: " + "</h5>");
                 out.println("<audio controls>");
                 out.println("<source src=\"../Uploaded_Audio/" + a.getArticle_audio() + "\" type=\"audio/mp3\">");
+                out.println("<source src=\"../Uploaded_Audio/" + a.getArticle_audio() + "\" type=\"audio/ogg\">");
+                out.println("Your browser does not support the audio element");
                 out.println("</audio>");
             }
 
@@ -71,8 +73,10 @@
 
             if (a.getArticle_video() != null){
                 out.println("<h5>" + "Video: " + "</h5>");
-                out.println("<video width=\"200px\" height=\"150px\" controls>");
+                out.println("<video width=\"320px\" height=\"240px\" controls>");
                 out.println("<source src=\"../Uploaded_Video/" + a.getArticle_video() + "\" type=\"video/mp4\">");
+                out.println("<source src=\"../Uploaded_Video/" + a.getArticle_video() + "\" type=\"video/ogg\">");
+                out.println("Your browser does not support the video tag.");
                 out.println("</video>");
             }
 
@@ -134,13 +138,34 @@
             
             //create the Delete and Edit buttons, passing on current article ID
             out.print("<form action=\"/UpdateArticleDatabase\" method=\"get\">");
-            out.print("<input type=\"submit\" value=\"Delete\" name=\"delete_button\"\">");
+//            out.print("<input type=\"submit\" value=\"Delete\" name=\"delete_button\"\">");
             out.print("<input type=\"submit\" value=\"Edit\" name=\"edit_button\"\">");
             out.print("<input type=\"hidden\" name=\"articleID\" value=\"" + articleID + "\">");
             out.print("<input type=\"hidden\" name=\"articleTitle\" value=\"" + articleTitle + "\">");
             out.print("<input type=\"hidden\" name=\"articleContent\" value=\"" + articleContent + "\">");
             out.print("<input type=\"hidden\" name=\"articleDate\" value=\"" + articleDate + "\">");
             out.print("</form>");
+
+            // ----------------------------------------------------------------------------------------------
+
+
+                    //Button to delete article; if clicked a form will be shown asking if they are sure they want to delete the article. If yes,
+                    // then the article will be deleted, if no then it will go back to the previous state
+
+                %>
+                    <button type="button" id="del_article_button_<%=articleID%>" onclick="showDeleteArticleForm(<%=articleID%>)">Delete Article</button>
+                        <div id="delete_article_<%=articleID%>" style="display: none">
+                            <br>
+                            <b>Are you sure you want to delete this article?</b>
+                            <br>
+                            <form action="/UpdateArticleDatabase" method="get">
+                            <input type="submit" value="Yes, Delete" name="delete_button">
+                            <input type="hidden" name="articleID" value="<%=articleID%>">
+                            </form>
+                            <button id="delete_cancel" onclick="cancelDeleteArticleForm(<%=articleID%>)">No</button>
+                        </div>
+
+                <%
 
             }
 

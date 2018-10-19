@@ -27,6 +27,9 @@
 
 <%
 
+    /* This page is displayed as a div below each article and shows all the comments for that article (when comments are
+    * set to be shown)*/
+
     try (ArticleDAO newArticleDAO = new ArticleDAO()){
         String current_article = request.getSession().getAttribute("current_article").toString();
 
@@ -36,7 +39,8 @@
 
                 out.println("<div id =\"comment_" + commentID +"\">");
 
-                UserPOJO user = newArticleDAO.getUserName(String.valueOf(cpj.getUserID())); //added method in DAO to return user's name details
+                //get user info based on the author_id (i.e. who wrote the article)
+                UserPOJO user = newArticleDAO.getUserName(String.valueOf(cpj.getUserID()));
 
                 out.println("<b>" + user.getUsername() + "</b>");
                 out.println("<p>" + cpj.getComments() + "</p>");

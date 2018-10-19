@@ -17,6 +17,11 @@
 <body>
 
 <%
+
+    /* This page prints out a list of both all the articles and all the comments in the database and their related visibility settings.
+     The administrator is then able to change the visibility of them by choosing to either show or hide the article/comment. When the
+      show/hide button is clicked, it goes through to the AdminServlet where there are methods to change the visibility in the database*/
+
     try (ArticleDAO newArticleDAO = new ArticleDAO()) {
 
         List<ArticlePOJO> allArticles = newArticleDAO.loadAllArticlesAdmin();

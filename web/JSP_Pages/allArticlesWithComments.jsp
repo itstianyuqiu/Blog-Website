@@ -25,6 +25,10 @@
 
 <body>
 <%
+
+    /* This page displays a list of all the articles in the database, provided their visibility is set to TRUE and the date of the article is equal to or
+     * before the current date. This page is only visible if the user is logged in */
+
     try (ArticleDAO newArticleDAO = new ArticleDAO()){
 
         List<ArticlePOJO> allArticles = newArticleDAO.loadAllArticles();
@@ -37,8 +41,8 @@
             String articleContent = a.getContent();
             String articleDate = a.getArticle_date();
 
-            //get current user info
-            UserPOJO user = newArticleDAO.getUserName(String.valueOf(a.getAuthor_id())); //added method in DAO to return user's name details
+            //get user info based on the author_id (i.e. who wrote the article)
+            UserPOJO user = newArticleDAO.getUserName(String.valueOf(a.getAuthor_id()));
 
             //display user First Name, Last Name and Username
             out.println("<header>");
@@ -103,6 +107,7 @@
                 }
 
         }
+            //Sets the first_login session to false (outside the loop so after all articles have been loaded)
             request.getSession().setAttribute("firstLogin_AllArticles", false);
         }
         catch (Exception e){

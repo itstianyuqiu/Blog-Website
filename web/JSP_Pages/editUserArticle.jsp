@@ -17,7 +17,10 @@
 <body>
 
 <%
-    //Displays the existing value of article title and content in the edit article form
+
+    /* This page displays a form where the user is able to update the details of the article they wish to edit. The existing details
+    * of the article are passed on from the previous page so they are prepopulated in the fields so they can edit if they wish and don't
+    * have to start again*/
 
     ArticlePOJO apj = (ArticlePOJO) request.getSession().getAttribute("editArticle");
 %>
@@ -47,6 +50,7 @@
     %>>
     <input type="submit" name="updateArticle" value="Update">
 </form>
+    <a href="../homepage.jsp"><button id="edit_cancel">Cancel</button></a>
 
 </body>
 </html>
