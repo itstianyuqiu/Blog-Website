@@ -18,7 +18,8 @@ public class UserLoginServlet extends HttpServlet {
         try (UserDAO userDAO = new UserDAO()) {
             String username = req.getParameter("username");
             String password = req.getParameter("password");
-
+//            String re=req.getParameter("");
+//6Lfkp3UUAAAAALjvR0nxlCj1frd1n7qv6Legj2ju
             UserPOJO userPOJO = userDAO.queryEntriesByUsername(username);
             //check if the login is correct, if correct then forward to user home page
             if (userPOJO != null && password.equals(userPOJO.getPassword())) {
@@ -32,11 +33,11 @@ public class UserLoginServlet extends HttpServlet {
                 req.getSession().setAttribute("firstLogin_AllArticles", true);
                 req.getSession().setAttribute("firstLogin_MyArticles", true);
                 req.getSession().setAttribute("current_article", 0);
-                req.getSession().setAttribute("page","allArticles");
+                req.getSession().setAttribute("page", "allArticles");
 
-                    req.getRequestDispatcher("/homepage.jsp").forward(req, resp);
+                req.getRequestDispatcher("/homepage.jsp").forward(req, resp);
 //                    resp.sendRedirect("/ArticleServlet");
-                    //---
+                //---
 
             }
             //if not correct then back to login page again

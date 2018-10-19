@@ -44,8 +44,7 @@
 
             <span id="zone_icon">
                 <a href="index.jsp">
-                    <%--<img id="icon_home" src="images/icon_home.png">--%>
-                    <img id="icon_home" src="images/icon_logo.png">
+                    <img id="icon_home" src="images/icon_home.png">
                 </a>
                 <a href="settingpage.jsp">
                     <img id="icon_setting" src="images/icon_setting.jpg">
@@ -70,8 +69,6 @@
     <section id="three">
         <h2>Manage My Articles</h2>
         <br>
-        <%--<button id="btn_my_articles" onclick="loadUserArticle()">Just read my articles</button>--%>
-        <%--<button id="btn_all_articles" onclick="loadAllArticleWithComments()">Read everyone's article</button>--%>
         <div id="my_articles"></div>
     </section>
 

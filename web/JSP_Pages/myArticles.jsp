@@ -12,15 +12,7 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="../TianCSS/homepage.css">
-    <%--<link rel="stylesheet" href="../homepageCSS/cssStyle.css">--%>
-    <%--<link rel="stylesheet" href="../homepageCSS/rowPart.css">--%>
-    <%--<link rel="stylesheet" href="../homepageCSS/otherCss.css">--%>
-    <%--<link rel="stylesheet" href="../homepageCSS/containerCSS.css">--%>
-    <%--<link rel="stylesheet" href="../homepageCSS/imageCSS.css">--%>
-    <%--<link rel="stylesheet" href="../homepageCSS/popUpCss.css">--%>
-    <%--<script type="text/javascript" src="../JQuery_lib/jquery-3.3.1.js"></script>--%>
-    <%--<script type="text/javascript" src="../myJS.js"></script>--%>
+    <link rel="stylesheet" href="../TianCSS/homepage_my_article_add_comments.css">
     <script type="text/javascript" src="../JQuery_lib/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="myJS.js"></script>
 </head>
@@ -64,7 +56,7 @@
             //generate show/hide comment button
                 %>
                 <form action="/CommentServlet" method="get">
-                    <input type="submit" id="button_<%=articleID%>" value="Show/Hide Comments" name="comment_button">
+                    <input class="btn_show_hide"type="submit" id="button_<%=articleID%>" value="Show/Hide Comments" name="comment_button">
                     <input type="hidden" name="current_article" value="<%=articleID%>">
                     <input type="hidden" name="button_id" value="button_<%=articleID%>">
                     <input type="hidden" name="page" value="myArticles">
@@ -102,11 +94,12 @@
             
             //create the Delete and Edit buttons, passing on current article ID
             out.print("<form action=\"/UpdateArticleDatabase\" method=\"get\">");
-            out.print("<input type=\"submit\" value=\"Delete\" name=\"delete_button\"\">");
-            out.print("<input type=\"submit\" value=\"Edit\" name=\"edit_button\"\">");
+            out.print("<input id=\"btn_my_article_edit\"type=\"submit\" value=\"Edit\" name=\"edit_button\"\">");
+            out.print("<input id=\"btn_my_article_delete\" type=\"submit\" value=\"Delete\" name=\"delete_button\"\">");
             out.print("<input type=\"hidden\" name=\"articleID\" value=\"" + articleID + "\">");
             out.print("<input type=\"hidden\" name=\"articleTitle\" value=\"" + articleTitle + "\">");
             out.print("<input type=\"hidden\" name=\"articleContent\" value=\"" + articleContent + "\">");
+            out.print("<input type=\"hidden\" name=\"articleDate\" value=\"" + articleDate + "\">");
             out.print("</form>");
 
             }

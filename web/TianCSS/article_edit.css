@@ -92,7 +92,8 @@ img {
     grid-column: 1;
     grid-row: 1;
 }
-#add_article_title{
+
+#edit_article_title{
     font-size: 14px;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     text-align: center;
@@ -103,7 +104,7 @@ img {
     border-radius: 6px;
     border: 1px #dcdcdc solid;
 }
-#add_article_content{
+#summernote{
     font-size: 14px;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
     text-align: center;
@@ -114,11 +115,13 @@ img {
     border-radius: 6px;
     border: 1px #dcdcdc solid;
 }
-#btn_add_article{
+#btn_update_article{
     width: 31%;
     height: 50px;
-    background-color: rgb(33,140,236);
+    background-color: #0066ff;
     color: #f8f8f8;
     border-radius: 6px;
 }
+
+
 

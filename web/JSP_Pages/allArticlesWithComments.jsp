@@ -13,12 +13,7 @@
 <html>
 <head>
     <title>All Articles</title>
-    <link rel="stylesheet" href="../homepageCSS/cssStyle.css">
-    <link rel="stylesheet" href="../homepageCSS/rowPart.css">
-    <link rel="stylesheet" href="../homepageCSS/otherCss.css">
-    <link rel="stylesheet" href="../homepageCSS/containerCSS.css">
-    <link rel="stylesheet" href="../homepageCSS/imageCSS.css">
-    <link rel="stylesheet" href="../homepageCSS/popUpCss.css">
+    <link rel="stylesheet" href="../TianCSS/homepage_all_article_add_comments.css">
     <script type="text/javascript" src="../JQuery_lib/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="../myJS.js"></script>
 </head>
@@ -67,17 +62,12 @@
             out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
 
                 //If this is first login, set all comments button to false & hide all comments div
-                if (request.getSession().getAttribute("firstLogin_AllArticles").toString().equals("true")){
-                    request.getSession().setAttribute("button_" + articleID, false);
-                    %>
-                    <script>hideVisibility(<%=articleID%>);</script>
-                    <%
-                 }
+
 
                 // Code to create show/hide comments button. When submit passing on current article ID & current button ID & current page "all articles"
                 %>
                 <form action="/CommentServlet" method="get">
-                    <input type="submit" id="button_<%=articleID%>" value="Show/Hide Comments" name="comment_button">
+                    <input class="btn_show_hide_all"type="submit" id="button_<%=articleID%>" value="Show/Hide Comments" name="comment_button">
                     <input type="hidden" name="current_article" value="<%=articleID%>">
                     <input type="hidden" name="button_id" value="button_<%=articleID%>">
                     <input type="hidden" name="page" value="allArticles">

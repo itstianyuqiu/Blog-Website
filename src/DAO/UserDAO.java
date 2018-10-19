@@ -1,6 +1,7 @@
 package DAO;
 
 import POJO.UserPOJO;
+import Utilities.QuaryModal;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -55,6 +56,33 @@ public class UserDAO implements AutoCloseable {
         return userPOJO;
     }
 
+    public QuaryModal<UserPOJO> queryAllUserByPage(QuaryModal quaryModal) throws SQLException {
+        List<UserPOJO> list = new ArrayList<>();
+        try (PreparedStatement ps = this.conn.prepareStatement("SELECT * FROM project_user LIMIT ?,?;")) {
+            ps.setInt(1, (quaryModal.getPageNO() - 1) * quaryModal.getPageSize());
+            ps.setInt(2, quaryModal.getPageSize());
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    list.add(userFromResultSet(rs));
+                }
+            }
+
+        }
+        quaryModal.setList(list);
+        return quaryModal;
+    }
+
+    public int queryCount() throws SQLException {
+        int count = 0;
+        try (PreparedStatement ps = this.conn.prepareStatement("SELECT count(1) FROM project_user;")) {
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    count = rs.getInt(1);
+                }
+            }
+        }
+        return count;
+    }
 //    /**
 //     * search user details by keyword
 //     *
@@ -83,12 +111,6 @@ public class UserDAO implements AutoCloseable {
 //        return userList;
 //    }
 
-    private UserPOJO userFromResultSet(ResultSet rs) throws SQLException {
-        return new UserPOJO(rs.getInt(1), rs.getString(2), rs.getString(3),
-                rs.getString(4), rs.getString(5), rs.getString(6),
-                rs.getString(7), rs.getString(8), rs.getString(9),
-                rs.getString(10),rs.getString(11));
-    }
 
     /**
      * add the new user
@@ -115,6 +137,14 @@ public class UserDAO implements AutoCloseable {
 
     }
 
+    public void addUserSecurityKey(String key) throws SQLException {
+        try (PreparedStatement ps = this.conn.prepareStatement(
+                "INSERT INTO group1.project_user (security_key) VALUE (?);")) {
+            ps.setString(1, key);
+            ps.executeUpdate();
+        }
+    }
+
     /**
      * delete user account by username
      *
@@ -139,8 +169,6 @@ public class UserDAO implements AutoCloseable {
         try (PreparedStatement ps = this.conn.prepareStatement(
                 "UPDATE project_user SET user_country=?,user_email=?,user_desciption=?, " +
                         "user_username=?,user_password=?,user_avatar=? WHERE user_id=?;")) {
-            System.out.println(userPOJO.getCountry());
-            System.out.println(userPOJO.getAvatar());
             ps.setString(1, userPOJO.getCountry());
             ps.setString(2, userPOJO.getEmail());
             ps.setString(3, userPOJO.getDescription());
@@ -152,6 +180,12 @@ public class UserDAO implements AutoCloseable {
         }
     }
 
+    private UserPOJO userFromResultSet(ResultSet rs) throws SQLException {
+        return new UserPOJO(rs.getInt(1), rs.getString(2), rs.getString(3),
+                rs.getString(4), rs.getString(5), rs.getString(6),
+                rs.getString(7), rs.getString(8), rs.getString(9),
+                rs.getString(10), rs.getString(11));
+    }
 
     @Override
     public void close() throws Exception {
@@ -160,13 +194,13 @@ public class UserDAO implements AutoCloseable {
 
     //added from articleDAO
 
-    public UserPOJO getUserName (String userID) throws SQLException {
+    public UserPOJO getUserName(String userID) throws SQLException {
         UserPOJO upj = new UserPOJO();
 
         try (PreparedStatement smt = this.conn.prepareStatement("SELECT user_username, user_firstname, user_lastname FROM project_user JOIN project_article a ON project_user.user_id = a.author_id WHERE a.author_id = ?")) {
             smt.setString(1, userID);
-            try (ResultSet rs = smt.executeQuery()){
-                while (rs.next()){
+            try (ResultSet rs = smt.executeQuery()) {
+                while (rs.next()) {
                     upj.setUsername(rs.getString("user_username"));
                     upj.setFirstName(rs.getString("user_firstname"));
                     upj.setLastName(rs.getString("user_lastname"));
