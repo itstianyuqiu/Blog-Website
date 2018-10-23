@@ -6,112 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b7fbd8c-773f-427a-91cd-f776cccc2f4c" name="Default" comment="(yang) refactor 3 24/10">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/016ad10e-7087-441f-a75e-077daba07e3b.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/6d217aee-afb7-433c-a66f-77b9b6f0bc6d.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/java_mail_1_4_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Exception/MyExceptionHander.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Filter/DefaultIndexFilter.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Servlet/GrecaptchaServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Servlet/IndexServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Servlet/QuaryUserArtServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Servlet/ShowArtDetileServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Servlet/UserForgotPasswordServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Servlet/UserResetPasswordServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Utilities/ConnectUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Utilities/EmailUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Utilities/GenerateLinkUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Utilities/GrecaptchaUtil.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Utilities/HashedEncode.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/TianCSS/gallery.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/java-mail-1.4.4.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/admin/password_reset.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/article.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/article_detail.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap-wysiwyg.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/DYT-julia-contacessi_v11.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/Thumbs.db" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/e1777d578648ec12ed16dbd05e9215e2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/header_backgroud.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/header_backgroud_2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/icon_gallery.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/index_signin_backgroud.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/index.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/prompt/Error.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/prompt/ErrorCON.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/prompt/Success.jsp" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/345f34d4-2e2d-4cfe-951d-7b877791e0fd.xml" afterPath="" />
+    <list default="true" id="0b7fbd8c-773f-427a-91cd-f776cccc2f4c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/FINAL_PROJECT.iml" afterPath="$PROJECT_DIR$/FINAL_PROJECT.iml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/article_add.css" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/article_add.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/article_edit.css" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/article_edit.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/homepage.css" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/homepage.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/index.css" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/index.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/settingpage.css" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/TianCSS/settingpage.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/ArticleDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/ArticleDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/DAO/UserDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/ArticlePOJO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/ArticlePOJO.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/JoinQueryDataModel.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/JoinQueryDataModel.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/UserPOJO.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/POJO/UserPOJO.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/AdminLoginServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/AdminLoginServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/AdminUserServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/AdminUserServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/ArticleUpload.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/ArticleUpload.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserLoginServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserLoginServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserNewAccountServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/Servlet/UserNewAccountServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/connection.properties" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/classes/connection.properties" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/admin/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/admin/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/admin/password_reset.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/admin/users.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/admin/users.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/homepage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/homepage.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index_forget_pwd.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index_forget_pwd.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index_login.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index_login.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index_signup.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index_signup.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/index_signup.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/mainPageCSS/new_index.css" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/mainPageCSS/new_index.css" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/newArticleSubmitForm.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/newArticleSubmitForm.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/settingpage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FINAL_PROJECT_war_exploded/settingpage.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/ArticleDAO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/ArticleDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/DAO/UserDAO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/ArticlePOJO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/ArticlePOJO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/JoinQueryDataModel.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/JoinQueryDataModel.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/UserPOJO.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/POJO/UserPOJO.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/AdminLoginServlet.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/AdminLoginServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/AdminUserServlet.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/AdminUserServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/ArticleUpload.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/ArticleUpload.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserLoginServlet.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserLoginServlet.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserNewAccountServlet.class" afterPath="$PROJECT_DIR$/out/production/FINAL_PROJECT/Servlet/UserNewAccountServlet.class" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/ArticleDAO.java" afterPath="$PROJECT_DIR$/src/DAO/ArticleDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/UserDAO.java" afterPath="$PROJECT_DIR$/src/DAO/UserDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/POJO/ArticlePOJO.java" afterPath="$PROJECT_DIR$/src/POJO/ArticlePOJO.java" />
-      <change beforePath="$PROJECT_DIR$/src/POJO/JoinQueryDataModel.java" afterPath="$PROJECT_DIR$/src/POJO/JoinQueryDataModel.java" />
-      <change beforePath="$PROJECT_DIR$/src/POJO/UserPOJO.java" afterPath="$PROJECT_DIR$/src/POJO/UserPOJO.java" />
-      <change beforePath="$PROJECT_DIR$/src/Servlet/AdminLoginServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/AdminLoginServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/Servlet/AdminUserServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/AdminUserServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/Servlet/ArticleUpload.java" afterPath="$PROJECT_DIR$/src/Servlet/ArticleUpload.java" />
-      <change beforePath="$PROJECT_DIR$/src/Servlet/UserLoginServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/UserLoginServlet.java" />
-      <change beforePath="$PROJECT_DIR$/src/Servlet/UserNewAccountServlet.java" afterPath="$PROJECT_DIR$/src/Servlet/UserNewAccountServlet.java" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/article_add.css" afterPath="$PROJECT_DIR$/web/TianCSS/article_add.css" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/article_edit.css" afterPath="$PROJECT_DIR$/web/TianCSS/article_edit.css" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/homepage.css" afterPath="$PROJECT_DIR$/web/TianCSS/homepage.css" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/index.css" afterPath="$PROJECT_DIR$/web/TianCSS/index.css" />
-      <change beforePath="$PROJECT_DIR$/web/TianCSS/settingpage.css" afterPath="$PROJECT_DIR$/web/TianCSS/settingpage.css" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/classes/connection.properties" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/connection.properties" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/web/admin/index.jsp" afterPath="$PROJECT_DIR$/web/admin/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/admin/password_reset.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/admin/users.jsp" afterPath="$PROJECT_DIR$/web/admin/users.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/homepage.jsp" afterPath="$PROJECT_DIR$/web/homepage.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/index_forget_pwd.jsp" afterPath="$PROJECT_DIR$/web/index_forget_pwd.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/index_login.jsp" afterPath="$PROJECT_DIR$/web/index_login.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/index_signup.jsp" afterPath="$PROJECT_DIR$/web/index_signup.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/mainPageCSS/new_index.css" afterPath="$PROJECT_DIR$/web/mainPageCSS/new_index.css" />
-      <change beforePath="$PROJECT_DIR$/web/newArticleSubmitForm.jsp" afterPath="$PROJECT_DIR$/web/newArticleSubmitForm.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/settingpage.jsp" afterPath="$PROJECT_DIR$/web/settingpage.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -241,7 +137,7 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3900">
+            <state relative-caret-position="3848">
               <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
               <folding />
             </state>
@@ -252,7 +148,7 @@
         <entry file="file://$PROJECT_DIR$/web/index_signup.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -262,7 +158,7 @@
         <entry file="file://$PROJECT_DIR$/web/index_login.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
-              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -271,7 +167,7 @@
       <file leaf-file-name="Error.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/prompt/Error.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
+            <state relative-caret-position="406">
               <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
               <folding />
             </state>
@@ -430,9 +326,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -528,6 +422,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -541,7 +437,7 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="SQL" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../final_project" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
@@ -758,8 +654,8 @@
       </method>
     </configuration>
     <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Application.QuaryUserArtServlet" />
-      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
+      <item index="1" class="java.lang.String" itemvalue="Application.QuaryUserArtServlet" />
       <item index="2" class="java.lang.String" itemvalue="Application.ConnectUtil" />
     </list>
     <recent_temporary>
@@ -846,26 +742,26 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32611173" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32611173" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25375536" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.028969957" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1075,9 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1085,9 +978,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1130,7 +1020,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2236">
           <caret line="117" column="32" lean-forward="false" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,9 +1027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
           <caret line="35" column="21" lean-forward="false" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1148,7 +1034,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1156,7 +1041,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1248">
           <caret line="48" column="42" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1164,7 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1180,7 +1063,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5632">
           <caret line="324" column="0" lean-forward="true" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1196,25 +1078,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1118">
           <caret line="39" column="60" lean-forward="false" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index_signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5652">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index_signup.html" />
     <entry file="file://$PROJECT_DIR$/web/TianCSS/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
           <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1222,13 +1093,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3900">
+        <state relative-caret-position="3848">
           <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
           <folding />
         </state>
@@ -1244,7 +1114,7 @@
     <entry file="file://$PROJECT_DIR$/web/index_signup.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1253,7 +1123,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="44" column="8" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1261,7 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="60" column="17" lean-forward="true" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1269,21 +1137,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="55" column="34" lean-forward="true" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index_login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/prompt/Error.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="406">
           <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
           <folding />
         </state>
