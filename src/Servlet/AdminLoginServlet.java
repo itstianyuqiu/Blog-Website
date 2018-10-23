@@ -44,10 +44,12 @@ public class AdminLoginServlet extends HttpServlet {
                 req.getSession().setAttribute("admin", adminPOJO);
                 resp.sendRedirect("/admin/index.jsp");
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        }  catch (SQLException e) {
+            req.setAttribute("error","Your data query is wrong!");
+            req.getRequestDispatcher("/promt/Error.jsp").forward(req,resp);
         } catch (Exception e) {
-            e.printStackTrace();
+            req.setAttribute("error","Your data query is wrong!");
+            req.getRequestDispatcher("/promt/Error.jsp").forward(req,resp);
         }
 
 

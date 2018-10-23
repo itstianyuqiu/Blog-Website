@@ -5,10 +5,53 @@
          version="4.0">
 
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>/index.jsp</welcome-file>
+        
     </welcome-file-list>
+    <!--error and exception handle-->
+    <servlet>
+        <servlet-name>MyExceptionHander</servlet-name>
+        <servlet-class>Exception.MyExceptionHander</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyExceptionHander</servlet-name>
+        <url-pattern>/MyExceptionHander</url-pattern>
+    </servlet-mapping>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/prompt/ErrorCON.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/prompt/ErrorCON.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/prompt/Error.jsp</location>
+    </error-page>
 
-    <!--USER-->
+<filter>
+    <filter-name>FilterServlet</filter-name>
+    <filter-class>Filter.DefaultIndexFilter</filter-class>
+    <init-param>
+        <param-name>FilterServlet</param-name>
+        <param-value>UTF-8</param-value>
+    </init-param>
+</filter>
+    <filter-mapping>
+        <filter-name>FilterServlet</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
+    USER
+    ShowArtDetileServlet
+    <servlet>
+        <servlet-name>ShowArtDetileServlet</servlet-name>
+        <servlet-class>Servlet.ShowArtDetileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowArtDetileServlet</servlet-name>
+        <url-pattern>/ShowArtDetileServlet</url-pattern>
+    </servlet-mapping>
     <!--login-->
     <servlet>
         <servlet-name>UserLoginServlet</servlet-name>
@@ -55,15 +98,42 @@
         <url-pattern>/UserLogOutServlet</url-pattern>
     </servlet-mapping>
     <!--user forget password-->
-    <!--<servlet>-->
-        <!--<servlet-name>UserForgetPasswordServlet</servlet-name>-->
-        <!--<servlet-class>Servlet.UserForgetPasswordServlet</servlet-class>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>UserForgetPasswordServlet</servlet-name>-->
-        <!--<url-pattern>/UserForgetPasswordServlet</url-pattern>-->
-    <!--</servlet-mapping>-->
+    <servlet>
+        <servlet-name>UserForgotPasswordServlet</servlet-name>
+        <servlet-class>Servlet.UserForgotPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserForgotPasswordServlet</servlet-name>
+        <url-pattern>/UserForgotPasswordServlet</url-pattern>
+    </servlet-mapping>
+    <!--user-reset-password-->
+    <servlet>
+        <servlet-name>UserResetPasswordServlet</servlet-name>
+        <servlet-class>Servlet.UserResetPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserResetPasswordServlet</servlet-name>
+        <url-pattern>/UserResetPasswordServlet</url-pattern>
+    </servlet-mapping>
+    <!--user-Grecaptcha-->
+    <servlet>
+        <servlet-name>GrecaptchaServlet</servlet-name>
+        <servlet-class>Servlet.GrecaptchaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GrecaptchaServlet</servlet-name>
+        <url-pattern>/GrecaptchaServlet</url-pattern>
+    </servlet-mapping>
 
+    <!--QuaryUserArtServlet-->
+    <servlet>
+        <servlet-name>QuaryUserArtServlet</servlet-name>
+        <servlet-class>Servlet.QuaryUserArtServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QuaryUserArtServlet</servlet-name>
+        <url-pattern>/QuaryUserArtServlet</url-pattern>
+    </servlet-mapping>
     <!--ARTICLE-->
 
     <servlet>

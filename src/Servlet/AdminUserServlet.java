@@ -2,15 +2,19 @@ package Servlet;
 
 import DAO.UserDAO;
 import POJO.UserPOJO;
+import Utilities.EmailUtil;
 import Utilities.QuaryModal;
 import net.sf.json.JSONArray;
 
+import javax.mail.MessagingException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AdminUserServlet extends HttpServlet {
 
@@ -59,9 +63,7 @@ public class AdminUserServlet extends HttpServlet {
                     adduser(req, userDAO, userPOJO);
                     req.getRequestDispatcher("/admin/add_user.jsp").forward(req, resp);
                 } else if (str.equals("sendemail")) {
-                    String username = req.getParameter("username");
-                    sendemail(userDAO, username);
-                    req.getRequestDispatcher("/admin/users.jsp").forward(req, resp);
+                    sendEmail(req,resp,userDAO);
                 }
             }
         } catch (SQLException e) {
@@ -88,21 +90,20 @@ public class AdminUserServlet extends HttpServlet {
         userDAO.addNewUserAccount(userPOJO);
     }
 
-    public void sendemail(UserDAO userDAO, String name) throws SQLException {
-        UserPOJO userPOJO = userDAO.queryEntriesByUsername(name);
-//        Properties props=new Properties();
-//        Session session=Session.getInstance(props,null);
-//        MIMEMessage message=new MIMEMessage(session);
-//        message.setContent("Hello","text/plain");//设置 内容和 格式
-//        message.setSubject("")//设置邮件主题
-//        Address address=new InternetAddress("邮件地址","名字")//传入一个地址的字符串 建立一个地址类
-//        message.setFrom(address)//设置发信人
-//        message.setReplayTo(address)//设置发信人
-//        Address address1[]={}//设置多个发信人
-//        message.addFrom(address1);
-//        message.addRecipient(type,address)//s设置收信人 增加一个
-
-
+    private void sendEmail(HttpServletRequest req, HttpServletResponse resp, UserDAO userDAO) throws SQLException, MessagingException, IOException {
+        String emailTitle = req.getParameter("email-title");
+        String emailContent = req.getParameter("email-content");
+        String securityKey = req.getParameter("security-Key");
+        System.out.println(securityKey);
+        if (securityKey == null) {
+                resp.getWriter().write("1");
+                return;
+        }
+        UserPOJO userPOJO = userDAO.queryEntrieBySecurityKey(securityKey);
+        List<UserPOJO> userPOJOList = new ArrayList<>();
+        userPOJOList.add(userPOJO);
+        EmailUtil.sendResetPasswordEmail(userPOJOList, emailTitle, emailContent);
+        resp.getWriter().write("0");
     }
 
 }

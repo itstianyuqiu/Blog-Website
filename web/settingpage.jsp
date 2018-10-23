@@ -10,7 +10,6 @@
     <script type="text/javascript" src="myJS.js"></script>
 
 </head>
-<%--<body onload="loadAllArticleWithComments()">--%>
 <body class="is-preload">
 
 <!-- Header -->
@@ -38,17 +37,14 @@
 
     <section id="zero">
         <div id="zone_search_icon">
-            <span id="zone_search">
-                <input type="search" id="search_bar" placeholder=" Search..."/>
-            </span>
-
             <span id="zone_icon">
-                <a href="homepage.jsp">
-                    <img id="icon_homepage" src="${userPOJO.getAvatar()}" alt="loading..."> ${userPOJO.getFirstName()}
-                </a>
                 <a href="index.jsp">
                     <img id="icon_home" src="images/icon_home.png">
                 </a>
+                <a href="homepage.jsp">
+                    <img id="icon_homepage" src="${userPOJO.getAvatar()}" alt="loading..."> ${userPOJO.getFirstName()}
+                </a>
+
                 <a href="/UserLogOutServlet">
                     <img id="icon_logout" src="images/icon_logout.png">
                 </a>
@@ -62,7 +58,7 @@
             <br>
             <p class="sub_title">Username</p>
             <input type="text" name="username" id="setting_username" class="setting_text_field"
-                   value="${userPOJO.getUsername()}"/>
+                   value="${userPOJO.getUsername()}" disabled="disabled"/>
             <br>
             <br>
             <p class="sub_title">Email address</p>
@@ -88,24 +84,6 @@
         <form action="/UserUpdateAccountServlet" method="post">
             <h2>Security</h2>
             <br>
-            <!--Email address-->
-            <!--<br>-->
-            <!--<input type="text" id="security_emailaddress" class="setting_text_field_long"/>-->
-            <!--<br>-->
-            <!--<button type="button" id="btn_sendcode" value="sendcode"> Send verification code</button>-->
-            <p class="sub_title">Security question</p>
-            <select id="form_securityquestion" name="securityquestion">
-                <option value="-">select a question</option>
-                <option value="1">What is your favourite movie?</option>
-                <option value="2">Where are you born?</option>
-                <option value="3">What is your first pet's name?</option>
-            </select>
-            <br>
-            <br>
-            <p class="sub_title">Answer</p>
-            <input type="text" id="security_questionanswer" class="setting_text_field"/>
-            <br>
-            <br>
             <p class="sub_title">New password</p>
             <input type="text" name="newpwd" id="security_password" class="setting_text_field"/>
             <br>
@@ -130,7 +108,7 @@
             <br>
             <button type="submit" id="btn_delete" value="delete">Yes, delete my account</button>
         </form>
-            <button id="delete_cancel_account" onclick="cancelDeleteUserAccountForm()">Cancel</button>
+            <button id="delete_cancel_account" onclick="cancelDeleteUserAccountForm()">Reserved account</button>
         </div>
     </section>
 
@@ -148,20 +126,31 @@
         </div>
 
         <div class="avatar_update_body">
-            <h3>Predefined Icons:</h3>
+            <h2>Change avatar</h2>
+            <p class="sub_title">You may also like</p>
             <div class="avatar_update_body_img">
-                <img src="images/icon_home.png">
-                <img src="images/icon_login.png">
-                <img src="images/icon_logo.png">
-                <img src="images/icon_setting.jpg">
+                <img src="images/default01.png">
+                <img src="images/default02.png">
+                <img src="images/default03.png">
+                <img src="images/default04.png">
+                <img src="images/default05.png">
+                <img src="images/default06.png">
+                <img src="images/default07.png">
+                <img src="images/default08.png">
+                <img src="images/default09.jpg">
+                <img src="images/default10.jpg">
+                <img src="images/default11.png">
+                <img src="images/default12.png">
             </div>
         </div>
         <div class="avatar_update_footer">
-            <h3>Choose your own Icon:</h3>
+            <hr>
+            <p class="sub_title">Custom avatar</p>
             <div>
                 <form action="/UserUpdateAccountServlet" method="post" enctype="multipart/form-data">
-                    <input type="file" accept="image/*" name="avatar">
-                    <button type="submit" name="submit_btn">Submit</button>
+                    <input type="file" accept="image/*" name="avatar" width="38px">
+                    <br>
+                    <button type="submit" name="submit_btn"id="avatar_update_submit">Submit</button>
                     <button type="button" name="cancel_btn" id="avatar_update_cancel">Cancel</button>
                 </form>
             </div>

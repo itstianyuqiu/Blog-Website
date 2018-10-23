@@ -1,12 +1,12 @@
 package DAO;
 
+import POJO.ArticlePOJO;
+import POJO.ImagePOJO;
+import POJO.JoinQueryDataModel;
 import POJO.UserPOJO;
 import Utilities.QuaryModal;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -180,11 +180,20 @@ public class UserDAO implements AutoCloseable {
         }
     }
 
+    public void updateUserSecurityKey(UserPOJO userPOJO) throws SQLException {
+        try (PreparedStatement ps = this.conn.prepareStatement(
+                "UPDATE project_user SET security_key=? WHERE user_username=?;")) {
+            ps.setString(1, userPOJO.getSecurityKey());
+            ps.setString(2, userPOJO.getUsername());
+            ps.executeUpdate();
+        }
+    }
+
     private UserPOJO userFromResultSet(ResultSet rs) throws SQLException {
         return new UserPOJO(rs.getInt(1), rs.getString(2), rs.getString(3),
                 rs.getString(4), rs.getString(5), rs.getString(6),
                 rs.getString(7), rs.getString(8), rs.getString(9),
-                rs.getString(10), rs.getString(11));
+                rs.getString(10), rs.getString(11), rs.getString(12));
     }
 
     @Override
@@ -209,4 +218,91 @@ public class UserDAO implements AutoCloseable {
         }
         return upj;
     }
+
+    public UserPOJO queryEntrieBySecurityKey(String securityKey) throws SQLException {
+        UserPOJO userPOJO = null;
+        try (PreparedStatement ps = this.conn.prepareStatement(
+                "SELECT * FROM project_user WHERE security_key = ?;")) {
+            ps.setString(1, securityKey);
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    userPOJO = userFromResultSet(rs);
+                }
+            }
+        }
+        return userPOJO;
+    }
+
+    /**
+     * quary
+     *
+     * @param text
+     * @return
+     */
+    public List<JoinQueryDataModel> quaryArtAnduser(String[] text, Date date[]) throws SQLException {
+        List<JoinQueryDataModel> list = new ArrayList<>();
+        String sql = "select ff.user_id," +
+                "   ff.user_username," +
+                "   ff.article_id," +
+                "   ff.article_title," +
+                "  ff.article_content," +
+                "   ff.article_date," +
+                "   ff.article_audio," +
+                "   ff.article_video," +
+                "   ff.article_YouTube" +
+                "   from (select pu.user_id," +
+                "   pu.user_username," +
+                "   pa.article_id," +
+                "   pa.article_title," +
+                "  pa.article_content," +
+                "   pa.article_date," +
+                "   pa.article_audio," +
+                "   pa.article_video," +
+                "   pa.article_YouTube" +
+                "   from project_user as pu" +
+                "   inner join project_article as pa on pu.user_id = pa.author_id" +
+                "   where pa.article_visibility=1 and pa.article_date between '" + date[0] + "' and '" + date[1] + "' ) as ff" ;
+        if (text.length == 0) {
+
+        } else if (text.length == 1) {
+            sql += " where ff.article_title like '%" + text[0] +
+                    "%' or ff.user_username like '%" + text[0] + "%' ";
+        } else {
+            sql += " where ff.article_title like '%" + text[0] + "%' or ff.article_title like '%" + text[1] + "%'" +
+                    "or ff.user_username like '%" + text[0] + "%' or ff.user_username like '%" + text[1] + "%'";
+        }
+        sql += "order by ff.article_date desc ;";
+        System.out.println(sql);
+        System.out.println(text.toString() + "====" + date.toString());
+        try (PreparedStatement ps = this.conn.prepareStatement(sql)) {
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    list.add(userOrArtFromResultSet(rs));
+                }
+            }
+        }
+        return list;
+    }
+
+
+    private JoinQueryDataModel userOrArtFromResultSet(ResultSet rs) throws SQLException {
+
+        UserPOJO up = new UserPOJO();
+        up.setUser_id(rs.getInt(1));
+        up.setUsername(rs.getString(2));
+        ArticlePOJO ap = new ArticlePOJO();
+        ap.setArticle_id(rs.getInt(3));
+        ap.setTitle(rs.getString(4));
+        ap.setContent(rs.getString(5));
+        ap.setArticle_date(rs.getString(6));
+        ap.setArticle_audio(rs.getString(7));
+        ap.setArticle_video(rs.getString(8));
+        ap.setArticle_Youtube(rs.getString(9));
+        System.out.println("userOrArtFromResultSet===" + ap.toString() + up.toString());
+        JoinQueryDataModel jqm = new JoinQueryDataModel();
+        jqm.setUp(up);
+        jqm.setAp(ap);
+        return jqm;
+    }
+
 }

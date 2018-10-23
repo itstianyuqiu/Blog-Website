@@ -34,10 +34,7 @@
         <div class="col-md-12">
             <div class="button-bar">
                 <div class="page-action" style="display: inline-block">
-                    <button class="btn btn-danger btn-sm allemail">Send All</button>
-                </div>
-                <div class="page-action" style="display: inline-block">
-                    <button class="btn btn-danger btn-sm alldelete">All Delete</button>
+                    <button class="btn btn-danger btn-sm alldelete">Delete All</button>
                 </div>
 
             </div>
@@ -62,14 +59,17 @@
                             <input type="checkbox">
                         </td>
                         <td>${userPOJO.username}</td>
-                        <td>${userPOJO.email}</td>
+                        <td class="useremail">${userPOJO.email}</td>
                         <td>${userPOJO.firstName}</td>
                         <td>${userPOJO.lastName}</td>
                         <td>${userPOJO.gender}</td>
                         <td>${userPOJO.country}</td>
                         <td>${userPOJO.birth}</td>
                         <td class="text-center">
-                                <%--<c:if test="${userPOJO.security_key} ne null"> <a href="javascript:;" class="btn btn-default btn-xs email" >email</a></c:if>--%>
+                            <c:if test="${not empty userPOJO.securityKey}">
+                                <a href="javascript:;" class="btn btn-info btn-xs email" data-toggle="modal"
+                                   data-target="#myModal" id="${userPOJO.securityKey}">email</a>
+                            </c:if>
                             <a href="javascript:;" class="btn btn-danger btn-xs deletebtn">delete</a>
                         </td>
                     </tr>
@@ -95,6 +95,32 @@
         </ul>
     </div>
 </div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title email-address" id="myModalLabel">Email To </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="email-title">email subject</label>
+                    <input class="form-control" id="email-title" name="title" type="text" placeholder="heater">
+                </div>
+                <div class="form-group">
+                    <label for="email-content">email content</label>
+                    <textarea class="form-control" id="email-content" name="content" placeholder="content">
+                            </textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary create-link">create reset password link</button>
+                <button type="button" class="btn btn-primary send-email">Send email</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 </body>
 <script src="../JQuery_lib/jquery-3.3.1.js"></script>
 <script src="../vendors/bootstrap/js/bootstrap.js"></script>
@@ -102,13 +128,51 @@
 <script>
     $(".page[id=${quarymodel.pageNO}]").addClass("active")
     $(function ($) {
+        $('.email').click(function () {
+            var emailaddress = $(this).parent().parent().children(".useremail").text()
+            var securityKey = $(this).attr('id')
+            $('.email-address').text('Email To : ' + emailaddress).attr({
+                "email-address": emailaddress,
+                "security-Key": securityKey
+            });
+        });
+        $('.create-link').click(function () {
 
-        <%--$("#${userPOJO.user_id} .email").click(function(){--%>
-        <%--location.href="/AdminUserServlet?adminuser=sendemail&username="+ ${userPOJO.username}--%>
-        <%--})--%>
-        <%--$(".allemail").click(function(){--%>
-        <%--location.href="/AdminUserServlet?adminuser=sendemail&username="+ ${userPOJO.username}--%>
-        <%--})--%>
+            $('#email-title').val('Reset password mail')
+            $('#email-content').val('http://localhost:8181/admin/password_reset.jsp?security-Key=' + $('.email-address').attr('security-Key'))
+
+        });
+        $('.send-email').click(function () {
+            sendEmail($('#email-title').val(), $('#email-content').val(), $('.email-address').attr('email-address'), $('.email-address').attr('security-Key'))
+        });
+
+        function sendEmail(title, content, address, key) {
+            $.post("/AdminUserServlet", {
+                'adminuser': 'sendemail',
+                'email-address': JSON.stringify(address),
+                'email-title': title,
+                'security-Key': key,
+                'email-content': content
+            }, function (xhr) {
+                if (xhr == '0') {
+                    $('#myModal').css('display','none');
+                    closeModel();
+                    alert('send success!')
+                } else {
+                    alert('send error!')
+                }
+            });
+        }
+
+        $(".close").on('click', function () {
+            closeModel()
+        });
+
+        function closeModel() {
+            $('.email-address').removeAttr('email-address').removeAttr('security-Key')
+            $('#email-title').val('')
+            $('#email-content').val('')
+        }
 
         $(".text-center input").click(function () {
             $(".usershow input").prop("checked", $(this).prop("checked"));

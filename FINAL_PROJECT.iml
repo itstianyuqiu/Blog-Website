@@ -20,5 +20,6 @@
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
     <orderEntry type="library" name="commons-fileupload-1.3.2" level="project" />
+    <orderEntry type="library" name="java-mail-1.4.4" level="project" />
   </component>
 </module>

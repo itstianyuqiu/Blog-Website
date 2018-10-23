@@ -15,21 +15,6 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="group1@db.sporadic.nz" uuid="345f34d4-2e2d-4cfe-951d-7b877791e0fd">
-      <driver-ref>mysql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://db.sporadic.nz:3306/group1</jdbc-url>
-      <driver-properties>
-        <property name="autoReconnect" value="true" />
-        <property name="zeroDateTimeBehavior" value="convertToNull" />
-        <property name="tinyInt1isBit" value="false" />
-        <property name="characterEncoding" value="utf8" />
-        <property name="characterSetResults" value="utf8" />
-        <property name="yearIsDateType" value="false" />
-        <property name="maxReconnects" value="100" />
-      </driver-properties>
-    </data-source>
     <data-source source="LOCAL" name="ycui124@db.sporadic.nz" uuid="26d96d04-4478-42b0-9e7e-60b5aa6bf0ad">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
@@ -44,6 +29,34 @@
         <property name="yearIsDateType" value="false" />
         <property name="callableStmtCacheSize" value="10000" />
         <property name="resultSetSizeThreshold" value="10000" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="group1@db.sporadic.nz" uuid="6d217aee-afb7-433c-a66f-77b9b6f0bc6d">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://db.sporadic.nz:3306/group1</jdbc-url>
+      <driver-properties>
+        <property name="autoReconnect" value="true" />
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="group1@localhost" uuid="016ad10e-7087-441f-a75e-077daba07e3b">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/group1</jdbc-url>
+      <driver-properties>
+        <property name="autoReconnect" value="true" />
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
   </component>

@@ -1,10 +1,9 @@
 package POJO;
 
-public class JoinQueryDataModel {
+public class JoinQueryDataModel implements Comparable<JoinQueryDataModel>{
     private UserPOJO up;
     private CommentsPOJO cp;
     private ArticlePOJO ap;
-
 
     public UserPOJO getUp() {
         return up;
@@ -28,5 +27,14 @@ public class JoinQueryDataModel {
 
     public void setAp(ArticlePOJO ap) {
         this.ap = ap;
+    }
+
+    @Override
+    public int compareTo(JoinQueryDataModel o) {
+        if (this.getAp().getTitle().toCharArray()[0]<o.getAp().getTitle().toCharArray()[0]) {
+            return -1;
+        } else {
+            return 1;
+        }
     }
 }

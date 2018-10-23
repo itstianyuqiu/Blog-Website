@@ -1,6 +1,6 @@
 package POJO;
 
-public class UserPOJO {
+public class UserPOJO implements Comparable<UserPOJO>{
     private int user_id;
     private String firstName;
     private String lastName;
@@ -15,6 +15,21 @@ public class UserPOJO {
     private String securityKey;
 
     public UserPOJO() {
+    }
+
+    public UserPOJO(int user_id, String firstName, String lastName, String gender, String country, String birth, String email, String description, String username, String password, String avatar, String securityKey) {
+        this.user_id = user_id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.country = country;
+        this.birth = birth;
+        this.email = email;
+        this.description = description;
+        this.username = username;
+        this.password = password;
+        this.avatar = avatar;
+        this.securityKey = securityKey;
     }
 
     public UserPOJO(int user_id, String firstName, String lastName, String gender, String country, String birth, String email, String description, String username, String password, String avatar) {
@@ -125,5 +140,16 @@ public class UserPOJO {
 
     public void setSecurityKey(String securityKey) {
         this.securityKey = securityKey;
+    }
+
+
+
+    @Override
+    public int compareTo(UserPOJO o) {
+        if (this.getUsername().toCharArray()[0]<o.getUsername().toCharArray()[0]) {
+            return 1;
+        } else {
+            return -1;
+        }
     }
 }

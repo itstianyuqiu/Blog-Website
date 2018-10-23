@@ -10,10 +10,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import POJO.ArticlePOJO;
-import POJO.CommentsPOJO;
-import POJO.ImagePOJO;
-import POJO.UserPOJO;
+import POJO.*;
 import com.zaxxer.hikari.HikariDataSource;
 
 public class ArticleDAO implements AutoCloseable {
@@ -24,7 +21,44 @@ public class ArticleDAO implements AutoCloseable {
         this.conn = HikariConnectionPool.getConnection();
     }
 
+public ArticlePOJO quaryArtAndimgs(int article_id) throws SQLException {
+    ArticlePOJO article=null;
+    try (PreparedStatement smt = this.conn.prepareStatement("SELECT * FROM project_article WHERE article_visibility = TRUE AND article_id = ?")) {
+        smt.setInt(1, article_id);
+        try (ResultSet rs = smt.executeQuery()) {
+            while (rs.next()) {
+                 article = loadSingleArticle(rs);
+            }
+        }
+    }
+    return article;
+}
+public  List<ImagePOJO> quaryImgByartID(int article_id) throws SQLException {
+        List<ImagePOJO> imagePOJOs=new ArrayList<>();
+    try (PreparedStatement smt = this.conn.prepareStatement("SELECT * FROM group1.project_article_images WHERE article_id=?")) {
+        smt.setInt(1, article_id);
+        try (ResultSet rs = smt.executeQuery()) {
+            while (rs.next()) {
+               ImagePOJO img = loadSingleImg(rs);
+                imagePOJOs.add(img);
+            }
+        }
+    }
+    return imagePOJOs;
+}
 
+private ImagePOJO loadSingleImg(ResultSet rs) throws SQLException {
+
+    ImagePOJO imagePOJO=new ImagePOJO();
+
+
+        imagePOJO.setArticle_id(rs.getInt(1));
+        imagePOJO.setImage_id(rs.getInt(2));
+        imagePOJO.setSource(rs.getString(3));
+
+
+    return imagePOJO;
+}
     /* METHODS TO ADD, LOAD AND DELETE ARTICLES FROM THE DATABASE */
 
     //Returns a list of all articles from the database, where the artice_visibility is true (i.e. they haven't been hidden by the admin) and they are equal to or before the current date
@@ -33,7 +67,9 @@ public class ArticleDAO implements AutoCloseable {
 
         List<ArticlePOJO> articles = new ArrayList<>();
         try (PreparedStatement smt = this.conn.prepareStatement("SELECT * FROM project_article WHERE article_visibility = TRUE AND article_date <= CURDATE()")) {
+
             try (ResultSet rs = smt.executeQuery()) {
+
                 while (rs.next()) {
                     ArticlePOJO article = loadSingleArticle(rs);
                     articles.add(article);
@@ -66,11 +102,9 @@ public class ArticleDAO implements AutoCloseable {
 
     //Method to load a single article from the database (and all of it's details) - this method is then called in loadAllArticles() and LoadUserArticles() and each article is added to the list
 
-    public ArticlePOJO loadSingleArticle(ResultSet rs) {
+    public ArticlePOJO loadSingleArticle(ResultSet rs) throws SQLException {
 
         ArticlePOJO article = new ArticlePOJO();
-
-        try {
             article.setArticle_id(rs.getInt(1));
             article.setTitle(rs.getString(2));
             article.setContent(rs.getString(3));
@@ -81,12 +115,9 @@ public class ArticleDAO implements AutoCloseable {
             article.setArticle_video(rs.getString(8));
             article.setArticle_Youtube(rs.getString(9));
 
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-
         return article;
     }
+
 
     //Adds a new article to the database - passes in details from an ArticlePOJO and places them into the database - sets the article_visibility to TRUE
 

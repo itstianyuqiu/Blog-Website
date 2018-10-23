@@ -106,25 +106,32 @@ public class ArticleUpload extends HttpServlet {
                     if (fi.getFieldName().equals("picture")){
                         String fileName = fi.getName();
                         if (!fileName.equals("")) {
-                            File singleImage = new File(imageFolder, fileName);
-                            allImages.add(singleImage);
-                            fi.write(singleImage);
+                            if(fileName.contains("png")||fileName.contains("jpeg")||fileName.contains("jpg")) {
+                                File singleImage = new File(imageFolder, fileName);
+
+                                allImages.add(singleImage);
+                                fi.write(singleImage);
+                            }
                         }
                     }
 
                     if (fi.getFieldName().equals("audioUpload")){
                         String audioName = fi.getName();
-                        if (!audioName.equals("")) {
+                        if (!audioName.equals("") )  {
+                            if(audioName.contains("mp3")||audioName.contains("ogg")){
+                            System.out.println(audioName+"servlet");
                             audioFile = new File(audioFolder, audioName);
-                            fi.write(audioFile);
+                            fi.write(audioFile);}
                         }
                     }
 
                     if (fi.getFieldName().equals("videoUpload")){
                         String videoName = fi.getName();
                         if (!videoName.equals("")) {
-                            videoFile = new File(videoFolder, videoName);
-                            fi.write(videoFile);
+                            if(videoName.contains("mp4")||videoName.contains("ogg")) {
+                                videoFile = new File(videoFolder, videoName);
+                                fi.write(videoFile);
+                            }
                         }
                     }
 

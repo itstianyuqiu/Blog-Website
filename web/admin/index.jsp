@@ -43,7 +43,7 @@
                 if (managerPOJO != null) {
                     out.print(managerPOJO.getAdminName());
                 } else {
-                    response.sendRedirect("admin/login.jsp");
+                    response.sendRedirect("/admin/login.jsp");
                 }
             %>
         </h3>

@@ -1,6 +1,8 @@
 package POJO;
 
-public class ArticlePOJO {
+import java.util.List;
+
+public class ArticlePOJO implements Comparable<ArticlePOJO>{
     private int article_id;
     private String title;
     private String content;
@@ -10,6 +12,15 @@ public class ArticlePOJO {
     private String article_audio;
     private String article_video;
     private String article_Youtube;
+    private List<ImagePOJO> imagePOJOS;
+
+    public List<ImagePOJO> getImagePOJOS() {
+        return imagePOJOS;
+    }
+
+    public void setImagePOJOS(List<ImagePOJO> imagePOJOS) {
+        this.imagePOJOS = imagePOJOS;
+    }
 
     public String getArticle_audio() {
         return article_audio;
@@ -83,5 +94,15 @@ public class ArticlePOJO {
 
     public String getArticle_date() {
         return article_date;
+    }
+
+
+    @Override
+    public int compareTo(ArticlePOJO o) {
+        if (this.getTitle().toCharArray()[0]<o.getTitle().toCharArray()[0]) {
+            return 1;
+        } else {
+            return -1;
+        }
     }
 }

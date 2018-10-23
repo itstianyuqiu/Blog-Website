@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
-
+/* Basic */
 html {
     margin: 0;
     padding: 0;
@@ -17,7 +17,6 @@ header, section {
     display: block;
 }
 
-/* Basic */
 html {
     box-sizing: border-box;
 }
@@ -34,12 +33,6 @@ body {
     line-height: 1.75em;
 }
 
-/*a {*/
-/*transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;*/
-/*border-bottom: dotted 1px;*/
-/*color: #49bf9d;*/
-/*text-decoration: none;*/
-/*}*/
 p {
     margin: 0 0 2em 0;
 }
@@ -84,19 +77,8 @@ h3 {
     margin: auto;
     width: 80%;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s
-}
-
-@-webkit-keyframes animatetop {
-    from {
-        top: -300px;
-    }
-    to {
-        top: 0;
-    }
 }
 
 @keyframes animatetop {
@@ -124,7 +106,7 @@ h3 {
 
 .avatar_update_header {
     padding: 0px 18px 30px;
-    background-color: lightblue;
+    background-color: white;
 }
 
 .avatar_update_body {
@@ -136,13 +118,14 @@ h3 {
 }
 
 .avatar_update_body_img {
-    margin: 0 10%;
+    margin: 0 28%;
     padding: 0;
 }
 
 .avatar_update_footer {
-    padding: 10px;
-    background-color: lightblue;
+    padding-left: 1em;
+    background-color: white;
+    padding-bottom: 2em;
 }
 
 /* Header */
@@ -188,25 +171,27 @@ h3 {
 }
 
 #search_bar {
-    width: 46%;
+    width: 67%;
     height: 50px;
+
 }
 
 #image_avatar {
     width: 40%;
     border-radius: 100%;
     margin-top: 22px;
-    margin-left: 30px;
+    margin-left: 1em;
+    cursor: pointer;
 }
 
 #icon_home {
-    width: 6%;
-    margin-left: 2em;
+    width: 7%;
+    margin-left: 1em;
 }
 
 #icon_homepage {
-    width: 3%;
-    margin-left: 2em;
+    width: 6%;
+    margin-left: 1em;
 
 }
 
@@ -233,15 +218,107 @@ h3 {
 .btn_savechange {
     width: 31%;
     height: 50px;
-    background-color: #0066ff;
-    color: #f8f8f8;
+    color: rgb(33, 140, 236);
+    background-color: white;
+    border: 2px solid rgb(33, 140, 236);
     border-radius: 6px;
+    transition-duration: 0.4s;
+}
+
+.btn_savechange:hover {
+    background-color: rgb(33, 140, 236);
+    color: #f8f8f8;
+    box-shadow: 0 9px 13px 0 rgba(177, 196, 221, 24), 0 14px 47px 0 rgba(33, 140, 236, 19);
 }
 
 #btn_delete {
     width: 31%;
     height: 50px;
+    color: #dc143c;
+    background-color: white;
+    border: 2px solid #dc143c;
+    border-radius: 6px;
+    transition-duration: 0.4s;
+}
+
+#btn_delete:hover {
+
     background-color: #dc143c;
     color: #f8f8f8;
+    box-shadow: 0 9px 13px 0 rgba(174, 36, 40, 24), 0 14px 47px 0 rgba(218, 26, 64, 19);
+}
+
+#delete_user_account_button {
+    width: 31%;
+    height: 50px;
+    color: #dc143c;
+    background-color: white;
+    border: 2px solid #dc143c;
     border-radius: 6px;
+    transition-duration: 0.4s;
+}
+
+#delete_user_account_button:hover {
+    background-color: #dc143c;
+    color: #f8f8f8;
+    box-shadow: 0 9px 13px 0 rgba(174, 36, 40, 24), 0 14px 47px 0 rgba(218, 26, 64, 19);
+}
+
+#delete_cancel_account {
+    width: 31%;
+    height: 50px;
+    color: rgb(33, 140, 236);
+    background-color: white;
+    border: 2px solid rgb(33, 140, 236);
+    border-radius: 6px;
+    margin-top: 1em;
+    transition-duration: 0.4s;
+}
+
+#delete_cancel_account:hover {
+    background-color: rgb(33, 140, 236);
+    color: #f8f8f8;
+    box-shadow: 0 9px 13px 0 rgba(177, 196, 221, 24), 0 14px 47px 0 rgba(33, 140, 236, 19);
+}
+
+#avatar_update_submit {
+    font-size: 16px;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    text-align: center;
+    width: 100px;
+    height: 38px;
+    color: #aaaaaa;
+    background-color: white;
+    border: 2px solid #aaaaaa;
+    border-radius: 6px;
+    margin-top: 1em;
+    transition-duration: 0.4s;
+}
+
+#avatar_update_submit:hover {
+    background-color: rgb(33, 140, 236);
+    color: #f8f8f8;
+    box-shadow: 0 9px 13px 0 rgba(177, 196, 221, 24), 0 14px 47px 0 rgba(33, 140, 236, 19);
+    border: 2px solid rgb(33, 140, 236);
+}
+
+#avatar_update_cancel {
+    font-size: 16px;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    text-align: center;
+    width: 100px;
+    height: 38px;
+    color: #aaaaaa;
+    background-color: white;
+    border: 2px solid #aaaaaa;
+    border-radius: 6px;
+    margin-top: 1em;
+    transition-duration: 0.4s;
+}
+
+#avatar_update_cancel:hover {
+    background-color: #dc143c;
+    color: #f8f8f8;
+    box-shadow: 0 9px 13px 0 rgba(174, 36, 40, 24), 0 14px 47px 0 rgba(218, 26, 64, 19);
+    border: 2px solid #dc143c;
 }

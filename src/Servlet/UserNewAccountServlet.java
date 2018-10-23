@@ -2,7 +2,8 @@ package Servlet;
 
 import DAO.UserDAO;
 import POJO.UserPOJO;
-
+import Utilities.GrecaptchaUtil;
+import Utilities.HashedEncode;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,12 +21,17 @@ public class UserNewAccountServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try (UserDAO userDAO = new UserDAO()) {
-
+            String grecaptcha=req.getParameter("grecaptcha");
+            Boolean boo=  GrecaptchaUtil.grecaptcha(grecaptcha);
+            if(!boo){//输出错误
+                return ;
+            }
             String firstName = req.getParameter("firstname");
             String lastName = req.getParameter("surname");
             String username = req.getParameter("username");
             String emailAddress = req.getParameter("emailaddress");
             String password = req.getParameter("password");
+            password= HashedEncode.EncryptPassword(password,username);
             String birthDay = req.getParameter("dob_day");
             String birthMonth = req.getParameter("dob_month");
             String birthYear = req.getParameter("dob_year");
@@ -65,4 +71,5 @@ public class UserNewAccountServlet extends HttpServlet {
 
 
     }
+
 }
