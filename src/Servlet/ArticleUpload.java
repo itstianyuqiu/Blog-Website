@@ -119,7 +119,7 @@ public class ArticleUpload extends HttpServlet {
                         String audioName = fi.getName();
                         if (!audioName.equals("") )  {
                             if(audioName.contains("mp3")||audioName.contains("ogg")){
-                            System.out.println(audioName+"servlet");
+
                             audioFile = new File(audioFolder, audioName);
                             fi.write(audioFile);}
                         }

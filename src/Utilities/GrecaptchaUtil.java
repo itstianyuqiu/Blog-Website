@@ -15,12 +15,12 @@ public class GrecaptchaUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
-//        System.out.println(sTR);
+
         str= str.substring(1,str.length()-1);
         str=str.replaceAll("\"", "");
         String strs[]=str.split(",");
         String successStrs[]=strs[0].trim().split(":");
-        System.out.println(successStrs[0]+"11111111111"+successStrs[1]);
+
         if(successStrs[0].trim().equals("success")&&successStrs[1].trim().trim().equals("true")){
             return true;
         }else {

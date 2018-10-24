@@ -19,7 +19,7 @@
         <div class="col-md-6">
             <form action="/AdminUserServlet" method="post">
                 <h2>add new user</h2>
-                <input type="hidden" name="adminuser" value="adduser" disabled>
+                <input type="hidden" name="adminuser" value="adduser">
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input id="username" class="form-control" name="username" type="text" placeholder="Username">
@@ -30,12 +30,16 @@
                            placeholder="Password">
                 </div>
                 <div class="form-group">
-                    <label for="nickname">Name</label>
-                    <input id="nickname" class="form-control" name="userrealname" type="text" placeholder="Name">
+                    <label for="firstname">First Name</label>
+                    <input id="firstname" class="form-control" name="firstname" type="text" placeholder="First Name">
                 </div>
                 <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <input id="gender" class="form-control" name="gender" type="text" placeholder="Gender">
+                    <label for="lastname">Last Name</label>
+                    <input id="lastname" class="form-control" name="lastname" type="text" placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="dob">Birth</label>
+                    <input id="dob" class="form-control" name="dob" type="date" placeholder="Date of Birth">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
@@ -43,12 +47,12 @@
                 </div>
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <area id="description" class="form-control" name="description" type="text"
-                          placeholder="Description">
+                    <input id="description" class="form-control" name="description" type="text"
+                           placeholder="Description">
                 </div>
-                <div class="form-group">
-                    <label for="country">Country</label>
-                    <input id="country" class="form-control" name="country" type="text" placeholder="Country">
+                <div class="form-group" id="countries">
+                    <label for="countrySelect">Country (two letters)</label>
+                    <input type="text" id="countrySelect" name="country"  class="form-control">
                 </div>
                 <div class="form-group">
                     <button class="btn btn-primary" type="submit">ADD</button>

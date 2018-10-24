@@ -24,28 +24,32 @@ public class ShowArtDetileServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-      String articleID= req.getParameter("articleid");
-      try( ArticleDAO articleDAO=new ArticleDAO();
-           UserDAO userDAO=new UserDAO()){
-          ArticlePOJO articlePOJO=articleDAO.quaryArtAndimgs(Integer.valueOf(articleID));
-           List<ImagePOJO> imgs=articleDAO.quaryImgByartID(Integer.valueOf(articleID));
-          articlePOJO.setImagePOJOS(imgs);
+        String articleID = req.getParameter("articleid");
 
-         UserPOJO userPOJO= userDAO.getUserName(String.valueOf(articlePOJO.getAuthor_id()));
+        if (articleID == null){
+            articleID = req.getSession().getAttribute("current_article").toString();
+        }
 
-          JoinQueryDataModel joinQueryDataModel=new JoinQueryDataModel();
-          joinQueryDataModel.setUp(userPOJO);
-          joinQueryDataModel.setAp(articlePOJO);
-          req.setAttribute("article",joinQueryDataModel);
-          req.getRequestDispatcher("/article.jsp").forward(req,resp);
-//         JSONObject jsonObject= JSONObject.fromObject(joinQueryDataModel);
-//         resp.getWriter().write(jsonObject.toString());
-      }
-      catch (SQLException e) {
-          e.printStackTrace();
-      } catch (Exception e) {
-          e.printStackTrace();
-      }
+        try (ArticleDAO articleDAO = new ArticleDAO();
+             UserDAO userDAO = new UserDAO()) {
+            ArticlePOJO articlePOJO = articleDAO.quaryArtAndimgs(Integer.valueOf(articleID));
+            List<ImagePOJO> imgs = articleDAO.quaryImgByartID(Integer.valueOf(articleID));
+            articlePOJO.setImagePOJOS(imgs);
+
+            UserPOJO userPOJO = userDAO.getUserName(String.valueOf(articlePOJO.getAuthor_id()));
+
+            JoinQueryDataModel joinQueryDataModel = new JoinQueryDataModel();
+            joinQueryDataModel.setUp(userPOJO);
+            joinQueryDataModel.setAp(articlePOJO);
+            req.getSession().setAttribute("current_article", articleID);
+            req.setAttribute("article", joinQueryDataModel);
+            req.getRequestDispatcher("/article.jsp").forward(req, resp);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }

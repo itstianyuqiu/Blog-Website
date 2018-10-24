@@ -24,7 +24,7 @@ public class UserResetPasswordServlet extends HttpServlet {
         String password = req.getParameter("password");
         String confirm = req.getParameter("confirm");
         String errMsg = "";
-        System.out.println(securityKey+"==="+password+"====="+confirm);
+
         if (password.equals("") || confirm.equals("")) {
             errMsg = "You didn't enter the password!";
         } else if (!password.equals(confirm)) {
@@ -32,7 +32,7 @@ public class UserResetPasswordServlet extends HttpServlet {
         }
         if (!errMsg.equals("")) {
             resp.getWriter().write(errMsg);
-            System.out.println(errMsg);
+
             return;
         }
         try (UserDAO userDAO = new UserDAO();) {

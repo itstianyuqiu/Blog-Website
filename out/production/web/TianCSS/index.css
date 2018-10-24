@@ -1,0 +1,249 @@
+body {
+    background-image: url("../images/index_signin_backgroud.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#login_frame {
+    width: 400px;
+    height: 340px;
+    padding: 13px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+    background-color: rgba(240, 255, 255, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+#image_logo {
+    margin-top: 22px;
+}
+
+.label_input {
+    font-size: 14px;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    width: 65px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #f8f8f8;
+    background-color:  rgb(33, 140, 236);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.login_text_field {
+    width: 277px;
+    height: 38px;
+    border-radius: 6px;
+    border: 0;
+}
+
+#btn_login {
+    font-size: 14px;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    width: 121px;
+    height: 38px;
+    text-align: center;
+    border: 2px solid #778899;
+    background-color: rgba(255,255,255,0);
+    color: #778899;
+    border-radius: 6px;
+    margin-left: -1.6em;
+    transition-duration: 0.4s;
+}
+#btn_login:hover{
+    color: #f8f8f8;
+    background-color: #778899;
+}
+
+#forget_pwd {
+    font-size: 14px;
+    line-height: 29px;
+    color: #778899;
+    text-decoration: none;
+    position: relative;
+    float: right;
+    top: 5px;
+    margin-right: 22px;
+
+}
+
+#forget_pwd:hover {
+    color:  rgb(33, 140, 236);
+    text-decoration: underline;
+}
+
+#login_control {
+    padding: 0 60px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 6px;
+    border: 0;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+/*------------------------------------------------------------------*/
+#signup_frame_signup {
+    width: 400px;
+    height: 500px;
+    padding: 13px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+    background-color: rgba(240, 255, 255, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    color: #f8f8f8;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+.signup_text_field_name{
+    width: 138px;
+    height: 38px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 0;
+}
+#form_securityquestion{
+    width: 150px;
+    height: 38px;
+    color: #999999;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 0;
+}
+#form_dob_day{
+    width: 56px;
+    height: 38px;
+    color: #999999;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 0;
+
+}
+#form_dob_month{
+    width: 56px;
+    height: 38px;
+    color: #999999;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 0;
+
+}
+#form_dob_year{
+    width: 88px;
+    height: 38px;
+    color: #999999;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 0;
+
+}
+
+.signup_text_field_usernameemailpassword{
+    width:277px;
+    height: 38px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 0;
+}
+
+#btn_signup{
+    font-size: 14px;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    width: 121px;
+    height: 38px;
+    text-align: center;
+    color: #778899;
+    background-color:  rgba(255,255,255,0);
+    border: 2px solid #778899;
+    border-radius: 6px;
+    float: right;
+    margin-right: 52px;
+}
+
+#btn_signup:hover{
+    color: #f8f8f8;
+    background-color:  #778899;
+}
+
+.gender_both{
+    display: inline-block;
+    margin-left: 16px;
+    padding: 5px;
+}
+
+#signup_control{
+    padding: 10px;
+
+}
+/*---------------------------------------------------*/
+#login_frame_resetpassword {
+    width: 400px;
+    height: 260px;
+    padding: 13px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+    background-color: rgba(240, 255, 255, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+#btn_confirm {
+    font-size: 14px;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    width: 277px;
+    height: 38px;
+    text-align: center;
+    border: 2px solid #778899;
+    background-color: rgba(255,255,255,0);
+    color: #778899;
+    border-radius: 6px;
+    transition-duration: 0.4s;
+}
+
+#btn_confirm:hover{
+    color: #f8f8f8;
+    background-color: #778899;
+}
+
+.signup_text_field_verificationcode{
+    width: 117px;
+    height: 38px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 0;
+}
+
+.verificationcode{
+    display: inline-block;
+    margin-left: 16px;
+    padding: 5px;
+}
+
+#confirm_control{
+    margin-left: 10px;
+}

@@ -18,15 +18,15 @@ public class UserLoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try (UserDAO userDAO = new UserDAO()) {
-            String grecaptcha=req.getParameter("grecaptcha");
-            Boolean boo=  GrecaptchaUtil.grecaptcha(grecaptcha);
+
             String errMsg="";
-            if(!boo){//输出错误
-                resp.getWriter().write("error: you didn't check grecaptcha !");
-                return ;
-            }
+
             String username = req.getParameter("username");
             String password = req.getParameter("password");
+
+            System.out.println("username: " + username);
+            System.out.println("password: " + password);
+
             if(username.equals("")||username==null){
                 errMsg="you didn't input you username!";
 
@@ -34,7 +34,7 @@ public class UserLoginServlet extends HttpServlet {
                 errMsg="you didn't input you password !";
             }
             password=HashedEncode.EncryptPassword(password,username);
-            System.out.println(password);
+
 
 
 
@@ -45,13 +45,11 @@ public class UserLoginServlet extends HttpServlet {
             }else if(!userPOJO.getPassword().equals(password)){
                 errMsg="wrong password!";
             }
-            if(!errMsg.equals("")){
-                resp.getWriter().write(errMsg);
-                return;
-            }
+            else {
 
                 req.getSession().setAttribute("userPOJO", userPOJO);
                 req.getSession().setAttribute("page", "allArticles");
+
 
                 //Kien's gr stuffs
                 req.getSession().setAttribute("userID", userPOJO.getUser_id());
@@ -59,11 +57,9 @@ public class UserLoginServlet extends HttpServlet {
                 req.getSession().setAttribute("firstLogin_MyArticles", true);
                 req.getSession().setAttribute("current_article", 0);
                 req.getSession().setAttribute("page", "allArticles");
-resp .getWriter().write("success");
-//                req.getRequestDispatcher("/homepage.jsp").forward(req, resp);
-            System.out.println("zhihou之后");
-//                    resp.sendRedirect("/ArticleServlet");
-                //---
+
+                resp.sendRedirect("/homepage.jsp");
+            }
 
 
             //if not correct then back to login page again

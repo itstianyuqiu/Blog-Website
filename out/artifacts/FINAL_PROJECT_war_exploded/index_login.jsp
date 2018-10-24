@@ -9,10 +9,11 @@
     <script SRC="JQuery_lib/jQuery.md5.js"></script>
     <script src="myJS.js"></script>
     <style>
-        .g-recaptcha{
+        .g-recaptcha {
             padding: 15px 46px 0;
         }
-        .errorMsg{
+
+        .errorMsg {
             width: 60px;
             height: 35px;
             color: red;
@@ -21,47 +22,57 @@
     </style>
 </head>
 <body>
+<form action="/UserLoginServlet" method="get">
+    <div id="login_frame">
+        <div class="errorMsg">
+            <p></p>
+        </div>
+        <p id="image_logo"><img src="images/icon_logo.png" width="113px"></p>
 
-<div id="login_frame">
-    <div class="errorMsg">
-        <p></p>
-    </div>
-    <p id="image_logo"><img src="images/icon_logo.png" width="113px"></p>
+        <input placeholder="  Username " type="text" name="username" id="username" class="login_text_field"/>
+        <br>
+        <br>
+        <input placeholder="  Password " type="password" name="password" id="password" class="login_text_field"/>
+        <br>
+        <br>
 
-    <input placeholder="  Username " type="text" name="username" id="username" class="login_text_field"/>
-    <br>
-    <br>
-    <input placeholder="  Password " type="password" name="password" id="password" class="login_text_field"/>
-    <br>
-    <br>
-    <div id="login_control">
-        <button type="button" id="btn_login" name="login" value="login">Log in</button>
-        <a id="forget_pwd" href="index_forget_pwd.jsp">Forgotten Pasword&quest;</a>
+        <%--<div class="g-recaptcha" data-sitekey="6Lfkp3UUAAAAAF26TrKkeofLcFidZExKMthqYE_s"></div>--%>
+
+        <%--<input id="gre" type="hidden" name="grecaptcha">--%>
+
+        <div id="login_control">
+            <input type="submit" id="btn_login" name="login" value="login"/>
+            <a id="forget_pwd" href="index_forget_pwd.jsp">Forgotten Pasword&quest;</a>
+        </div>
     </div>
-    <div class="g-recaptcha" data-sitekey="6Lfkp3UUAAAAAF26TrKkeofLcFidZExKMthqYE_s" ></div>
-</div>
+</form>
 </body>
 
 
 <script>
-    $('#btn_login').click(function () {
-        var $grecaptcha=grecaptcha.getResponse()
 
-        if($grecaptcha!=null){$.post('/UserLoginServlet', {
-            'grecaptcha':$grecaptcha,
-            'username': $("#username").val(),
-            'password': $.md5($('#password').val())
-        }, function (xhr) {
-           var xhr= xhr.split(':')
-            if(xhr[0]=='error'){
-               $('.errorMsg p').text(xhr[1])
-            } else {
-               location.href="/homepage.jsp"
-            }
-        });}else {
-            alert("You didn't click grecaptcha ")
-        }
-    });
+    // $("#btn_login").click(function () {
+    //     document.getElementById("gre").setAttribute('value', grecaptcha.getResponse());
+    // });
+
+    // $('#btn_login').click(function () {
+    //     var $grecaptcha=grecaptcha.getResponse()
+    //
+    //     if($grecaptcha!=null){$.post('/UserLoginServlet', {
+    //         'grecaptcha':$grecaptcha,
+    //         'username': $("#username").val(),
+    //         'password': $.md5($('#password').val())
+    //     }, function (xhr) {
+    //         var xhr= xhr.split(':')
+    //         if(xhr[0]=='error'){
+    //             $('.errorMsg p').text(xhr[1])
+    //         } else {
+    //             location.href="/homepage.jsp"
+    //         }
+    //     });}else {
+    //         alert("You didn't click grecaptcha ")
+    //     }
+    // });
 
 </script>
 

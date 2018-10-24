@@ -1,0 +1,10 @@
+BUGS: 
+
+- All articles index page: not updated with new article submit
+- All articles index page: cannot hide article
+- Sort buttons
+- Reset user password(hash/salt)
+- Delete Articles when it's hidden
+- display of comment author (username)
+- multi media
+

@@ -1,6 +1,9 @@
 <%@ page import="POJO.UserPOJO" %>
 <%@ page import="POJO.ArticlePOJO" %>
 <%@ page import="POJO.JoinQueryDataModel" %>
+<%@ page import="POJO.ImagePOJO" %>
+<%@ page import="java.util.List" %>
+<%@ page import="DAO.ArticleDAO" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -37,10 +40,8 @@
             <div class="12u">
 
                 <!-- Header -->
-                <section id="header">
+                <section id="headerArticle">
 
-                    <!-- Logo -->
-                    <h1><a href="#">Dopetrope</a></h1>
 
                     <!-- Nav -->
                     <nav id="nav">
@@ -48,13 +49,12 @@
                                 <%if (userPOJO!=null&&userPOJO.getUsername()!=null&&!userPOJO.getUsername().equals("")){%>
                                     <li><a href="homepage.jsp">Home Page</a></li>
 
-                                    <li><a onclick="loadAllArticle()">My Account</a></li>
                                 <% } %>
 
 
                             <li><a href="index.jsp">Other Articles</a></li>
 
-                            <li class="current_page_item"><a href="article.jsp">Current Article</a></li>
+                            <li class=/ShowArtDetileServlet?articleid=+${article.ap.article_id}"><a href="article.jsp">Current Article</a></li>
 
                         </ul>
                     </nav>
@@ -83,21 +83,31 @@
 
                                 <!-- Content -->
                                 <article class="box is-post">
-                                    <c:forEach items="${article.ap.imagePOJOS}" var="item">
-                                    <a href="#" class="image image-full"><img src="${item}" alt="" /></a>
-                                    </c:forEach>
+                                    <%--<c:forEach items="${article.ap.imagePOJOS}" var="item">--%>
+                                    <a href="#" class="image image-full">
+                                        <%--<img src="Uploaded_Images/${item.source}" alt="" />--%>
+                                        <img src="images/pic01.jpg" alt="">
+                                    </a>
+                                    <%--</c:forEach>--%>
+
                                     <header>
-                                        <h2 class="art-title">${article.ap.title} </h2>
-                                        <span class="byline"><h4 class="auth-name">${article.up.username}</h4></span>
-                                        <span class="byline"><h4 class="artdate">${article.ap.article_date}</h4></span>
+                                        <h3>Title: ${article.ap.title}</h3>
+
+                                        <hr>
+                                        <h3>Author: ${article.up.username}</h3>
+
+                                        <hr>
+                                        <h3>Date: ${article.ap.article_date}</h3>
+
                                     </header>
 
+                                        <hr>
+                                        <p> ${article.ap.content} </p>
 
-                                    <div id ="article-cotent">
-                                        ${article.ap.content}
 
+                                        <hr>
+                                        <h3>Comments: </h3>
 
-                                    </div>
 
 
                                     <footer class="actions">
@@ -106,11 +116,18 @@
 
                                             <%if (userPOJO!=null){%>
                                             <br>
-                                            <button onclick="loadArticleCommentsJSP(${article.ap.article_id})">Comments </button>
-                                            <br>
+                                            <%
+                                            request.getSession().setAttribute("page","singleArticle");
+                                            request.getSession().setAttribute("current_article", request.getSession().getAttribute("current_article"));
+                                            %>
+                                            <div id ="${article.ap.article_id}">
+                                                <script>
+                                                    loadSingleArticleComments(${article.ap.article_id});
+                                                </script>
+                                            </div>
                                            <% } else {%>
                                             <br>
-                                            <button onclick="login()">Comments </button>
+                                            <button onclick="login()">Show Comments </button>
                                             <br>
                                             <%  }%>
 
@@ -130,16 +147,6 @@
 </div>
 
 
-<div id ="side_nav">
-
-    <%if(userPOJO!=null){%>
-         <br>
-    <button onclick="addNewArticle()">Add a new article </button>
-    <button>My Account</button>
-    <br>
-   <% }%>
-
-</div>
 
 <script>
 

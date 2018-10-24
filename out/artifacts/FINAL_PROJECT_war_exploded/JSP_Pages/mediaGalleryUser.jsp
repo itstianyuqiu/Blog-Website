@@ -73,5 +73,8 @@
 
 %>
 
+<hr>
+<a href="/JSP_Pages/mediaGalleryAll.jsp"><button>Load All Media</button></a>
+
 </body>
 </html>

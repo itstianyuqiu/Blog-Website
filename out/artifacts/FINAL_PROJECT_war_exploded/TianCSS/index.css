@@ -88,13 +88,13 @@ body {
 /*------------------------------------------------------------------*/
 #signup_frame_signup {
     width: 400px;
-    height: 500px;
+    height: 750px;
     padding: 13px;
     position: absolute;
     left: 50%;
     top: 50%;
     margin-left: -200px;
-    margin-top: -200px;
+    margin-top: -400px;
     background-color: rgba(240, 255, 255, 0.5);
     border-radius: 10px;
     text-align: center;
@@ -175,8 +175,9 @@ body {
     background-color:  rgba(255,255,255,0);
     border: 2px solid #778899;
     border-radius: 6px;
-    float: right;
-    margin-right: 52px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
 }
 
 #btn_signup:hover{

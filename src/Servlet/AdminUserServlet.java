@@ -25,14 +25,14 @@ public class AdminUserServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("admin servlet");
         String str = req.getParameter("adminuser");
-        System.out.println(str);
         try (UserDAO userDAO = new UserDAO()) {
             if (str == null || str.equals("")) {
 
             } else {
                 if (str.equals("getalluser")) {
-                    System.out.println(str);
+
                     int pageno = Integer.valueOf(req.getParameter("currentpage"));
                     int count = userDAO.queryCount();
                     QuaryModal<UserPOJO> userPOJOQuaryModal = new QuaryModal<>();
@@ -59,8 +59,9 @@ public class AdminUserServlet extends HttpServlet {
 
 
                 } else if (str.equals("adduser")) {
+                    System.out.println("admin add============");
                     UserPOJO userPOJO = new UserPOJO();
-                    adduser(req, userDAO, userPOJO);
+                    addUser(req, userDAO, userPOJO);
                     req.getRequestDispatcher("/admin/add_user.jsp").forward(req, resp);
                 } else if (str.equals("sendemail")) {
                     sendEmail(req,resp,userDAO);
@@ -75,17 +76,17 @@ public class AdminUserServlet extends HttpServlet {
     }
 
     public void deleteuser(int id, UserDAO userDAO) throws SQLException {
-        System.out.println("delete=" + id);
         userDAO.deleteUserAccount(id);
     }
 
-    public void adduser(HttpServletRequest req, UserDAO userDAO, UserPOJO userPOJO) throws SQLException {
+    public void addUser(HttpServletRequest req, UserDAO userDAO, UserPOJO userPOJO) throws SQLException {
         userPOJO.setUsername(req.getParameter("username"));
         userPOJO.setPassword(req.getParameter("password"));
-        userPOJO.setBirth(req.getParameter("nickname"));
-        userPOJO.setGender(req.getParameter("gender"));
+        userPOJO.setFirstName(req.getParameter("firstname"));
+        userPOJO.setLastName(req.getParameter("lastname"));
+        userPOJO.setBirth(req.getParameter("dob"));
         userPOJO.setEmail(req.getParameter("email"));
-        userPOJO.setDescription(req.getParameter("disciption"));
+        userPOJO.setDescription(req.getParameter("description"));
         userPOJO.setCountry(req.getParameter("country"));
         userDAO.addNewUserAccount(userPOJO);
     }
@@ -94,7 +95,6 @@ public class AdminUserServlet extends HttpServlet {
         String emailTitle = req.getParameter("email-title");
         String emailContent = req.getParameter("email-content");
         String securityKey = req.getParameter("security-Key");
-        System.out.println(securityKey);
         if (securityKey == null) {
                 resp.getWriter().write("1");
                 return;

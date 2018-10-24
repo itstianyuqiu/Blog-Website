@@ -18,7 +18,7 @@ public class UserDeleteAccountServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("user user delete delete");
+
         UserPOJO userPOJO = (UserPOJO) req.getSession().getAttribute("userPOJO");
         try (UserDAO userDAO = new UserDAO()) {
             userDAO.deleteUserAccount(userPOJO.getUser_id());
@@ -29,6 +29,6 @@ public class UserDeleteAccountServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("delete");
+
     }
 }

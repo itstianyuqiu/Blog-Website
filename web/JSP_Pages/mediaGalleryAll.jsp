@@ -73,5 +73,8 @@
 
 %>
 
+<hr>
+<a href="/JSP_Pages/mediaGalleryUser.jsp"><button>Load User Media</button></a>
+
 </body>
 </html>

@@ -93,14 +93,14 @@ public class UserUpdateAccountServlet extends HttpServlet {
         ServletFileUpload fileUpload = new ServletFileUpload(factory);
 
         List<FileItem> fileItems = fileUpload.parseRequest(req);
-        System.out.println(fileItems.size());
+
         File imgFile = null;
         String filename = null;
 
 
         for (FileItem fi : fileItems) {
             if (!fi.isFormField()) {
-                System.out.println(fi.getName());
+
                 filename = fi.getName();
                 imgFile = new File(uploadFolder, filename);
                 fi.write(imgFile);
@@ -133,13 +133,11 @@ public class UserUpdateAccountServlet extends HttpServlet {
     }
 
     private void changeGeneralAccountSetting(UserDAO userDAO, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, SQLException {
-        String username = req.getParameter("username");
         String email = req.getParameter("emailaddress");
         String country = req.getParameter("country");
         String description = req.getParameter("description");
 
         UserPOJO userPOJO = (UserPOJO) req.getSession().getAttribute("userPOJO");
-        userPOJO.setUsername(username);
         userPOJO.setEmail(email);
         userPOJO.setCountry(country);
         userPOJO.setDescription(description);

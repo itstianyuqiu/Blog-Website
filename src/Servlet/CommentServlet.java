@@ -52,6 +52,7 @@ public class CommentServlet extends HttpServlet {
                 cpj.setComments(req.getParameter("comments_content"));
             try (ArticleDAO newArticleDAO = new ArticleDAO()){
                 newArticleDAO.addNewComment(cpj);
+
                 doPost(req, resp);
             } catch (Exception e) {
                 e.printStackTrace();

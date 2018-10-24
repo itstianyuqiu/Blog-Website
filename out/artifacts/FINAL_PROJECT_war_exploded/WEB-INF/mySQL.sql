@@ -103,8 +103,8 @@ SELECT * FROM project_user;
 SELECT article_id
 FROM project_user_article
 WHERE user_id = 1;
-SELECT *
-FROM project_article_comment;
+
+SELECT * FROM project_article_comment;
 
 SELECT *
 FROM project_comment_relationship;

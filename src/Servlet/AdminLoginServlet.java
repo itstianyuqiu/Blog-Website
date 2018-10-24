@@ -22,7 +22,6 @@ public class AdminLoginServlet extends HttpServlet {
 
         String username = req.getParameter("username");
         String password = req.getParameter("password");
-        System.out.println(username + "+" + password);
         String errMsg = "";
         if (username.equals("") || username == null) {
             errMsg = "please enter your username";
@@ -32,7 +31,7 @@ public class AdminLoginServlet extends HttpServlet {
         }
         try (AdminDAO adminDAO = new AdminDAO()) {
             AdminPOJO adminPOJO = adminDAO.queryAdminbyName(username);
-            System.out.println(adminPOJO.toString());
+
             if (adminPOJO == null || adminPOJO.getAdminName().equals("")) {
                 errMsg = "wrong username";
             } else if (!adminPOJO.getPassword().equals(password)) {

@@ -50,6 +50,10 @@ function loadArticleCommentsJSP(articleID) {
     $("#" + articleID + "").load('../JSP_Pages/articleComments.jsp');
 }
 
+function loadSingleArticleComments(articleID) {
+    $("#" + articleID + "").load('../JSP_Pages/singleArticleComments.jsp');
+}
+
 function loadCurrentDate() {
     var date = new Date();
 

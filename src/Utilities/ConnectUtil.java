@@ -31,8 +31,7 @@ public class ConnectUtil {
             con.setRequestProperty("User-Agent", USER_AGENT);
             //获取响应
             int responseCode = con.getResponseCode();
-            System.out.println("\nSending 'GET' request to URL : " + url);
-            System.out.println("Response Code : " + responseCode);
+
 
             BufferedReader in = new BufferedReader(
                     new InputStreamReader(con.getInputStream()));
@@ -44,7 +43,7 @@ public class ConnectUtil {
             }
             in.close();
             //打印结果
-            System.out.println(response.toString());
+
                 return  response.toString();
         }
         // HTTP POST请求
@@ -66,9 +65,7 @@ public class ConnectUtil {
             wr.close();
 
             int responseCode = con.getResponseCode();
-            System.out.println("\nSending 'POST' request to URL : " + url);
-            System.out.println("Post parameters : " + urlParameters);
-            System.out.println("Response Code : " + responseCode);
+
 
             BufferedReader in = new BufferedReader(
                     new InputStreamReader(con.getInputStream()));
@@ -80,7 +77,7 @@ public class ConnectUtil {
             }
             in.close();
             //打印结果
-            System.out.println(response.toString());
+
             return response.toString();
         }
         public static String changeMapToParameters(Map<String,String> map){
@@ -105,7 +102,7 @@ public class ConnectUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println(sTR+"这个是验证中的");
+
     }
     }
 

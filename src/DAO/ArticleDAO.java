@@ -618,6 +618,8 @@ private ImagePOJO loadSingleImg(ResultSet rs) throws SQLException {
         return upj;
     }
 
+
+
     @Override
     public void close() throws Exception {
         this.conn.close();

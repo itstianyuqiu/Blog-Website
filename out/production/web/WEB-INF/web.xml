@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <welcome-file-list>
+        <welcome-file>/index.jsp</welcome-file>
+        
+    </welcome-file-list>
+    <!--error and exception handle-->
+    <servlet>
+        <servlet-name>MyExceptionHander</servlet-name>
+        <servlet-class>Exception.MyExceptionHander</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyExceptionHander</servlet-name>
+        <url-pattern>/MyExceptionHander</url-pattern>
+    </servlet-mapping>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/prompt/ErrorCON.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/prompt/ErrorCON.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/prompt/Error.jsp</location>
+    </error-page>
+
+<filter>
+    <filter-name>FilterServlet</filter-name>
+    <filter-class>Filter.DefaultIndexFilter</filter-class>
+    <init-param>
+        <param-name>FilterServlet</param-name>
+        <param-value>UTF-8</param-value>
+    </init-param>
+</filter>
+    <filter-mapping>
+        <filter-name>FilterServlet</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
+    <!--USER-->
+    <!--ShowArtDetileServlet-->
+    <servlet>
+        <servlet-name>ShowArtDetileServlet</servlet-name>
+        <servlet-class>Servlet.ShowArtDetileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowArtDetileServlet</servlet-name>
+        <url-pattern>/ShowArtDetileServlet</url-pattern>
+    </servlet-mapping>
+    <!--login-->
+    <servlet>
+        <servlet-name>UserLoginServlet</servlet-name>
+        <servlet-class>Servlet.UserLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserLoginServlet</servlet-name>
+        <url-pattern>/UserLoginServlet</url-pattern>
+    </servlet-mapping>
+    <!--new account-->
+    <servlet>
+        <servlet-name>UserNewAccountServlet</servlet-name>
+        <servlet-class>Servlet.UserNewAccountServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserNewAccountServlet</servlet-name>
+        <url-pattern>/UserNewAccountServlet</url-pattern>
+    </servlet-mapping>
+    <!--update user details-->
+    <servlet>
+        <servlet-name>UserUpdateAccountServlet</servlet-name>
+        <servlet-class>Servlet.UserUpdateAccountServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserUpdateAccountServlet</servlet-name>
+        <url-pattern>/UserUpdateAccountServlet</url-pattern>
+    </servlet-mapping>
+    <!--delete user account-->
+    <servlet>
+        <servlet-name>UserDeleteAccountServlet</servlet-name>
+        <servlet-class>Servlet.UserDeleteAccountServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserDeleteAccountServlet</servlet-name>
+        <url-pattern>/UserDeleteAccountServlet</url-pattern>
+    </servlet-mapping>
+    <!--log out user account-->
+    <servlet>
+        <servlet-name>UserLogOutServlet</servlet-name>
+        <servlet-class>Servlet.UserLogOutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserLogOutServlet</servlet-name>
+        <url-pattern>/UserLogOutServlet</url-pattern>
+    </servlet-mapping>
+    <!--user forget password-->
+    <servlet>
+        <servlet-name>UserForgotPasswordServlet</servlet-name>
+        <servlet-class>Servlet.UserForgotPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserForgotPasswordServlet</servlet-name>
+        <url-pattern>/UserForgotPasswordServlet</url-pattern>
+    </servlet-mapping>
+    <!--user-reset-password-->
+    <servlet>
+        <servlet-name>UserResetPasswordServlet</servlet-name>
+        <servlet-class>Servlet.UserResetPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserResetPasswordServlet</servlet-name>
+        <url-pattern>/UserResetPasswordServlet</url-pattern>
+    </servlet-mapping>
+    <!--user-Grecaptcha-->
+    <servlet>
+        <servlet-name>GrecaptchaServlet</servlet-name>
+        <servlet-class>Servlet.GrecaptchaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GrecaptchaServlet</servlet-name>
+        <url-pattern>/GrecaptchaServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--QuaryUserArtServlet-->
+    <servlet>
+        <servlet-name>QuaryUserArtServlet</servlet-name>
+        <servlet-class>Servlet.QuaryUserArtServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QuaryUserArtServlet</servlet-name>
+        <url-pattern>/QuaryUserArtServlet</url-pattern>
+    </servlet-mapping>
+    <!--ARTICLE-->
+
+    <servlet>
+        <servlet-name>ArticleServlet</servlet-name>
+        <servlet-class>Servlet.ArticleServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ArticleServlet</servlet-name>
+        <url-pattern>/ArticleServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateArticleDatabase</servlet-name>
+        <servlet-class>Servlet.UpdateArticleDatabase</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateArticleDatabase</servlet-name>
+        <url-pattern>/UpdateArticleDatabase</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CommentServlet</servlet-name>
+        <servlet-class>Servlet.CommentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CommentServlet</servlet-name>
+        <url-pattern>/CommentServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ArticleUpload</servlet-name>
+        <servlet-class>Servlet.ArticleUpload</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ArticleUpload</servlet-name>
+        <url-pattern>/ArticleUpload</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>Servlet.AdminServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/AdminServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>test</servlet-name>
+        <servlet-class>Servlet.test</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>test</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+
+
+
+    <!--Manager-->
+    <servlet>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <servlet-class>Servlet.AdminLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <url-pattern>/AdminLoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminQuitServlet</servlet-name>
+        <servlet-class>Servlet.AdminQuitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminQuitServlet</servlet-name>
+        <url-pattern>/AdminQuitServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminUserServlet</servlet-name>
+        <servlet-class>Servlet.AdminUserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminUserServlet</servlet-name>
+        <url-pattern>/AdminUserServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminCommentServlet</servlet-name>
+        <servlet-class>Servlet.AdminCommentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminCommentServlet</servlet-name>
+        <url-pattern>/AdminCommentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminArticleServlet</servlet-name>
+        <servlet-class>Servlet.AdminArticleServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminArticleServlet</servlet-name>
+        <url-pattern>/AdminArticleServlet</url-pattern>
+    </servlet-mapping>
+</web-app>

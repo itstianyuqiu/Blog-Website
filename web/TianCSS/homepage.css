@@ -200,6 +200,26 @@ h3 {
     box-shadow: 0 9px 13px 0 rgba(177, 196, 221, 24), 0 14px 47px 0 rgba(33, 140, 236, 19);
 }
 
+.btn_article_delete{
+    font-size: 16px;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    text-align: center;
+    width: 218.62px;
+    height: 50px;
+    border-radius: 6px;
+    color: #dc143c;
+    background-color: white;
+    border: 2px solid  #dc143c;
+    margin-top: 1em;
+    transition-duration: 0.4s;
+}
+
+.btn_article_delete:hover {
+    background-color:  #dc143c;
+    color: #f8f8f8;
+    box-shadow: 0 9px 13px 0 rgba(174, 36, 40, 24), 0 14px 47px 0  #dc143c;
+}
+
 .btn_my_article_delete {
     font-size: 16px;
     font-family: "Source Sans Pro", Helvetica, sans-serif;

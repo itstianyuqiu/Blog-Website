@@ -23,7 +23,7 @@ public class IndexServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         req.setAttribute("allArt",this.jqmlist);
-        System.out.println();
+
         req.getRequestDispatcher("/index.jsp").forward(req,resp);
     }
 
@@ -34,7 +34,7 @@ public class IndexServlet extends HttpServlet {
             Date datebegin=Date.valueOf("1970-1-1");
             Date dateend=new Date(new java.util.Date().getTime());
            this.jqmlist = ud.quaryArtAnduser(frontstr, new Date[]{datebegin, dateend});
-            System.out.println(jqmlist);
+
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (Exception e) {

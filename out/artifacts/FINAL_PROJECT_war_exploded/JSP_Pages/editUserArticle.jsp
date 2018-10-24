@@ -87,15 +87,14 @@
                                                 out.println("<img src=\"../Uploaded_Images/" + i.getSource() + "\"" + "width=\"200\">");
                                                 out.println("<input type=\"checkbox\" name=\"checkbox_" + i.getImage_id() + "\" value=\"" + i.getImage_id() + "\">");
                                             }
+                                            out.println("<br><br><b>Add more images: </b> <br> <br>");
                                             out.println("<input type=\"file\" id=\"picture\" name=\"picture\" accept=\"image/png, image/jpeg\" multiple>");
                                         } catch (Exception e) {
                                             e.getMessage();
                                         }
                                     %>
 
-                                    <br>
-                                    <br>
-                                    <b>Add more images: </b>
+
                                     <br>
                                     <br>
                                     <input id="btn_update_article" type="submit" name="updateArticle" value="Update">

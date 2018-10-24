@@ -32,7 +32,7 @@
 
         .article {
             width: 400px;
-
+            height: 600px;
             margin-top: 30px;
             margin-left: 10px;
             background-color: snow;
@@ -104,7 +104,7 @@
                             $.each(xhr[i][j], function (k) {
                                 if (k == 'imagePOJOS') {
                                     if (xhr[i][j][k] != null && xhr[i][j][k] != '') {
-                                        $img = $('<image></image>').attr('src', xhr[i][j][k][1])
+                                        $img = $('<img></img>').attr('src', 'Uploaded_Images/'+xhr[i][j][k][0]['source'])
                                         $imgDv.append($img)
                                     } else {
                                         $img = $('<img></img>').attr('src', 'images/pic0' + randomImgNo() + '.jpg')
@@ -142,9 +142,6 @@
 
 
         function showdetail($id) {
-
-
-            console.log($id)
             location.href="/ShowArtDetileServlet?articleid="+$id;
         }
 
@@ -157,9 +154,14 @@
             <img id="index_logo" src="images/icon_logo.png">
         </div>
 
+
         <%--login btn--%>
         <div class="btns">
         <% if (userPOJO == null) {%>
+
+            <a href="/JSP_Pages/mediaGalleryAll.jsp">
+                <img style="width: 50px" id="icon_gallery" src="images/icon_gallery.png">
+            </a>
 
             <a href="index_login.jsp">
                 <button class="btn btn-primary ">Login</button>

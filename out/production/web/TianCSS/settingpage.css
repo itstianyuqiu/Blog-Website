@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
+/* Basic */
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    line-height: 1;
+}
+
+header, section {
+    display: block;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    color: #a2a2a2;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: 400;
+    line-height: 1.75em;
+}
+
+p {
+    margin: 0 0 2em 0;
+}
+
+h2, h3 {
+    color: #787878;
+    font-weight: 400;
+    line-height: 1em;
+    margin: 0 0 1em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+h3 {
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+
+/*Change avatar*/
+#change_avatar {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+/* Avatar Content */
+.avatar_update_content {
+    position: relative;
+    background-color: white;
+    margin: auto;
+    width: 80%;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    cursor: pointer;
+}
+
+.avatar_update_header {
+    padding: 0px 18px 30px;
+    background-color: white;
+}
+
+.avatar_update_body {
+    padding: 10px;;
+}
+
+.avatar_update_body img {
+    width: 100px;
+}
+
+.avatar_update_body_img {
+    margin: 0 28%;
+    padding: 0;
+}
+
+.avatar_update_footer {
+    padding-left: 1em;
+    background-color: white;
+    padding-bottom: 2em;
+}
+
+/* Header */
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-attachment: scroll;
+    background-color: #0A0A0A;
+    background-image: url("https://i.pinimg.com/564x/79/93/c4/7993c411e740ffe4763b0fca7c4ef66d.jpg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    left: 0;
+    padding: 8em 4em;
+    position: fixed;
+    text-align: right;
+    top: 0;
+    width: 35%;
+}
+
+/* Main */
+#main {
+    margin-left: 35%;
+    max-width: 54em;
+    padding: 8em 4em 4em 4em;
+    width: calc(100% - 35%);
+}
+
+#main > section {
+    border-top: solid 2px #efefef;
+    margin: 4em 0 0 0;
+    padding: 4em 0 0 0;
+}
+
+#main > section:first-child {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#search_bar {
+    width: 67%;
+    height: 50px;
+
+}
+
+#image_avatar {
+    width: 40%;
+    border-radius: 100%;
+    margin-top: 22px;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+#icon_home {
+    width: 7%;
+    margin-left: 1em;
+}
+
+#icon_homepage {
+    width: 6%;
+    margin-left: 1em;
+
+}
+
+#icon_logout {
+    width: 6%;
+    margin-left: 1em;
+}
+
+.setting_text_field {
+    width: 100%;
+    height: 50px;
+}
+
+#form_securityquestion {
+    width: 100%;
+    height: 50px;
+}
+
+.sub_title {
+    font-size: 20px;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+
+.btn_savechange {
+    width: 31%;
+    height: 50px;
+    color: rgb(33, 140, 236);
+    background-color: white;
+    border: 2px solid rgb(33, 140, 236);
+    border-radius: 6px;
+    transition-duration: 0.4s;
+}
+
+.btn_savechange:hover {
+    background-color: rgb(33, 140, 236);
+    color: #f8f8f8;
+    box-shadow: 0 9px 13px 0 rgba(177, 196, 221, 24), 0 14px 47px 0 rgba(33, 140, 236, 19);
+}
+
+#btn_delete {
+    width: 31%;
+    height: 50px;
+    color: #dc143c;
+    background-color: white;
+    border: 2px solid #dc143c;
+    border-radius: 6px;
+    transition-duration: 0.4s;
+}
+
+#btn_delete:hover {
+
+    background-color: #dc143c;
+    color: #f8f8f8;
+    box-shadow: 0 9px 13px 0 rgba(174, 36, 40, 24), 0 14px 47px 0 rgba(218, 26, 64, 19);
+}
+
+#delete_user_account_button {
+    width: 31%;
+    height: 50px;
+    color: #dc143c;
+    background-color: white;
+    border: 2px solid #dc143c;
+    border-radius: 6px;
+    transition-duration: 0.4s;
+}
+
+#delete_user_account_button:hover {
+    background-color: #dc143c;
+    color: #f8f8f8;
+    box-shadow: 0 9px 13px 0 rgba(174, 36, 40, 24), 0 14px 47px 0 rgba(218, 26, 64, 19);
+}
+
+#delete_cancel_account {
+    width: 31%;
+    height: 50px;
+    color: rgb(33, 140, 236);
+    background-color: white;
+    border: 2px solid rgb(33, 140, 236);
+    border-radius: 6px;
+    margin-top: 1em;
+    transition-duration: 0.4s;
+}
+
+#delete_cancel_account:hover {
+    background-color: rgb(33, 140, 236);
+    color: #f8f8f8;
+    box-shadow: 0 9px 13px 0 rgba(177, 196, 221, 24), 0 14px 47px 0 rgba(33, 140, 236, 19);
+}
+
+#avatar_update_submit {
+    font-size: 16px;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    text-align: center;
+    width: 100px;
+    height: 38px;
+    color: #aaaaaa;
+    background-color: white;
+    border: 2px solid #aaaaaa;
+    border-radius: 6px;
+    margin-top: 1em;
+    transition-duration: 0.4s;
+}
+
+#avatar_update_submit:hover {
+    background-color: rgb(33, 140, 236);
+    color: #f8f8f8;
+    box-shadow: 0 9px 13px 0 rgba(177, 196, 221, 24), 0 14px 47px 0 rgba(33, 140, 236, 19);
+    border: 2px solid rgb(33, 140, 236);
+}
+
+#avatar_update_cancel {
+    font-size: 16px;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    text-align: center;
+    width: 100px;
+    height: 38px;
+    color: #aaaaaa;
+    background-color: white;
+    border: 2px solid #aaaaaa;
+    border-radius: 6px;
+    margin-top: 1em;
+    transition-duration: 0.4s;
+}
+
+#avatar_update_cancel:hover {
+    background-color: #dc143c;
+    color: #f8f8f8;
+    box-shadow: 0 9px 13px 0 rgba(174, 36, 40, 24), 0 14px 47px 0 rgba(218, 26, 64, 19);
+    border: 2px solid #dc143c;
+}

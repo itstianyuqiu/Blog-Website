@@ -152,6 +152,16 @@ public class UserDAO implements AutoCloseable {
      * @throws SQLException
      */
     public void deleteUserAccount(int id) throws SQLException {
+        try(ArticleDAO newArticleDAO = new ArticleDAO()){
+            List<ArticlePOJO> userArticles = newArticleDAO.loadUserArticles(""+id);
+
+            for (ArticlePOJO eachArticle: userArticles){
+                newArticleDAO.deleteArticle(""+eachArticle.getArticle_id());
+            }
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
         try (PreparedStatement ps = this.conn.prepareStatement(
                 "DELETE FROM project_user WHERE user_id = ?;")) {
             ps.setInt(1, id);

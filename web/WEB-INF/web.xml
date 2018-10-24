@@ -6,7 +6,7 @@
 
     <welcome-file-list>
         <welcome-file>/index.jsp</welcome-file>
-        
+
     </welcome-file-list>
     <!--error and exception handle-->
     <servlet>
@@ -30,20 +30,20 @@
         <location>/prompt/Error.jsp</location>
     </error-page>
 
-<filter>
-    <filter-name>FilterServlet</filter-name>
-    <filter-class>Filter.DefaultIndexFilter</filter-class>
-    <init-param>
-        <param-name>FilterServlet</param-name>
-        <param-value>UTF-8</param-value>
-    </init-param>
-</filter>
+    <filter>
+        <filter-name>FilterServlet</filter-name>
+        <filter-class>Filter.DefaultIndexFilter</filter-class>
+        <init-param>
+            <param-name>FilterServlet</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
     <filter-mapping>
         <filter-name>FilterServlet</filter-name>
         <url-pattern>*</url-pattern>
     </filter-mapping>
-    USER
-    ShowArtDetileServlet
+    <!--USER-->
+    <!--ShowArtDetileServlet-->
     <servlet>
         <servlet-name>ShowArtDetileServlet</servlet-name>
         <servlet-class>Servlet.ShowArtDetileServlet</servlet-class>
@@ -105,6 +105,15 @@
     <servlet-mapping>
         <servlet-name>UserForgotPasswordServlet</servlet-name>
         <url-pattern>/UserForgotPasswordServlet</url-pattern>
+    </servlet-mapping>
+    <!--check User Name-->
+    <servlet>
+        <servlet-name>CheckUserNameServlet</servlet-name>
+        <servlet-class>Servlet.CheckUserNameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckUserNameServlet</servlet-name>
+        <url-pattern>/CheckUserNameServlet</url-pattern>
     </servlet-mapping>
     <!--user-reset-password-->
     <servlet>
@@ -187,17 +196,6 @@
     </servlet-mapping>
 
 
-    <servlet>
-        <servlet-name>test</servlet-name>
-        <servlet-class>Servlet.test</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>test</servlet-name>
-        <url-pattern>/test</url-pattern>
-    </servlet-mapping>
-
-
-
     <!--Manager-->
     <servlet>
         <servlet-name>AdminLoginServlet</servlet-name>
@@ -234,13 +232,23 @@
         <servlet-name>AdminCommentServlet</servlet-name>
         <url-pattern>/AdminCommentServlet</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>AdminArticleServlet</servlet-name>
         <servlet-class>Servlet.AdminArticleServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>AdminArticleServlet</servlet-name>
         <url-pattern>/AdminArticleServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NewCommentSingleArticle</servlet-name>
+        <servlet-class>Servlet.NewCommentSingleArticle</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewCommentSingleArticle</servlet-name>
+        <url-pattern>/NewCommentSingleArticle</url-pattern>
+    </servlet-mapping>
+
 </web-app>

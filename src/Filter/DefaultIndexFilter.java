@@ -28,8 +28,6 @@ public class DefaultIndexFilter implements Filter {
         String userIP = request.getRemoteAddr();
         String uri = request.getRequestURI();
         String path = request.getContextPath();
-        System.out.println(uri);
-        System.out.println(path);
         if (!uri.contains("Servlet") || !uri.contains(".jsp")) {// If the request is not a servlet or JSP, direct release
             dofil.doFilter(request, response);
         } else {
@@ -50,6 +48,9 @@ public class DefaultIndexFilter implements Filter {
                     request.getRequestDispatcher("/prompt/error").forward(request, response);
                 }
             } else if (uri.contains("newArticleSubmitForm.jsp")||uri.contains("homepage.jsp")
+//                    || uri.contains("myArticles.jsp") || uri.contains("allArticlesWithComments.jsp") || uri.contains("allArticlesWithoutComments.jsp")
+//                    || uri.contains("articleComments.jsp") || uri.contains("editUserArticle.jsp") || uri.contains("mediaGalleryAll.jsp")
+//                    || uri.contains("mediaGalleryUser.jsp") || uri.contains("userLoggedMainPage.jsp")
 
 //                    uri.contains(".jsp")||uri.contains(".jsp")||
 //                    uri.contains(".jsp")||uri.contains(".jsp")||

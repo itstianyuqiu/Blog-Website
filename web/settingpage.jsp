@@ -62,7 +62,7 @@
             <br>
             <br>
             <p class="sub_title">Email address</p>
-            <input type="text" name="emailaddress" id="setting_emailaddress" class="setting_text_field"
+            <input type="email" name="emailaddress" id="setting_emailaddress" class="setting_text_field"
                    value="${userPOJO.getEmail()}"/>
             <br>
             <br>
@@ -149,7 +149,7 @@
             <div>
                 <form action="/UserUpdateAccountServlet" method="post" enctype="multipart/form-data">
                     <input type="file" accept="image/*" name="avatar" width="38px">
-                    <br>
+
                     <button type="submit" name="submit_btn"id="avatar_update_submit">Submit</button>
                     <button type="button" name="cancel_btn" id="avatar_update_cancel">Cancel</button>
                 </form>

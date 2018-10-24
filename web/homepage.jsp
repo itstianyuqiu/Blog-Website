@@ -46,7 +46,7 @@
 
             <%--<span id="zone_search">--%>
 
-   <%----%>
+            <%----%>
             <%--</span>--%>
 
             <span id="zone_icon">

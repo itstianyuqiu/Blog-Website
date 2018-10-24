@@ -12,16 +12,38 @@
 <html>
 <head>
     <title>Title</title>
-    <link rel="stylesheet" href="../TianCSS/homepage_my_article_add_comments.css">
+    <link rel="stylesheet" href="../TianCSS/homepage.css">
     <script type="text/javascript" src="../JQuery_lib/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="../myJS.js"></script>
+
+    <style>
+        .btn_article_delete{
+            font-size: 16px;
+            font-family: "Source Sans Pro", Helvetica, sans-serif;
+            text-align: center;
+            width: 218.62px;
+            height: 50px;
+            border-radius: 6px;
+            color: #dc143c;
+            background-color: white;
+            border: 2px solid  #dc143c;
+            margin-top: 1em;
+            transition-duration: 0.4s;
+        }
+
+        .btn_article_delete:hover {
+            background-color:  #dc143c;
+            color: #f8f8f8;
+            box-shadow: 0 9px 13px 0 rgba(174, 36, 40, 24), 0 14px 47px 0  #dc143c;
+        }
+    </style>
 </head>
 <body>
 
 <%
 
 
-    try (ArticleDAO newArticleDAO = new ArticleDAO()){
+    try (ArticleDAO newArticleDAO = new ArticleDAO()) {
 
         //generate a list of Articles based on the current userID
         List<ArticlePOJO> allArticles = newArticleDAO.loadUserArticles(request.getSession().getAttribute("userID").toString());
@@ -37,39 +59,42 @@
 
             String formattedContent = "";
 
-            String [] parts = articleContent.split("\"");
-            for (int i = 0; i < parts.length; i++){
-                if (i != parts.length - 1){
-                    formattedContent = formattedContent + parts[i] +"&quot;";
-                }
-                else {
+            String[] parts = articleContent.split("\"");
+            for (int i = 0; i < parts.length; i++) {
+                if (i != parts.length - 1) {
+                    formattedContent = formattedContent + parts[i] + "&quot;";
+                } else {
                     formattedContent = formattedContent + parts[i];
                 }
             }
 
-            System.out.println(formattedContent);
 
             //generate & print out article title, publishing date and content
-            out.println("<h4>" + articleTitle + "</h4>");
+            out.println("<h4>" + "Title: " + articleTitle + "</h4>");
             out.println("<br>");
             out.println("<i>" + "Publishing Date: " + articleDate + "</i>");
             out.println("<br>");
-            out.println(articleContent);
+            out.println("<b>Content: </b> " + articleContent);
             out.println("<br>");
 
 
             //generate and print images that belong to this article
-            out.println("<h5>" + "Photos: " + "</h5>");
-            List <ImagePOJO> allImages = newArticleDAO.loadImageFromArticle(articleID);
-            for (ImagePOJO i : allImages ) {
-                if (i != null){
-                    out.println("<img src=\"../Uploaded_Images/" + i.getSource() + "\"" + "width=\"200\">");
+
+
+            List<ImagePOJO> allImages = newArticleDAO.loadImageFromArticle(articleID);
+            if (!allImages.isEmpty()) {
+                out.println("<h5>" + "Photos: " + "</h5>");
+
+                for (ImagePOJO i : allImages) {
+                    if (i != null) {
+                        out.println("<img src=\"../Uploaded_Images/" + i.getSource() + "\"" + "width=\"200\">");
+                    }
                 }
             }
             out.println("<br>");
 
             //generate and print the audio that belongs to this article
-            if (a.getArticle_audio() != null){
+            if (a.getArticle_audio() != null) {
                 out.println("<h5>" + "Audio: " + "</h5>");
                 out.println("<audio controls>");
                 out.println("<source src=\"../Uploaded_Audio/" + a.getArticle_audio() + "\" type=\"audio/mp3\">");
@@ -80,7 +105,7 @@
 
 
             //generate and print the video that belongs to this article
-            if (a.getArticle_video() != null){
+            if (a.getArticle_video() != null) {
                 out.println("<h5>" + "Video: " + "</h5>");
                 out.println("<video width=\"320px\" height=\"240px\" controls>");
                 out.println("<source src=\"../Uploaded_Video/" + a.getArticle_video() + "\" type=\"video/mp4\">");
@@ -90,97 +115,100 @@
             }
 
             //generate and print the youtube that belongs to this article
-            if (!a.getArticle_Youtube().equals("")){
+            if (!a.getArticle_Youtube().equals("")) {
                 out.println("<h5>" + "Youtube: " + "</h5>");
-                %>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/<%=a.getArticle_Youtube()%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen> </iframe>
-                <%
-            }
+%>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/<%=a.getArticle_Youtube()%>" frameborder="0"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<%
+    }
 
-            //generate a blank comment div (default visibility is false, true when clicked on show comment button)
-            out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
+    //generate a blank comment div (default visibility is false, true when clicked on show comment button)
+    out.println("<div id=\"" + articleID + "\"" + ">Something</div>");
 
-            //generate show/hide comment button
-                %>
+    //generate show/hide comment button
+%>
 
-                <form action="/CommentServlet" method="get">
-                    <input class="btn_show_hide"type="submit" id="button_<%=articleID%>" value="Show/Hide Comments" name="comment_button">
-                    <input type="hidden" name="current_article" value="<%=articleID%>">
-                    <input type="hidden" name="button_id" value="button_<%=articleID%>">
-                    <input type="hidden" name="page" value="myArticles">
-                </form>
-                <%
+<form action="/CommentServlet" method="get">
+    <input class="btn_show_hide" type="submit" id="button_<%=articleID%>" value="Show/Hide Comments"
+           name="comment_button">
+    <input type="hidden" name="current_article" value="<%=articleID%>">
+    <input type="hidden" name="button_id" value="button_<%=articleID%>">
+    <input type="hidden" name="page" value="myArticles">
+</form>
+<%
 
-                    if (request.getSession().getAttribute("firstLogin_MyArticles").toString().equals("true")){
-                        request.getSession().setAttribute("button_" + articleID, false);
-                        %>
-                        <script>hideVisibility(<%=articleID%>);</script>
-                        <%
-                    }
-
-
-            // get the session of current article and current button, if matches with the current iteration of the loop then show
-            String currentArticle = request.getSession().getAttribute("current_article").toString();
-            String currentButton = request.getSession().getAttribute("button_" + articleID).toString();
-
-            //Get the current article & button session, if matches with the current iteration of the loop, then show & load the comments div.
-            if ((articleID == Integer.parseInt(currentArticle)) && (currentButton.equals("true"))){
-                %>
-                    <script>
-                        showVisibility(<%=currentArticle%>);
-                        loadArticleCommentsJSP(<%=currentArticle%>);
-                    </script>
-                <%
-            }
-            else {
-                %>
-                    <script>
-                        hideVisibility(<%=articleID%>);
-                    </script>
-                <%
-            }
-
-            //create the Delete and Edit buttons, passing on current article ID
-                %>
-                <form action="/UpdateArticleDatabase" method="get">
-                    <input class="btn_my_article_edit" type="submit" value="Edit" name="edit_button">
-                    <input type="hidden" name="articleID" value="<%=articleID%>">
-                    <input type="hidden" name="articleTitle" value="<%=articleTitle%>">
-                    <input type="hidden" name="articleContent" value="<%=formattedContent%>">
-                    <input type="hidden" name="articleDate" value="<%=articleDate%>">
-                </form>
-                <%
+    if (request.getSession().getAttribute("firstLogin_MyArticles").toString().equals("true")) {
+        request.getSession().setAttribute("button_" + articleID, false);
+%>
+<script>hideVisibility(<%=articleID%>);</script>
+<%
+    }
 
 
-            // ----------------------------------------------------------------------------------------------
+    // get the session of current article and current button, if matches with the current iteration of the loop then show
+    String currentArticle = request.getSession().getAttribute("current_article").toString();
+    String currentButton = request.getSession().getAttribute("button_" + articleID).toString();
+
+    //Get the current article & button session, if matches with the current iteration of the loop, then show & load the comments div.
+    if ((articleID == Integer.parseInt(currentArticle)) && (currentButton.equals("true"))) {
+%>
+<script>
+    showVisibility(<%=currentArticle%>);
+    loadArticleCommentsJSP(<%=currentArticle%>);
+</script>
+<%
+} else {
+%>
+<script>
+    hideVisibility(<%=articleID%>);
+</script>
+<%
+    }
+
+    //create the Delete and Edit buttons, passing on current article ID
+%>
+<form action="/UpdateArticleDatabase" method="get">
+    <input class="btn_my_article_edit" type="submit" value="Edit" name="edit_button">
+    <input type="hidden" name="articleID" value="<%=articleID%>">
+    <input type="hidden" name="articleTitle" value="<%=articleTitle%>">
+    <input type="hidden" name="articleContent" value="<%=formattedContent%>">
+    <input type="hidden" name="articleDate" value="<%=articleDate%>">
+</form>
+<%
 
 
-                    //Button to delete article; if clicked a form will be shown asking if they are sure they want to delete the article. If yes,
-                    // then the article will be deleted, if no then it will go back to the previous state
+    // ----------------------------------------------------------------------------------------------
 
-                %>
-                    <button type="button" id="del_article_button_<%=articleID%>" onclick="showDeleteArticleForm(<%=articleID%>)">Delete Article</button>
-                        <div id="delete_article_<%=articleID%>" style="display: none">
-                            <br>
-                            <b>Are you sure you want to delete this article?</b>
-                            <br>
-                            <form action="/UpdateArticleDatabase" method="get">
-                            <input id="btn_my_article_delete" type="submit" value="Yes, Delete" name="delete_button">
-                            <input type="hidden" name="articleID" value="<%=articleID%>">
-                            </form>
-                            <button id="delete_cancel" onclick="cancelDeleteArticleForm(<%=articleID%>)">No</button>
-                        </div>
 
-                <%
+    //Button to delete article; if clicked a form will be shown asking if they are sure they want to delete the article. If yes,
+    // then the article will be deleted, if no then it will go back to the previous state
 
-            }
+%>
+<button class="btn_article_delete" type="button" id="del_article_button_<%=articleID%>"
+        onclick="showDeleteArticleForm(<%=articleID%>)">Delete
+    Article
+</button>
+<div id="delete_article_<%=articleID%>" style="display: none">
+    <br>
+    <b>Are you sure you want to delete this article?</b>
+    <br>
+    <form action="/UpdateArticleDatabase" method="get">
+        <input id="btn_my_article_delete" type="submit" value="Yes, Delete" name="delete_button">
+        <input type="hidden" name="articleID" value="<%=articleID%>">
+    </form>
+    <button id="delete_cancel" onclick="cancelDeleteArticleForm(<%=articleID%>)">No</button>
+</div>
 
-            request.getSession().setAttribute("firstLogin_MyArticles", false);
+<%
 
         }
-        catch (Exception e){
+
+        request.getSession().setAttribute("firstLogin_MyArticles", false);
+
+    } catch (Exception e) {
         e.getMessage();
-        }
+    }
 %>
 
 
